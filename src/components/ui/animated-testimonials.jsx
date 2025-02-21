@@ -28,8 +28,8 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
     return Math.floor(Math.random() * 21) - 10
   }
   return (
-    <div className=" mx-auto antialiased font-sans px-12 py-20">
-      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-20">
+    <div className=" mx-auto antialiased font-sans px-12 py-20 ">
+      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-20 z-[4]">
         <div>
           <div className="relative h-80 w-full">
             <AnimatePresence>
