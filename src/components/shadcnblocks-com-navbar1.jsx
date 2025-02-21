@@ -1,12 +1,12 @@
-import { Book, Menu, Sunset, Trees, Zap } from "lucide-react";
+import { Book, Menu, Sunset, Trees, Zap } from 'lucide-react'
 
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
+} from '@/components/ui/accordion'
+import { Button } from '@/components/ui/button'
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -14,113 +14,113 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+} from '@/components/ui/navigation-menu'
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from '@/components/ui/sheet'
 
 const Navbar1 = ({
   logo = {
-    url: "https://www.shadcnblocks.com",
-    src: "https://www.shadcnblocks.com/images/block/block-1.svg",
-    alt: "logo",
-    title: "Shadcnblocks.com",
+    url: 'https://www.shadcnblocks.com',
+    src: 'https://www.shadcnblocks.com/images/block/block-1.svg',
+    alt: 'logo',
+    title: 'Shadcnblocks.com',
   },
 
   menu = [
-    { title: "Home", url: "#" },
+    { title: 'Home', url: '#' },
     {
-      title: "Products",
-      url: "#",
+      title: 'Products',
+      url: '#',
       items: [
         {
-          title: "Blog",
-          description: "The latest industry news, updates, and info",
+          title: 'Blog',
+          description: 'The latest industry news, updates, and info',
           icon: <Book className="size-5 shrink-0" />,
-          url: "#",
+          url: '#',
         },
         {
-          title: "Company",
-          description: "Our mission is to innovate and empower the world",
+          title: 'Company',
+          description: 'Our mission is to innovate and empower the world',
           icon: <Trees className="size-5 shrink-0" />,
-          url: "#",
+          url: '#',
         },
         {
-          title: "Careers",
-          description: "Browse job listing and discover our workspace",
+          title: 'Careers',
+          description: 'Browse job listing and discover our workspace',
           icon: <Sunset className="size-5 shrink-0" />,
-          url: "#",
+          url: '#',
         },
         {
-          title: "Support",
+          title: 'Support',
           description:
-            "Get in touch with our support team or visit our community forums",
+            'Get in touch with our support team or visit our community forums',
           icon: <Zap className="size-5 shrink-0" />,
-          url: "#",
+          url: '#',
         },
       ],
     },
     {
-      title: "Resources",
-      url: "#",
+      title: 'Resources',
+      url: '#',
       items: [
         {
-          title: "Help Center",
-          description: "Get all the answers you need right here",
+          title: 'Help Center',
+          description: 'Get all the answers you need right here',
           icon: <Zap className="size-5 shrink-0" />,
-          url: "#",
+          url: '#',
         },
         {
-          title: "Contact Us",
-          description: "We are here to help you with any questions you have",
+          title: 'Contact Us',
+          description: 'We are here to help you with any questions you have',
           icon: <Sunset className="size-5 shrink-0" />,
-          url: "#",
+          url: '#',
         },
         {
-          title: "Status",
-          description: "Check the current status of our services and APIs",
+          title: 'Status',
+          description: 'Check the current status of our services and APIs',
           icon: <Trees className="size-5 shrink-0" />,
-          url: "#",
+          url: '#',
         },
         {
-          title: "Terms of Service",
-          description: "Our terms and conditions for using our services",
+          title: 'Terms of Service',
+          description: 'Our terms and conditions for using our services',
           icon: <Book className="size-5 shrink-0" />,
-          url: "#",
+          url: '#',
         },
       ],
     },
     {
-      title: "Pricing",
-      url: "#",
+      title: 'Pricing',
+      url: '#',
     },
     {
-      title: "Blog",
-      url: "#",
+      title: 'Blog',
+      url: '#',
     },
   ],
 
   mobileExtraLinks = [
-    { name: "Press", url: "#" },
-    { name: "Contact", url: "#" },
-    { name: "Imprint", url: "#" },
-    { name: "Sitemap", url: "#" },
+    { name: 'Press', url: '#' },
+    { name: 'Contact', url: '#' },
+    { name: 'Imprint', url: '#' },
+    { name: 'Sitemap', url: '#' },
   ],
 
   auth = {
-    login: { text: "Log in", url: "#" },
-    signup: { text: "Sign up", url: "#" },
-  }
+    login: { text: 'Log in', url: '#' },
+    signup: { text: 'Sign up', url: '#' },
+  },
 }) => {
   return (
-    (<section className="py-4">
-      <div className="container">
-        <nav className="hidden justify-between lg:flex">
-          <div className="flex items-center gap-6">
+    <section className="py-4">
+      <div className="mx-auto container ">
+        <nav className="hidden justify-between lg:flex left-0 right-0 ">
+          <div className="flex items-center gap-6 ">
             <a href={logo.url} className="flex items-center gap-2">
               <img src={logo.src} className="w-8" alt={logo.alt} />
               <span className="text-lg font-semibold">{logo.title}</span>
@@ -166,7 +166,11 @@ const Navbar1 = ({
                   </SheetTitle>
                 </SheetHeader>
                 <div className="my-6 flex flex-col gap-6">
-                  <Accordion type="single" collapsible className="flex w-full flex-col gap-4">
+                  <Accordion
+                    type="single"
+                    collapsible
+                    className="flex w-full flex-col gap-4"
+                  >
                     {menu.map((item) => renderMobileMenuItem(item))}
                   </Accordion>
                   <div className="border-t py-4">
@@ -175,7 +179,8 @@ const Navbar1 = ({
                         <a
                           key={idx}
                           className="inline-flex h-10 items-center gap-2 whitespace-nowrap rounded-md px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-accent-foreground"
-                          href={link.url}>
+                          href={link.url}
+                        >
                           {link.name}
                         </a>
                       ))}
@@ -195,14 +200,14 @@ const Navbar1 = ({
           </div>
         </div>
       </div>
-    </section>)
-  );
-};
+    </section>
+  )
+}
 
 const renderMenuItem = (item) => {
   if (item.items) {
     return (
-      (<NavigationMenuItem key={item.title} className="text-muted-foreground">
+      <NavigationMenuItem key={item.title} className="text-muted-foreground">
         <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
         <NavigationMenuContent>
           <ul className="w-80 p-3">
@@ -211,7 +216,8 @@ const renderMenuItem = (item) => {
                 <li key={subItem.title}>
                   <a
                     className="flex select-none gap-4 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-muted hover:text-accent-foreground"
-                    href={subItem.url}>
+                    href={subItem.url}
+                  >
                     {subItem.icon}
                     <div>
                       <div className="text-sm font-semibold">
@@ -229,24 +235,25 @@ const renderMenuItem = (item) => {
             </NavigationMenuLink>
           </ul>
         </NavigationMenuContent>
-      </NavigationMenuItem>)
-    );
+      </NavigationMenuItem>
+    )
   }
 
   return (
-    (<a
+    <a
       key={item.title}
       className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-accent-foreground"
-      href={item.url}>
+      href={item.url}
+    >
       {item.title}
-    </a>)
-  );
-};
+    </a>
+  )
+}
 
 const renderMobileMenuItem = (item) => {
   if (item.items) {
     return (
-      (<AccordionItem key={item.title} value={item.title} className="border-b-0">
+      <AccordionItem key={item.title} value={item.title} className="border-b-0">
         <AccordionTrigger className="py-0 font-semibold hover:no-underline">
           {item.title}
         </AccordionTrigger>
@@ -255,7 +262,8 @@ const renderMobileMenuItem = (item) => {
             <a
               key={subItem.title}
               className="flex select-none gap-4 rounded-md p-3 leading-none outline-none transition-colors hover:bg-muted hover:text-accent-foreground"
-              href={subItem.url}>
+              href={subItem.url}
+            >
               {subItem.icon}
               <div>
                 <div className="text-sm font-semibold">{subItem.title}</div>
@@ -268,15 +276,15 @@ const renderMobileMenuItem = (item) => {
             </a>
           ))}
         </AccordionContent>
-      </AccordionItem>)
-    );
+      </AccordionItem>
+    )
   }
 
   return (
-    (<a key={item.title} href={item.url} className="font-semibold">
+    <a key={item.title} href={item.url} className="font-semibold">
       {item.title}
-    </a>)
-  );
-};
+    </a>
+  )
+}
 
-export { Navbar1 };
+export { Navbar1 }

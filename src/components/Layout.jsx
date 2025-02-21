@@ -5,15 +5,15 @@ import { Footerdemo } from './ui/footer-section'
 const Layout = () => {
   return (
     <div className="max-w-[1280px] mx-auto">
-      <header>
+      <header className="sticky top-0 z-[1000] px-4 bg-background shadow-md">
         <Navbar1 />
       </header>
-      <section>
+      <section className="px-4 relative z-[999] select-none">
         <Outlet />
       </section>
-      <footer>
+      <footer className="px-4">
         <Footerdemo />
-      </footer> 
+      </footer>
     </div>
   )
 }

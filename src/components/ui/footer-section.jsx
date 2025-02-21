@@ -1,35 +1,53 @@
-import * as React from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Switch } from "@/components/ui/switch"
+import * as React from 'react'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import { Switch } from '@/components/ui/switch'
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip"
-import { Facebook, Instagram, Linkedin, Moon, Send, Sun, Twitter } from "lucide-react"
+} from '@/components/ui/tooltip'
+import {
+  ArrowUpIcon,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Moon,
+  Send,
+  Sun,
+  Twitter,
+} from 'lucide-react'
 
 function Footerdemo() {
   const [isDarkMode, setIsDarkMode] = React.useState(true)
   const [isChatOpen, setIsChatOpen] = React.useState(false)
+  const [visible, setVisible] = React.useState(false)
 
   React.useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark")
-    } else {
-      document.documentElement.classList.remove("dark")
+    const handleScroll = () => {
+      setVisible(window.scrollY > 0)
     }
+
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [isDarkMode])
 
   return (
-    (<footer
-      className="relative border-t bg-background text-foreground transition-colors duration-300">
+    <footer className="relative border-t bg-background text-foreground transition-colors duration-300">
       <div className="container mx-auto px-4 py-12 md:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="relative">
-            <h2 className="mb-4 text-3xl font-bold tracking-tight">Stay Connected</h2>
+            <h2 className="mb-4 text-3xl font-bold tracking-tight">
+              Stay Connected
+            </h2>
             <p className="mb-6 text-muted-foreground">
               Join our newsletter for the latest updates and exclusive offers.
             </p>
@@ -37,34 +55,50 @@ function Footerdemo() {
               <Input
                 type="email"
                 placeholder="Enter your email"
-                className="pr-12 backdrop-blur-sm" />
+                className="pr-12 backdrop-blur-sm"
+              />
               <Button
                 type="submit"
                 size="icon"
-                className="absolute right-1 top-1 h-8 w-8 rounded-full bg-primary text-primary-foreground transition-transform hover:scale-105">
+                className="absolute right-1 top-1 h-8 w-8 rounded-full bg-primary text-primary-foreground transition-transform hover:scale-105"
+              >
                 <Send className="h-4 w-4" />
                 <span className="sr-only">Subscribe</span>
               </Button>
             </form>
-            <div
-              className="absolute -right-4 top-0 h-24 w-24 rounded-full bg-primary/10 blur-2xl" />
+            <div className="absolute -right-4 top-0 h-24 w-24 rounded-full bg-primary/10 blur-2xl" />
           </div>
           <div>
             <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
             <nav className="space-y-2 text-sm">
-              <a href="#" className="block transition-colors hover:text-primary">
+              <a
+                href="#"
+                className="block transition-colors hover:text-primary"
+              >
                 Home
               </a>
-              <a href="#" className="block transition-colors hover:text-primary">
+              <a
+                href="#"
+                className="block transition-colors hover:text-primary"
+              >
                 About Us
               </a>
-              <a href="#" className="block transition-colors hover:text-primary">
+              <a
+                href="#"
+                className="block transition-colors hover:text-primary"
+              >
                 Services
               </a>
-              <a href="#" className="block transition-colors hover:text-primary">
+              <a
+                href="#"
+                className="block transition-colors hover:text-primary"
+              >
                 Products
               </a>
-              <a href="#" className="block transition-colors hover:text-primary">
+              <a
+                href="#"
+                className="block transition-colors hover:text-primary"
+              >
                 Contact
               </a>
             </nav>
@@ -84,7 +118,11 @@ function Footerdemo() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="outline" size="icon" className="rounded-full">
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="rounded-full"
+                    >
                       <Facebook className="h-4 w-4" />
                       <span className="sr-only">Facebook</span>
                     </Button>
@@ -97,7 +135,11 @@ function Footerdemo() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="outline" size="icon" className="rounded-full">
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="rounded-full"
+                    >
                       <Twitter className="h-4 w-4" />
                       <span className="sr-only">Twitter</span>
                     </Button>
@@ -110,7 +152,11 @@ function Footerdemo() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="outline" size="icon" className="rounded-full">
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="rounded-full"
+                    >
                       <Instagram className="h-4 w-4" />
                       <span className="sr-only">Instagram</span>
                     </Button>
@@ -123,7 +169,11 @@ function Footerdemo() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="outline" size="icon" className="rounded-full">
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="rounded-full"
+                    >
                       <Linkedin className="h-4 w-4" />
                       <span className="sr-only">LinkedIn</span>
                     </Button>
@@ -136,7 +186,11 @@ function Footerdemo() {
             </div>
             <div className="flex items-center space-x-2">
               <Sun className="h-4 w-4" />
-              <Switch id="dark-mode" checked={isDarkMode} onCheckedChange={setIsDarkMode} />
+              <Switch
+                id="dark-mode"
+                checked={isDarkMode}
+                onCheckedChange={setIsDarkMode}
+              />
               <Moon className="h-4 w-4" />
               <Label htmlFor="dark-mode" className="sr-only">
                 Toggle dark mode
@@ -144,8 +198,7 @@ function Footerdemo() {
             </div>
           </div>
         </div>
-        <div
-          className="mt-12 flex flex-col items-center justify-between gap-4 border-t pt-8 text-center md:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t pt-8 text-center md:flex-row relative">
           <p className="text-sm text-muted-foreground">
             © 2024 Your Company. All rights reserved.
           </p>
@@ -160,10 +213,23 @@ function Footerdemo() {
               Cookie Settings
             </a>
           </nav>
+          <div className={`fixed bottom-8 right-8 ${visible ? '' : 'hidden'}`}>
+            <Button
+              variant="outline"
+              size="icon"
+              className="rounded-full"
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+              }}
+            >
+              <ArrowUpIcon className="h-6 w-6" />
+              <span className="sr-only">Scroll to top</span>
+            </Button>
+          </div>
         </div>
       </div>
-    </footer>)
-  );
+    </footer>
+  )
 }
 
 export { Footerdemo }

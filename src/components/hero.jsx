@@ -71,15 +71,15 @@ function HeroContent({
 
 const Hero = ({ pill, content, preview }) => {
   return (
-    <div className="container relative overflow-hidden">
-      <div className="flex min-h-[calc(100vh-64px)] flex-col lg:flex-row items-center py-8 px-4 md:px-8 lg:px-12">
+    <div className="container relative overflow-hidden mx-auto pt-8">
+      <div className="flex min-h-[calc(100vh-64px)] flex-col lg:flex-row items-center">
         <div className="flex flex-col gap-4 w-full lg:max-w-2xl">
           {pill && <HeroBadge {...pill} />}
           <HeroContent {...content} />
         </div>
         {preview && (
           <div className="w-full lg:max-w-xl lg:pl-16 mt-12 lg:mt-0">
-            {preview}
+            <img src={preview} alt="" />
           </div>
         )}
       </div>
