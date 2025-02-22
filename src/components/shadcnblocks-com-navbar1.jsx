@@ -119,7 +119,7 @@ const Navbar1 = ({
 }) => {
   return (
     <section className="py-4">
-      <div className="mx-auto container ">
+      <div className="mx-auto">
         <nav className="hidden justify-between lg:flex left-0 right-0 ">
           <div className="flex items-center gap-6 ">
             <Link to={logo.url} className="flex items-center gap-2">
