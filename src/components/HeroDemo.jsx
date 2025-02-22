@@ -29,7 +29,6 @@ function HeroDemo() {
           icon: <Icons.component className="h-4 w-4" />,
         },
       }}
-      preview="https://surepass.io/wp-content/uploads/2019/09/main.png"
     />
   )
 }

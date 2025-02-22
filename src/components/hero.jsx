@@ -71,8 +71,8 @@ function HeroContent({
 
 const Hero = ({ pill, content, preview }) => {
   return (
-    <div className="container relative overflow-hidden mx-auto pt-8">
-      <div className="flex min-h-[calc(100vh-64px)] flex-col lg:flex-row items-center">
+    <div className="container relative overflow-hidden mx-auto">
+      <div className="py-10 flex flex-col lg:flex-row items-center">
         <div className="flex flex-col gap-4 w-full lg:max-w-2xl">
           {pill && <HeroBadge {...pill} />}
           <HeroContent {...content} />

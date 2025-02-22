@@ -1,13 +1,13 @@
-import { Hero } from '@/components/hero'
 import HeroDemo from '../../components/HeroDemo'
-import { BackgroundBeamsWithCollision } from '../../components/ui/background-beams-with-collision'
 import { AnimatedTestimonials } from '@/components/ui/animated-testimonials'
+import { Logos3 } from '../../components/ui/logos3'
 
 const Home = () => {
   return (
     <div>
-      <HeroDemo  />
-      <AnimatedTestimonialsDemo />
+      <HeroDemo />
+      {/* <AnimatedTestimonialsDemo /> */}
+      <Logos3 />
     </div>
   )
 }
