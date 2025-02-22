@@ -16,6 +16,11 @@ import {
   IconSignature,
   IconTableColumn,
 } from '@tabler/icons-react'
+import { Layout, Pointer, Zap } from 'lucide-react'
+import { Feature108 } from '@/components/ui/features'
+import { FeaturesSectionWithHoverEffects } from '../../components/ui/features-hover'
+import { Cta11 } from '../../components/ui/cta'
+import Wrapper from '../../components/Wrapper'
 
 const cardData = [
   {
@@ -95,31 +100,103 @@ const items = [
   },
 ]
 
+const tabsData = {
+  badge: 'shadcnblocks.com',
+  heading: 'A Collection of Components Built With Shadcn & Tailwind',
+  description: 'Join us to build flawless web solutions.',
+  tabs: [
+    {
+      value: 'tab-1',
+      icon: <Zap className="h-auto w-4 shrink-0" />,
+      label: 'Boost Revenue',
+      content: {
+        badge: 'Modern Tactics',
+        title: 'Make your site a true standout.',
+        description:
+          'Discover new web trends that help you craft sleek, highly functional sites that drive traffic and convert leads into customers.',
+        buttonText: 'See Plans',
+        imageSrc:
+          'https://www.shadcnblocks.com/images/block/placeholder-dark-1.svg',
+        imageAlt: 'placeholder',
+      },
+    },
+    {
+      value: 'tab-2',
+      icon: <Pointer className="h-auto w-4 shrink-0" />,
+      label: 'Higher Engagement',
+      content: {
+        badge: 'Expert Features',
+        title: 'Boost your site with top-tier design.',
+        description:
+          'Use stellar design to easily engage users and strengthen their loyalty. Create a seamless experience that keeps them coming back for more.',
+        buttonText: 'See Tools',
+        imageSrc:
+          'https://www.shadcnblocks.com/images/block/placeholder-dark-2.svg',
+        imageAlt: 'placeholder',
+      },
+    },
+    {
+      value: 'tab-3',
+      icon: <Layout className="h-auto w-4 shrink-0" />,
+      label: 'Stunning Layouts',
+      content: {
+        badge: 'Elite Solutions',
+        title: 'Build an advanced web experience.',
+        description:
+          'Lift your brand with modern tech that grabs attention and drives action. Create a digital experience that stands out from the crowd.',
+        buttonText: 'See Options',
+        imageSrc:
+          'https://www.shadcnblocks.com/images/block/placeholder-dark-3.svg',
+        imageAlt: 'placeholder',
+      },
+    },
+  ],
+}
+
+const ctaData = {
+  heading: 'Ready to Get Started?',
+  description:
+    'Join thousands of satisfied customers using our platform to build amazing websites.',
+  buttons: {
+    primary: {
+      text: 'Get Started',
+      url: 'https://www.shadcnblocks.com',
+    },
+    secondary: {
+      text: 'Learn More',
+      url: 'https://www.shadcnblocks.com',
+    },
+  },
+}
+
 const Home = () => {
   return (
     <div>
-      <HeroDemo />
-
-      {/* <AnimatedTestimonialsDemo /> */}
-      <Logos3 />
-      {/* <SpotlightCard cards={cardData} /> */}
-      <BentoGrid className=" pt-4 pb-12 mx-auto">
-        {items.map((item, i) => (
-          <BentoGridItem
-            key={i}
-            title={item.title}
-            description={item.description}
-            header={item.header}
-            icon={item.icon}
-            className={i === 3 || i === 6 ? 'md:col-span-2' : ''}
-          />
-        ))}
-      </BentoGrid>
-      <TestimonialsSection
-        title="Trusted by developers worldwide"
-        description="Join thousands of developers who are already building the future with our AI platform"
-        testimonials={testimonials}
-      />
+      <Wrapper>
+        <HeroDemo />
+        {/* <AnimatedTestimonialsDemo /> */}
+        <Logos3 />
+        {/* <SpotlightCard cards={cardData} /> */}
+        <BentoGrid className="pt-4 pb-12 mx-auto">
+          {items.map((item, i) => (
+            <BentoGridItem
+              key={i}
+              title={item.title}
+              description={item.description}
+              header={item.header}
+              icon={item.icon}
+              className={i === 3 || i === 6 ? 'md:col-span-2' : ''}
+            />
+          ))}
+        </BentoGrid>
+        <Feature108 {...tabsData} />
+        <TestimonialsSection
+          title="Trusted by developers worldwide"
+          description="Join thousands of developers who are already building the future with our AI platform"
+          testimonials={testimonials}
+        />
+      </Wrapper>
+      <Cta11 {...ctaData} />
     </div>
   )
 }

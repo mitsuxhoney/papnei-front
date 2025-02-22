@@ -14,11 +14,21 @@ export default {
       },
       animation: {
         marquee: 'marquee var(--duration) linear infinite',
+        'skew-scroll': 'skew-scroll 20s linear infinite',
       },
       keyframes: {
         marquee: {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(calc(-100% - var(--gap)))' },
+        },
+        'skew-scroll': {
+          '0%': {
+            transform: 'rotateX(20deg) rotateZ(-20deg) skewX(20deg)',
+          },
+          '100%': {
+            transform:
+              'rotateX(20deg) rotateZ(-20deg) skewX(20deg) translateY(-100%)',
+          },
         },
       },
       borderRadius: {

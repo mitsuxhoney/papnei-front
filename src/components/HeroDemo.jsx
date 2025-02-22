@@ -3,6 +3,14 @@ import { Icons } from '@/components/ui/icons'
 import { ProjectStatusCard } from '@/components/ui/expandable-card'
 import { BackgroundBeamsWithCollision } from './ui/background-beams-with-collision'
 
+const tiltedItems = [
+  { id: '1', text: 'Feature One' },
+  { id: '2', text: 'Feature Two' },
+  { id: '3', text: 'Feature Three' },
+  { id: '4', text: 'Feature Four' },
+  { id: '5', text: 'Feature Five' },
+]
+
 function HeroDemo() {
   return (
     <Hero
@@ -29,6 +37,7 @@ function HeroDemo() {
           icon: <Icons.component className="h-4 w-4" />,
         },
       }}
+      preview={tiltedItems}
     />
   )
 }

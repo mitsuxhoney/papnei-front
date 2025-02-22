@@ -18,7 +18,7 @@ export const BentoGrid = ({ className, children }) => {
       </div>
       <div
         className={cn(
-          'grid lg:auto-rows-[18rem] grid-cols-1 xl:grid-cols-3 gap-4 mx-auto ',
+          'grid md:auto-rows-[18rem] grid-cols-1 gap-4 md:grid-cols-3 justify-between mx-auto w-full',
           className
         )}
       >
@@ -38,11 +38,11 @@ export const BentoGridItem = ({
   const { theme } = useTheme()
   return (
     <MagicCard
-      className="cursor-pointer flex flex-col items-center justify-center whitespace-nowrap text-4xl w-full h-full"
+      className="cursor-pointer flex flex-col items-center justify-center text-4xl w-full h-[300px] px-8 overflow-hidden"
       gradientColor={theme === 'dark' ? '#262626' : '#D9D9D955'}
     >
       <div className="flex flex-col gap-4">
-        <div>{header}</div>
+        {header}
         <div className="group-hover/bento:translate-x-2 transition duration-200">
           {icon}
           <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">

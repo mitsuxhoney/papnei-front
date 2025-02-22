@@ -3,6 +3,7 @@ import { buttonVariants } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { Link } from 'react-router-dom'
 import HeroBadge from '@/components/ui/hero-badge'
+import { TiltedScroll } from './ui/tilted-scroll'
 
 const ease = [0.16, 1, 0.3, 1]
 
@@ -72,15 +73,13 @@ function HeroContent({
 const Hero = ({ pill, content, preview }) => {
   return (
     <div className="relative overflow-hidden mx-auto">
-      <div className="py-10 flex flex-col lg:flex-row items-center">
+      <div className="py-10 flex flex-col lg:flex-row lg:gap-20 items-center">
         <div className="flex flex-col gap-4 w-full lg:max-w-2xl">
           {pill && <HeroBadge {...pill} />}
           <HeroContent {...content} />
         </div>
         {preview && (
-          <div className="w-full lg:max-w-xl lg:pl-16 mt-12 lg:mt-0">
-            <img src={preview} alt="" />
-          </div>
+          <TiltedScroll items={preview} className="mt-8 hidden lg:block" />
         )}
       </div>
     </div>
