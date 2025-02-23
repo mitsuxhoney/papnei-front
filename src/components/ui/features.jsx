@@ -213,7 +213,7 @@ const Feature108 = ({
   console.log(tabs[0].features)
   return (
     <section className="py-16">
-      <div className="container mx-auto">
+      <div className="mx-auto">
         <div className="flex flex-col items-center gap-4 text-center">
           <Badge variant="outline">{badge}</Badge>
           <h1 className="max-w-2xl text-3xl font-semibold md:text-4xl">
@@ -222,7 +222,7 @@ const Feature108 = ({
           <p className="text-muted-foreground">{description}</p>
         </div>
         <Tabs defaultValue={tabs[0].value} className="mt-8">
-          <TabsList className="container flex flex-col justify-center gap-4 sm:flex-row md:gap-10">
+          <TabsList className="flex flex-col justify-center gap-4 sm:flex-row md:gap-10">
             {tabs.map((tab) => (
               <TabsTrigger
                 key={tab.value}

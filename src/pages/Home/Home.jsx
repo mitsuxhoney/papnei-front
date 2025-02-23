@@ -182,20 +182,22 @@ const Home = () => {
         <Logos3 />
         {/* <SpotlightCard cards={cardData} /> */}
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1280px] xl:w-[2160px] xl:gap-10 mx-auto">
-          {cardsData?.map((card) => (
-            <MagicCard
-              key={card.title}
-              className="cursor-pointer flex-col items-center justify-center overflow-hidden py-4 px-4 w-full h-[180px]"
-              gradientColor={theme === 'dark' ? '#262626' : '#D9D9D955'}
-            >
-              <div className="flex flex-col gap-4">
-                <div className="flex items-center gap-2">{card.icon}</div>
-                <h3>{card.title}</h3>
-                <p>{card.description}</p>
-              </div>
-            </MagicCard>
-          ))}
+        <div className="w-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1280px] xl:max-w-[2160px] xl:gap-10 mx-auto">
+            {cardsData?.map((card) => (
+              <MagicCard
+                key={card.title}
+                className="cursor-pointer flex-col items-center justify-center overflow-hidden py-4 px-4 w-full h-[180px] border"
+                gradientColor={theme === 'dark' ? '#262626' : '#D9D9D955'}
+              >
+                <div className="flex flex-col gap-4">
+                  <div className="flex items-center gap-2">{card.icon}</div>
+                  <h3>{card.title}</h3>
+                  <p>{card.description}</p>
+                </div>
+              </MagicCard>
+            ))}
+          </div>
         </div>
 
         <Feature108 {...tabsData} />
