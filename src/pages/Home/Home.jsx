@@ -5,6 +5,8 @@ import { Logos3 } from '../../components/ui/logos3'
 
 import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid'
 
+import { useTheme } from '@/components/theme-provider'
+
 import { TestimonialsSection } from '@/components/ui/testimonials-with-marquee'
 // import Squares from '@/components/ui/Squares'
 import {
@@ -21,6 +23,7 @@ import { Feature108 } from '@/components/ui/features'
 import { FeaturesSectionWithHoverEffects } from '../../components/ui/features-hover'
 import { Cta11 } from '../../components/ui/cta'
 import Wrapper from '../../components/Wrapper'
+import { MagicCard } from '../../components/ui/magic-card'
 
 const cardData = [
   {
@@ -76,29 +79,6 @@ const testimonials = [
 const Skeleton = () => (
   <div className="flex w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
 )
-
-const items = [
-  {
-    title: 'Business Verification',
-    description:
-      'Verify business entities with our comprehensive multiple API suites.',
-    header: <Skeleton />,
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: 'Identity Verification',
-    description:
-      'Secure and fast identity verification for your customers through multiple API suites.',
-    header: <Skeleton />,
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: 'Aadhar E-signature',
-    description: 'Seamless digital document signing with Aadhar verification.',
-    header: <Skeleton />,
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
-  },
-]
 
 const tabsData = {
   badge: 'shadcnblocks.com',
@@ -169,7 +149,31 @@ const ctaData = {
   },
 }
 
+const cardsData = [
+  {
+    title: 'Business Verification',
+    description:
+      'Verify business entities with our comprehensive multiple API suites.',
+
+    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: 'Identity Verification',
+    description:
+      'Secure and fast identity verification for your customers through API suites.',
+
+    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: 'Aadhar E-signature',
+    description: 'Seamless digital document signing with Aadhar verification.',
+
+    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+  },
+]
+
 const Home = () => {
+  const { theme } = useTheme()
   return (
     <div>
       <Wrapper>
@@ -177,18 +181,23 @@ const Home = () => {
         {/* <AnimatedTestimonialsDemo /> */}
         <Logos3 />
         {/* <SpotlightCard cards={cardData} /> */}
-        <BentoGrid className="pt-4 pb-12 mx-auto">
-          {items.map((item, i) => (
-            <BentoGridItem
-              key={i}
-              title={item.title}
-              description={item.description}
-              header={item.header}
-              icon={item.icon}
-              className={i === 3 || i === 6 ? 'md:col-span-2' : ''}
-            />
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1280px] xl:w-[2160px] xl:gap-10 mx-auto">
+          {cardsData?.map((card) => (
+            <MagicCard
+              key={card.title}
+              className="cursor-pointer flex-col items-center justify-center overflow-hidden py-4 px-4 w-full h-[180px]"
+              gradientColor={theme === 'dark' ? '#262626' : '#D9D9D955'}
+            >
+              <div className="flex flex-col gap-4">
+                <div className="flex items-center gap-2">{card.icon}</div>
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+              </div>
+            </MagicCard>
           ))}
-        </BentoGrid>
+        </div>
+
         <Feature108 {...tabsData} />
         <TestimonialsSection
           title="Trusted by developers worldwide"

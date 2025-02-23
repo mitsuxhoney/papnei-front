@@ -19,27 +19,21 @@ import {
   Sun,
   Twitter,
 } from 'lucide-react'
+import { useTheme } from '@/components/theme-provider'
 import Wrapper from '../Wrapper'
 
 function Footerdemo() {
-  const [isDarkMode, setIsDarkMode] = React.useState(true)
-  const [isChatOpen, setIsChatOpen] = React.useState(false)
   const [visible, setVisible] = React.useState(false)
+  const { theme, setTheme } = useTheme()
 
   React.useEffect(() => {
     const handleScroll = () => {
       setVisible(window.scrollY > 0)
     }
 
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
-
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [isDarkMode])
+  }, [])
 
   return (
     <Wrapper>
@@ -190,8 +184,10 @@ function Footerdemo() {
                 <Sun className="h-4 w-4" />
                 <Switch
                   id="dark-mode"
-                  checked={isDarkMode}
-                  onCheckedChange={setIsDarkMode}
+                  checked={theme === 'dark'}
+                  onCheckedChange={(checked) =>
+                    setTheme(checked ? 'dark' : 'light')
+                  }
                 />
                 <Moon className="h-4 w-4" />
                 <Label htmlFor="dark-mode" className="sr-only">

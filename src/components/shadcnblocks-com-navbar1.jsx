@@ -125,7 +125,7 @@ const Navbar1 = ({
       <section className="py-4">
         <div className="mx-auto">
           <nav className="hidden justify-between lg:flex left-0 right-0 ">
-            <ScrollProgress className="top-[73px]" />
+            <ScrollProgress className="top-[72px]" />
 
             <div className="flex items-center gap-6 ">
               <Link to={logo.url} className="flex items-center gap-2">
@@ -150,7 +150,7 @@ const Navbar1 = ({
             </div>
           </nav>
           <div className="block lg:hidden">
-            <ScrollProgress className="top-[73px] " />
+            <ScrollProgress className="top-[72px] " />
 
             <div className="flex items-center justify-between">
               <Link to={logo.url} className="flex items-center gap-2">
