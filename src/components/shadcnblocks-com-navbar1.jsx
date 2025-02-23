@@ -122,8 +122,8 @@ const Navbar1 = ({
   ],
 
   auth = {
-    login: { text: 'Log in', url: '#' },
-    signup: { text: 'Sign up', url: '#' },
+    login: { text: 'Get API Keys', url: '#' },
+    signup: { text: 'Contact Sales', url: '#' },
   },
 }) => {
   const { theme, setTheme } = useTheme()
@@ -147,13 +147,14 @@ const Navbar1 = ({
                 </NavigationMenu>
               </div>
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-2 items-center">
               <Button asChild variant="outline" size="sm">
                 <Link to={auth.login.url}>{auth.login.text}</Link>
               </Button>
               <Button asChild size="sm">
                 <Link to={auth.signup.url}>{auth.signup.text}</Link>
               </Button>
+              <ModeToggle />
             </div>
           </nav>
           <div className="block lg:hidden">

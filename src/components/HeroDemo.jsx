@@ -28,12 +28,12 @@ function HeroDemo() {
           'A modern component library with beautiful defaults and endless customization options. Start building your next project faster.',
         primaryAction: {
           href: '/docs/getting-started',
-          text: 'Get Started',
+          text: 'Get API Keys',
           icon: <Icons.logo className="h-4 w-4" />,
         },
         secondaryAction: {
           href: '/components',
-          text: 'Browse Components',
+          text: 'Contact Sales',
           icon: <Icons.component className="h-4 w-4" />,
         },
       }}
