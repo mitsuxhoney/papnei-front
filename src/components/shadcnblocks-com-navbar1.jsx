@@ -154,7 +154,13 @@ const Navbar1 = ({
               <Button asChild size="sm">
                 <Link to={auth.signup.url}>{auth.signup.text}</Link>
               </Button>
-              <ModeToggle />
+              <div
+                className="rounded-md border p-2.5"
+                onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+              >
+                {theme === 'light' && <Moon className="h-4 w-4" />}
+                {theme === 'dark' && <Sun className="h-4 w-4" />}
+              </div>
             </div>
           </nav>
           <div className="block lg:hidden">
@@ -167,12 +173,18 @@ const Navbar1 = ({
               </Link>
 
               <div className="flex items-center gap-2">
-                <ModeToggle />
+                <div
+                  className="rounded-md border p-[0.8rem]"
+                  onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+                >
+                  {theme === 'light' && <Moon className="h-4 w-4" />}
+                  {theme === 'dark' && <Sun className="h-4 w-4" />}
+                </div>
 
                 <Sheet>
                   <SheetTrigger asChild>
                     <Button variant="outline" size="icon">
-                      <Menu className="size-4" />
+                      <Menu className="h-4 w-4" />
                     </Button>
                   </SheetTrigger>
                   <SheetContent className="overflow-y-auto">

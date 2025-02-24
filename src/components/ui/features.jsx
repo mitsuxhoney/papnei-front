@@ -212,7 +212,7 @@ const Feature108 = ({
 }) => {
   console.log(tabs[0].features)
   return (
-    <section className="py-16">
+    <section className="">
       <div className="mx-auto">
         <div className="flex flex-col items-center gap-4 text-center">
           <Badge variant="outline">{badge}</Badge>

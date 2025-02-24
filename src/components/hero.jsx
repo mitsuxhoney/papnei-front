@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils'
 import { Link } from 'react-router-dom'
 import HeroBadge from '@/components/ui/hero-badge'
 import { TiltedScroll } from './ui/tilted-scroll'
+import { Cover } from './ui/cover'
 
 const ease = [0.16, 1, 0.3, 1]
 
@@ -24,7 +25,12 @@ function HeroContent({
       >
         {title}{' '}
         {titleHighlight && (
-          <span className="text-primary">{titleHighlight}</span>
+          // <Cover>
+          // className="bg-clip-text text- text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white"
+          <span >
+            {titleHighlight}
+          </span>
+          // </Cover>
         )}
       </motion.h1>
       <motion.p

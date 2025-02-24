@@ -1,6 +1,7 @@
 import defaultTheme from 'tailwindcss/defaultTheme'
 import colors from 'tailwindcss/colors'
 import { default as flattenColorPalette } from 'tailwindcss/lib/util/flattenColorPalette'
+import scrollBarHide from 'tailwind-scrollbar-hide'
 
 /** @type {import('tailwindcss').Config} */
 
@@ -14,6 +15,7 @@ export default {
       },
       animation: {
         marquee: 'marquee var(--duration) linear infinite',
+        'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
         'skew-scroll': 'skew-scroll 20s linear infinite',
       },
       keyframes: {
@@ -29,6 +31,10 @@ export default {
             transform:
               'rotateX(20deg) rotateZ(-20deg) skewX(20deg) translateY(-100%)',
           },
+        },
+        'marquee-vertical': {
+          from: { transform: 'translateY(0)' },
+          to: { transform: 'translateY(calc(-100% - var(--gap)))' },
         },
       },
       borderRadius: {
@@ -80,7 +86,11 @@ export default {
       },
     },
   },
-  plugins: [require('tailwindcss-animate'), addVariablesForColors],
+  plugins: [
+    require('tailwindcss-animate'),
+    addVariablesForColors,
+    scrollBarHide,
+  ],
 }
 
 function addVariablesForColors({ addBase, theme }) {

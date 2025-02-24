@@ -24,6 +24,125 @@ import { FeaturesSectionWithHoverEffects } from '../../components/ui/features-ho
 import { Cta11 } from '../../components/ui/cta'
 import Wrapper from '../../components/Wrapper'
 import { MagicCard } from '../../components/ui/magic-card'
+import { Testimonials } from '../../components/ui/eldora-testimonials'
+import { Tabs } from '../../components/ui/aceternity-tabs'
+import { StickyScroll } from '../../components/ui/sticky-scroll-reveal'
+import { TracingBeam } from '../../components/ui/tracing-beam'
+import { FeatureSteps } from '../../components/steps-section'
+
+const DummyContent = () => {
+  return (
+    <img
+      src="https://ui.aceternity.com/_next/image?url=%2Flinear.webp&w=2048&q=75"
+      alt="dummy image"
+      width="1000"
+      height="1000"
+      className="object-cover object-left-top h-[60%] md:h-[90%] absolute -bottom-20 inset-x-0 w-[90%] rounded-xl mx-auto"
+    />
+  )
+}
+
+const tabs = [
+  {
+    title: 'Xettle',
+    value: 'Xettle',
+    content: (
+      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <p>Xettle</p>
+        <DummyContent />
+      </div>
+    ),
+  },
+  {
+    title: 'ONO',
+    value: 'ONO',
+    content: (
+      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <p>ONO</p>
+        <DummyContent />
+      </div>
+    ),
+  },
+  {
+    title: 'Privacy Card',
+    value: 'Privacy Card',
+    content: (
+      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <p>Privacy Card</p>
+        <DummyContent />
+      </div>
+    ),
+  },
+  {
+    title: 'Mahagram',
+    value: 'Mahagram',
+    content: (
+      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <p>Mahagram</p>
+        <DummyContent />
+      </div>
+    ),
+  },
+  {
+    title: 'Bharat ATM',
+    value: 'Bharat ATM',
+    content: (
+      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <p>Bharat ATM</p>
+        <DummyContent />
+      </div>
+    ),
+  },
+]
+
+const integrationsData = [
+  {
+    title: 'Collaborative Editing',
+    description:
+      'Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.',
+    content: (
+      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+        Collaborative Editing
+      </div>
+    ),
+  },
+  {
+    title: 'Real time changes',
+    description:
+      'See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.',
+    content: (
+      <div className="h-full w-full  flex items-center justify-center text-white">
+        <img
+          src="https://ui.aceternity.com/_next/image?url=%2Flinear.webp&w=640&q=75"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="linear board demo"
+        />
+      </div>
+    ),
+  },
+  {
+    title: 'Version control',
+    description:
+      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    content: (
+      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
+        Version control
+      </div>
+    ),
+  },
+  {
+    title: 'Running out of content',
+    description:
+      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    content: (
+      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+        Running out of content
+      </div>
+    ),
+  },
+]
 
 const cardData = [
   {
@@ -172,17 +291,47 @@ const cardsData = [
   },
 ]
 
+const featureSteps = [
+  {
+    step: 'Step 1',
+    title: 'Learn the Basics',
+    content: 'Start your Web3 journey by learning the basics of blockchain.',
+    image:
+      'https://images.unsplash.com/photo-1723958929247-ef054b525153?q=80&w=2070&auto=format&fit=crop',
+  },
+  {
+    step: 'Step 2',
+    title: 'Deep Dive',
+    content:
+      'Dive deep into blockchain fundamentals and smart contract development.',
+    image:
+      'https://images.unsplash.com/photo-1723931464622-b7df7c71e380?q=80&w=2070&auto=format&fit=crop',
+  },
+  {
+    step: 'Step 3',
+    title: 'Build Projects',
+    content:
+      'Graduate with hands-on Web3 experience through building decentralized applications.',
+    image:
+      'https://images.unsplash.com/photo-1725961476494-efa87ae3106a?q=80&w=2070&auto=format&fit=crop',
+  },
+]
+
 const Home = () => {
   const { theme } = useTheme()
   return (
     <div>
       <Wrapper>
-        <HeroDemo />
+        <div>
+          <HeroDemo />
+        </div>
         {/* <AnimatedTestimonialsDemo /> */}
-        <Logos3 />
+        <div>
+          <Logos3 />
+        </div>
         {/* <SpotlightCard cards={cardData} /> */}
 
-        <div className="w-full">
+        {/* <div className="w-full">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1280px] xl:max-w-[2160px] xl:gap-10 mx-auto">
             {cardsData?.map((card) => (
               <MagicCard
@@ -191,21 +340,47 @@ const Home = () => {
                 gradientColor={theme === 'dark' ? '#262626' : '#D9D9D955'}
               >
                 <div className="flex flex-col gap-4">
-                  <div className="flex items-center gap-2">{card.icon}</div>
-                  <h3>{card.title}</h3>
-                  <p>{card.description}</p>
+                  <div className="flex gap-2">
+                    <div className="flex items-center gap-2">{card.icon}</div>
+                    <h3 className=" text-neutral-800 dark:text-neutral-100 text-lg font-bold">
+                      {card.title}
+                    </h3>
+                  </div>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-300">
+                    {card.description}
+                  </p>
                 </div>
               </MagicCard>
             ))}
           </div>
+        </div> */}
+        <div className="mb-6">
+          <Feature108 {...tabsData} />
         </div>
 
-        <Feature108 {...tabsData} />
-        <TestimonialsSection
+        {/* <TestimonialsSection
           title="Trusted by developers worldwide"
           description="Join thousands of developers who are already building the future with our AI platform"
           testimonials={testimonials}
-        />
+        /> */}
+        <div className="mb-16">
+          <FeatureSteps
+            features={featureSteps}
+            title="Your Journey Starts Here"
+            autoPlayInterval={4000}
+            imageHeight="h-[500px]"
+          />
+        </div>
+
+        <div className="h-[30rem] md:h-[40rem] [perspective:1000px] relative flex flex-col mx-auto w-full items-center justify-start mb-40">
+          <Tabs
+            tabs={tabs}
+            activeTabClassName={`rounded-xl text-sm px-4 py-3 font-semibold text-primary`}
+          />
+        </div>
+        <div className="relative z-10 h-[600px] w-full overflow-hidden rounded-lg border bg-background mb-20">
+          <Testimonials />
+        </div>
       </Wrapper>
       <Cta11 {...ctaData} />
     </div>
