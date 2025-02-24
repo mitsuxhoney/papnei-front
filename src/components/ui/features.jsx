@@ -1,5 +1,5 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@radix-ui/react-tabs'
-import { Layout, Pointer, Zap } from 'lucide-react'
+import { Fingerprint, Layout, Pointer, Zap } from 'lucide-react'
 import {
   IconAdjustmentsBolt,
   IconCloud,
@@ -13,213 +13,254 @@ import {
 import { Badge } from '@/components/ui/badge'
 import { FeaturesSectionWithHoverEffects } from './features-hover'
 
+const features = {
+  badge: 'Products & Services',
+  heading: 'Our Products',
+  description:
+    'Discover our suite of verification services designed to enhance your business operations.',
+}
+
 const tabs = [
   {
     value: 'tab-1',
     icon: <Zap className="h-auto w-4 shrink-0" />,
-    label: 'Boost Revenue',
+    label: 'Business Verification',
     content: {
-      badge: 'Modern Tactics',
-      title: 'Make your site a true standout.',
+      badge: 'Trust & Compliance',
+      title: 'Verify Businesses with Ease',
       description:
-        'Discover new web trends that help you craft sleek, highly functional sites that drive traffic and convert leads into customers.',
-      buttonText: 'See Plans',
+        'Ensure business legitimacy with automated verification solutions for GST, PAN, and more.',
+      buttonText: 'Explore Solutions',
       imageSrc: 'https://shadcnblocks.com/images/block/placeholder-dark-1.svg',
-      imageAlt: 'placeholder',
+      imageAlt: 'Business Verification',
     },
     features: [
       {
-        title: 'Built for developers',
-        description:
-          'Built for engineers, developers, dreamers, thinkers and doers.',
+        title: 'GST Verification',
+        description: 'Validate GST details to ensure business legitimacy.',
         icon: <IconTerminal2 />,
       },
       {
-        title: 'Ease of use',
-        description:
-          "It's as easy as using an Apple, and as expensive as buying one.",
+        title: 'PAN Verification',
+        description: 'Verify business PAN for compliance and authenticity.',
         icon: <IconEaseInOut />,
       },
       {
-        title: 'Pricing like no other',
-        description:
-          'Our prices are best in the market. No cap, no lock, no credit card required.',
+        title: 'CIN Verification',
+        description: 'Check company registration details via MCA records.',
         icon: <IconCurrencyDollar />,
       },
       {
-        title: '100% Uptime guarantee',
-        description: 'We just cannot be taken down by anyone.',
-        icon: <IconCloud />,
-      },
-      {
-        title: 'Multi-tenant Architecture',
-        description:
-          'You can simply share passwords instead of buying new seats',
-        icon: <IconRouteAltLeft />,
-      },
-      {
-        title: '24/7 Customer Support',
-        description:
-          'We are available a 100% of the time. Atleast our AI Agents are.',
-        icon: <IconHelp />,
-      },
-      {
-        title: 'Money back guarantee',
-        description:
-          'If you donot like EveryAI, we will convince you to like us.',
+        title: 'Shop & Establishment Verification',
+        description: 'Confirm business registration under state laws.',
         icon: <IconAdjustmentsBolt />,
       },
       {
-        title: 'And everything else',
-        description:
-          'I just ran out of copy ideas. Accept my sincere apologies',
+        title: 'Bank Account Verification',
+        description: 'Instantly verify business bank account details.',
         icon: <IconHeart />,
+      },
+      {
+        title: 'UDYAM Registration Check',
+        description:
+          'Authenticate MSME registration for eligibility verification.',
+        icon: <IconRouteAltLeft />,
+      },
+      {
+        title: 'FSSAI License Verification',
+        description: 'Ensure food businesses are legally registered.',
+        icon: <IconHelp />,
+      },
+      {
+        title: 'Trademark Verification',
+        description: 'Validate trademark registration for brand protection.',
+        icon: <IconCloud />,
       },
     ],
   },
   {
     value: 'tab-2',
     icon: <Pointer className="h-auto w-4 shrink-0" />,
-    label: 'Higher Engagement',
+    label: 'Identity Verification',
     content: {
-      badge: 'Expert Features',
-      title: 'Boost your site with top-tier design.',
+      badge: 'Secure Identity',
+      title: 'Authenticate Identities Seamlessly',
       description:
-        'Use stellar design to easily engage users and strengthen their loyalty. Create a seamless experience that keeps them coming back for more.',
-      buttonText: 'See Tools',
+        'Leverage AI-driven verification for Aadhaar, PAN, and more to enhance security.',
+      buttonText: 'Get Started',
       imageSrc: 'https://shadcnblocks.com/images/block/placeholder-dark-2.svg',
-      imageAlt: 'placeholder',
+      imageAlt: 'Identity Verification',
     },
     features: [
       {
-        title: 'Built for developers',
+        title: 'Aadhaar Verification',
         description:
-          'Built for engineers, developers, dreamers, thinkers and doers.',
+          'Instantly verify Aadhaar details for identity authentication.',
         icon: <IconTerminal2 />,
       },
       {
-        title: 'Ease of use',
-        description:
-          "It's as easy as using an Apple, and as expensive as buying one.",
+        title: 'PAN Verification',
+        description: 'Validate individual PAN details for KYC compliance.',
         icon: <IconEaseInOut />,
       },
       {
-        title: 'Pricing like no other',
-        description:
-          'Our prices are best in the market. No cap, no lock, no credit card required.',
+        title: 'Driving License Check',
+        description: 'Confirm license validity and ownership.',
         icon: <IconCurrencyDollar />,
       },
       {
-        title: '100% Uptime guarantee',
-        description: 'We just cannot be taken down by anyone.',
-        icon: <IconCloud />,
-      },
-      {
-        title: 'Money back guarantee',
-        description:
-          'If you donot like EveryAI, we will convince you to like us.',
+        title: 'Voter ID Verification',
+        description: 'Authenticate voter ID details for user validation.',
         icon: <IconAdjustmentsBolt />,
       },
       {
-        title: 'And everything else',
-        description:
-          'I just ran out of copy ideas. Accept my sincere apologies',
+        title: 'Passport Verification',
+        description: 'Verify passport details for enhanced identification.',
         icon: <IconHeart />,
       },
       {
-        title: 'Multi-tenant Architecture',
-        description:
-          'You can simply share passwords instead of buying new seats',
+        title: 'Face Match',
+        description: 'Ensure user identity with AI-driven facial recognition.',
         icon: <IconRouteAltLeft />,
       },
       {
-        title: '24/7 Customer Support',
-        description:
-          'We are available a 100% of the time. Atleast our AI Agents are.',
+        title: 'OCR-Based Verification',
+        description: 'Extract & validate details from ID documents.',
         icon: <IconHelp />,
+      },
+      {
+        title: 'Liveness Detection',
+        description: 'Prevent fraud with real-time user authentication.',
+        icon: <IconCloud />,
       },
     ],
   },
   {
     value: 'tab-3',
     icon: <Layout className="h-auto w-4 shrink-0" />,
-    label: 'Stunning Layouts',
+    label: 'KYC & KYB',
     content: {
-      badge: 'Elite Solutions',
-      title: 'Build an advanced web experience.',
+      badge: 'Seamless Compliance',
+      title: 'KYC & KYB Made Simple',
       description:
-        'Lift your brand with modern tech that grabs attention and drives action. Create a digital experience that stands out from the crowd.',
-      buttonText: 'See Options',
+        'Automate user and business verification with cutting-edge compliance solutions.',
+      buttonText: 'See How',
       imageSrc: 'https://shadcnblocks.com/images/block/placeholder-dark-3.svg',
-      imageAlt: 'placeholder',
+      imageAlt: 'KYC & KYB',
     },
     features: [
       {
-        title: '100% Uptime guarantee',
-        description: 'We just cannot be taken down by anyone.',
-        icon: <IconCloud />,
-      },
-      {
-        title: 'Multi-tenant Architecture',
-        description:
-          'You can simply share passwords instead of buying new seats',
-        icon: <IconRouteAltLeft />,
-      },
-      {
-        title: '24/7 Customer Support',
-        description:
-          'We are available a 100% of the time. Atleast our AI Agents are.',
-        icon: <IconHelp />,
-      },
-      {
-        title: 'Money back guarantee',
-        description:
-          'If you donot like EveryAI, we will convince you to like us.',
-        icon: <IconAdjustmentsBolt />,
-      },
-      {
-        title: 'And everything else',
-        description:
-          'I just ran out of copy ideas. Accept my sincere apologies',
-        icon: <IconHeart />,
-      },
-      {
-        title: 'Built for developers',
-        description:
-          'Built for engineers, developers, dreamers, thinkers and doers.',
+        title: 'Video KYC',
+        description: 'Conduct live video verification for seamless onboarding.',
         icon: <IconTerminal2 />,
       },
       {
-        title: 'Ease of use',
-        description:
-          "It's as easy as using an Apple, and as expensive as buying one.",
+        title: 'Document Verification',
+        description: 'Authenticate ID proofs with AI-powered checks.',
         icon: <IconEaseInOut />,
       },
       {
-        title: 'Pricing like no other',
+        title: 'AML Screening',
         description:
-          'Our prices are best in the market. No cap, no lock, no credit card required.',
+          'Detect risks with automated Anti-Money Laundering checks.',
         icon: <IconCurrencyDollar />,
+      },
+      {
+        title: 'Address Verification',
+        description: 'Validate user-provided addresses with trusted sources.',
+        icon: <IconAdjustmentsBolt />,
+      },
+      {
+        title: 'Bank Statement Analysis',
+        description: 'Assess financial stability with automated insights.',
+        icon: <IconHeart />,
+      },
+      {
+        title: 'Income Proof Verification',
+        description: 'Confirm income details for risk assessment.',
+        icon: <IconRouteAltLeft />,
+      },
+      {
+        title: 'E-Sign with Aadhaar',
+        description: 'Secure agreements with Aadhaar-based digital signatures.',
+        icon: <IconHelp />,
+      },
+      {
+        title: 'Consent-Based Data Sharing',
+        description: 'Ensure compliance with user-approved data access.',
+        icon: <IconCloud />,
+      },
+    ],
+  },
+  {
+    value: 'tab-4',
+    icon: <Fingerprint className="h-auto w-4 shrink-0" />,
+    label: 'Aadhaar E-Sign',
+    content: {
+      badge: 'Digital Signing',
+      title: 'Legally Binding E-Signatures',
+      description:
+        'Simplify document signing with Aadhaar-based e-signature solutions.',
+      buttonText: 'Learn More',
+      imageSrc: 'https://shadcnblocks.com/images/block/placeholder-dark-4.svg',
+      imageAlt: 'Aadhaar E-Sign',
+    },
+    features: [
+      {
+        title: 'Aadhaar OTP E-Sign',
+        description: 'Digitally sign documents using Aadhaar-based OTP.',
+        icon: <IconTerminal2 />,
+      },
+      {
+        title: 'Biometric E-Sign',
+        description: 'Authenticate signatures with Aadhaar biometrics.',
+        icon: <IconEaseInOut />,
+      },
+      {
+        title: 'Digital Agreement Signing',
+        description: 'Enable legally binding e-signatures for contracts.',
+        icon: <IconCurrencyDollar />,
+      },
+      {
+        title: 'E-Mandate Registration',
+        description: 'Automate recurring payment authorizations.',
+        icon: <IconAdjustmentsBolt />,
+      },
+      {
+        title: 'NSDL-Based E-Sign',
+        description: 'Securely sign documents via NSDL integration.',
+        icon: <IconHeart />,
+      },
+      {
+        title: 'API-Based E-Sign',
+        description: 'Seamlessly integrate Aadhaar e-sign into your workflows.',
+        icon: <IconRouteAltLeft />,
+      },
+      {
+        title: 'Bulk Document Signing',
+        description: 'Sign multiple documents in a single workflow.',
+        icon: <IconHelp />,
+      },
+      {
+        title: 'Legal Validity & Compliance',
+        description: 'Ensure compliance with IT Act 2000 regulations.',
+        icon: <IconCloud />,
       },
     ],
   },
 ]
 
-const Feature108 = ({
-  badge = 'shadcnblocks.com',
-  heading = 'A Collection of Components Built With Shadcn & Tailwind',
-  description = 'Join us to build flawless web solutions.',
-}) => {
+const Feature108 = () => {
   console.log(tabs[0].features)
   return (
     <section className="">
       <div className="mx-auto">
         <div className="flex flex-col items-center gap-4 text-center">
-          <Badge variant="outline">{badge}</Badge>
+          <Badge variant="outline">{features.badge}</Badge>
           <h1 className="max-w-2xl text-3xl font-semibold md:text-4xl">
-            {heading}
+            {features.heading}
           </h1>
-          <p className="text-muted-foreground">{description}</p>
+          <p className="text-muted-foreground">{features.description}</p>
         </div>
         <Tabs defaultValue={tabs[0].value} className="mt-8">
           <TabsList className="flex flex-col justify-center gap-4 sm:flex-row md:gap-10">

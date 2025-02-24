@@ -33,7 +33,7 @@ function HeroContent({
         )}
       </motion.h1>
       <motion.p
-        className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8"
+        className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-7"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1, duration: 0.8, ease }}

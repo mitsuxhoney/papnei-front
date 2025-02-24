@@ -6,7 +6,7 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from '@/components/ui/carousel'
+} from '@/components/ui/eldora-carousel'
 
 const data = [
   {
@@ -87,13 +87,13 @@ const CaseStudies = ({
       <div className="mx-auto ">
         <div className="mb-8 flex items-center justify-center md:mb-14 lg:mb-16">
           <div className="flex flex-col items-center gap-4 text-center mb-10">
-            <Badge variant="outline">How it works ?</Badge>
+            <Badge variant="outline">Success Stories</Badge>
             <h1 className="max-w-2xl text-3xl font-semibold md:text-4xl">
-              Simple Integration
+              Case Studies
             </h1>
             <p className="text-muted-foreground">
-              Our API is designed to be developer-friendly and easy to
-              implement.
+              Real-world success stories highlighting our impact, expertise, and
+              innovative solutions.
             </p>
           </div>
         </div>

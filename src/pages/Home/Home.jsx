@@ -1,7 +1,16 @@
 import HeroDemo from '../../components/HeroDemo'
 import { FaReact } from 'react-icons/fa'
 import { SiNextdotjs, SiFramer } from 'react-icons/si'
-import { Logos3 } from '../../components/ui/logos3'
+import { Logos3 as Partners } from '../../components/ui/logos3'
+
+import { MdOutlineFormatQuote } from 'react-icons/md'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/eldora-carousel'
 
 import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid'
 
@@ -19,7 +28,7 @@ import {
   IconTableColumn,
 } from '@tabler/icons-react'
 import { Layout, Pointer, Zap } from 'lucide-react'
-import { Feature108 } from '@/components/ui/features'
+import { Feature108 as Features } from '@/components/ui/features'
 import { FeaturesSectionWithHoverEffects } from '../../components/ui/features-hover'
 import { Cta11 } from '../../components/ui/cta'
 import Wrapper from '../../components/Wrapper'
@@ -28,9 +37,10 @@ import { Testimonials } from '../../components/ui/eldora-testimonials'
 import { Tabs } from '../../components/ui/aceternity-tabs'
 import { StickyScroll } from '../../components/ui/sticky-scroll-reveal'
 import { TracingBeam } from '../../components/ui/tracing-beam'
-import { FeatureSteps } from '../../components/steps-section'
+import { FeatureSteps as StepsIntegration } from '../../components/steps-section'
 import { CaseStudies } from '../../components/case-studies'
 import { FAQCTA } from '../../components/faq-cta'
+import { EldoraTestimonials } from '../../components/eldora-testimonials'
 
 const DummyContent = () => {
   return (
@@ -296,78 +306,78 @@ const cardsData = [
 const featureSteps = [
   {
     step: 'Step 1',
-    title: 'Learn the Basics',
-    content: 'Start your Web3 journey by learning the basics of blockchain.',
+    title: 'Get Started Instantly',
+    content: 'Sign up and access our API dashboard in minutes.',
     image:
       'https://images.unsplash.com/photo-1723958929247-ef054b525153?q=80&w=2070&auto=format&fit=crop',
   },
   {
     step: 'Step 2',
-    title: 'Deep Dive',
+    title: 'Integrate with Ease',
     content:
-      'Dive deep into blockchain fundamentals and smart contract development.',
+      'Use our well-documented APIs to connect seamlessly with your system.',
     image:
       'https://images.unsplash.com/photo-1723931464622-b7df7c71e380?q=80&w=2070&auto=format&fit=crop',
   },
   {
     step: 'Step 3',
-    title: 'Build Projects',
+    title: 'Automate Verification',
     content:
-      'Graduate with hands-on Web3 experience through building decentralized applications.',
+      'Leverage our real-time verification tools to enhance security and compliance.',
     image:
       'https://images.unsplash.com/photo-1725961476494-efa87ae3106a?q=80&w=2070&auto=format&fit=crop',
   },
 ]
 
 const caseStudiesData = {
-  title: 'Projects',
+  title: 'Case Studies',
   description:
-    'Discover how leading companies and developers are leveraging modern web technologies to build exceptional digital experiences. These case studies showcase real-world applications and success stories.',
+    'Real-world success stories highlighting our impact, expertise, and innovative solutions.',
   items: [
     {
-      id: 'shadcn-ui',
-      title: 'shadcn/ui: Building a Modern Component Library',
+      id: 'study1',
+      title: 'Business Verification: Ensuring Trust & Compliance',
       description:
-        'Explore how shadcn/ui revolutionized React component libraries by providing a unique approach to component distribution and customization, making it easier for developers to build beautiful, accessible applications.',
+        'How our GST, PAN, and Bank Account verification helped businesses maintain compliance and prevent fraud.',
       href: 'https://ui.shadcn.com',
       image:
         'https://images.unsplash.com/photo-1551250928-243dc937c49d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2NDI3NzN8MHwxfGFsbHwxMjN8fHx8fHwyfHwxNzIzODA2OTM5fA&ixlib=rb-4.0.3&q=80&w=1080',
     },
     {
-      id: 'tailwind',
-      title: 'Tailwind CSS: The Utility-First Revolution',
+      id: 'study2',
+      title: 'Identity Verification: Enhancing Security & User Trust',
       description:
-        'Discover how Tailwind CSS transformed the way developers style their applications, offering a utility-first approach that speeds up development while maintaining complete design flexibility.',
+        'Learn how our Aadhaar, PAN, and other identity verification services reduced fraud and streamlined onboarding.',
+      href: 'https://nextjs.org',
+      image:
+        'https://images.unsplash.com/photo-1550070881-a5d71eda5800?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2NDI3NzN8MHwxfGFsbHwxMjV8fHx8fHwyfHwxNzIzNDM1Mjk4fA&ixlib=rb-4.0.3&q=80&w=1080',
+    },
+    {
+      id: 'study3',
+      title: 'Aadhaar E-Sign: Simplifying Digital Transactions',
+      description:
+        'Discover how Aadhaar E-Sign transformed businesses by enabling secure, legally compliant document signing.',
       href: 'https://tailwindcss.com',
       image:
         'https://images.unsplash.com/photo-1551250928-e4a05afaed1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2NDI3NzN8MHwxfGFsbHwxMjR8fHx8fHwyfHwxNzIzODA2OTM5fA&ixlib=rb-4.0.3&q=80&w=1080',
     },
     {
-      id: 'astro',
-      title: 'Astro: The All-in-One Web Framework',
+      id: 'study4',
+      title: 'Trademark & FSSAI Verification: Protecting Brands & Businesses',
       description:
-        "Learn how Astro's innovative 'Islands Architecture' and zero-JS-by-default approach is helping developers build faster websites while maintaining rich interactivity where needed.",
+        'Case study on how businesses safeguarded their brand identity and ensured regulatory compliance.',
       href: 'https://astro.build',
       image:
         'https://images.unsplash.com/photo-1536735561749-fc87494598cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2NDI3NzN8MHwxfGFsbHwxNzd8fHx8fHwyfHwxNzIzNjM0NDc0fA&ixlib=rb-4.0.3&q=80&w=1080',
     },
     {
-      id: 'react',
-      title: 'React: Pioneering Component-Based UI',
+      id: 'study5',
+      title: 'KYC & KYB: Enabling Seamless Customer Onboarding',
       description:
-        'See how React continues to shape modern web development with its component-based architecture, enabling developers to build complex user interfaces with reusable, maintainable code.',
+        'How our Video KYC and document verification solutions accelerated user onboarding and compliance processes.',
       href: 'https://react.dev',
       image:
         'https://images.unsplash.com/photo-1548324215-9133768e4094?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2NDI3NzN8MHwxfGFsbHwxMzF8fHx8fHwyfHwxNzIzNDM1MzA1fA&ixlib=rb-4.0.3&q=80&w=1080',
-    },
-    {
-      id: 'nextjs',
-      title: 'Next.js: The React Framework for Production',
-      description:
-        'Explore how Next.js has become the go-to framework for building full-stack React applications, offering features like server components, file-based routing, and automatic optimization.',
-      href: 'https://nextjs.org',
-      image:
-        'https://images.unsplash.com/photo-1550070881-a5d71eda5800?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2NDI3NzN8MHwxfGFsbHwxMjV8fHx8fHwyfHwxNzIzNDM1Mjk4fA&ixlib=rb-4.0.3&q=80&w=1080',
     },
   ],
 }
@@ -425,10 +435,9 @@ const Home = () => {
         </div>
         {/* <AnimatedTestimonialsDemo /> */}
         <div>
-          <Logos3 />
+          <Partners />
         </div>
         {/* <SpotlightCard cards={cardData} /> */}
-
         {/* <div className="w-full">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1280px] xl:max-w-[2160px] xl:gap-10 mx-auto">
             {cardsData?.map((card) => (
@@ -453,23 +462,21 @@ const Home = () => {
           </div>
         </div> */}
         <div className="mb-6">
-          <Feature108 {...tabsData} />
+          <Features {...tabsData} />
         </div>
-
         {/* <TestimonialsSection
           title="Trusted by developers worldwide"
           description="Join thousands of developers who are already building the future with our AI platform"
           testimonials={testimonials}
         /> */}
         <div className="mb-16">
-          <FeatureSteps
+          <StepsIntegration
             features={featureSteps}
             title="Your Journey Starts Here"
             autoPlayInterval={4000}
             imageHeight="h-[500px]"
           />
         </div>
-
         <div className="">
           <CaseStudies {...caseStudiesData} />
         </div>

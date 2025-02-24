@@ -2,6 +2,7 @@ import { Hero } from '@/components/hero'
 import { Icons } from '@/components/ui/icons'
 import { ProjectStatusCard } from '@/components/ui/expandable-card'
 import { BackgroundBeamsWithCollision } from './ui/background-beams-with-collision'
+import { Key } from 'lucide-react'
 
 const tiltedItems = [
   { id: '1', text: 'Feature One' },
@@ -22,17 +23,17 @@ function HeroDemo() {
         size: 'md',
       }}
       content={{
-        title: 'Build beautiful apps',
-        titleHighlight: 'with ease',
+        title: 'Instant. Secure. Hassle-Free Verification',
+
         description:
-          'A modern component library with beautiful defaults and endless customization options. Start building your next project faster.',
+          'Integrate our robust APIs to streamline Business Verification, Identity Verification, KYC/KYB compliance, and Aadhaar E-Sign processes.',
         primaryAction: {
           href: '/docs/getting-started',
           text: 'Get API Keys',
-          icon: <Icons.logo className="h-4 w-4" />,
+          icon: <Key className="h-4 w-4" />,
         },
         secondaryAction: {
-          href: '/components',
+          href: '/contact-us',
           text: 'Contact Sales',
           icon: <Icons.component className="h-4 w-4" />,
         },

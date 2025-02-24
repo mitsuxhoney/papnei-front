@@ -32,10 +32,11 @@ export function FeatureSteps({
         <div className="flex flex-col items-center gap-4 text-center mb-10">
           <Badge variant="outline">How it works ?</Badge>
           <h1 className="max-w-2xl text-3xl font-semibold md:text-4xl">
-            Simple Integration
+            Seamless API Integration
           </h1>
           <p className="text-muted-foreground">
-            Our API is designed to be developer-friendly and easy to implement.
+            Our APIs are designed to be developer-friendly, secure, and easy to
+            implement—ensuring a hassle-free verification process.
           </p>
         </div>
 

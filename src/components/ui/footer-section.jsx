@@ -21,6 +21,7 @@ import {
 } from 'lucide-react'
 import { useTheme } from '@/components/theme-provider'
 import Wrapper from '../Wrapper'
+import { Link } from 'react-router-dom'
 
 function Footerdemo() {
   const [visible, setVisible] = React.useState(false)
@@ -67,36 +68,30 @@ function Footerdemo() {
             <div>
               <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
               <nav className="space-y-2 text-sm">
-                <a
+                <Link
                   href="#"
                   className="block transition-colors hover:text-primary"
                 >
                   Home
-                </a>
-                <a
-                  href="#"
-                  className="block transition-colors hover:text-primary"
-                >
-                  About Us
-                </a>
-                <a
-                  href="#"
-                  className="block transition-colors hover:text-primary"
-                >
-                  Services
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#"
                   className="block transition-colors hover:text-primary"
                 >
                   Products
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#"
                   className="block transition-colors hover:text-primary"
                 >
-                  Contact
-                </a>
+                  Contact Us
+                </Link>
+                <Link
+                  href="#"
+                  className="block transition-colors hover:text-primary"
+                >
+                  About Us
+                </Link>
               </nav>
             </div>
             <div>
@@ -201,15 +196,12 @@ function Footerdemo() {
               © 2024 Your Company. All rights reserved.
             </p>
             <nav className="flex gap-4 text-sm">
-              <a href="#" className="transition-colors hover:text-primary">
+              <Link to="#" className="transition-colors hover:text-primary">
                 Privacy Policy
-              </a>
-              <a href="#" className="transition-colors hover:text-primary">
+              </Link>
+              <Link to="#" className="transition-colors hover:text-primary">
                 Terms of Service
-              </a>
-              <a href="#" className="transition-colors hover:text-primary">
-                Cookie Settings
-              </a>
+              </Link>
             </nav>
             <div
               className={`fixed bottom-8 right-8 ${visible ? '' : 'hidden'}`}

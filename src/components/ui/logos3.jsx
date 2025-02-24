@@ -7,7 +7,7 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from '@/components/ui/carousel'
+} from '@/components/ui/eldora-carousel'
 
 const Logos3 = ({
   heading = '',

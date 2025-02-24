@@ -1,4 +1,15 @@
-import { Book, Menu, Moon, Sun, Sunset, Trees, Zap } from 'lucide-react'
+import {
+  Book,
+  Fingerprint,
+  Handshake,
+  IdCard,
+  Menu,
+  Moon,
+  Sun,
+  Sunset,
+  Trees,
+  Zap,
+} from 'lucide-react'
 
 import {
   Accordion,
@@ -42,76 +53,35 @@ const Navbar1 = ({
   },
 
   menu = [
-    { title: 'Home', url: '/' },
     {
       title: 'Products',
-      url: '#',
+      url: '',
       items: [
         {
-          title: 'Blog',
-          description: 'The latest industry news, updates, and info',
-          icon: <Book className="size-5 shrink-0" />,
-          url: '#',
-        },
-        {
-          title: 'Company',
-          description: 'Our mission is to innovate and empower the world',
-          icon: <Trees className="size-5 shrink-0" />,
-          url: '#',
-        },
-        {
-          title: 'Careers',
-          description: 'Browse job listing and discover our workspace',
-          icon: <Sunset className="size-5 shrink-0" />,
-          url: '#',
-        },
-        {
-          title: 'Support',
+          title: 'Business Verification',
           description:
-            'Get in touch with our support team or visit our community forums',
-          icon: <Zap className="size-5 shrink-0" />,
-          url: '#',
+            'Quick and secure verification to ensure business credibility and compliance.',
+          icon: <Handshake className="size-5 shrink-0" />,
+          url: '/business',
+        },
+        {
+          title: 'Identity Verfication',
+          description:
+            'Seamless and secure identity authentication to prevent fraud and enhance trust.',
+          icon: <Fingerprint className="size-5 shrink-0" />,
+          url: '/identity',
+        },
+        {
+          title: 'Aadhar E-Sign',
+          description:
+            'Legally sign documents online with Aadhar for a fast, paperless experience.',
+          icon: <IdCard className="size-5 shrink-0" />,
+          url: '/aadhar',
         },
       ],
     },
-    {
-      title: 'Resources',
-      url: '#',
-      items: [
-        {
-          title: 'Help Center',
-          description: 'Get all the answers you need right here',
-          icon: <Zap className="size-5 shrink-0" />,
-          url: '#',
-        },
-        {
-          title: 'Contact Us',
-          description: 'We are here to help you with any questions you have',
-          icon: <Sunset className="size-5 shrink-0" />,
-          url: '#',
-        },
-        {
-          title: 'Status',
-          description: 'Check the current status of our services and APIs',
-          icon: <Trees className="size-5 shrink-0" />,
-          url: '#',
-        },
-        {
-          title: 'Terms of Service',
-          description: 'Our terms and conditions for using our services',
-          icon: <Book className="size-5 shrink-0" />,
-          url: '#',
-        },
-      ],
-    },
-    {
-      title: 'Pricing',
-      url: '#',
-    },
-    {
-      title: 'Blog',
-      url: '#',
-    },
+    { title: 'Contact Us', url: '/contact-us' },
+    { title: 'About Us', url: '/about-us' },
   ],
 
   mobileExtraLinks = [
@@ -129,7 +99,7 @@ const Navbar1 = ({
   const { theme, setTheme } = useTheme()
   return (
     <Wrapper>
-      <section className="py-4">
+      <section className="py-4 select-none">
         <div className="mx-auto">
           <nav className="hidden justify-between lg:flex left-0 right-0 ">
             <ScrollProgress className="top-[72px]" />

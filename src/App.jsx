@@ -4,6 +4,8 @@ import Layout from './components/Layout'
 import Aadhar from './pages/Aadhar/Aadhar'
 import Business from './pages/Business/Business'
 import Identity from './pages/Identity/Identity'
+import ContactUs from './pages/ContactUs/ContactUs'
+import AboutUs from './pages/AboutUs/AboutUs'
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Route path="/aadhar" element={<Aadhar />} />
         <Route path="/business" element={<Business />} />
         <Route path="/identity" element={<Identity />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/about-us" element={<AboutUs />} />
       </Route>
       <Route
         path="/*"
