@@ -16,8 +16,8 @@ function HeroDemo() {
   return (
     <Hero
       pill={{
-        text: 'New! PrismUI Components',
-        href: '/docs',
+        text: "Introducing new API's",
+        href: '/',
         icon: <Icons.logo className="h-4 w-4" />,
         variant: 'default',
         size: 'md',

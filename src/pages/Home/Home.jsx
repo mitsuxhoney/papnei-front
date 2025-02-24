@@ -3,20 +3,8 @@ import { FaReact } from 'react-icons/fa'
 import { SiNextdotjs, SiFramer } from 'react-icons/si'
 import { Logos3 as Partners } from '../../components/ui/logos3'
 
-import { MdOutlineFormatQuote } from 'react-icons/md'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/eldora-carousel'
-
-import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid'
-
 import { useTheme } from '@/components/theme-provider'
 
-import { TestimonialsSection } from '@/components/ui/testimonials-with-marquee'
 // import Squares from '@/components/ui/Squares'
 import {
   IconArrowWaveRightUp,
@@ -40,7 +28,6 @@ import { TracingBeam } from '../../components/ui/tracing-beam'
 import { FeatureSteps as StepsIntegration } from '../../components/steps-section'
 import { CaseStudies } from '../../components/case-studies'
 import { FAQCTA } from '../../components/faq-cta'
-import { EldoraTestimonials } from '../../components/eldora-testimonials'
 
 const DummyContent = () => {
   return (
