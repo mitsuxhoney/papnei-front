@@ -155,7 +155,7 @@ const Navbar1 = ({
                 <Link to={auth.signup.url}>{auth.signup.text}</Link>
               </Button>
               <div
-                className="rounded-md border p-2.5"
+                className="rounded-md border p-2.5 hover:bg-muted cursor-pointer"
                 onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
               >
                 {theme === 'light' && <Moon className="h-4 w-4" />}
@@ -174,7 +174,7 @@ const Navbar1 = ({
 
               <div className="flex items-center gap-2">
                 <div
-                  className="rounded-md border p-[0.8rem]"
+                  className="rounded-md border p-[0.7rem] hover:bg-muted cursor-pointer"
                   onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
                 >
                   {theme === 'light' && <Moon className="h-4 w-4" />}

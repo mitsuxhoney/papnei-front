@@ -29,6 +29,8 @@ import { Tabs } from '../../components/ui/aceternity-tabs'
 import { StickyScroll } from '../../components/ui/sticky-scroll-reveal'
 import { TracingBeam } from '../../components/ui/tracing-beam'
 import { FeatureSteps } from '../../components/steps-section'
+import { CaseStudies } from '../../components/case-studies'
+import { FAQCTA } from '../../components/faq-cta'
 
 const DummyContent = () => {
   return (
@@ -317,6 +319,102 @@ const featureSteps = [
   },
 ]
 
+const caseStudiesData = {
+  title: 'Projects',
+  description:
+    'Discover how leading companies and developers are leveraging modern web technologies to build exceptional digital experiences. These case studies showcase real-world applications and success stories.',
+  items: [
+    {
+      id: 'shadcn-ui',
+      title: 'shadcn/ui: Building a Modern Component Library',
+      description:
+        'Explore how shadcn/ui revolutionized React component libraries by providing a unique approach to component distribution and customization, making it easier for developers to build beautiful, accessible applications.',
+      href: 'https://ui.shadcn.com',
+      image:
+        'https://images.unsplash.com/photo-1551250928-243dc937c49d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2NDI3NzN8MHwxfGFsbHwxMjN8fHx8fHwyfHwxNzIzODA2OTM5fA&ixlib=rb-4.0.3&q=80&w=1080',
+    },
+    {
+      id: 'tailwind',
+      title: 'Tailwind CSS: The Utility-First Revolution',
+      description:
+        'Discover how Tailwind CSS transformed the way developers style their applications, offering a utility-first approach that speeds up development while maintaining complete design flexibility.',
+      href: 'https://tailwindcss.com',
+      image:
+        'https://images.unsplash.com/photo-1551250928-e4a05afaed1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2NDI3NzN8MHwxfGFsbHwxMjR8fHx8fHwyfHwxNzIzODA2OTM5fA&ixlib=rb-4.0.3&q=80&w=1080',
+    },
+    {
+      id: 'astro',
+      title: 'Astro: The All-in-One Web Framework',
+      description:
+        "Learn how Astro's innovative 'Islands Architecture' and zero-JS-by-default approach is helping developers build faster websites while maintaining rich interactivity where needed.",
+      href: 'https://astro.build',
+      image:
+        'https://images.unsplash.com/photo-1536735561749-fc87494598cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2NDI3NzN8MHwxfGFsbHwxNzd8fHx8fHwyfHwxNzIzNjM0NDc0fA&ixlib=rb-4.0.3&q=80&w=1080',
+    },
+    {
+      id: 'react',
+      title: 'React: Pioneering Component-Based UI',
+      description:
+        'See how React continues to shape modern web development with its component-based architecture, enabling developers to build complex user interfaces with reusable, maintainable code.',
+      href: 'https://react.dev',
+      image:
+        'https://images.unsplash.com/photo-1548324215-9133768e4094?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2NDI3NzN8MHwxfGFsbHwxMzF8fHx8fHwyfHwxNzIzNDM1MzA1fA&ixlib=rb-4.0.3&q=80&w=1080',
+    },
+    {
+      id: 'nextjs',
+      title: 'Next.js: The React Framework for Production',
+      description:
+        'Explore how Next.js has become the go-to framework for building full-stack React applications, offering features like server components, file-based routing, and automatic optimization.',
+      href: 'https://nextjs.org',
+      image:
+        'https://images.unsplash.com/photo-1550070881-a5d71eda5800?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2NDI3NzN8MHwxfGFsbHwxMjV8fHx8fHwyfHwxNzIzNDM1Mjk4fA&ixlib=rb-4.0.3&q=80&w=1080',
+    },
+  ],
+}
+
+const FAQCTAData = {
+  heading: 'Frequently asked questions',
+  description:
+    "Everything you need to know about shadcnblocks. Can't find the answer you're looking for? Feel free to contact our support team.",
+  items: [
+    {
+      id: 'faq-1',
+      question: 'What is shadcnblocks?',
+      answer:
+        'shadcnblocks is a collection of ready-to-use block components built on top of shadcn/ui, designed to help you build beautiful websites faster.',
+    },
+    {
+      id: 'faq-2',
+      question: 'How do I install shadcnblocks?',
+      answer:
+        'shadcnblocks components are designed to be copied and pasted into your project. Simply browse the components, click on the one you want to use, and copy the code directly into your project. This gives you full control over the code and allows for easy customization.',
+    },
+    {
+      id: 'faq-3',
+      question: 'Is shadcnblocks free to use?',
+      answer:
+        'Yes, shadcnblocks is open-source and free to use in both personal and commercial projects. You can customize and modify the blocks to suit your needs.',
+    },
+    {
+      id: 'faq-4',
+      question: 'Can I customize the blocks?',
+      answer:
+        'Absolutely! All blocks are built with customization in mind. You can modify the styling, content, and behavior through props and Tailwind CSS classes.',
+    },
+    {
+      id: 'faq-5',
+      question: 'Do you offer support?',
+      answer:
+        'Yes, we provide support through our GitHub repository where you can report issues, suggest features, or ask questions about implementation.',
+    },
+  ],
+  supportHeading: 'Still have questions?',
+  supportDescription:
+    "Can't find the answer you're looking for? Our support team is here to help with any technical questions or concerns.",
+  supportButtonText: 'Contact Support',
+  supportButtonUrl: 'https://shadcnblocks.com',
+}
+
 const Home = () => {
   const { theme } = useTheme()
   return (
@@ -372,17 +470,15 @@ const Home = () => {
           />
         </div>
 
-        <div className="h-[30rem] md:h-[40rem] [perspective:1000px] relative flex flex-col mx-auto w-full items-center justify-start mb-40">
-          <Tabs
-            tabs={tabs}
-            activeTabClassName={`rounded-xl text-sm px-4 py-3 font-semibold text-primary`}
-          />
+        <div className="">
+          <CaseStudies {...caseStudiesData} />
         </div>
         <div className="relative z-10 h-[600px] w-full overflow-hidden rounded-lg border bg-background mb-20">
           <Testimonials />
         </div>
       </Wrapper>
-      <Cta11 {...ctaData} />
+      <FAQCTA {...FAQCTAData} />
+      {/* <Cta11 {...ctaData} /> */}
     </div>
   )
 }

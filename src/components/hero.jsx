@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import HeroBadge from '@/components/ui/hero-badge'
 import { TiltedScroll } from './ui/tilted-scroll'
 import { Cover } from './ui/cover'
+import { AnimatedBeamDemo } from './ui/animated-beam-hero'
 
 const ease = [0.16, 1, 0.3, 1]
 
@@ -27,9 +28,7 @@ function HeroContent({
         {titleHighlight && (
           // <Cover>
           // className="bg-clip-text text- text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white"
-          <span >
-            {titleHighlight}
-          </span>
+          <span>{titleHighlight}</span>
           // </Cover>
         )}
       </motion.h1>
@@ -59,7 +58,7 @@ function HeroContent({
             {primaryAction.text}
           </Link>
         )}
-        {secondaryAction && (
+        {/* {secondaryAction && (
           <Link
             path={secondaryAction.href}
             className={cn(
@@ -70,7 +69,7 @@ function HeroContent({
             {secondaryAction.icon}
             {secondaryAction.text}
           </Link>
-        )}
+        )} */}
       </motion.div>
     </div>
   )
@@ -84,10 +83,8 @@ const Hero = ({ pill, content, preview }) => {
           {pill && <HeroBadge {...pill} />}
           <HeroContent {...content} />
         </div>
-        <div className="pr-28">
-          {preview && (
-            <TiltedScroll items={preview} className="mt-8 hidden lg:block " />
-          )}
+        <div className="w-full">
+          <AnimatedBeamDemo />
         </div>
       </div>
     </div>
