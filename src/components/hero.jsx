@@ -83,9 +83,8 @@ const Hero = ({ pill, content, preview }) => {
           {pill && <HeroBadge {...pill} />}
           <HeroContent {...content} />
         </div>
-        <div className="w-full">
-          <AnimatedBeamDemo />
-        </div>
+
+        <AnimatedBeamDemo />
       </div>
     </div>
   )

@@ -73,7 +73,7 @@ const FAQCTA = ({
             {faqItems.map((item) => (
               <AccordionItem key={item.id} value={item.id}>
                 <AccordionTrigger className="transition-opacity duration-200 hover:no-underline">
-                  <div className="font-medium sm:py-1 lg:py-2 text-lg">
+                  <div className="font-medium sm:py-1 lg:py-2 text-lg text-left">
                     {item.question}
                   </div>
                 </AccordionTrigger>
