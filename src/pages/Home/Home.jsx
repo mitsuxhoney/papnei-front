@@ -2,32 +2,21 @@ import HeroDemo from '../../components/HeroDemo'
 import { FaReact } from 'react-icons/fa'
 import { SiNextdotjs, SiFramer } from 'react-icons/si'
 import { Logos3 as Partners } from '../../components/ui/logos3'
-
 import { useTheme } from '@/components/theme-provider'
-
-// import Squares from '@/components/ui/Squares'
 import {
-  IconArrowWaveRightUp,
-  IconBoxAlignRightFilled,
-  IconBoxAlignTopLeft,
   IconClipboardCopy,
   IconFileBroken,
   IconSignature,
-  IconTableColumn,
 } from '@tabler/icons-react'
-import { Layout, Pointer, Zap } from 'lucide-react'
+import { Icons } from '@/components/ui/icons'
+import { Key, Layout, Pointer, Zap } from 'lucide-react'
 import { Feature108 as Features } from '@/components/ui/features'
-import { FeaturesSectionWithHoverEffects } from '../../components/ui/features-hover'
-import { Cta11 } from '../../components/ui/cta'
 import Wrapper from '../../components/Wrapper'
-import { MagicCard } from '../../components/ui/magic-card'
 import { Testimonials } from '../../components/ui/eldora-testimonials'
-import { Tabs } from '../../components/ui/aceternity-tabs'
-import { StickyScroll } from '../../components/ui/sticky-scroll-reveal'
-import { TracingBeam } from '../../components/ui/tracing-beam'
 import { FeatureSteps as StepsIntegration } from '../../components/steps-section'
 import { CaseStudies } from '../../components/case-studies'
 import { FAQCTA } from '../../components/faq-cta'
+import { AnimatedBeamDemo as HomeHero } from '../../components/ui/animated-beam-hero'
 
 const DummyContent = () => {
   return (
@@ -412,13 +401,42 @@ const FAQCTAData = {
   supportButtonUrl: 'https://shadcnblocks.com',
 }
 
+const homeHeroContent = {
+  title: 'Instant. Secure. Hassle-Free Verification',
+
+  description:
+    'Integrate our robust APIs to streamline Business Verification, Identity Verification, KYC/KYB compliance, and Aadhaar E-Sign processes.',
+  primaryAction: {
+    href: '/docs/getting-started',
+    text: 'Get API Keys',
+    icon: <Key className="h-4 w-4" />,
+  },
+  secondaryAction: {
+    href: '/contact-us',
+    text: 'Contact Sales',
+    icon: <Icons.component className="h-4 w-4" />,
+  },
+}
+
+const homeHeroBadge = {
+  text: "Introducing new API's",
+  href: '/',
+  icon: <Icons.logo className="h-4 w-4" />,
+  variant: 'default',
+  size: 'md',
+}
+
 const Home = () => {
   const { theme } = useTheme()
   return (
     <div>
       <Wrapper>
         <div>
-          <HeroDemo />
+          <HeroDemo
+            preview={<HomeHero />}
+            content={homeHeroContent}
+            pill={homeHeroBadge}
+          />
         </div>
         {/* <AnimatedTestimonialsDemo /> */}
         <div>

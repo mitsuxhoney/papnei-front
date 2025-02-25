@@ -130,10 +130,10 @@ const CaseStudies = ({
               {items.map((item) => (
                 <CarouselItem
                   key={item.id}
-                  className="max-w-[320px] lg:max-w-[360px] basis-1/2 md:basis-1/3 mx-auto"
+                  className="max-w-[320px] lg:max-w-[360px] basis-[100%] md:basis-1/3 mx-auto"
                 >
                   <Link to={item.href} className="group rounded-xl">
-                    <div className="group relative h-full min-h-[20rem] lg:min-h-[24rem] max-w-full overflow-hidden rounded-xl md:aspect-[5/4] lg:aspect-[16/9]">
+                    <div className="group relative h-full min-h-[18rem] lg:min-h-[24rem] max-w-full overflow-hidden rounded-xl md:aspect-[5/4] lg:aspect-[16/9]">
                       <img
                         src={item.image}
                         alt={item.title}

@@ -84,7 +84,7 @@ const Hero = ({ pill, content, preview }) => {
           <HeroContent {...content} />
         </div>
 
-        <AnimatedBeamDemo />
+        {preview}
       </div>
     </div>
   )
