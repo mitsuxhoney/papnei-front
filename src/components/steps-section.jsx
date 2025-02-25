@@ -66,10 +66,10 @@ export function FeatureSteps({
                 </motion.div>
 
                 <div className="flex-1">
-                  <h3 className="text-xl md:text-2xl font-semibold">
+                  <h3 className="max-md:text-xs md:text-2xl font-semibold">
                     {feature.title || feature.step}
                   </h3>
-                  <p className="text-sm md:text-lg text-muted-foreground">
+                  <p className="max-md:text-sm md:text-lg text-muted-foreground">
                     {feature.content}
                   </p>
                 </div>
@@ -79,7 +79,7 @@ export function FeatureSteps({
 
           <div
             className={cn(
-              'order-1 md:order-2 relative h-[180px] md:h-[250px] lg:h-[370px] overflow-hidden rounded-lg'
+              'order-1 md:order-2 relative lg:h-[370px] overflow-hidden rounded-lg'
             )}
           >
             <AnimatePresence mode="wait">
@@ -94,13 +94,15 @@ export function FeatureSteps({
                       exit={{ y: -100, opacity: 0, rotateX: 20 }}
                       transition={{ duration: 0.5, ease: 'easeInOut' }}
                     >
-                      <img
-                        src={feature.image}
-                        alt={feature.step}
-                        className="w-full h-full object-cover transition-transform transform"
-                        width={800}
-                        height={400}
-                      />
+                      
+                        <img
+                          src={feature.image}
+                          alt={feature.step}
+                          className="w-full h-full object-cover transition-transform transform"
+                          width={800}
+                          height={400}
+                        />
+                      
                       <div className="absolute bottom-0 left-0 right-0 h-2/3 from-background via-background/50 to-transparent" />
                     </motion.div>
                   )

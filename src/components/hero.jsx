@@ -6,6 +6,7 @@ import HeroBadge from '@/components/ui/hero-badge'
 import { TiltedScroll } from './ui/tilted-scroll'
 import { Cover } from './ui/cover'
 import { AnimatedBeamDemo } from './ui/animated-beam-hero'
+import LazyLoadMotion from './LazyLoadMotion'
 
 const ease = [0.16, 1, 0.3, 1]
 
@@ -78,13 +79,14 @@ function HeroContent({
 const Hero = ({ pill, content, preview }) => {
   return (
     <div className="relative overflow-hidden mx-auto">
-      <div className="py-10 flex flex-col lg:flex-row lg:gap-14 justify-between items-center xl:max-w-[2160px] xl:mx-auto">
-        <div className="flex flex-col gap-4 w-full lg:max-w-2xl">
+      <div className="py-10 flex flex-col gap-20 lg:flex-row lg:gap-14 justify-between items-center xl:max-w-[2160px] xl:mx-auto">
+        <div className="flex flex-col gap-4 w-full lg:max-w-2xl lg:w-[60%]">
           {pill && <HeroBadge {...pill} />}
           <HeroContent {...content} />
         </div>
-
-        {preview}
+        <div className="lg:w-[40%] w-full flex justify-end">
+          <LazyLoadMotion>{preview}</LazyLoadMotion>
+        </div>
       </div>
     </div>
   )

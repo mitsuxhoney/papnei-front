@@ -4,12 +4,30 @@ import { SiNextdotjs, SiFramer } from 'react-icons/si'
 import { Logos3 as Partners } from '../../components/ui/logos3'
 import { useTheme } from '@/components/theme-provider'
 import {
+  IconArrowWaveRightUp,
+  IconBoxAlignRightFilled,
+  IconBoxAlignTopLeft,
   IconClipboardCopy,
   IconFileBroken,
   IconSignature,
+  IconTableColumn,
 } from '@tabler/icons-react'
+import {
+  Banknote,
+  ShoppingCart,
+  Rocket,
+  Briefcase,
+  BanknoteIcon,
+  ShoppingCartIcon,
+  RocketIcon,
+  BriefcaseIcon,
+  CodeIcon,
+  Clock,
+  ShieldCheck,
+  Server,
+} from 'lucide-react'
 import { Icons } from '@/components/ui/icons'
-import { Key, Layout, Pointer, Zap } from 'lucide-react'
+import { Code, Key, Layout, Pointer, Zap } from 'lucide-react'
 import { Feature108 as Features } from '@/components/ui/features'
 import Wrapper from '../../components/Wrapper'
 import { Testimonials } from '../../components/ui/eldora-testimonials'
@@ -17,175 +35,12 @@ import { FeatureSteps as StepsIntegration } from '../../components/steps-section
 import { CaseStudies } from '../../components/case-studies'
 import { FAQCTA } from '../../components/faq-cta'
 import { AnimatedBeamDemo as HomeHero } from '../../components/ui/animated-beam-hero'
-
-const DummyContent = () => {
-  return (
-    <img
-      src="https://ui.aceternity.com/_next/image?url=%2Flinear.webp&w=2048&q=75"
-      alt="dummy image"
-      width="1000"
-      height="1000"
-      className="object-cover object-left-top h-[60%] md:h-[90%] absolute -bottom-20 inset-x-0 w-[90%] rounded-xl mx-auto"
-    />
-  )
-}
-
-const tabs = [
-  {
-    title: 'Xettle',
-    value: 'Xettle',
-    content: (
-      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-        <p>Xettle</p>
-        <DummyContent />
-      </div>
-    ),
-  },
-  {
-    title: 'ONO',
-    value: 'ONO',
-    content: (
-      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-        <p>ONO</p>
-        <DummyContent />
-      </div>
-    ),
-  },
-  {
-    title: 'Privacy Card',
-    value: 'Privacy Card',
-    content: (
-      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-        <p>Privacy Card</p>
-        <DummyContent />
-      </div>
-    ),
-  },
-  {
-    title: 'Mahagram',
-    value: 'Mahagram',
-    content: (
-      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-        <p>Mahagram</p>
-        <DummyContent />
-      </div>
-    ),
-  },
-  {
-    title: 'Bharat ATM',
-    value: 'Bharat ATM',
-    content: (
-      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-        <p>Bharat ATM</p>
-        <DummyContent />
-      </div>
-    ),
-  },
-]
-
-const integrationsData = [
-  {
-    title: 'Collaborative Editing',
-    description:
-      'Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.',
-    content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        Collaborative Editing
-      </div>
-    ),
-  },
-  {
-    title: 'Real time changes',
-    description:
-      'See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.',
-    content: (
-      <div className="h-full w-full  flex items-center justify-center text-white">
-        <img
-          src="https://ui.aceternity.com/_next/image?url=%2Flinear.webp&w=640&q=75"
-          width={300}
-          height={300}
-          className="h-full w-full object-cover"
-          alt="linear board demo"
-        />
-      </div>
-    ),
-  },
-  {
-    title: 'Version control',
-    description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-    content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
-        Version control
-      </div>
-    ),
-  },
-  {
-    title: 'Running out of content',
-    description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-    content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        Running out of content
-      </div>
-    ),
-  },
-]
-
-const cardData = [
-  {
-    title: 'Next.js',
-    description:
-      'A React framework for server-rendered or statically-exported React apps.',
-    icon: <SiNextdotjs size={40} />,
-  },
-  {
-    title: 'React',
-    description: 'A JavaScript library for building user interfaces.',
-    icon: <FaReact size={40} />,
-  },
-  {
-    title: 'Framer Motion',
-    description: ' A production-ready motion library for React.',
-    icon: <SiFramer size={40} />,
-  },
-]
-
-const testimonials = [
-  {
-    author: {
-      name: 'Emma Thompson',
-      handle: '@emmaai',
-      avatar:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face',
-    },
-    text: 'Using this AI platform has transformed how we handle data analysis. The speed and accuracy are unprecedented.',
-    href: 'https://twitter.com/emmaai',
-  },
-  {
-    author: {
-      name: 'David Park',
-      handle: '@davidtech',
-      avatar:
-        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
-    },
-    text: "The API integration is flawless. We've reduced our development time by 60% since implementing this solution.",
-    href: 'https://twitter.com/davidtech',
-  },
-  {
-    author: {
-      name: 'Sofia Rodriguez',
-      handle: '@sofiaml',
-      avatar:
-        'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face',
-    },
-    text: 'Finally, an AI tool that actually understands context! The accuracy in natural language processing is impressive.',
-  },
-]
-
-const Skeleton = () => (
-  <div className="flex w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
-)
+import LazyLoadMotion from '../../components/LazyLoadMotion'
+import { BentoGrid, BentoGridItem } from '../../components/ui/bento-grid'
+import { CardDemo } from '../../components/ui/aceternity-card'
+import { MagicCard } from '../../components/ui/magic-card'
+import Who from '../../components/Who'
+import { Why } from '../../components/Why'
 
 const tabsData = {
   badge: 'shadcnblocks.com',
@@ -239,45 +94,6 @@ const tabsData = {
     },
   ],
 }
-
-const ctaData = {
-  heading: 'Ready to Get Started?',
-  description:
-    'Join thousands of satisfied customers using our platform to build amazing websites.',
-  buttons: {
-    primary: {
-      text: 'Get Started',
-      url: 'https://www.shadcnblocks.com',
-    },
-    secondary: {
-      text: 'Learn More',
-      url: 'https://www.shadcnblocks.com',
-    },
-  },
-}
-
-const cardsData = [
-  {
-    title: 'Business Verification',
-    description:
-      'Verify business entities with our comprehensive multiple API suites.',
-
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: 'Identity Verification',
-    description:
-      'Secure and fast identity verification for your customers through API suites.',
-
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: 'Aadhar E-signature',
-    description: 'Seamless digital document signing with Aadhar verification.',
-
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
-  },
-]
 
 const featureSteps = [
   {
@@ -409,7 +225,7 @@ const homeHeroContent = {
   primaryAction: {
     href: '/docs/getting-started',
     text: 'Get API Keys',
-    icon: <Key className="h-4 w-4" />,
+    icon: <Code className="h-4 w-4" />,
   },
   secondaryAction: {
     href: '/contact-us',
@@ -425,6 +241,55 @@ const homeHeroBadge = {
   variant: 'default',
   size: 'md',
 }
+
+const Skeleton = () => (
+  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
+)
+const items = [
+  {
+    title: 'The Dawn of Innovation',
+    description: 'Explore the birth of groundbreaking ideas and inventions.',
+    header: <Skeleton />,
+    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: 'The Digital Revolution',
+    description: 'Dive into the transformative power of technology.',
+    header: <Skeleton />,
+    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: 'The Art of Design',
+    description: 'Discover the beauty of thoughtful and functional design.',
+    header: <Skeleton />,
+    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: 'The Power of Communication',
+    description:
+      'Understand the impact of effective communication in our lives.',
+    header: <Skeleton />,
+    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: 'The Pursuit of Knowledge',
+    description: 'Join the quest for understanding and enlightenment.',
+    header: <Skeleton />,
+    icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: 'The Joy of Creation',
+    description: 'Experience the thrill of bringing ideas to life.',
+    header: <Skeleton />,
+    icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: 'The Spirit of Adventure',
+    description: 'Embark on exciting journeys and thrilling discoveries.',
+    header: <Skeleton />,
+    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+  },
+]
 
 const Home = () => {
   const { theme } = useTheme()
@@ -466,8 +331,14 @@ const Home = () => {
             ))}
           </div>
         </div> */}
+        <div className="w-full">
+          <Who />
+        </div>
         <div className="mb-6">
           <Features {...tabsData} />
+        </div>
+        <div className="mb-16">
+          <Why />
         </div>
         {/* <TestimonialsSection
           title="Trusted by developers worldwide"
@@ -475,16 +346,18 @@ const Home = () => {
           testimonials={testimonials}
         /> */}
         <div className="mb-16">
-          <StepsIntegration
-            features={featureSteps}
-            title="Your Journey Starts Here"
-            autoPlayInterval={4000}
-            imageHeight="h-[500px]"
-          />
+          <LazyLoadMotion>
+            <StepsIntegration
+              features={featureSteps}
+              title="Your Journey Starts Here"
+              autoPlayInterval={4000}
+              imageHeight="h-[500px]"
+            />
+          </LazyLoadMotion>
         </div>
-        <div className="">
+        <LazyLoadMotion>
           <CaseStudies {...caseStudiesData} />
-        </div>
+        </LazyLoadMotion>
         <div className="relative z-10 h-[600px] w-full overflow-hidden rounded-lg border bg-background mb-20">
           <Testimonials />
         </div>

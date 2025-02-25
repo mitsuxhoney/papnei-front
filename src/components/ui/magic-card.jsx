@@ -1,6 +1,5 @@
 import { motion, useMotionTemplate, useMotionValue } from 'motion/react'
 import { useCallback, useEffect, useRef } from 'react'
-
 import { cn } from '@/lib/utils'
 
 export function MagicCard({
@@ -8,7 +7,7 @@ export function MagicCard({
   className,
   gradientSize = 200,
   gradientColor = '#262626',
-  gradientOpacity = 0.8,
+  gradientOpacity = 0.1,
   gradientFrom = '#9E7AFF',
   gradientTo = '#FE8BBB',
 }) {

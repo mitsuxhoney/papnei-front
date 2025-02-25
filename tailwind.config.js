@@ -15,12 +15,28 @@ export default {
       },
       animation: {
         marquee: 'marquee var(--duration) linear infinite',
+        move: 'move 5s linear infinite',
         'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
         'skew-scroll': 'skew-scroll 20s linear infinite',
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        orbit: 'orbit calc(var(--duration)*1s) linear infinite',
       },
       keyframes: {
+        orbit: {
+          '0%': {
+            transform:
+              'rotate(calc(var(--angle) * 1deg)) translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg))',
+          },
+          '100%': {
+            transform:
+              'rotate(calc(var(--angle) * 1deg + 360deg)) translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 360deg))',
+          },
+        },
+        move: {
+          '0%': { transform: 'translateX(-200px)' },
+          '100%': { transform: 'translateX(200px)' },
+        },
         'accordion-down': {
           from: { height: '0' },
           to: { height: 'var(--radix-accordion-content-height)' },

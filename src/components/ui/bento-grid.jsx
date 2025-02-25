@@ -1,29 +1,14 @@
 import { cn } from '@/lib/utils'
-import { BorderBeam } from './border-beam'
-import { Card } from '@/components/ui/card'
-import { useTheme } from '@/components/theme-provider'
-import { MagicCard } from './magic-card'
 
 export const BentoGrid = ({ className, children }) => {
   return (
-    <div>
-      <div className="flex flex-col gap-4">
-        <h2 className="text-3xl font-semibold lg:text-4xl">
-          Complete Identity Verification Suite
-        </h2>
-        <p className="text-sm font-normal text-muted-foreground lg:text-lg">
-          Everything you need to verify and authenticate customers in your
-          application
-        </p>
-      </div>
-      <div
-        className={cn(
-          'grid md:auto-rows-[18rem] grid-cols-1 gap-4 md:grid-cols-3 justify-between mx-auto w-full',
-          className
-        )}
-      >
-        {children}
-      </div>
+    <div
+      className={cn(
+        'grid md:auto-rows grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto ',
+        className
+      )}
+    >
+      {children}
     </div>
   )
 }
@@ -35,24 +20,23 @@ export const BentoGridItem = ({
   header,
   icon,
 }) => {
-  const { theme } = useTheme()
   return (
-    <MagicCard
-      className="cursor-pointer flex flex-col items-center justify-center text-4xl w-full h-[300px] px-8 overflow-hidden"
-      gradientColor={theme === 'dark' ? '#262626' : '#D9D9D955'}
+    <div
+      className={cn(
+        'row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 bg-white border justify-between flex flex-col space-y-4',
+        className
+      )}
     >
-      <div className="flex flex-col gap-4">
-        {header}
-        <div className="group-hover/bento:translate-x-2 transition duration-200">
-          {icon}
-          <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">
-            {title}
-          </div>
-          <div className="font-sans font-normal text-neutral-600 text-xs text-wrap dark:text-neutral-300">
-            {description}
-          </div>
+      {header}
+      <div className="group-hover/bento:translate-x-2 transition duration-200">
+        {icon}
+        <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">
+          {title}
+        </div>
+        <div className="font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300">
+          {description}
         </div>
       </div>
-    </MagicCard>
+    </div>
   )
 }
