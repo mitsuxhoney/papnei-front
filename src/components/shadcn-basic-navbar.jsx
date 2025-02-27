@@ -368,13 +368,13 @@ export function Navbar1() {
                     <div className="flex gap-5 flex-col -mt-1">
                       <Link
                         to="/about-us"
-                        className="block select-none text-sm font-semibold rounded-md px-0 py-0 leading-2 hover:underline tracking-wide"
+                        className="block select-none font-semibold rounded-md px-0 py-0 leading-2 hover:underline"
                       >
                         About Us
                       </Link>
                       <Link
                         to="/contact-us"
-                        className="py-0 px-0 font-semibold block select-none text-sm rounded-md p-2 hover:underline tracking-wide"
+                        className="py-0 px-0 font-semibold block select-none rounded-md p-2 hover:underline"
                       >
                         Contact Us
                       </Link>
