@@ -101,7 +101,7 @@ const BusinessProducts = () => {
       </div>
       <div
         className={
-          'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 w-full gap-4 mb-16'
+          'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 w-full gap-4 mb-16'
         }
       >
         {businessProducts?.map((item) => (

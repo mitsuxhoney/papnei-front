@@ -109,14 +109,15 @@ const Navbar1 = ({
                 <img src={logo.src} className="w-8" alt={logo.alt} />
                 <span className="text-lg font-semibold">{logo.title}</span>
               </Link>
-              <div className="flex items-center ">
-                <NavigationMenu>
-                  <NavigationMenuList>
-                    {menu.map((item) => renderMenuItem(item))}
-                  </NavigationMenuList>
-                </NavigationMenu>
-              </div>
             </div>
+            <div className="flex items-center">
+              <NavigationMenu>
+                <NavigationMenuList>
+                  {menu.map((item) => renderMenuItem(item))}
+                </NavigationMenuList>
+              </NavigationMenu>
+            </div>
+
             <div className="flex gap-2 items-center">
               <Button asChild variant="outline" size="sm">
                 <Link to={auth.login.url}>{auth.login.text}</Link>

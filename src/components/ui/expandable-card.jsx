@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import { useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Clock,
@@ -33,7 +33,7 @@ export function ProjectStatusCard({
   openIssues,
 }) {
   const { isExpanded, toggleExpand, animatedHeight } = useExpandable()
-  const contentRef = useRef < HTMLDivElement > null
+  const contentRef = useRef(null)
 
   useEffect(() => {
     if (contentRef.current) {
@@ -43,7 +43,7 @@ export function ProjectStatusCard({
 
   return (
     <Card
-      className="w-full max-w-md cursor-pointer transition-all duration-300 hover:shadow-lg"
+      className="w-full max-w-md mx-auto cursor-pointer transition-all duration-300 hover:shadow-lg"
       onClick={toggleExpand}
     >
       <CardHeader className="space-y-1">
@@ -78,13 +78,13 @@ export function ProjectStatusCard({
 
       <CardContent>
         <div className="space-y-4">
-          <div className="space-y-2">
+          {/* <div className="space-y-2">
             <div className="flex justify-between text-sm text-gray-600">
               <span>Progress</span>
               <span>{progress}%</span>
             </div>
             <ProgressBar value={progress} className="h-2" />
-          </div>
+          </div> */}
 
           <motion.div
             style={{ height: animatedHeight }}
@@ -178,12 +178,12 @@ export function ProjectStatusCard({
         </div>
       </CardContent>
 
-      <CardFooter>
+      {/* <CardFooter>
         <div className="flex items-center justify-between w-full text-sm text-gray-600">
           <span>Last updated: 2 hours ago</span>
           <span>{openIssues} open issues</span>
         </div>
-      </CardFooter>
+      </CardFooter> */}
     </Card>
   )
 }

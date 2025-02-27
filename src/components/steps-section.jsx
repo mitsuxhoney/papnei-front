@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Badge } from '@/components/ui/badge'
 import { cn } from '@/lib/utils'
+import { TerminalDemo } from './TerminalDemo'
 
 export function FeatureSteps({
   features,
@@ -27,7 +28,7 @@ export function FeatureSteps({
   }, [progress, features.length, autoPlayInterval])
 
   return (
-    <div className={cn('px-8 md:px-12', className)}>
+    <div className={cn('', className)}>
       <div className="max-w-7xl mx-auto w-full">
         <div className="flex flex-col items-center gap-4 text-center mb-10">
           <Badge variant="outline">How it works ?</Badge>
@@ -82,7 +83,8 @@ export function FeatureSteps({
               'order-1 md:order-2 relative lg:h-[370px] overflow-hidden rounded-lg'
             )}
           >
-            <AnimatePresence mode="wait">
+            <TerminalDemo />
+            {/* <AnimatePresence mode="wait">
               {features.map(
                 (feature, index) =>
                   index === currentFeature && (
@@ -94,20 +96,12 @@ export function FeatureSteps({
                       exit={{ y: -100, opacity: 0, rotateX: 20 }}
                       transition={{ duration: 0.5, ease: 'easeInOut' }}
                     >
-                      
-                        <img
-                          src={feature.image}
-                          alt={feature.step}
-                          className="w-full h-full object-cover transition-transform transform"
-                          width={800}
-                          height={400}
-                        />
-                      
+
                       <div className="absolute bottom-0 left-0 right-0 h-2/3 from-background via-background/50 to-transparent" />
                     </motion.div>
                   )
               )}
-            </AnimatePresence>
+            </AnimatePresence> */}
           </div>
         </div>
       </div>

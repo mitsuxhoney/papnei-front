@@ -331,7 +331,7 @@ const items = [
         <AnimatedListDemo />
       </LazyLoadMotion>
     ),
-    className: 'md:col-span-1',
+    className: 'max-md:col-span-2 lg:col-span-1',
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
   },
   {
@@ -346,7 +346,7 @@ const items = [
         <OrbitingCirclesHome />
       </LazyLoadMotion>
     ),
-    className: 'md:col-span-1',
+    className: 'max-md:col-span-2 lg:col-span-1',
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
   {
@@ -361,7 +361,7 @@ const items = [
         <AnimatedBeamDemo />
       </LazyLoadMotion>
     ),
-    className: 'md:col-span-1',
+    className: 'max-md:col-span-2 lg:col-span-1',
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
   {
@@ -372,7 +372,7 @@ const items = [
       </span>
     ),
     header: <SkeletonFour />,
-    className: 'md:col-span-2',
+    className: 'max-md:col-span-2 lg:col-span-2',
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
   },
 
@@ -384,7 +384,7 @@ const items = [
       </span>
     ),
     header: <SkeletonFive />,
-    className: 'md:col-span-1 relative z-[0]',
+    className: 'max-md:col-span-2 lg:col-span-1 relative z-[0]',
     icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
   },
 ]
@@ -414,15 +414,7 @@ export function Why() {
             header={item.header}
             className={cn('[&>p:text-lg]', item.className)}
             icon={item.icon}
-          >
-            <Particles
-              className="absolute inset-0 z-0"
-              quantity={100}
-              ease={80}
-              color={color}
-              refresh
-            />
-          </BentoGridItem>
+          ></BentoGridItem>
         ))}
       </BentoGrid>
     </div>

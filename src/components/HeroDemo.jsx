@@ -1,9 +1,16 @@
 import { Hero } from '@/components/hero'
 import { ProjectStatusCard } from '@/components/ui/expandable-card'
 
-function HeroDemo({ preview, content, pill }) {
+function HeroDemo({ preview, content, pill, background = undefined }) {
   console.log('Content', content)
-  return <Hero content={content} preview={preview} pill={pill} />
+  return (
+    <Hero
+      content={content}
+      preview={preview}
+      pill={pill}
+      background={background}
+    />
+  )
 }
 
 function PreviewCards() {
