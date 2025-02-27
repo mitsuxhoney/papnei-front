@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom'
 
 import { Footerdemo } from './ui/footer-section'
-import { Navbar1 } from './shadcnblocks-com-navbar1'
+import { Navbar1 } from './shadcn-basic-navbar'
 
 const Layout = () => {
   return (
