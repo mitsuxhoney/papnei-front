@@ -10,31 +10,7 @@ import { DotPattern } from '../../components/ui/dot-pattern'
 import { DotPatternDemo } from '../../components/DotPatternDemo'
 import { cn } from '@/lib/utils'
 import { GridBackground } from '../../components/ui/glowing-card'
-
-const businessHeroContent = {
-  title: 'Instant. Secure. Hassle-Free Verification',
-
-  description:
-    'Integrate our robust APIs to streamline Business Verification, Identity Verification, KYC/KYB compliance, and Aadhaar E-Sign processes.',
-  primaryAction: {
-    href: '/docs/getting-started',
-    text: 'Get API Keys',
-    icon: <Code className="h-4 w-4" />,
-  },
-  secondaryAction: {
-    href: '/contact-us',
-    text: 'Contact Sales',
-    icon: <Icons.component className="h-4 w-4" />,
-  },
-}
-
-const businessHeroBadge = {
-  text: "Introducing new API's",
-  href: '/',
-  icon: <Icons.logo className="h-4 w-4" />,
-  variant: 'default',
-  size: 'md',
-}
+import { BusinessHero } from '../../components/ui/modern-hero'
 
 const features = [
   {
@@ -86,33 +62,52 @@ const featuresHeading = {
     'Discover our suite of verification services designed to enhance your business operations.',
 }
 
+const businessHero = {
+  heading: 'A Collection of Components Built With Shadcn & Tailwind',
+  description:
+    'Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.',
+  button: {
+    text: 'Discover all components',
+    url: 'https://www.shadcnblocks.com',
+  },
+  reviews: {
+    count: 200,
+    avatars: [
+      {
+        src: 'https://www.shadcnblocks.com/images/block/avatar-1.webp',
+        alt: 'Avatar 1',
+      },
+      {
+        src: 'https://www.shadcnblocks.com/images/block/avatar-2.webp',
+        alt: 'Avatar 2',
+      },
+      {
+        src: 'https://www.shadcnblocks.com/images/block/avatar-3.webp',
+        alt: 'Avatar 3',
+      },
+      {
+        src: 'https://www.shadcnblocks.com/images/block/avatar-4.webp',
+        alt: 'Avatar 4',
+      },
+      {
+        src: 'https://www.shadcnblocks.com/images/block/avatar-5.webp',
+        alt: 'Avatar 5',
+      },
+    ],
+  },
+}
+
 const Business = () => {
   return (
     <div>
+      <div className="mb-16">
+        <BusinessHero businessHero={businessHero} />
+      </div>
       <Wrapper>
-        <div>
-          <HeroDemo
-            content={businessHeroContent}
-            pill={businessHeroBadge}
-            preview={
-              <GridBackground
-                title="Welcome to JatinVerse"
-                description="Transforming your ideas into stunning visual experiences. Explore the world of creative design with us."
-              />
-            }
-            // background={
-            //   <DotPattern
-            //     className={cn(
-            //       ' [mask-image:radial-gradient(500px_circle_at_center,white,transparent)]'
-            //     )}
-            //   />
-            // }
-          />
-        </div>
-        <div className="mt-4">
+        <div className="mb-16">
           <BusinessProducts />
         </div>
-        <div className="w-full">
+        <div className="w-full mb-16">
           <FeaturesSection grid={features} gridHeading={featuresHeading} />
         </div>
       </Wrapper>
