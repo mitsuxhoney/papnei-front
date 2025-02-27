@@ -6,7 +6,7 @@ import { Navbar1 } from './shadcnblocks-com-navbar1'
 const Layout = () => {
   return (
     <div className="mx-auto">
-      <header className="sticky top-0 z-[50] bg-background shadow-md">
+      <header className="sticky top-0 z-[50] bg-background shadow-md w-full">
         <Navbar1 />
       </header>
       <section className=" select-none">

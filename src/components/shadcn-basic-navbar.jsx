@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom'
-
 import { cn } from '@/lib/utils'
 import { Icons } from '@/components/ui/icons'
 import {
@@ -11,7 +10,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from '@/components/ui/shad-basic-navigation-menu'
+} from '@/components/ui/navigation-menu'
 
 const components = [
   {
@@ -25,12 +24,28 @@ const components = [
     href: '/docs/primitives/hover-card',
     description:
       'For sighted users to preview content available behind a link.',
+    items: [
+      {
+        title: 'Hover Card Item',
+        href: '/docs/primitives/hover-card-item',
+        description:
+          'A card item that can be used within the Hover Card component.',
+      },
+    ],
   },
   {
     title: 'Progress',
     href: '/docs/primitives/progress',
     description:
       'Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.',
+    items: [
+      {
+        title: 'Progress Item',
+        href: '/docs/primitives/progress-item',
+        description:
+          'A progress item that can be used within the Progress component.',
+      },
+    ],
   },
   {
     title: 'Scroll-area',
@@ -53,67 +68,23 @@ const components = [
 
 export function Navbar1() {
   return (
-    <NavigationMenu>
-      <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
-                  >
-                    <Icons.logo className="h-6 w-6" />
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      shadcn/ui
-                    </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      Beautifully designed components that you can copy and
-                      paste into your apps. Accessible. Customizable. Open
-                      Source.
-                    </p>
-                  </a>
-                </NavigationMenuLink>
-              </li>
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
-              </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
-              </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Documentation
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
+    <div className="w-full">
+      <NavigationMenu className="w-full">
+        <NavigationMenuList className="w-full">
+          <div className="flex gap-4 justify-between items-center w-full mx-auto">
+            <div>
+              <NavigationMenuItem>Hello</NavigationMenuItem>
+            </div>
+            <div>
+              <NavigationMenuItem>Components</NavigationMenuItem>
+            </div>
+            <div>
+              <NavigationMenuItem>Components</NavigationMenuItem>
+            </div>
+          </div>
+        </NavigationMenuList>
+      </NavigationMenu>
+    </div>
   )
 }
 

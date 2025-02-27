@@ -177,19 +177,7 @@ const Navbar1 = ({
                       >
                         {menu.map((item) => renderMobileMenuItem(item))}
                       </Accordion>
-                      <div className="border-t py-4">
-                        <div className="grid grid-cols-2 justify-start">
-                          {mobileExtraLinks.map((link, idx) => (
-                            <Link
-                              key={idx}
-                              className="inline-flex h-10 items-center gap-2 whitespace-nowrap rounded-md px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-accent-foreground"
-                              to={link.url}
-                            >
-                              {link.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
+
                       <div className="flex flex-col gap-3">
                         <Button asChild variant="outline">
                           <Link to={auth.login.url}>{auth.login.text}</Link>
