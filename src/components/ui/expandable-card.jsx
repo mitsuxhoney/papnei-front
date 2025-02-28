@@ -1,26 +1,11 @@
 import { useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import {
-  Clock,
-  GitBranch,
-  Github,
-  MessageSquare,
-  StepForwardIcon as Progress,
-  Star,
-  Users,
-  CheckCircle2,
-} from 'lucide-react'
-import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
+import { Card, CardContent, CardHeader } from '@/components/ui/card'
+
 import { Button } from '@/components/ui/button'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+
 import { Progress as ProgressBar } from '@/components/ui/progress'
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components/ui/tooltip'
+
 import { useExpandable } from '@/components/hooks/use-expandable'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
@@ -28,7 +13,6 @@ import { z } from 'zod'
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -36,7 +20,6 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { CardDescription, CardTitle } from './aceternity-card'
-import { SparklesText } from './sparkle-text'
 
 const formSchema = z.object({
   username: z.string().min(2, {
@@ -76,15 +59,13 @@ export function ProjectStatusCard({
   })
 
   function onSubmit(values) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
     console.log(values)
   }
 
   return (
     <Card className="relative w-full mx-auto max-w-md cursor-pointer transition-all duration-300 hover:shadow-lg">
       <div
-        className="absolute -top-8 -right-8 flex items-center gap-2 text-muted-foreground"
+        className="absolute -top-8 -right-8 max-sm:-top-8 max-sm:-right-6 flex items-center gap-2 text-muted-foreground"
         style={{ opacity: 1 }}
       >
         <span className="text-sm font-medium">Give it a click!</span>

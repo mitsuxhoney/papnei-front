@@ -1,8 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import {
   ChevronDown,
   Menu,
-  X,
   Shield,
   UserCheck,
   FileSignature,
@@ -35,10 +34,7 @@ import {
   ShieldCheck,
   Smartphone,
   Mail,
-  Printer,
   Calendar,
-  HardDrive,
-  Cpu,
   Moon,
   Sun,
 } from 'lucide-react'
@@ -59,7 +55,6 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 import { Button } from '@/components/ui/button'
-import { ModeToggle } from './ui/mode-toggle'
 import { useTheme } from './theme-provider'
 
 // Business Verification Items - 15 items
@@ -447,9 +442,9 @@ const Navbar = () => {
       <div className="bg-primary py-2 px-4 text-center text-primary-foreground">
         <p className="text-sm font-medium">
           New: Enhanced Business Verification API now available{' '}
-          <a href="#" className="underline ml-2">
+          <Link to="/contact-us" className="underline ml-2">
             Learn more →
-          </a>
+          </Link>
         </p>
       </div>
       <Wrapper>
@@ -532,8 +527,8 @@ const Navbar = () => {
                   <div className="flex items-center md:hidden">
                     <Sheet>
                       <SheetTrigger asChild>
-                        <Button variant="outline" size="icon">
-                          <Menu className="h-4 w-4" />
+                        <Button variant="outline" className="p-5" size="icon">
+                          <Menu className="h-6 w-6" />
                         </Button>
                       </SheetTrigger>
                       <SheetContent className="overflow-y-auto">

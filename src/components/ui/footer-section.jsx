@@ -38,7 +38,7 @@ function Footerdemo() {
 
   return (
     <Wrapper>
-      <footer className="relative border-t bg-background text-foreground transition-colors duration-300">
+      <footer className="relative bg-background text-foreground transition-colors duration-300">
         <div className="mx-auto py-12">
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
             <div className="relative">
@@ -204,7 +204,9 @@ function Footerdemo() {
               </Link>
             </nav>
             <div
-              className={`fixed bottom-8 right-8 ${visible ? '' : 'hidden'}`}
+              className={`fixed z-[10000] bottom-8 right-8 ${
+                visible ? '' : 'hidden'
+              }`}
             >
               <Button
                 variant="outline"

@@ -87,7 +87,7 @@ const FAQCTA = ({
             </Button>
           </div>
         </div> */}
-        <div className="w-full bg-accent p-4 text-center md:p-6 lg:p-8 lg:py-14 flex flex-col gap-14 justify-between items-center relative">
+        <div className="w-full bg-accent p-4 text-center md:p-6 lg:p-8 lg:py-14 flex flex-col gap-14 justify-between items-center relative overflow-hidden">
           {/* <div className="w-full mx-auto">
             <Meteors number={50} />
           </div> */}

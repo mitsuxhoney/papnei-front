@@ -13,10 +13,7 @@ import {
 } from '@/components/ui/navigation-menu'
 import {
   Sheet,
-  SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -33,59 +30,6 @@ import Wrapper from './Wrapper'
 import { ArrowRight, Menu, Moon, Sun, X } from 'lucide-react'
 import { ScrollProgress } from './ui/scroll-progress'
 
-const components = [
-  {
-    title: 'Alert Dialog',
-    href: '/docs/primitives/alert-dialog',
-    description:
-      'A modal dialog that interrupts the user with important content and expects a response.',
-  },
-  {
-    title: 'Hover Card',
-    href: '/docs/primitives/hover-card',
-    description:
-      'For sighted users to preview content available behind a link.',
-    items: [
-      {
-        title: 'Hover Card Item',
-        href: '/docs/primitives/hover-card-item',
-        description:
-          'A card item that can be used within the Hover Card component.',
-      },
-    ],
-  },
-  {
-    title: 'Progress',
-    href: '/docs/primitives/progress',
-    description:
-      'Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.',
-    items: [
-      {
-        title: 'Progress Item',
-        href: '/docs/primitives/progress-item',
-        description:
-          'A progress item that can be used within the Progress component.',
-      },
-    ],
-  },
-  {
-    title: 'Scroll-area',
-    href: '/docs/primitives/scroll-area',
-    description: 'Visually or semantically separates content.',
-  },
-  {
-    title: 'Tabs',
-    href: '/docs/primitives/tabs',
-    description:
-      'A set of layered sections of content—known as tab panels—that are displayed one at a time.',
-  },
-  {
-    title: 'Tooltip',
-    href: '/docs/primitives/tooltip',
-    description:
-      'A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.',
-  },
-]
 
 const logo = {
   url: '/',
