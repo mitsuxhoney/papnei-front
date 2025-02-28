@@ -94,16 +94,16 @@ const FAQCTA = ({
           <div className="flex flex-col gap-2">
             {/* <h3 className="text-xl font-semibold md:text-4xl">{heading}</h3> */}
             <SparklesText
-              className={`text-xl font-semibold md:text-5xl`}
+              className={`text-2xl font-semibold md:text-5xl`}
               text={FAQCTAData.ctaHeading}
             />
             {/* <TypingAnimation>{heading}</TypingAnimation> */}
-            <p className="text-muted-foreground lg:text-md">
+            <p className="text-muted-foreground text-xs lg:text-md">
               {FAQCTAData.ctaDescription}
             </p>
           </div>
 
-          <div>
+          <div className="max-w-md lg:max-w-lg w-full">
             <ExpandableCardBasic />
           </div>
         </div>

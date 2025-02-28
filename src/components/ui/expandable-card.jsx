@@ -63,7 +63,7 @@ export function ProjectStatusCard({
   }
 
   return (
-    <Card className="relative w-full mx-auto max-w-md cursor-pointer transition-all duration-300 hover:shadow-lg">
+    <Card className="relative w-full mx-auto cursor-pointer transition-all duration-300 hover:shadow-lg">
       <div
         className="absolute -top-8 -right-8 max-sm:-top-8 max-sm:-right-6 flex items-center gap-2 text-muted-foreground"
         style={{ opacity: 1 }}
@@ -116,7 +116,7 @@ export function ProjectStatusCard({
           </TooltipProvider>
         </div> */}
         <div className="w-full">
-          <div className="flex flex-col gap-2 items-start text-left w-full">
+          <div className="flex flex-col gap-2 items-start text-left w-full px-2">
             <CardTitle className="flex justify-between gap-4 w-full">
               <div className="text-md">{titleBeforeExpand}</div>
               <div className="text-sm tracking-wider">
@@ -193,7 +193,7 @@ export function ProjectStatusCard({
                         onSubmit={form.handleSubmit(onSubmit)}
                         className="flex flex-col items-start text-left w-full"
                       >
-                        <div className="flex flex-col gap-2 w-full">
+                        <div className="flex flex-col gap-2 w-full px-2">
                           <div className="w-full">
                             <FormField
                               control={form.control}
@@ -279,7 +279,7 @@ export function ProjectStatusCard({
                             />
                           </div>
                         </div>
-                        <div className="w-full mt-4">
+                        <div className="w-full mt-4 px-2">
                           <Button type="submit" className="text-sm">
                             Get API Key
                           </Button>
