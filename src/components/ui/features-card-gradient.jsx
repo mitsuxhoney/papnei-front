@@ -11,7 +11,7 @@ export function FeaturesSectionWithCardGradient({ grid, gridHeading }) {
         </h1>
         <p className="text-muted-foreground">{gridHeading.description}</p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-2  mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-4 mx-auto">
         {grid.map((feature) => (
           <div
             key={feature.title}

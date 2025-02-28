@@ -242,7 +242,7 @@ export function Navbar1() {
     <div className="w-full">
       <Wrapper>
         <div className="flex items-center justify-between py-4">
-          <ScrollProgress className="top-[70px]" />
+          <ScrollProgress className="top-[69px]" />
           <div className="flex items-center gap-6 ">
             <Link to={logo.url} className="flex items-center gap-2">
               <img src={logo.src} className="w-8" alt={logo.alt} />
@@ -403,7 +403,7 @@ const ListItem = ({ className, title, href, icon, children, ...props }) => {
     <NavigationMenuLink asChild>
       <Link
         className={cn(
-          'block select-none text-sm font-medium rounded-md p-2 leading-1 transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
+          'block select-none text-sm font-medium rounded-md p-1 leading-1 transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
           className
         )}
         to={href}

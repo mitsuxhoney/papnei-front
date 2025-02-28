@@ -11,5 +11,5 @@ export function useExpandable(initialState = false) {
     setIsExpanded((prev) => !prev)
   }, [])
 
-  return { isExpanded, toggleExpand, animatedHeight }
+  return { isExpanded, toggleExpand, animatedHeight, setIsExpanded }
 }

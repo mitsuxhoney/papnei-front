@@ -1,13 +1,13 @@
 import { Outlet } from 'react-router-dom'
 
 import { Footerdemo } from './ui/footer-section'
-import { Navbar1 } from './shadcn-basic-navbar'
+import Navbar from './MegaMenuNavbar'
 
 const Layout = () => {
   return (
     <div className="mx-auto">
       <header className="sticky top-0 z-[50] bg-background shadow-md w-full">
-        <Navbar1 />
+        <Navbar />
       </header>
       <section className=" select-none">
         <Outlet />

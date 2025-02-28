@@ -64,13 +64,13 @@ const Who = () => {
         >
           {whoData?.map((item) => (
             <MagicCard key={item.title} className={`p-4 max-sm:h-[180px]`}>
-              <Particles
+              {/* <Particles
                 className="absolute inset-0 z-0"
                 quantity={100}
                 ease={80}
                 color={color}
                 refresh
-              />
+              /> */}
               <div className="w-full flex flex-col gap-4">
                 <div className="flex flex-col gap-2">
                   <div className="">{item.icon}</div>
