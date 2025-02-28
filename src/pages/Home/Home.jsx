@@ -41,6 +41,7 @@ import { CardDemo } from '../../components/ui/aceternity-card'
 import { MagicCard } from '../../components/ui/magic-card'
 import Who from '../../components/Who'
 import { Why } from '../../components/Why'
+import { BusinessCTA } from '../../components/BusinessCTA'
 
 const tabsData = {
   badge: 'shadcnblocks.com',
@@ -178,6 +179,9 @@ const FAQCTAData = {
   heading: 'Frequently asked questions',
   description:
     "Everything you need to know about shadcnblocks. Can't find the answer you're looking for? Feel free to contact our support team.",
+  ctaHeading: 'Ready To Get Started',
+  ctaDescription:
+    'Join thousand of satisfied customers using our platform to build amazing websites.',
   items: [
     {
       id: 'faq-1',
@@ -292,7 +296,6 @@ const items = [
 ]
 
 const Home = () => {
-  const { theme } = useTheme()
   return (
     <div>
       <Wrapper>
@@ -362,8 +365,9 @@ const Home = () => {
           <Testimonials />
         </div>
       </Wrapper>
-      <FAQCTA {...FAQCTAData} />
-      {/* <Cta11 {...ctaData} /> */}
+      <div>
+        <FAQCTA FAQCTAData={FAQCTAData} />
+      </div>
     </div>
   )
 }

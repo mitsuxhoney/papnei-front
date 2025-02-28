@@ -7,6 +7,10 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import Wrapper from './Wrapper'
+import ExpandableCardBasic from './ExpandableCardDemo'
+import { BorderBeamForm } from './border-beam-form'
+import { SparklesText } from './ui/sparkle-text'
+import { Meteors } from './ui/meteors'
 
 const faq = {
   heading: 'Frequently asked questions',
@@ -14,48 +18,16 @@ const faq = {
     'Find answers to common questions about our verification APIs. Need more help? Contact our support team anytime!',
 }
 
-const faqItems = [
-  {
-    id: 'faq-1',
-    question: 'What verification services do you offer?',
-    answer:
-      'We provide Business Verification, Identity Verification, KYC/KYB Compliance, and Aadhaar E-Sign solutions.',
-  },
-  {
-    id: 'faq-2',
-    question: "How do I integrate your API's?",
-    answer:
-      'Our APIs come with detailed documentation, code samples, and sandbox environments for seamless integration.',
-  },
-  {
-    id: 'faq-3',
-    question: 'Are your APIs compliant with regulations?',
-    answer:
-      'Yes, we follow industry standards and legal requirements for data security and compliance.',
-  },
-  {
-    id: 'faq-4',
-    question: 'What industries can use your services?',
-    answer:
-      'Our APIs are designed for fintech, banking, insurance, e-commerce, and other industries needing secure verifications.',
-  },
-  {
-    id: 'faq-5',
-    question: 'Do you offer customer support?',
-    answer:
-      'Yes, we provide 24/7 technical and onboarding support to ensure smooth integration.',
-  },
-]
-
 const FAQCTA = ({
   supportHeading = 'Need more support?',
   supportDescription = 'Our dedicated support team is here to help you with any questions or concerns. Get in touch with us for personalized assistance.',
   supportButtonText = 'Contact Support',
   supportButtonUrl = 'https://www.shadcnblocks.com',
+  FAQCTAData,
 }) => {
   return (
-    <section className="">
-      <div className="space-y-16">
+    <section className="w-full">
+      <div className="space-y-16 w-full">
         <Wrapper>
           <div className="mx-auto flex max-w-3xl flex-col text-left md:text-center">
             <h2 className="mb-3 md:mb-4 lg:mb-6 text-5xl font-bold leading-[1.2] tracking-tighter text-foreground">
@@ -66,11 +38,11 @@ const FAQCTA = ({
             </p>
           </div>
           <Accordion
-            type="single"
+            type="multiple"
             collapsible
             className="mx-auto w-full lg:max-w-3xl"
           >
-            {faqItems.map((item) => (
+            {FAQCTAData.items.map((item) => (
               <AccordionItem key={item.id} value={item.id}>
                 <AccordionTrigger className="transition-opacity duration-200 hover:no-underline">
                   <div className="font-medium sm:py-1 lg:py-2 text-lg text-left">
@@ -86,7 +58,7 @@ const FAQCTA = ({
             ))}
           </Accordion>
         </Wrapper>
-        <div className="mx-auto flex  flex-col items-center bg-accent p-4 text-center md:p-6 lg:p-8">
+        {/* <div className="mx-auto flex flex-col items-center bg-accent p-4 text-center md:p-6 lg:p-8">
           <div className="relative">
             <Avatar className="absolute mb-4 size-16 origin-bottom -translate-x-[60%] scale-[80%] border md:mb-5">
               <AvatarImage src="https://shadcnblocks.com/images/block/avatar-2.webp" />
@@ -113,6 +85,26 @@ const FAQCTA = ({
                 {supportButtonText}
               </a>
             </Button>
+          </div>
+        </div> */}
+        <div className="w-full bg-accent p-4 text-center md:p-6 lg:p-8 lg:py-14 flex flex-col gap-14 justify-between items-center relative">
+          {/* <div className="w-full mx-auto">
+            <Meteors number={50} />
+          </div> */}
+          <div className="flex flex-col gap-2">
+            {/* <h3 className="text-xl font-semibold md:text-4xl">{heading}</h3> */}
+            <SparklesText
+              className={`text-xl font-semibold md:text-5xl`}
+              text={FAQCTAData.ctaHeading}
+            />
+            {/* <TypingAnimation>{heading}</TypingAnimation> */}
+            <p className="text-muted-foreground lg:text-md">
+              {FAQCTAData.ctaDescription}
+            </p>
+          </div>
+
+          <div>
+            <ExpandableCardBasic />
           </div>
         </div>
       </div>

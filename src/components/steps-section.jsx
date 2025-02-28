@@ -12,20 +12,24 @@ export function FeatureSteps({
   imageHeight = 'h-[400px]',
 }) {
   const [currentFeature, setCurrentFeature] = useState(0)
-  const [progress, setProgress] = useState(0)
+  const handleFeatureClick = (index) => {
+    setCurrentFeature(index)
+  }
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      if (progress < 100) {
-        setProgress((prev) => prev + 100 / (autoPlayInterval / 100))
-      } else {
-        setCurrentFeature((prev) => (prev + 1) % features.length)
-        setProgress(0)
-      }
-    }, 100)
+  // const [progress, setProgress] = useState(0)
 
-    return () => clearInterval(timer)
-  }, [progress, features.length, autoPlayInterval])
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     if (progress < 100) {
+  //       setProgress((prev) => prev + 100 / (autoPlayInterval / 100))
+  //     } else {
+  //       setCurrentFeature((prev) => (prev + 1) % features.length)
+  //       setProgress(0)
+  //     }
+  //   }, 100)
+
+  //   return () => clearInterval(timer)
+  // }, [progress, features.length, autoPlayInterval])
 
   return (
     <div className={cn('', className)}>
@@ -46,10 +50,14 @@ export function FeatureSteps({
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                className="flex items-center gap-6 md:gap-8"
-                initial={{ opacity: 0.3 }}
-                animate={{ opacity: index === currentFeature ? 1 : 0.3 }}
+                className={cn(
+                  'flex items-center gap-6 md:gap-8 cursor-pointer',
+                  index === currentFeature ? 'relative z-10' : ''
+                )}
+                initial={{ opacity: 0.3 }} // Higher base opacity (was 0.3)
+                animate={{ opacity: index === currentFeature ? 1 : 0.3 }} // Higher non-selected opacity
                 transition={{ duration: 0.5 }}
+                onClick={() => handleFeatureClick(index)} // Add click handler
               >
                 <motion.div
                   className={cn(

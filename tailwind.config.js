@@ -14,6 +14,9 @@ export default {
         container: '1280px',
       },
       animation: {
+        meteor: 'meteor 5s linear infinite',
+        rippling: 'rippling var(--duration) ease-out',
+        pulse: 'pulse var(--duration) ease-out infinite',
         marquee: 'marquee var(--duration) linear infinite',
         move: 'move 5s linear infinite',
         'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
@@ -23,6 +26,30 @@ export default {
         orbit: 'orbit calc(var(--duration)*1s) linear infinite',
       },
       keyframes: {
+        meteor: {
+          '0%': {
+            transform: 'rotate(var(--angle)) translateX(0)',
+            opacity: '1',
+          },
+          '70%': { opacity: '1' },
+          '100%': {
+            transform: 'rotate(var(--angle)) translateX(-500px)',
+            opacity: '0',
+          },
+        },
+        rippling: {
+          '0%': {
+            opacity: '1',
+          },
+          '100%': {
+            transform: 'scale(2)',
+            opacity: '0',
+          },
+        },
+        pulse: {
+          '0%, 100%': { boxShadow: '0 0 0 0 var(--pulse-color)' },
+          '50%': { boxShadow: '0 0 0 8px var(--pulse-color)' },
+        },
         orbit: {
           '0%': {
             transform:
