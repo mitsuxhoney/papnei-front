@@ -22,6 +22,7 @@ import { IntegrationBenefits } from '../../components/IntegrationBenefits'
 import { BusinessCTA } from '../../components/BusinessCTA'
 import { FAQCTA } from '../../components/faq-cta'
 import { InteractiveHoverButton } from '../../components/ui/interactive-hover'
+import Hero3 from '../../components/Hero3'
 
 const features = [
   {
@@ -255,8 +256,8 @@ const otherProductsHeading = {
 const Aadhar = () => {
   return (
     <div>
-      <div className="mb-16">
-        <Hero1 businessHero={businessHero} />
+      <div className="mb-16 relative">
+        <Hero3 />
       </div>
       <Wrapper>
         <div className="mb-16">
