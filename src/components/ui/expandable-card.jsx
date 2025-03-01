@@ -141,9 +141,15 @@ export function ProjectStatusCard({
                 )}
               </div>
             </CardTitle>
-            <CardDescription className="font-medium">
-              {descriptionBeforeExpand}
-            </CardDescription>
+            {isExpanded ? (
+              <CardDescription className="font-medium">
+                {descriptionAfterExpand}
+              </CardDescription>
+            ) : (
+              <CardDescription className="font-medium">
+                {descriptionBeforeExpand}
+              </CardDescription>
+            )}
           </div>
         </div>
       </CardHeader>

@@ -2,6 +2,7 @@ import defaultTheme from 'tailwindcss/defaultTheme'
 import colors from 'tailwindcss/colors'
 import { default as flattenColorPalette } from 'tailwindcss/lib/util/flattenColorPalette'
 import scrollBarHide from 'tailwind-scrollbar-hide'
+import svgToDataUri from 'mini-svg-data-uri'
 
 /** @type {import('tailwindcss').Config} */
 
@@ -15,6 +16,9 @@ export default {
       },
       animation: {
         meteor: 'meteor 5s linear infinite',
+        moveUp: 'moveUp 1.4s ease forwards',
+        appear: 'appear 1s 1s forwards',
+        aurora: 'aurora 60s linear infinite',
         rippling: 'rippling var(--duration) ease-out',
         pulse: 'pulse var(--duration) ease-out infinite',
         marquee: 'marquee var(--duration) linear infinite',
@@ -26,6 +30,22 @@ export default {
         orbit: 'orbit calc(var(--duration)*1s) linear infinite',
       },
       keyframes: {
+        moveUp: {
+          '0%': { transform: 'translateY(5%)', opacity: '0' },
+          '100%': { transform: 'translateY(0%)', opacity: '1' },
+        },
+        appear: {
+          from: { opacity: '0' },
+          to: { opacity: '1' },
+        },
+        aurora: {
+          from: {
+            backgroundPosition: '50% 50%, 50% 50%',
+          },
+          to: {
+            backgroundPosition: '350% 50%, 350% 50%',
+          },
+        },
         meteor: {
           '0%': {
             transform: 'rotate(var(--angle)) translateX(0)',
@@ -143,6 +163,18 @@ export default {
     require('tailwindcss-animate'),
     addVariablesForColors,
     scrollBarHide,
+    function ({ matchUtilities, theme, addUtilities }) {
+      matchUtilities(
+        {
+          'bg-grid': (value) => ({
+            backgroundImage: `url("${svgToDataUri(
+              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
+            )}")`,
+          }),
+        },
+        { values: flattenColorPalette(theme('backgroundColor')), type: 'color' }
+      )
+    },
   ],
 }
 

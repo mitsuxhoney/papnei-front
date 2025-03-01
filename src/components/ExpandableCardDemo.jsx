@@ -7,7 +7,7 @@ export default function ExpandableCardBasic() {
     <div className="relative w-full max-w-3xl mx-auto">
       <ProjectStatusCard
         titleBeforeExpand="Get In Touch"
-        descriptionBeforeExpand="Click the button below to get in touch with us! Toggle the form to send us your inquiries, and we'll respond as soon as possible."
+        descriptionBeforeExpand="Click the button to get in touch with us!"
         titleAfterExpand=""
         descriptionAfterExpand=""
         open={
