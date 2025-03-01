@@ -31,7 +31,7 @@ const BusinessProducts = ({ grid, gridHeading, className }) => {
       </div>
       <div className={cn('grid w-full gap-4 mb-16', className)}>
         {grid?.map((item) => (
-          <MagicCard key={item.title} className={`p-4 max-sm:h-[180px]`}>
+          <MagicCard key={item.title} className={`p-4 max-sm:h-[200px]`}>
             <div className="w-full flex flex-col gap-4">
               <div className="">{item.icon}</div>
               <div className="text-md font-semibold md:text-lg">

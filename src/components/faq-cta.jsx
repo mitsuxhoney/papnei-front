@@ -11,6 +11,7 @@ import ExpandableCardBasic from './ExpandableCardDemo'
 import { BorderBeamForm } from './border-beam-form'
 import { SparklesText } from './ui/sparkle-text'
 import { Meteors } from './ui/meteors'
+import { AuroraBackground } from './ui/aurora-background'
 
 const faq = {
   heading: 'Frequently asked questions',
@@ -87,25 +88,32 @@ const FAQCTA = ({
             </Button>
           </div>
         </div> */}
-        <div className="w-full bg-accent p-4 text-center md:p-6 lg:p-8 lg:py-14 flex flex-col gap-14 justify-between items-center relative overflow-hidden">
+
+        <div className="w-full text-center relative overflow-hidden">
           {/* <div className="w-full mx-auto">
             <Meteors number={50} />
           </div> */}
-          <div className="flex flex-col gap-2">
-            {/* <h3 className="text-xl font-semibold md:text-4xl">{heading}</h3> */}
-            <SparklesText
-              className={`text-2xl font-semibold md:text-5xl`}
-              text={FAQCTAData.ctaHeading}
-            />
-            {/* <TypingAnimation>{heading}</TypingAnimation> */}
-            <p className="text-muted-foreground text-xs lg:text-md">
-              {FAQCTAData.ctaDescription}
-            </p>
-          </div>
+          <AuroraBackground className="w-screen h-full py-10">
+            <div className="w-full flex flex-col gap-12 items-center">
+              <Wrapper>
+                <div className="flex flex-col gap-2 items-center">
+                  {/* <h3 className="text-xl font-semibold md:text-4xl">{heading}</h3> */}
+                  <SparklesText
+                    className={`text-3xl font-semibold md:text-5xl`}
+                    text={FAQCTAData.ctaHeading}
+                  />
+                  {/* <TypingAnimation>{heading}</TypingAnimation> */}
+                  <p className="text-muted-foreground text-sm lg:text-md">
+                    {FAQCTAData.ctaDescription}
+                  </p>
+                </div>
+              </Wrapper>
 
-          <div className="max-w-md lg:max-w-lg w-full">
-            <ExpandableCardBasic />
-          </div>
+              <div className="max-w-md lg:max-w-lg w-full">
+                <ExpandableCardBasic />
+              </div>
+            </div>
+          </AuroraBackground>
         </div>
       </div>
     </section>

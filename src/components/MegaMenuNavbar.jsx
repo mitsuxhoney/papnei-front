@@ -37,10 +37,24 @@ import {
   Calendar,
   Moon,
   Sun,
+  Phone,
+  Utensils,
+  Factory,
+  BadgeCheck,
+  Scan,
+  Car,
+  Camera,
+  Truck,
+  Settings,
+  Banknote,
+  EyeOff,
+  Smile,
+  PenTool,
+  LinkIcon,
 } from 'lucide-react'
 import { cn } from '../lib/utils'
 import Wrapper from './Wrapper'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {
   Sheet,
   SheetContent,
@@ -56,98 +70,87 @@ import {
 } from '@/components/ui/accordion'
 import { Button } from '@/components/ui/button'
 import { useTheme } from './theme-provider'
+import { IconLetterCaseToggle } from '@tabler/icons-react'
+import { Link1Icon } from '@radix-ui/react-icons'
 
 // Business Verification Items - 15 items
 const businessVerificationItems = [
   {
     id: 'bv-1',
-    title: 'Business Registration',
-    description: 'Verify company registration status and details',
-    icon: <Building className="w-4 h-4 text-blue-600" />,
+    title: 'GST OTP Verification API',
+    description: 'Verify GST details using OTP-based authentication',
+    url: '/business/gst-otp-verification',
+    icon: <Key className="w-4 h-4 text-blue-600" />,
   },
   {
     id: 'bv-2',
-    title: 'GST Verification',
+    title: 'GST Verification API',
     description: 'Validate GST registration and filing status',
+    url: '/business/gst-verification',
     icon: <Database className="w-4 h-4 text-blue-600" />,
   },
   {
     id: 'bv-3',
-    title: 'Director Verification',
-    description: 'Verify company directors and their details',
-    icon: <Briefcase className="w-4 h-4 text-blue-600" />,
+    title: 'GST To Phone Number API',
+    description: 'Fetch phone number linked to a GST registration',
+    url: '/business/gst-to-phone',
+    icon: <Phone className="w-4 h-4 text-blue-600" />,
   },
   {
     id: 'bv-4',
-    title: 'Financial Health Check',
-    description: 'Assess business financial stability and credit score',
-    icon: <CreditCard className="w-4 h-4 text-blue-600" />,
+    title: 'MCA Data APIs (CIN / DIN)',
+    description: 'Retrieve company and director information using CIN/DIN',
+    url: '/business/mca-data',
+    icon: <Briefcase className="w-4 h-4 text-blue-600" />,
   },
   {
     id: 'bv-5',
-    title: 'Address Verification',
-    description: 'Verify registered business address',
-    icon: <Globe className="w-4 h-4 text-blue-600" />,
+    title: 'MCA Filed Doc Pull API',
+    description: 'Fetch company documents filed with MCA',
+    url: '/business/mca-filed-docs',
+    icon: <FileText className="w-4 h-4 text-blue-600" />,
   },
   {
     id: 'bv-6',
-    title: 'Legal Status Check',
-    description: 'Check for legal disputes and compliance issues',
-    icon: <FileCheck className="w-4 h-4 text-blue-600" />,
-  },
-  {
-    id: 'bv-7',
-    title: 'Tax Compliance',
-    description: 'Verify tax compliance status and history',
+    title: 'TDS-206 Compliance',
+    description: 'Verify tax deduction compliance under section 206',
+    url: '/business/tds-206-compliance',
     icon: <DollarSign className="w-4 h-4 text-blue-600" />,
   },
   {
+    id: 'bv-7',
+    title: 'FSSAI Verification API',
+    description: 'Verify food business registration with FSSAI',
+    url: '/business/fssai-verification',
+    icon: <Utensils className="w-4 h-4 text-blue-600" />,
+  },
+  {
     id: 'bv-8',
-    title: 'Credit Score Analysis',
-    description: 'Comprehensive business credit score assessment',
-    icon: <Percent className="w-4 h-4 text-blue-600" />,
+    title: 'TAN Verification API',
+    description: 'Validate Tax Deduction Account Number (TAN)',
+    url: '/business/tan-verification',
+    icon: <CreditCard className="w-4 h-4 text-blue-600" />,
   },
   {
     id: 'bv-9',
-    title: 'Ownership Verification',
-    description: 'Verify business ownership structure and details',
-    icon: <Users className="w-4 h-4 text-blue-600" />,
+    title: 'Udyog Verification',
+    description: 'Verify business details using Udyog Aadhaar',
+    url: '/business/udyog-verification',
+    icon: <Factory className="w-4 h-4 text-blue-600" />,
   },
   {
     id: 'bv-10',
-    title: 'Bank Account Verification',
-    description: 'Verify business bank account details',
-    icon: <Landmark className="w-4 h-4 text-blue-600" />,
+    title: 'Udyam Verification',
+    description: 'Verify MSME registration under Udyam scheme',
+    url: '/business/udyam-verification',
+    icon: <BadgeCheck className="w-4 h-4 text-blue-600" />,
   },
   {
     id: 'bv-11',
-    title: 'Compliance Certification',
-    description: 'Verify business compliance certifications',
-    icon: <Award className="w-4 h-4 text-blue-600" />,
-  },
-  {
-    id: 'bv-12',
-    title: 'Industry Classification',
-    description: 'Verify business industry classification',
-    icon: <Layers className="w-4 h-4 text-blue-600" />,
-  },
-  {
-    id: 'bv-13',
-    title: 'Business Relationships',
-    description: 'Analyze business partnerships and relationships',
-    icon: <Network className="w-4 h-4 text-blue-600" />,
-  },
-  {
-    id: 'bv-14',
-    title: 'Financial Statements',
-    description: 'Verify and analyze business financial statements',
-    icon: <PieChart className="w-4 h-4 text-blue-600" />,
-  },
-  {
-    id: 'bv-15',
-    title: 'Business License Verification',
-    description: 'Verify business licenses and permits',
-    icon: <CheckCircle className="w-4 h-4 text-blue-600" />,
+    title: 'IEC Verification',
+    description: 'Validate Import Export Code (IEC) registration',
+    url: '/business/iec-verification',
+    icon: <Globe className="w-4 h-4 text-blue-600" />,
   },
 ]
 
@@ -155,187 +158,126 @@ const businessVerificationItems = [
 const identityVerificationItems = [
   {
     id: 'iv-1',
-    title: 'Aadhaar Verification',
-    description: 'Verify identity using Aadhaar details',
-    icon: <User className="w-4 h-4 text-green-600" />,
-  },
-  {
-    id: 'iv-2',
-    title: 'PAN Verification',
-    description: 'Validate PAN card details and status',
+    title: 'PAN Verification API',
+    description: 'Verify PAN card details and status',
+    url: '/identity/pan-verification',
     icon: <FileText className="w-4 h-4 text-green-600" />,
   },
   {
-    id: 'iv-3',
-    title: 'Voter ID Verification',
-    description: 'Verify voter ID card details',
-    icon: <UserCheck className="w-4 h-4 text-green-600" />,
-  },
-  {
-    id: 'iv-4',
-    title: 'Driving License Check',
-    description: 'Validate driving license details and status',
+    id: 'iv-2',
+    title: 'PAN Comprehensive API',
+    description: 'Fetch detailed PAN information with verification',
+    url: '/identity/pan-comprehensive',
     icon: <FileCheck className="w-4 h-4 text-green-600" />,
   },
   {
+    id: 'iv-3',
+    title: 'Aadhaar to PAN API',
+    description: 'Link Aadhaar with PAN and verify details',
+    url: '/identity/aadhaar-to-pan',
+    icon: <LinkIcon className="w-4 h-4 text-green-600" />,
+  },
+  {
+    id: 'iv-4',
+    title: 'PAN Validation API',
+    description: 'Validate PAN details for accuracy',
+    url: '/identity/pan-validation',
+    icon: <CheckCircle className="w-4 h-4 text-green-600" />,
+  },
+  {
     id: 'iv-5',
-    title: 'Passport Verification',
-    description: 'Verify passport details and validity',
-    icon: <Globe className="w-4 h-4 text-green-600" />,
+    title: 'Aadhaar Verification API',
+    description: 'Verify identity using Aadhaar details',
+    url: '/identity/aadhaar-verification',
+    icon: <User className="w-4 h-4 text-green-600" />,
   },
   {
     id: 'iv-6',
-    title: 'Biometric Verification',
-    description: 'Verify identity using fingerprint or facial recognition',
-    icon: <Fingerprint className="w-4 h-4 text-green-600" />,
+    title: 'Voter-ID Verification API',
+    description: 'Verify Voter ID details',
+    url: '/identity/voter-id-verification',
+    icon: <UserCheck className="w-4 h-4 text-green-600" />,
   },
   {
     id: 'iv-7',
-    title: 'Address Verification',
-    description: 'Verify residential address details',
-    icon: <Search className="w-4 h-4 text-green-600" />,
+    title: 'Voter-ID OCR API',
+    description: 'Extract text and details from Voter ID',
+    url: '/identity/voter-id-ocr',
+    icon: <Scan className="w-4 h-4 text-green-600" />,
   },
   {
     id: 'iv-8',
-    title: 'Employment Verification',
-    description: 'Verify employment history and current status',
-    icon: <Briefcase className="w-4 h-4 text-green-600" />,
+    title: 'DL Verification API',
+    description: 'Verify Driving License details',
+    url: '/identity/dl-verification',
+    icon: <Car className="w-4 h-4 text-green-600" />,
   },
   {
     id: 'iv-9',
-    title: 'Education Verification',
-    description: 'Verify educational qualifications and certificates',
-    icon: <Award className="w-4 h-4 text-green-600" />,
+    title: 'Passport Verification API',
+    description: 'Verify passport details and validity',
+    url: '/identity/passport-verification',
+    icon: <Globe className="w-4 h-4 text-green-600" />,
   },
   {
     id: 'iv-10',
-    title: 'Criminal Record Check',
-    description: 'Verify criminal record status',
-    icon: <AlertCircle className="w-4 h-4 text-green-600" />,
-  },
-  {
-    id: 'iv-11',
-    title: 'Bank Account Verification',
-    description: 'Verify bank account details and status',
-    icon: <Landmark className="w-4 h-4 text-green-600" />,
-  },
-  {
-    id: 'iv-12',
-    title: 'Credit Score Check',
-    description: 'Verify and analyze personal credit score',
-    icon: <DollarSign className="w-4 h-4 text-green-600" />,
-  },
-  {
-    id: 'iv-13',
-    title: 'Document Verification',
-    description: 'Verify authenticity of submitted documents',
+    title: 'Passport OCR API',
+    description: 'Extract text from passport using OCR',
+    url: '/identity/passport-ocr',
     icon: <FileSearch className="w-4 h-4 text-green-600" />,
   },
   {
+    id: 'iv-11',
+    title: 'Photo-ID OCR API',
+    description: 'Extract text and details from any photo ID',
+    url: '/identity/photo-id-ocr',
+    icon: <Camera className="w-4 h-4 text-green-600" />,
+  },
+  {
+    id: 'iv-12',
+    title: 'Vehicle RC Verification API',
+    description: 'Verify vehicle registration certificate details',
+    url: '/identity/vehicle-rc-verification',
+    icon: <Truck className="w-4 h-4 text-green-600" />,
+  },
+  {
+    id: 'iv-13',
+    title: 'Chassis Number to RC API',
+    description: 'Retrieve RC details using chassis number',
+    url: '/identity/chassis-to-rc',
+    icon: <Settings className="w-4 h-4 text-green-600" />,
+  },
+  {
     id: 'iv-14',
-    title: 'Age Verification',
-    description: 'Verify age for compliance purposes',
-    icon: <Clock className="w-4 h-4 text-green-600" />,
+    title: 'RC with Financer Details',
+    description: 'Fetch vehicle RC details along with financer info',
+    url: '/identity/rc-with-financer',
+    icon: <Banknote className="w-4 h-4 text-green-600" />,
   },
   {
     id: 'iv-15',
-    title: 'Phone Number Verification',
-    description: 'Verify and validate phone numbers',
-    icon: <Smartphone className="w-4 h-4 text-green-600" />,
+    title: 'Aadhaar Masking API',
+    description: 'Mask Aadhaar details for privacy and compliance',
+    url: '/identity/aadhaar-masking',
+    icon: <EyeOff className="w-4 h-4 text-green-600" />,
   },
 ]
 
 // Aadhar E-Sign Items - 15 items
 const aadharESignItems = [
   {
-    id: 'es-1',
-    title: 'Document E-Sign',
-    description: 'Electronically sign documents using Aadhaar',
-    icon: <FileSignature className="w-4 h-4 text-purple-600" />,
+    id: 'av-1',
+    title: 'Face Verification API',
+    description: 'Verify identity using facial recognition technology',
+    url: '/aadhar/face-verification',
+    icon: <Smile className="w-4 h-4 text-purple-600" />,
   },
   {
-    id: 'es-2',
-    title: 'Bulk E-Sign',
-    description: 'Process multiple documents for e-signing',
-    icon: <FileText className="w-4 h-4 text-purple-600" />,
-  },
-  {
-    id: 'es-3',
-    title: 'E-Sign Verification',
-    description: 'Verify authenticity of Aadhaar e-signatures',
-    icon: <FileCheck className="w-4 h-4 text-purple-600" />,
-  },
-  {
-    id: 'es-4',
-    title: 'E-Sign API Integration',
-    description: 'Integrate e-signing capabilities into your platform',
-    icon: <Zap className="w-4 h-4 text-purple-600" />,
-  },
-  {
-    id: 'es-5',
-    title: 'E-Sign Workflow',
-    description: 'Create custom e-signing workflows for your business',
-    icon: <BarChart className="w-4 h-4 text-purple-600" />,
-  },
-  {
-    id: 'es-6',
-    title: 'E-Sign Analytics',
-    description: 'Track and analyze e-signing activities',
-    icon: <PieChart className="w-4 h-4 text-purple-600" />,
-  },
-  {
-    id: 'es-7',
-    title: 'Secure Document Storage',
-    description: 'Securely store e-signed documents',
-    icon: <Lock className="w-4 h-4 text-purple-600" />,
-  },
-  {
-    id: 'es-8',
-    title: 'E-Sign Audit Trail',
-    description: 'Maintain detailed audit trails for all e-signatures',
-    icon: <Clock className="w-4 h-4 text-purple-600" />,
-  },
-  {
-    id: 'es-9',
-    title: 'Template Management',
-    description: 'Create and manage document templates for e-signing',
-    icon: <Layers className="w-4 h-4 text-purple-600" />,
-  },
-  {
-    id: 'es-10',
-    title: 'Multi-party E-Sign',
-    description: 'Facilitate document signing by multiple parties',
-    icon: <Users className="w-4 h-4 text-purple-600" />,
-  },
-  {
-    id: 'es-11',
-    title: 'E-Sign Encryption',
-    description: 'Advanced encryption for e-signed documents',
-    icon: <Key className="w-4 h-4 text-purple-600" />,
-  },
-  {
-    id: 'es-12',
-    title: 'Compliance Management',
-    description: 'Ensure e-signatures comply with legal requirements',
-    icon: <ShieldCheck className="w-4 h-4 text-purple-600" />,
-  },
-  {
-    id: 'es-13',
-    title: 'Mobile E-Sign',
-    description: 'Sign documents on mobile devices',
-    icon: <Smartphone className="w-4 h-4 text-purple-600" />,
-  },
-  {
-    id: 'es-14',
-    title: 'E-Sign Notifications',
-    description: 'Automated notifications for e-signing workflow',
-    icon: <Mail className="w-4 h-4 text-purple-600" />,
-  },
-  {
-    id: 'es-15',
-    title: 'Document Expiry Management',
-    description: 'Manage expiration of e-signed documents',
-    icon: <Calendar className="w-4 h-4 text-purple-600" />,
+    id: 'av-2',
+    title: 'Aadhaar E-Sign API',
+    description: 'Digitally sign documents using Aadhaar-based authentication',
+    url: '/aadhar/e-sign',
+    icon: <PenTool className="w-4 h-4 text-purple-600" />,
   },
 ]
 
@@ -345,6 +287,7 @@ const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null)
   const [activeCategory, setActiveCategory] = useState(null)
   const navRef = useRef(null)
+  const navigate = useNavigate()
 
   // Close menus when clicking outside
   useEffect(() => {
@@ -459,7 +402,7 @@ const Navbar = () => {
                   <div className="flex gap-1 items-center cursor-pointer">
                     <Shield className="h-5 w-5 text-primary" />
                     <span className="text-lg font-semibold text-foreground">
-                      VerifyAPI
+                      XRAY
                     </span>
                   </div>
                 </Link>
@@ -558,15 +501,14 @@ const Navbar = () => {
                               <AccordionContent>
                                 <div className="flex flex-col gap-2">
                                   {businessVerificationItems.map((item) => (
-                                    <div
-                                      key={item.id}
-                                      className="flex items-center gap-2"
-                                    >
-                                      <div>{item.icon}</div>
-                                      <p className="font-medium text-sm">
-                                        {item.title}
-                                      </p>
-                                    </div>
+                                    <Link to={item.url} key={item.id}>
+                                      <div className="flex items-center gap-2">
+                                        <div>{item.icon}</div>
+                                        <p className="font-medium text-sm">
+                                          {item.title}
+                                        </p>
+                                      </div>
+                                    </Link>
                                   ))}
                                 </div>
                               </AccordionContent>
@@ -581,15 +523,14 @@ const Navbar = () => {
                               <AccordionContent>
                                 <div className="flex flex-col gap-2">
                                   {identityVerificationItems.map((item) => (
-                                    <div
-                                      key={item.id}
-                                      className="flex items-center gap-2"
-                                    >
-                                      <div>{item.icon}</div>
-                                      <p className="font-medium text-sm">
-                                        {item.title}
-                                      </p>
-                                    </div>
+                                    <Link to={item.url} key={item.id}>
+                                      <div className="flex items-center gap-2">
+                                        <div>{item.icon}</div>
+                                        <p className="font-medium text-sm">
+                                          {item.title}
+                                        </p>
+                                      </div>
+                                    </Link>
                                   ))}
                                 </div>
                               </AccordionContent>
@@ -604,15 +545,14 @@ const Navbar = () => {
                               <AccordionContent>
                                 <div className="flex flex-col gap-2">
                                   {aadharESignItems.map((item) => (
-                                    <div
-                                      key={item.id}
-                                      className="flex items-center gap-2"
-                                    >
-                                      <div>{item.icon}</div>
-                                      <p className="font-medium text-sm">
-                                        {item.title}
-                                      </p>
-                                    </div>
+                                    <Link to={item.url} key={item.id}>
+                                      <div className="flex items-center gap-2">
+                                        <div>{item.icon}</div>
+                                        <p className="font-medium text-sm">
+                                          {item.title}
+                                        </p>
+                                      </div>
+                                    </Link>
                                   ))}
                                 </div>
                               </AccordionContent>
@@ -638,7 +578,7 @@ const Navbar = () => {
             {/* Full-width mega menu */}
             {activeDropdown === 'products' && (
               <div
-                className="absolute left-0 right-0 mt-1 bg-accent border-b shadow-lg z-40"
+                className="absolute left-0 right-0 mt-1 bg-white dark:bg-[#09090B] border-b shadow-lg z-40"
                 onMouseEnter={() => handleMouseEnter('products')}
                 onMouseLeave={handleMouseLeave}
               >
@@ -653,7 +593,15 @@ const Navbar = () => {
 
                         <div className="space-y-1">
                           <button
-                            onClick={() => toggleCategory('business')}
+                            onClick={() => {
+                              navigate('/business')
+                              toggleDropdown(false)
+                              window.scrollTo({
+                                top: 0,
+                                left: 0,
+                                behavior: 'smooth',
+                              })
+                            }}
                             onMouseEnter={() =>
                               handleCategoryMouseEnter('business')
                             }
@@ -681,7 +629,15 @@ const Navbar = () => {
                           </button>
 
                           <button
-                            onClick={() => toggleCategory('identity')}
+                            onClick={() => {
+                              navigate('/identity')
+                              toggleDropdown(false)
+                              window.scrollTo({
+                                top: 0,
+                                left: 0,
+                                behavior: 'smooth',
+                              })
+                            }}
                             onMouseEnter={() =>
                               handleCategoryMouseEnter('identity')
                             }
@@ -709,7 +665,15 @@ const Navbar = () => {
                           </button>
 
                           <button
-                            onClick={() => toggleCategory('aadhar')}
+                            onClick={() => {
+                              navigate('/aadhar')
+                              toggleDropdown(false)
+                              window.scrollTo({
+                                top: 0,
+                                left: 0,
+                                behavior: 'smooth',
+                              })
+                            }}
                             onMouseEnter={() =>
                               handleCategoryMouseEnter('aadhar')
                             }
@@ -771,9 +735,12 @@ const Navbar = () => {
 
                             <div className="grid grid-cols-3 gap-4 overflow-y-auto">
                               {getActiveItems().map((item) => (
-                                <a
+                                <Link
                                   key={item.id}
-                                  href="#"
+                                  to={item.url}
+                                  onClick={() => {
+                                    toggleDropdown(false)
+                                  }}
                                   className="flex select-none gap-3 rounded-md p-3 leading-none outline-none transition-colors hover:bg-muted"
                                 >
                                   <div className="flex-shrink-0">
@@ -787,7 +754,7 @@ const Navbar = () => {
                                       {item.description}
                                     </p>
                                   </div>
-                                </a>
+                                </Link>
                               ))}
                             </div>
                           </>

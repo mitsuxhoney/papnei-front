@@ -2,7 +2,6 @@ import {
   BanknoteIcon,
   BuildingIcon,
   ClipboardCheckIcon,
-  Code,
   DatabaseIcon,
   FactoryIcon,
   FileTextIcon,
@@ -12,24 +11,17 @@ import {
   ShieldCheckIcon,
   UtensilsIcon,
 } from 'lucide-react'
-import HeroDemo from '../../components/HeroDemo'
+
 import Wrapper from '../../components/Wrapper'
-import { Icons } from '@/components/ui/icons'
-import { BorderBeamForm } from '../../components/border-beam-form'
+
 import BusinessProducts from '../../components/BusinessProducts'
 import FeaturesSection from '../../components/ui/features-section'
-import ExpandableCardBasic from '../../components/ExpandableCardDemo'
-import { DotPattern } from '../../components/ui/dot-pattern'
-import { DotPatternDemo } from '../../components/DotPatternDemo'
-import { cn } from '@/lib/utils'
-import { GridBackground } from '../../components/ui/glowing-card'
-import { BusinessHero } from '../../components/ui/modern-hero'
+import { Hero1 } from '../../components/Hero1'
 import { StaticTestimonialsEldora } from '../../components/StaticTestimonialsEldora'
 import { IntegrationBenefits } from '../../components/IntegrationBenefits'
 import { BusinessCTA } from '../../components/BusinessCTA'
 import { FAQCTA } from '../../components/faq-cta'
 import { InteractiveHoverButton } from '../../components/ui/interactive-hover'
-import OurOtherProducts from '../../components/OurOtherProducts'
 
 const features = [
   {
@@ -264,7 +256,7 @@ const Aadhar = () => {
   return (
     <div>
       <div className="mb-16">
-        <BusinessHero businessHero={businessHero} />
+        <Hero1 businessHero={businessHero} />
       </div>
       <Wrapper>
         <div className="mb-16">

@@ -2,7 +2,6 @@ import {
   BanknoteIcon,
   BuildingIcon,
   ClipboardCheckIcon,
-  Code,
   DatabaseIcon,
   FactoryIcon,
   FileTextIcon,
@@ -12,24 +11,74 @@ import {
   ShieldCheckIcon,
   UtensilsIcon,
 } from 'lucide-react'
-import HeroDemo from '../../components/HeroDemo'
 import Wrapper from '../../components/Wrapper'
-import { Icons } from '@/components/ui/icons'
-import { BorderBeamForm } from '../../components/border-beam-form'
+
 import BusinessProducts from '../../components/BusinessProducts'
 import FeaturesSection from '../../components/ui/features-section'
-import ExpandableCardBasic from '../../components/ExpandableCardDemo'
-import { DotPattern } from '../../components/ui/dot-pattern'
-import { DotPatternDemo } from '../../components/DotPatternDemo'
-import { cn } from '@/lib/utils'
-import { GridBackground } from '../../components/ui/glowing-card'
-import { BusinessHero } from '../../components/ui/modern-hero'
 import { StaticTestimonialsEldora } from '../../components/StaticTestimonialsEldora'
 import { IntegrationBenefits } from '../../components/IntegrationBenefits'
 import { BusinessCTA } from '../../components/BusinessCTA'
 import { FAQCTA } from '../../components/faq-cta'
 import { InteractiveHoverButton } from '../../components/ui/interactive-hover'
-import OurOtherProducts from '../../components/OurOtherProducts'
+import { Hero1 } from '../../components/Hero1'
+
+const businessHero = {
+  heading: 'A Collection of Components Built With Shadcn & Tailwind',
+  description:
+    'Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.',
+  button: {
+    text: 'Discover all components',
+    url: 'https://www.shadcnblocks.com',
+  },
+
+  reviews: {
+    count: 200,
+    avatars: [
+      {
+        id: 1,
+        name: 'John Doe',
+        designation: 'Software Engineer',
+        image:
+          'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80',
+      },
+      {
+        id: 2,
+        name: 'Robert Johnson',
+        designation: 'Product Manager',
+        image:
+          'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60',
+      },
+      {
+        id: 3,
+        name: 'Jane Smith',
+        designation: 'Data Scientist',
+        image:
+          'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60',
+      },
+      {
+        id: 4,
+        name: 'Emily Davis',
+        designation: 'UX Designer',
+        image:
+          'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60',
+      },
+      {
+        id: 5,
+        name: 'Tyler Durden',
+        designation: 'Soap Developer',
+        image:
+          'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80',
+      },
+      {
+        id: 6,
+        name: 'Dora',
+        designation: 'The Explorer',
+        image:
+          'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3534&q=80',
+      },
+    ],
+  },
+}
 
 const features = [
   {
@@ -54,41 +103,6 @@ const featuresHeading = {
   heading: 'Features at a glance',
   description:
     'Discover our suite of verification services designed to enhance your business operations.',
-}
-
-const businessHero = {
-  heading: 'A Collection of Components Built With Shadcn & Tailwind',
-  description:
-    'Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.',
-  button: {
-    text: 'Discover all components',
-    url: 'https://www.shadcnblocks.com',
-  },
-  reviews: {
-    count: 200,
-    avatars: [
-      {
-        src: 'https://www.shadcnblocks.com/images/block/avatar-1.webp',
-        alt: 'Avatar 1',
-      },
-      {
-        src: 'https://www.shadcnblocks.com/images/block/avatar-2.webp',
-        alt: 'Avatar 2',
-      },
-      {
-        src: 'https://www.shadcnblocks.com/images/block/avatar-3.webp',
-        alt: 'Avatar 3',
-      },
-      {
-        src: 'https://www.shadcnblocks.com/images/block/avatar-4.webp',
-        alt: 'Avatar 4',
-      },
-      {
-        src: 'https://www.shadcnblocks.com/images/block/avatar-5.webp',
-        alt: 'Avatar 5',
-      },
-    ],
-  },
 }
 
 const featuresBenefits = [
@@ -264,7 +278,7 @@ const Identity = () => {
   return (
     <div>
       <div className="mb-16">
-        <BusinessHero businessHero={businessHero} />
+        <Hero1 businessHero={businessHero} />
       </div>
       <Wrapper>
         <div className="mb-16">
