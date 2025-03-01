@@ -15,6 +15,7 @@ export default {
         container: '1280px',
       },
       animation: {
+        spotlight: 'spotlight 2s ease .75s 1 forwards',
         meteor: 'meteor 5s linear infinite',
         moveUp: 'moveUp 1.4s ease forwards',
         appear: 'appear 1s 1s forwards',
@@ -30,6 +31,16 @@ export default {
         orbit: 'orbit calc(var(--duration)*1s) linear infinite',
       },
       keyframes: {
+        spotlight: {
+          '0%': {
+            opacity: 0,
+            transform: 'translate(-72%, -62%) scale(0.5)',
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translate(-50%,-40%) scale(1)',
+          },
+        },
         moveUp: {
           '0%': { transform: 'translateY(5%)', opacity: '0' },
           '100%': { transform: 'translateY(0%)', opacity: '1' },
