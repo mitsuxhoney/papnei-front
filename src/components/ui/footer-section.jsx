@@ -71,36 +71,54 @@ function Footerdemo() {
                 <Link
                   to="/"
                   className="block transition-colors hover:text-primary"
+                  onClick={() => {
+                    window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })
+                  }}
                 >
                   Home
                 </Link>
                 <Link
                   to="/business"
                   className="block transition-colors hover:text-primary"
+                  onClick={() => {
+                    window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })
+                  }}
                 >
                   Business Verification
                 </Link>
                 <Link
                   to="identity"
                   className="block transition-colors hover:text-primary"
+                  onClick={() => {
+                    window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })
+                  }}
                 >
                   Identity Verification
                 </Link>
                 <Link
                   to="/aadhar"
                   className="block transition-colors hover:text-primary"
+                  onClick={() => {
+                    window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })
+                  }}
                 >
                   Aadhar Verification
                 </Link>
                 <Link
                   to="/contact-us"
                   className="block transition-colors hover:text-primary"
+                  onClick={() => {
+                    window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })
+                  }}
                 >
                   Contact Us
                 </Link>
                 <Link
                   to="/about-us"
                   className="block transition-colors hover:text-primary"
+                  onClick={() => {
+                    window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })
+                  }}
                 >
                   About Us
                 </Link>

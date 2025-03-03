@@ -38,9 +38,9 @@ import { InteractiveHoverButton } from '../../components/ui/interactive-hover'
 import { Hero1 } from '../../components/Hero1'
 
 const businessHero = {
-  heading: 'A Collection of Components Built With Shadcn & Tailwind',
+  heading: 'XRAY provides fast, and secure identity verification solutions.',
   description:
-    'Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.',
+    'Our advanced technology simplifies the process while maintaining the highest security standards.',
   button: {
     text: 'Discover all components',
     url: 'https://www.shadcnblocks.com',
