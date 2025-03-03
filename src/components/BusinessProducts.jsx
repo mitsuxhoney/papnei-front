@@ -1,7 +1,7 @@
 import { Badge } from '@/components/ui/badge'
 import { MagicCard } from './ui/magic-card'
 import { cn } from '@/lib/utils'
-
+import { Link } from 'react-router-dom'
 import {
   BanknoteIcon,
   BriefcaseIcon,
@@ -39,7 +39,7 @@ const BusinessProducts = ({ grid, gridHeading, className }) => {
               </div>
 
               <div className="text-muted-foreground">{item.description}</div>
-              <div>{item.button}</div>
+              <Link to={item.url}>{item.button}</Link>
             </div>
           </MagicCard>
         ))}

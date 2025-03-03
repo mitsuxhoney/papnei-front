@@ -69,25 +69,37 @@ function Footerdemo() {
               <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
               <nav className="space-y-2 text-sm">
                 <Link
-                  href="#"
+                  to="/"
                   className="block transition-colors hover:text-primary"
                 >
                   Home
                 </Link>
                 <Link
-                  href="#"
+                  to="/business"
                   className="block transition-colors hover:text-primary"
                 >
-                  Products
+                  Business Verification
                 </Link>
                 <Link
-                  href="#"
+                  to="identity"
+                  className="block transition-colors hover:text-primary"
+                >
+                  Identity Verification
+                </Link>
+                <Link
+                  to="/aadhar"
+                  className="block transition-colors hover:text-primary"
+                >
+                  Aadhar Verification
+                </Link>
+                <Link
+                  to="/contact-us"
                   className="block transition-colors hover:text-primary"
                 >
                   Contact Us
                 </Link>
                 <Link
-                  href="#"
+                  to="/about-us"
                   className="block transition-colors hover:text-primary"
                 >
                   About Us

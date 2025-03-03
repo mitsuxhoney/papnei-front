@@ -13,7 +13,6 @@ import PanVerification from '@/pages/Identity/pan-verification'
 import PANComprehensive from './pages/Identity/pan-comprehensive'
 import AadharPAN from './pages/Identity/aadhar-pan'
 import PANValidation from './pages/Identity/pan-validation'
-import VoterVerification from './pages/Identity/voter-verification'
 import VoterOCR from './pages/Identity/voter-ocr'
 import DLVerification from './pages/Identity/dl-verification'
 import PassportVerification from './pages/Identity/passport-verification'
@@ -33,6 +32,8 @@ import TANVerification from './pages/Business/tan-verification'
 import UDYOGVerification from './pages/Business/udyog-verification'
 import UDYAMVerification from './pages/Business/udyam-verification'
 import IECVerification from './pages/Business/IECVerification'
+import AadharVerification from './pages/Identity/aadhar-verification'
+import VoterVerification from './pages/Identity/voter-verification'
 
 function App() {
   return (
@@ -59,7 +60,8 @@ function App() {
           <Route path="pan-comprehensive" element={<PANComprehensive />} />
           <Route path="aadhaar-to-pan" element={<AadharPAN />} />
           <Route path="pan-validation" element={<PANValidation />} />
-          <Route path="aadhaar-verification" element={<VoterVerification />} />
+          <Route path="aadhar-verification" element={<AadharVerification />} />
+          <Route path="voter-id-verification" element={<VoterVerification />} />
           <Route path="voter-id-ocr" element={<VoterOCR />} />
           <Route path="dl-verification" element={<DLVerification />} />
           <Route

@@ -15,13 +15,14 @@ export function FeaturesSectionWithCardGradient({ grid, gridHeading }) {
         {grid.map((feature) => (
           <div
             key={feature.title}
-            className="relative bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white p-6 rounded-3xl overflow-hidden"
+            className="relative bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white p-6 flex flex-col gap-4 rounded-3xl overflow-hidden"
           >
             <Grid size={20} />
+            <div>{feature.badge}</div>
             <p className="text-base font-bold text-neutral-800 dark:text-white relative z-20">
               {feature.title}
             </p>
-            <p className="text-neutral-600 dark:text-neutral-400 mt-4 text-base font-normal relative z-20">
+            <p className="text-neutral-600 dark:text-neutral-400 text-base font-normal relative z-20">
               {feature.description}
             </p>
           </div>
