@@ -328,7 +328,12 @@ const Navbar = () => {
       setActiveCategory(null)
     } else {
       setActiveDropdown(menu)
-      setActiveCategory(null)
+      // Set default category to 'business' when opening Products dropdown
+      if (menu === 'products') {
+        setActiveCategory('business')
+      } else {
+        setActiveCategory(null)
+      }
     }
   }
 
@@ -340,6 +345,10 @@ const Navbar = () => {
   const handleMouseEnter = (menu) => {
     if (window.innerWidth >= 768) {
       setActiveDropdown(menu)
+      // Set default category to 'business' when opening Products dropdown
+      if (menu === 'products') {
+        setActiveCategory('business')
+      }
     }
   }
 
@@ -389,7 +398,13 @@ const Navbar = () => {
       <div className="bg-primary py-2 px-4 text-center text-primary-foreground">
         <p className="text-sm font-medium">
           New: Enhanced Business Verification API now available{' '}
-          <Link to="/contact-us" className="underline ml-2">
+          <Link
+            to="/contact-us"
+            className="underline ml-2"
+            onClick={() => {
+              window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })
+            }}
+          >
             Learn more →
           </Link>
         </p>
@@ -440,6 +455,9 @@ const Navbar = () => {
                     {/* About Us */}
                     <Link
                       to="/about-us"
+                      onClick={() => {
+                        window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })
+                      }}
                       className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:text-blue-600"
                     >
                       About Us
@@ -448,6 +466,9 @@ const Navbar = () => {
                     {/* Contact Us */}
                     <Link
                       to="/contact-us"
+                      onClick={() => {
+                        window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })
+                      }}
                       className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:text-blue-600"
                     >
                       Contact Us
@@ -484,7 +505,17 @@ const Navbar = () => {
                       <SheetContent className="overflow-y-auto">
                         <SheetHeader>
                           <SheetTitle>
-                            <Link to="/" className="flex items-center gap-1">
+                            <Link
+                              to="/"
+                              className="flex items-center gap-1"
+                              onClick={() => {
+                                window.scrollTo({
+                                  left: 0,
+                                  top: 0,
+                                  behavior: 'smooth',
+                                })
+                              }}
+                            >
                               <Shield className="h-5 w-5 text-primary" />
                               <span className="text-lg font-semibold text-foreground">
                                 XRAY
@@ -661,10 +692,34 @@ const Navbar = () => {
 
                           <div className="flex flex-col gap-2">
                             <Button asChild variant="outline">
-                              <Link to="/about-us">About Us</Link>
+                              <Link
+                                to="/about-us"
+                                onClick={() => {
+                                  setOpen(false)
+                                  window.scrollTo({
+                                    left: 0,
+                                    top: 0,
+                                    behavior: 'smooth',
+                                  })
+                                }}
+                              >
+                                About Us
+                              </Link>
                             </Button>
                             <Button asChild>
-                              <Link to="/contact-us">Contact Us</Link>
+                              <Link
+                                to="/contact-us"
+                                onClick={() => {
+                                  setOpen(false)
+                                  window.scrollTo({
+                                    left: 0,
+                                    top: 0,
+                                    behavior: 'smooth',
+                                  })
+                                }}
+                              >
+                                Contact Us
+                              </Link>
                             </Button>
                           </div>
                         </div>
@@ -822,7 +877,15 @@ const Navbar = () => {
                               </h3>
                               <Link
                                 to={activeCategory}
-                                onClick={() => toggleDropdown('products')}
+                                onClick={() => {
+                                  toggleDropdown('products')
+
+                                  window.scrollTo({
+                                    left: 0,
+                                    top: 0,
+                                    behavior: 'smooth',
+                                  })
+                                }}
                                 className={cn(
                                   'text-sm font-medium flex items-center',
                                   getActiveCategoryColor()
@@ -840,6 +903,11 @@ const Navbar = () => {
                                   to={item.url}
                                   onClick={() => {
                                     toggleDropdown(false)
+                                    window.scrollTo({
+                                      left: 0,
+                                      top: 0,
+                                      behavior: 'smooth',
+                                    })
                                   }}
                                   className="flex select-none gap-3 rounded-md p-3 leading-none outline-none transition-colors hover:bg-muted"
                                 >

@@ -4,6 +4,8 @@ import { Avatar, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { AnimatedTooltip } from './ui/animated-tooltip'
 import Wrapper from './Wrapper'
+import { InteractiveGridPattern } from './ui/interactive-grid'
+import { cn } from '../lib/utils'
 
 function Hero2({ businessHero }) {
   return (
