@@ -328,7 +328,12 @@ const Navbar = () => {
       setActiveCategory(null)
     } else {
       setActiveDropdown(menu)
-      setActiveCategory(null)
+      // Set default category to 'business' when opening Products dropdown
+      if (menu === 'products') {
+        setActiveCategory('business')
+      } else {
+        setActiveCategory(null)
+      }
     }
   }
 
@@ -340,6 +345,10 @@ const Navbar = () => {
   const handleMouseEnter = (menu) => {
     if (window.innerWidth >= 768) {
       setActiveDropdown(menu)
+      // Set default category to 'business' when opening Products dropdown
+      if (menu === 'products') {
+        setActiveCategory('business')
+      }
     }
   }
 
