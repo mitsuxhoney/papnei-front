@@ -401,7 +401,7 @@ const Navbar = () => {
         <div ref={navRef} className="">
           {/* Announcement banner */}
 
-          <div className="py-4">
+          <div className="py-4 px-6 md:px-14">
             <nav className="relative z-30">
               <div className="flex justify-between items-center">
                 {/* Logo */}
