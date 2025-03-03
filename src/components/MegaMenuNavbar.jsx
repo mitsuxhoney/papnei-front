@@ -394,9 +394,11 @@ const Navbar = () => {
           </Link>
         </p>
       </div>
-      <Wrapper>
+
+      <div className="relative">
+        <ScrollProgress className="bottom-0 absolute" />
+
         <div ref={navRef} className="">
-          <ScrollProgress className="top-[109px]" />
           {/* Announcement banner */}
 
           <div className="py-4">
@@ -879,7 +881,7 @@ const Navbar = () => {
             )}
           </div>
         </div>
-      </Wrapper>
+      </div>
     </>
   )
 }

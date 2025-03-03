@@ -3,6 +3,7 @@ import { Sparkles } from './ui/layouts-sparkles'
 import { Avatar, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { AnimatedTooltip } from './ui/animated-tooltip'
+import Wrapper from './Wrapper'
 
 function Hero2({ businessHero }) {
   return (
@@ -17,41 +18,42 @@ function Hero2({ businessHero }) {
             alt="bg-image"
           /> */}
 
-          <div className="w-full flex flex-col items-center py-24 relative z-[5]">
-            <div className="mx-auto flex max-w-screen-lg flex-col gap-6 items-center justify-center h-full">
-              <h1 className="2xl:text-6xl xl:text-5xl text-5xl text-center font-semibold bg-gradient-to-b from-[#edeffd] to-[#7b9cda] bg-clip-text ">
-                {businessHero.heading}
-              </h1>
-              <p className="text-balance text-muted-foreground lg:text-lg text-center">
-                {businessHero.description}
-              </p>
-            </div>
-
-            <Button asChild size="lg" className="mt-10">
-              <a href={businessHero.button.url}>{businessHero.button.text}</a>
-            </Button>
-
-            <div className=" mx-auto mt-10 flex flex-col items-center gap-4 sm:flex-row">
-              <span className="mx-4 inline-flex items-center -space-x-4">
-                <AnimatedTooltip items={businessHero.reviews.avatars} />
-              </span>
-              <div>
-                <div className="flex items-center gap-1">
-                  {[...Array(5)].map((_, index) => (
-                    <Star
-                      key={index}
-                      className="size-5 fill-yellow-400 text-yellow-400"
-                    />
-                  ))}
-                </div>
-                <p className="text-left font-medium text-muted-foreground">
-                  from {businessHero.reviews.count}+ reviews
+          <Wrapper>
+            <div className="w-full flex flex-col items-center py-24 relative z-[5]">
+              <div className="mx-auto flex max-w-screen-lg flex-col gap-6 items-center justify-center h-full">
+                <h1 className="2xl:text-6xl xl:text-5xl text-xl text-center font-semibold bg-gradient-to-b from-[#edeffd] to-[#7b9cda] bg-clip-text ">
+                  {businessHero.heading}
+                </h1>
+                <p className="text-balance text-muted-foreground lg:text-lg text-center">
+                  {businessHero.description}
                 </p>
               </div>
-            </div>
-          </div>
 
-          {/* <article className="grid gap-4 text-center relative z-10 py-10 h-full place-content-center">
+              <Button asChild size="lg" className="mt-10">
+                <a href={businessHero.button.url}>{businessHero.button.text}</a>
+              </Button>
+
+              <div className=" mx-auto mt-10 flex flex-col items-center gap-4 sm:flex-row">
+                <span className="mx-4 inline-flex items-center -space-x-4">
+                  <AnimatedTooltip items={businessHero.reviews.avatars} />
+                </span>
+                <div>
+                  <div className="flex items-center gap-1">
+                    {[...Array(5)].map((_, index) => (
+                      <Star
+                        key={index}
+                        className="size-5 fill-yellow-400 text-yellow-400"
+                      />
+                    ))}
+                  </div>
+                  <p className="text-left font-medium text-muted-foreground">
+                    from {businessHero.reviews.count}+ reviews
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* <article className="grid gap-4 text-center relative z-10 py-10 h-full place-content-center">
             <h1 className="2xl:text-6xl xl:text-5xl text-5xl font-semibold bg-gradient-to-b text-primary from-[#edeffd] to-[#7b9cda] bg-clip-text leading-[100%] tracking-tighter">
               Become an Animation Expert <br /> Easily at Our Academy
             </h1>
@@ -66,15 +68,16 @@ function Hero2({ businessHero }) {
             </button>
           </article> */}
 
-          <div className="absolute bottom-0 z-[2] h-full w-screen overflow-hidden [mask-image:radial-gradient(closest-side_at_center,white,transparent)] before:absolute before:inset-0 before:bg-[radial-gradient(closest-side_at_bottom_center,#3273ff,transparent_90%)] before:opacity-40 after:absolute">
-            <Sparkles
-              density={1800}
-              speed={1.2}
-              color="#48b6ff"
-              direction="top"
-              className="absolute inset-x-0 bottom-0 h-full w-full z-[-1]"
-            />
-          </div>
+            <div className="absolute bottom-0 z-[2] h-full w-screen overflow-hidden [mask-image:radial-gradient(closest-side_at_center,white,transparent)] before:absolute before:inset-0 before:bg-[radial-gradient(closest-side_at_bottom_center,#3273ff,transparent_90%)] before:opacity-40 after:absolute">
+              <Sparkles
+                density={1800}
+                speed={1.2}
+                color="#48b6ff"
+                direction="top"
+                className="absolute inset-x-0 bottom-0 h-full w-full z-[-1]"
+              />
+            </div>
+          </Wrapper>
         </section>
       </main>
     </>
