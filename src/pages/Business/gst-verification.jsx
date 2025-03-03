@@ -1,5 +1,5 @@
 const GSTVerification = () => {
-  return <div>GSTVerification</div>
+  return <div></div>
 }
 
 export default GSTVerification

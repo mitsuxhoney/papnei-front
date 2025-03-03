@@ -51,6 +51,8 @@ import {
   Smile,
   PenTool,
   LinkIcon,
+  Layout,
+  LayoutGrid,
 } from 'lucide-react'
 import { cn } from '../lib/utils'
 import Wrapper from './Wrapper'
@@ -72,6 +74,7 @@ import { Button } from '@/components/ui/button'
 import { useTheme } from './theme-provider'
 import { IconLetterCaseToggle } from '@tabler/icons-react'
 import { Link1Icon } from '@radix-ui/react-icons'
+import { ScrollProgress } from '@/components/ui/scroll-progress'
 
 // Business Verification Items - 15 items
 const businessVerificationItems = [
@@ -288,6 +291,7 @@ const Navbar = () => {
   const [activeCategory, setActiveCategory] = useState(null)
   const navRef = useRef(null)
   const navigate = useNavigate()
+  const [open, setOpen] = useState(false)
 
   // Close menus when clicking outside
   useEffect(() => {
@@ -392,6 +396,7 @@ const Navbar = () => {
       </div>
       <Wrapper>
         <div ref={navRef} className="">
+          <ScrollProgress className="top-[109px]" />
           {/* Announcement banner */}
 
           <div className="py-4">
@@ -468,7 +473,7 @@ const Navbar = () => {
 
                   {/* Mobile menu button */}
                   <div className="flex items-center md:hidden">
-                    <Sheet>
+                    <Sheet open={open} onOpenChange={setOpen}>
                       <SheetTrigger asChild>
                         <Button variant="outline" className="p-5" size="icon">
                           <Menu className="h-6 w-6" />
@@ -501,7 +506,18 @@ const Navbar = () => {
                               <AccordionContent>
                                 <div className="flex flex-col gap-2">
                                   {businessVerificationItems.map((item) => (
-                                    <Link to={item.url} key={item.id}>
+                                    <Link
+                                      to={item.url}
+                                      key={item.id}
+                                      onClick={() => {
+                                        setOpen(false)
+                                        window.scrollTo({
+                                          top: 0,
+                                          left: 0,
+                                          behavior: 'smooth',
+                                        })
+                                      }}
+                                    >
                                       <div className="flex items-center gap-2">
                                         <div>{item.icon}</div>
                                         <p className="font-medium text-sm">
@@ -510,6 +526,26 @@ const Navbar = () => {
                                       </div>
                                     </Link>
                                   ))}
+                                  <Link
+                                    to="/business"
+                                    onClick={() => {
+                                      setOpen(false)
+                                      window.scrollTo({
+                                        top: 0,
+                                        left: 0,
+                                        behavior: 'smooth',
+                                      })
+                                    }}
+                                  >
+                                    <div className="flex items-center gap-2">
+                                      <div>
+                                        <LayoutGrid className="w-4 h-4 text-blue-600" />
+                                      </div>
+                                      <p className="font-medium text-sm">
+                                        View All Services
+                                      </p>
+                                    </div>
+                                  </Link>
                                 </div>
                               </AccordionContent>
                             </AccordionItem>
@@ -523,7 +559,18 @@ const Navbar = () => {
                               <AccordionContent>
                                 <div className="flex flex-col gap-2">
                                   {identityVerificationItems.map((item) => (
-                                    <Link to={item.url} key={item.id}>
+                                    <Link
+                                      to={item.url}
+                                      key={item.id}
+                                      onClick={() => {
+                                        setOpen(false)
+                                        window.scrollTo({
+                                          top: 0,
+                                          left: 0,
+                                          behavior: 'smooth',
+                                        })
+                                      }}
+                                    >
                                       <div className="flex items-center gap-2">
                                         <div>{item.icon}</div>
                                         <p className="font-medium text-sm">
@@ -532,6 +579,26 @@ const Navbar = () => {
                                       </div>
                                     </Link>
                                   ))}
+                                  <Link
+                                    to="/identity"
+                                    onClick={() => {
+                                      setOpen(false)
+                                      window.scrollTo({
+                                        top: 0,
+                                        left: 0,
+                                        behavior: 'smooth',
+                                      })
+                                    }}
+                                  >
+                                    <div className="flex items-center gap-2">
+                                      <div>
+                                        <LayoutGrid className="w-4 h-4 text-green-600" />
+                                      </div>
+                                      <p className="font-medium text-sm">
+                                        View All Services
+                                      </p>
+                                    </div>
+                                  </Link>
                                 </div>
                               </AccordionContent>
                             </AccordionItem>
@@ -545,7 +612,18 @@ const Navbar = () => {
                               <AccordionContent>
                                 <div className="flex flex-col gap-2">
                                   {aadharESignItems.map((item) => (
-                                    <Link to={item.url} key={item.id}>
+                                    <Link
+                                      to={item.url}
+                                      key={item.id}
+                                      onClick={() => {
+                                        setOpen(false)
+                                        window.scrollTo({
+                                          top: 0,
+                                          left: 0,
+                                          behavior: 'smooth',
+                                        })
+                                      }}
+                                    >
                                       <div className="flex items-center gap-2">
                                         <div>{item.icon}</div>
                                         <p className="font-medium text-sm">
@@ -554,6 +632,26 @@ const Navbar = () => {
                                       </div>
                                     </Link>
                                   ))}
+                                  <Link
+                                    to="/aadhar"
+                                    onClick={() => {
+                                      setOpen(false)
+                                      window.scrollTo({
+                                        top: 0,
+                                        left: 0,
+                                        behavior: 'smooth',
+                                      })
+                                    }}
+                                  >
+                                    <div className="flex items-center gap-2">
+                                      <div>
+                                        <LayoutGrid className="w-4 h-4 text-purple-600" />
+                                      </div>
+                                      <p className="font-medium text-sm">
+                                        View All Services
+                                      </p>
+                                    </div>
+                                  </Link>
                                 </div>
                               </AccordionContent>
                             </AccordionItem>
