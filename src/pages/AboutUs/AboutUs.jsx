@@ -20,8 +20,8 @@ const AboutUs = () => {
       <section className="py-16 ">
         <div className=" mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-left">Our Story</h2>
-            <div className="space-y-6 text-gray-700 text-left">
+            <h2 className="text-3xl font-bold mb-8 text-center">Our Story</h2>
+            <div className="space-y-6 text-muted-foreground text-center">
               <p>
                 Founded in 2018, Papnei began with a simple yet powerful vision:
                 to make healthcare more accessible, efficient, and
@@ -53,7 +53,7 @@ const AboutUs = () => {
         <div className=" mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Our Mission & Values</h2>
-            <p className="text-gray-700">
+            <p className="text-muted-foreground">
               Guided by our core principles, we&apos;re committed to
               transforming healthcare for the better.
             </p>

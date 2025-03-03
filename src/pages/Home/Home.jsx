@@ -42,6 +42,7 @@ import { MagicCard } from '../../components/ui/magic-card'
 import Who from '../../components/Who'
 import { Why } from '../../components/Why'
 import { BusinessCTA } from '../../components/BusinessCTA'
+import OpenSource from '../../components/ui/open-source'
 
 const tabsData = {
   badge: 'shadcnblocks.com',
@@ -309,6 +310,29 @@ const Home = () => {
         {/* <AnimatedTestimonialsDemo /> */}
         <div>
           <Partners />
+        </div>
+        <div className="mb-16">
+          <OpenSource
+            repository="codehagen/prismui"
+            title="Join our community"
+            description="PrismUI is built by the community, for the community. We'd love to have you join us!"
+            buttonText="View on GitHub"
+            defaultStats={{
+              stars: 300,
+              contributors: [
+                {
+                  login: 'codehagen',
+                  avatar_url:
+                    'https://avatars.githubusercontent.com/u/12345678?v=4',
+                },
+                {
+                  login: 'contributor2',
+                  avatar_url:
+                    'https://avatars.githubusercontent.com/u/23456789?v=4',
+                },
+              ],
+            }}
+          />
         </div>
         {/* <SpotlightCard cards={cardData} /> */}
         {/* <div className="w-full">

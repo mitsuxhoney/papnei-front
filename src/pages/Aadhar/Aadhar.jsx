@@ -1,5 +1,6 @@
 import {
   BanknoteIcon,
+  BarChartIcon,
   BuildingIcon,
   ClipboardCheckIcon,
   DatabaseIcon,
@@ -7,8 +8,11 @@ import {
   FileTextIcon,
   GlobeIcon,
   KeyIcon,
+  PenIcon,
   PhoneIcon,
+  SendIcon,
   ShieldCheckIcon,
+  SmileIcon,
   UtensilsIcon,
 } from 'lucide-react'
 
@@ -26,16 +30,19 @@ import Hero3 from '../../components/Hero3'
 
 const features = [
   {
+    badge: <ShieldCheckIcon className="w-4 h-4" />,
     title: 'HIPAA and SOC2 Compliant',
     description:
       'Our applications are HIPAA and SOC2 compliant, your data is safe with us, always.',
   },
   {
+    badge: <SendIcon className="w-4 h-4" />,
     title: 'Automated Social Media Posting',
     description:
       'Schedule and automate your social media posts across multiple platforms to save time and maintain a consistent online presence.',
   },
   {
+    badge: <BarChartIcon className="w-4 h-4" />,
     title: 'Advanced Analytics',
     description:
       'Gain insights into your social media performance with detailed analytics and reporting tools to measure engagement and ROI.',
@@ -152,71 +159,32 @@ const FAQCTAData = {
   supportButtonText: 'Contact Support',
   supportButtonUrl: 'https://shadcnblocks.com',
 }
-const businessProducts = [
+const aadharProducts = [
   {
-    title: 'GST OTP Verification',
-    description: 'Verify GST details using OTP-based authentication.',
-    icon: <KeyIcon className="w-4 h-4" />,
+    title: 'Face Verification',
+    description: 'Verify identity through facial recognition.',
+    icon: <SmileIcon className="w-4 h-4" />, // Replace with your preferred icon
+    url: 'face-verification',
+    button: (
+      <InteractiveHoverButton className="rounded-md h-8 flex items-center text-sm">
+        Learn More
+      </InteractiveHoverButton>
+    ),
   },
   {
-    title: 'GST Verification',
-    description: 'Authenticate businesses by verifying their GST details.',
-    icon: <ShieldCheckIcon className="w-4 h-4" />,
-  },
-  {
-    title: 'GST To Phone Number',
-    description: 'Retrieve phone numbers linked to a given GST number.',
-    icon: <PhoneIcon className="w-4 h-4" />,
-  },
-  {
-    title: 'MCA Data (CIN / DIN)',
-    description: 'Access company and director details via MCA database.',
-    icon: <DatabaseIcon className="w-4 h-4" />,
-  },
-  {
-    title: 'MCA Filed Doc Pull',
-    description: 'Retrieve documents filed with MCA for compliance.',
-    icon: <FileTextIcon className="w-4 h-4" />,
-  },
-  {
-    title: 'TDS-206 Compliance',
-    description: 'Verify TDS-206 compliance for tax purposes.',
-    icon: <BanknoteIcon className="w-4 h-4" />,
-  },
-  {
-    title: 'FSSAI Verification',
-    description: 'Validate FSSAI license details for food businesses.',
-    icon: <UtensilsIcon className="w-4 h-4" />,
-  },
-  {
-    title: 'TAN Verification',
-    description:
-      'Authenticate Tax Deduction and Collection Account Number (TAN).',
-    icon: <ClipboardCheckIcon className="w-4 h-4" />,
-  },
-  {
-    title: 'Udyog Verification',
-    description: 'Verify Udyog Aadhaar details of MSMEs.',
-    icon: <FactoryIcon className="w-4 h-4" />,
-  },
-  {
-    title: 'Udyam Verification',
-    description: 'Authenticate Udyam Registration details of MSMEs.',
-    icon: <BuildingIcon className="w-4 h-4" />,
-  },
-  {
-    title: 'IEC Verification',
-    description: 'Validate Importer Exporter Code (IEC) details.',
-    icon: <GlobeIcon className="w-4 h-4" />,
-  },
-  {
-    title: 'IEC Verificatione',
-    description: 'Validate Importer Exporter Code (IEC) details.',
-    icon: <GlobeIcon className="w-4 h-4" />,
+    title: 'Aadhaar E-Sign',
+    description: 'Digitally sign documents using Aadhaar-based e-signature.',
+    icon: <PenIcon className="w-4 h-4" />, // Replace with your preferred icon
+    url: 'e-sign',
+    button: (
+      <InteractiveHoverButton className="rounded-md h-8 flex items-center text-sm">
+        Learn More
+      </InteractiveHoverButton>
+    ),
   },
 ]
 
-const BusinessProductsHeading = {
+const aadharProductsHeading = {
   badge: 'Instant Verification',
   title: 'Business & Compliance Verification Solutions',
   description:
@@ -225,21 +193,23 @@ const BusinessProductsHeading = {
 
 const otherProducts = [
   {
-    title: 'Identity Verfication',
+    title: 'Business Verfication',
     description: 'Verify GST details using OTP-based authentication.',
     icon: <KeyIcon className="w-4 h-4" />,
+    url: '/business',
     button: (
-      <InteractiveHoverButton className="rounded-md h-8 flex items-center text-sm">
+      <InteractiveHoverButton className="rounded-md flex items-center text-sm">
         Learn More
       </InteractiveHoverButton>
     ),
   },
   {
-    title: 'Aadhar E-Signature',
+    title: 'Identity Verfication',
     description: 'Authenticate businesses by verifying their GST details.',
     icon: <ShieldCheckIcon className="w-4 h-4 " />,
+    url: '/identity',
     button: (
-      <InteractiveHoverButton className="rounded-md h-8 flex items-center text-sm">
+      <InteractiveHoverButton className="rounded-md flex items-center text-sm">
         Learn More
       </InteractiveHoverButton>
     ),
@@ -267,9 +237,9 @@ const Aadhar = () => {
       <Wrapper>
         <div className="mb-16">
           <BusinessProducts
-            grid={businessProducts}
-            gridHeading={BusinessProductsHeading}
-            className="grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+            grid={aadharProducts}
+            gridHeading={aadharProductsHeading}
+            className="grid-cols-1 md:grid-cols-2 max-w-3xl mx-auto"
           />
         </div>
       </Wrapper>

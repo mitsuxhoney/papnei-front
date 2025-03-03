@@ -191,7 +191,7 @@ const identityVerificationItems = [
     id: 'iv-5',
     title: 'Aadhaar Verification API',
     description: 'Verify identity using Aadhaar details',
-    url: '/identity/aadhaar-verification',
+    url: '/identity/aadhar-verification',
     icon: <User className="w-4 h-4 text-green-600" />,
   },
   {

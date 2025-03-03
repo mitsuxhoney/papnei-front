@@ -63,7 +63,7 @@ const Who = () => {
           }
         >
           {whoData?.map((item) => (
-            <MagicCard key={item.title} className={`p-4 max-sm:h-[180px]`}>
+            <MagicCard key={item.title} className={`p-4 h-full`}>
               {/* <Particles
                 className="absolute inset-0 z-0"
                 quantity={100}
