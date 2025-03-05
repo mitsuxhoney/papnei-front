@@ -24,6 +24,8 @@ import { FAQCTA } from '../../components/faq-cta'
 import { InteractiveHoverButton } from '../../components/ui/interactive-hover'
 import { AuroraBackground } from '../../components/ui/aurora-background'
 import Hero2 from '../../components/Hero2'
+import Ripple from '../../components/ui/Ripple'
+import { Connect } from '../../components/ui/new-cta'
 
 const features = [
   {
@@ -54,14 +56,14 @@ const featuresHeading = {
 }
 
 const businessHero = {
-  heading: 'A Collection of Components Built With Shadcn & Tailwind',
+  heading: 'Business Verification Made Simple with XRAY ',
   description:
-    'Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.',
+    'Trust, Transparency, and Security for Your Business',
   button: {
-    text: 'Discover all components',
+    text: 'Get API Keys',
     url: 'https://www.shadcnblocks.com',
   },
-  background: <AuroraBackground />,
+  background: <Ripple />,
   reviews: {
     count: 200,
     avatars: [
@@ -379,6 +381,7 @@ const Business = () => {
       <div className="mb-16">
         <BusinessCTA />
       </div>
+
       <Wrapper>
         <div className="mb-16">
           <BusinessProducts
@@ -388,8 +391,14 @@ const Business = () => {
           />
         </div>
       </Wrapper>
-      <div className="">
+      {/* <div className="">
         <FAQCTA FAQCTAData={FAQCTAData} />
+      </div> */}
+      {/* <div className="mb-16">
+        <BusinessCTA />
+      </div> */}
+      <div className="mb-16 px-16">
+        <Connect />
       </div>
     </div>
   )
