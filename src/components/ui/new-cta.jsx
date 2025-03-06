@@ -81,25 +81,25 @@ export function Connect() {
                       id="next-js"
                       className="absolute bottom-12 left-14 rounded-3xl border border-slate-400 bg-slate-200 px-2 py-1.5 text-xs opacity-50 dark:border-slate-600 dark:bg-slate-800"
                     >
-                      UI-UX
+                      Business Verification
                     </div>
                     <div
                       id="react-js"
                       className="absolute left-2 top-20 rounded-3xl border border-slate-400 bg-slate-200 px-2 py-1.5 text-xs opacity-50 dark:border-slate-600 dark:bg-slate-800"
                     >
-                      Graphic Design
+                      Identity Verification
                     </div>
                     <div
                       id="typescript"
                       className="absolute bottom-20 right-1 rounded-3xl border border-slate-400 bg-slate-200 px-2 py-1.5 text-xs opacity-50 dark:border-slate-600 dark:bg-slate-800"
                     >
-                      Web Application
+                      Aadhar E-Sign
                     </div>
                     <div
                       id="javascript"
                       className="absolute right-12 top-10 rounded-3xl border border-slate-400 bg-slate-200 px-2 py-1.5 text-xs opacity-50 dark:border-slate-600 dark:bg-slate-800"
                     >
-                      Branding
+                      KYC & KYB
                     </div>
                   </div>
                   <div className="-mt-20 flex h-full flex-col justify-center p-2 md:-mt-4 md:ml-10 md:w-[400px]">
@@ -146,7 +146,7 @@ export function Connect() {
                 cy={2}
                 cr={2}
                 cx={2}
-                className="absolute inset-0 -z-10 h-full w-full opacity-20 [mask-image:radial-gradient(1000px_circle_at_center,white,transparent)]"
+                className="absolute inset-0 -z-10 h-full w-full opacity-30 [mask-image:radial-gradient(1000px_circle_at_center,white,transparent)]"
               />
             </div>
           </HighlighterItem>

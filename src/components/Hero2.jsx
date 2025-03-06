@@ -8,6 +8,8 @@ import { InteractiveGridPattern } from './ui/interactive-grid'
 import { cn } from '../lib/utils'
 import { DotPattern } from "@/components/ui/dot-pattern";
 import { Tiles } from '@/components/ui/tiles'
+import { BorderBeamForm }from '@/components/border-beam-form'
+
 function Hero2({ businessHero }) {
   return (
     <>
@@ -23,12 +25,12 @@ function Hero2({ businessHero }) {
           )}
         />
 
-        <section className="mx-auto relative z-10 border-white/10 w-full overflow-hidden">
+        <section className="relative z-10 border-white/10 w-full overflow-hidden">
           <Wrapper>
-            <div className="w-full flex flex-col items-center py-24 relative z-20">
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-10 py-24 relative z-20">
               {/* Hero Content */}
-              <div className="relative flex flex-col items-center text-center">
-                <h1 className="2xl:text-6xl xl:text-5xl text-xl font-semibold bg-gradient-to-b from-[#edeffd] to-[#7b9cda] bg-clip-text relative">
+              <div className="relative flex flex-col items-start justify-center text-left">
+                <h1 className="2xl:text-6xl xl:text-6xl text-xl font-semibold bg-gradient-to-b from-[#edeffd] to-[#7b9cda] bg-clip-text relative">
                   {businessHero.heading}
                 </h1>
 
@@ -39,26 +41,31 @@ function Hero2({ businessHero }) {
                 <Button asChild size="lg" className="mt-8 relative">
                   <a href={businessHero.button.url}>{businessHero.button.text}</a>
                 </Button>
+
+                {/* Reviews Section */}
+                <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row">
+                  <span className="inline-flex items-start -space-x-4">
+                    <AnimatedTooltip items={businessHero.reviews.avatars} />
+                  </span>
+                  <div>
+                    <div className="flex items-center gap-1">
+                      {[...Array(5)].map((_, index) => (
+                        <Star
+                          key={index}
+                          className="size-5 fill-yellow-400 text-yellow-400"
+                        />
+                      ))}
+                    </div>
+                    <p className="text-left font-medium text-muted-foreground">
+                      from {businessHero.reviews.count}+ reviews
+                    </p>
+                  </div>
+                </div>
               </div>
 
-              {/* Reviews Section */}
-              <div className="mx-auto mt-10 flex flex-col items-center gap-4 sm:flex-row">
-                <span className="mx-4 inline-flex items-center -space-x-4">
-                  <AnimatedTooltip items={businessHero.reviews.avatars} />
-                </span>
-                <div>
-                  <div className="flex items-center gap-1">
-                    {[...Array(5)].map((_, index) => (
-                      <Star
-                        key={index}
-                        className="size-5 fill-yellow-400 text-yellow-400"
-                      />
-                    ))}
-                  </div>
-                  <p className="text-left font-medium text-muted-foreground">
-                    from {businessHero.reviews.count}+ reviews
-                  </p>
-                </div>
+              {/* BorderBeamForm Section */}
+              <div className="flex justify-center items-center">
+                <BorderBeamForm />
               </div>
             </div>
           </Wrapper>
@@ -68,6 +75,3 @@ function Hero2({ businessHero }) {
   )
 }
 export default Hero2
-
-
-

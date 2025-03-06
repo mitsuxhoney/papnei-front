@@ -84,12 +84,12 @@ const CaseStudies = ({
   }, [carouselApi])
 
   return (
-    <section className="py-16">
+    <section className="py-10">
       <div className="mx-auto ">
-        <div className="mb-8 flex items-center justify-center md:mb-14 lg:mb-16">
+        <div className="mb-8 flex items-center justify-center md:mb-14 lg:mb-10">
           <div className="flex flex-col items-center gap-4 text-center mb-10">
             <Badge variant="outline">Success Stories</Badge>
-            <h1 className="max-w-2xl text-3xl font-semibold md:text-4xl">
+            <h1 className="max-w-2xl text-3xl font-semibold md:text-5xl">
               Case Studies
             </h1>
             <p className="text-muted-foreground">

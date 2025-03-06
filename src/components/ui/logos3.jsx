@@ -63,7 +63,7 @@ const Logos3 = ({
   ],
 }) => {
   return (
-    <section className="pb-20 w-full pt-10 md:pt-16 lg:pt-20">
+    <section className="w-full">
       {/* <div className="container flex flex-col items-center text-center">
         <h1 className="my-6 text-pretty text-2xl font-bold lg:text-4xl">
           {heading}

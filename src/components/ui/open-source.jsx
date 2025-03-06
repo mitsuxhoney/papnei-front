@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { cn } from '@/lib/utils'
 import { Suspense } from 'react'
+import { NumberTicker } from '@/components/ui/number-ticker'
 
 async function getGithubStats(repository, githubToken) {
   try {
@@ -90,6 +91,7 @@ function StarsDecoration() {
         <StarIcon delay={0.2} />
         <StarIcon delay={0.3} />
         <StarIcon delay={0.4} />
+        <StarIcon delay={0.5} />
       </div>
     </div>
   )
@@ -121,13 +123,13 @@ function ContributorAvatars({ contributors }) {
 
 function OpenSourceCard({ repository, stars, contributors }) {
   return (
-    <div className="relative grid md:grid-cols-2 gap-8 items-center">
+    <div className="relative grid md:grid-cols-4 gap-8 items-center py-10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         viewport={{ once: true }}
-        className="relative flex flex-col items-center text-center"
+        className="relative flex flex-col items-center text-center -translate-x-1/2"
       >
         <motion.a
           href={`https://github.com/${repository}`}
@@ -149,7 +151,7 @@ function OpenSourceCard({ repository, stars, contributors }) {
 
       <Separator className="md:hidden" />
 
-      <div className="hidden md:block absolute left-1/2 top-0 h-full">
+      <div className="hidden md:block absolute left-1/4 top-0 h-full">
         <Separator orientation="vertical" />
       </div>
 
@@ -181,6 +183,70 @@ function OpenSourceCard({ repository, stars, contributors }) {
           </a>
         </div>
       </motion.div>
+      <div className="hidden md:block absolute right-1/2 top-0 h-full">
+        <Separator orientation="vertical" />
+      </div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        viewport={{ once: true }}
+        className="text-center"
+      >
+        <div className="space-y-4">
+          <div>
+            <div className="text-3xl font-bold">
+              <NumberTicker value={50} className="text-7xl font-bold" />
+            </div>
+            <div className="text-lg text-muted-foreground mt-2">
+              Join our growing community
+            </div>
+          </div>
+          <a
+            href={`https://github.com/${repository}/graphs/contributors`}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block"
+          >
+            <div className="flex justify-center">
+              <ContributorAvatars contributors={contributors} />
+            </div>
+          </a>
+        </div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        viewport={{ once: true }}
+        className="text-center"
+      >
+        <div className="space-y-4">
+          <div>
+            <div className="text-3xl font-bold">
+              <NumberTicker value={50} className="text-7xl font-bold" />
+            </div>
+            <div className="text-lg text-muted-foreground mt-2">
+              Join our growing community
+            </div>
+          </div>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block"
+          >
+            <div className="flex justify-center">
+              <ContributorAvatars contributors={contributors} />
+            </div>
+          </a>
+        </div>
+      </motion.div>
+      <div className="hidden md:block absolute right-1/4 top-0 h-full">
+        <Separator orientation="vertical" />
+      </div>
+      {/* <div className="text-5xl font-bold mb-2">
+            <NumberTicker value={50} className="font-bold tracking-normal" />+
+          </div> */}
     </div>
   )
 }
@@ -194,7 +260,7 @@ function OpenSourceContent({
   buttonText = 'Star on GitHub',
 }) {
   return (
-    <section className="container relative py-20">
+    <section className="py-1 relative">
       <div className="text-center mb-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -202,14 +268,14 @@ function OpenSourceContent({
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold tracking-tight sm:text-6xl mb-4">
+          <h2 className="text-4xl font-bold tracking-tight  mb-4">
             {title}
           </h2>
           <p className="text-xl text-muted-foreground max-w-[800px] mx-auto">
             {description}
           </p>
           <div className="mt-6">
-            <Button variant="outline" size="lg" className="gap-2" asChild>
+            {/* <Button variant="outline" size="lg" className="gap-2" asChild>
               <a
                 href={`https://github.com/${repository}`}
                 target="_blank"
@@ -223,12 +289,12 @@ function OpenSourceContent({
                 </svg>
                 {buttonText}
               </a>
-            </Button>
+            </Button> */}
           </div>
         </motion.div>
       </div>
-      <Separator className="mb-16" />
-      <div className="max-w-4xl mx-auto">
+      {/* <Separator className="mb-16" /> */}
+      <div className="max-w-full mx-6">
         <OpenSourceCard
           repository={repository}
           stars={stars}

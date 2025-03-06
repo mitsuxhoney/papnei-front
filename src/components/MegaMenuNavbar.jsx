@@ -410,7 +410,7 @@ const Navbar = () => {
         </p>
       </div>
 
-      <div className="relative">
+      <div className="relative ">
         <ScrollProgress className="bottom-0 absolute" />
 
         <div ref={navRef} className="">

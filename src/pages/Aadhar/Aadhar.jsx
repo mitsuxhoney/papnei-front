@@ -26,7 +26,8 @@ import { IntegrationBenefits } from '../../components/IntegrationBenefits'
 import { BusinessCTA } from '../../components/BusinessCTA'
 import { FAQCTA } from '../../components/faq-cta'
 import { InteractiveHoverButton } from '../../components/ui/interactive-hover'
-import Hero3 from '../../components/Hero3'
+import Hero2 from '../../components/Hero2'
+import { Connect } from '../../components/ui/new-cta'
 
 const features = [
   {
@@ -57,35 +58,58 @@ const featuresHeading = {
 }
 
 const businessHero = {
-  heading: 'A Collection of Components Built With Shadcn & Tailwind',
+  heading: 'Aadhaar E-Sign Verification, Instantly',
   description:
-    'Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.',
+    'Our advanced technology simplifies the process while maintaining the highest security standards.',
   button: {
-    text: 'Discover all components',
+    text: 'GET API KEYS',
     url: 'https://www.shadcnblocks.com',
   },
+
   reviews: {
     count: 200,
     avatars: [
       {
-        src: 'https://www.shadcnblocks.com/images/block/avatar-1.webp',
-        alt: 'Avatar 1',
+        id: 1,
+        name: 'John Doe',
+        designation: 'Software Engineer',
+        image:
+          'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80',
       },
       {
-        src: 'https://www.shadcnblocks.com/images/block/avatar-2.webp',
-        alt: 'Avatar 2',
+        id: 2,
+        name: 'Robert Johnson',
+        designation: 'Product Manager',
+        image:
+          'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60',
       },
       {
-        src: 'https://www.shadcnblocks.com/images/block/avatar-3.webp',
-        alt: 'Avatar 3',
+        id: 3,
+        name: 'Jane Smith',
+        designation: 'Data Scientist',
+        image:
+          'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60',
       },
       {
-        src: 'https://www.shadcnblocks.com/images/block/avatar-4.webp',
-        alt: 'Avatar 4',
+        id: 4,
+        name: 'Emily Davis',
+        designation: 'UX Designer',
+        image:
+          'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60',
       },
       {
-        src: 'https://www.shadcnblocks.com/images/block/avatar-5.webp',
-        alt: 'Avatar 5',
+        id: 5,
+        name: 'Tyler Durden',
+        designation: 'Soap Developer',
+        image:
+          'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80',
+      },
+      {
+        id: 6,
+        name: 'Dora',
+        designation: 'The Explorer',
+        image:
+          'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3534&q=80',
       },
     ],
   },
@@ -115,50 +139,46 @@ const featuresBenefits = [
 ]
 
 const FAQCTAData = {
-  heading: 'Frequently asked questions',
+  heading: 'Frequently Asked Questions',
   description:
-    "Everything you need to know about shadcnblocks. Can't find the answer you're looking for? Feel free to contact our support team.",
+    "Everything you need to know about Aadhaar E-Sign verification. Can't find the answer you're looking for? Feel free to contact our support team.",
   ctaHeading: 'Ready To Get Started',
   ctaDescription:
-    'Join thousand of satisfied customers using our platform to build amazing websites.',
+    'Join thousands of satisfied users leveraging our secure Aadhaar E-Sign verification for seamless document authentication.',
   items: [
     {
       id: 'faq-1',
-      question: 'What is shadcnblocks?',
+      question: 'What is Aadhaar E-Sign verification?',
       answer:
-        'shadcnblocks is a collection of ready-to-use block components built on top of shadcn/ui, designed to help you build beautiful websites faster.',
+        'Aadhaar E-Sign verification is an electronic signature service that allows individuals to digitally sign documents using their Aadhaar number and OTP authentication.',
     },
     {
       id: 'faq-2',
-      question: 'How do I install shadcnblocks?',
+      question: 'How does Aadhaar E-Sign work?',
       answer:
-        'shadcnblocks components are designed to be copied and pasted into your project. Simply browse the components, click on the one you want to use, and copy the code directly into your project. This gives you full control over the code and allows for easy customization.',
+        'Aadhaar E-Sign works by linking your Aadhaar number with an OTP-based authentication process, enabling you to digitally sign documents without needing a physical signature.',
     },
     {
       id: 'faq-3',
-      question: 'Is shadcnblocks free to use?',
+      question: 'Is Aadhaar E-Sign legally valid?',
       answer:
-        'Yes, shadcnblocks is open-source and free to use in both personal and commercial projects. You can customize and modify the blocks to suit your needs.',
+        'Yes, Aadhaar E-Sign is legally recognized under the Information Technology Act, 2000, making it a valid and secure way to sign digital documents.',
     },
     {
       id: 'faq-4',
-      question: 'Can I customize the blocks?',
+      question: 'What are the benefits of using Aadhaar E-Sign?',
       answer:
-        'Absolutely! All blocks are built with customization in mind. You can modify the styling, content, and behavior through props and Tailwind CSS classes.',
+        'Aadhaar E-Sign is secure, fast, cost-effective, and legally valid. It eliminates the need for physical paperwork and enables remote document signing.',
     },
     {
       id: 'faq-5',
-      question: 'Do you offer support?',
+      question: 'Who can use Aadhaar E-Sign verification?',
       answer:
-        'Yes, we provide support through our GitHub repository where you can report issues, suggest features, or ask questions about implementation.',
+        'Any individual with a valid Aadhaar number and linked mobile number can use Aadhaar E-Sign verification to sign documents digitally.',
     },
   ],
-  supportHeading: 'Still have questions?',
-  supportDescription:
-    "Can't find the answer you're looking for? Our support team is here to help with any technical questions or concerns.",
-  supportButtonText: 'Contact Support',
-  supportButtonUrl: 'https://shadcnblocks.com',
 }
+
 const aadharProducts = [
   {
     title: 'Face Verification',
@@ -186,7 +206,7 @@ const aadharProducts = [
 
 const aadharProductsHeading = {
   badge: 'Instant Verification',
-  title: 'Business & Compliance Verification Solutions',
+  title: 'Aadhar E-Sign Verification Solutions',
   description:
     'Seamlessly verify business details, tax compliance, and legal registrations with our comprehensive suite of verification tools.',
 }
@@ -226,8 +246,8 @@ const otherProductsHeading = {
 const Aadhar = () => {
   return (
     <div>
-      <div className="mb-16 relative">
-        <Hero3 />
+      <div className="mb-16">
+        <Hero2 businessHero={businessHero} />
       </div>
       <Wrapper>
         <div className="mb-16">
@@ -256,9 +276,9 @@ const Aadhar = () => {
         </div>
       </Wrapper>
 
-      <div className="mb-16">
+      {/* <div className="mb-16">
         <BusinessCTA />
-      </div>
+      </div> */}
       <Wrapper>
         <div className="mb-16">
           <BusinessProducts
@@ -270,6 +290,9 @@ const Aadhar = () => {
       </Wrapper>
       <div className="">
         <FAQCTA FAQCTAData={FAQCTAData} />
+      </div>
+      <div className="mb-16 px-16">
+        <Connect />
       </div>
     </div>
   )

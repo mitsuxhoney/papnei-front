@@ -3,6 +3,7 @@ import { FaReact } from 'react-icons/fa'
 import { SiNextdotjs, SiFramer } from 'react-icons/si'
 import { Logos3 as Partners } from '../../components/ui/logos3'
 import { useTheme } from '@/components/theme-provider'
+
 import {
   IconArrowWaveRightUp,
   IconBoxAlignRightFilled,
@@ -32,6 +33,7 @@ import { Feature108 as Features } from '@/components/ui/features'
 import Wrapper from '../../components/Wrapper'
 import { Testimonials } from '../../components/ui/eldora-testimonials'
 import { FeatureSteps as StepsIntegration } from '../../components/steps-section'
+import { IntegrationBenefits } from '../../components/IntegrationBenefits'
 import { CaseStudies } from '../../components/case-studies'
 import { FAQCTA } from '../../components/faq-cta'
 import { AnimatedBeamDemo as HomeHero } from '../../components/ui/animated-beam-hero'
@@ -43,6 +45,8 @@ import Who from '../../components/Who'
 import { Why } from '../../components/Why'
 import { BusinessCTA } from '../../components/BusinessCTA'
 import OpenSource from '../../components/ui/open-source'
+import { Connect } from '../../components/ui/new-cta'
+import Cta10Demo from '../../components/ui/cta10-demo'
 
 const tabsData = {
   badge: 'shadcnblocks.com',
@@ -126,101 +130,131 @@ const featureSteps = [
 const caseStudiesData = {
   title: 'Case Studies',
   description:
-    'Real-world success stories highlighting our impact, expertise, and innovative solutions.',
+    'Real-world success stories showcasing how our verification solutions drive security, compliance, and efficiency.',
   items: [
     {
       id: 'study1',
       title: 'Business Verification: Ensuring Trust & Compliance',
       description:
-        'How our GST, PAN, and Bank Account verification helped businesses maintain compliance and prevent fraud.',
-      href: 'https://ui.shadcn.com',
+        'How our GST, PAN, and Bank Account verification helped businesses maintain compliance, prevent fraud, and establish trust.',
+      href: 'https://yourwebsite.com/case-study/business-verification',
       image:
-        'https://images.unsplash.com/photo-1551250928-243dc937c49d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2NDI3NzN8MHwxfGFsbHwxMjN8fHx8fHwyfHwxNzIzODA2OTM5fA&ixlib=rb-4.0.3&q=80&w=1080',
+        'https://images.unsplash.com/photo-1591696205602-2f950c417cb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
     },
-    {
-      id: 'study2',
-      title: 'Identity Verification: Enhancing Security & User Trust',
-      description:
-        'Learn how our Aadhaar, PAN, and other identity verification services reduced fraud and streamlined onboarding.',
-      href: 'https://nextjs.org',
-      image:
-        'https://images.unsplash.com/photo-1550070881-a5d71eda5800?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2NDI3NzN8MHwxfGFsbHwxMjV8fHx8fHwyfHwxNzIzNDM1Mjk4fA&ixlib=rb-4.0.3&q=80&w=1080',
-    },
+    // {
+    //   id: 'study2',
+    //   title: 'Identity Verification: Enhancing Security & User Trust',
+    //   description:
+    //     'Learn how our Aadhaar, PAN, and other identity verification services reduced fraud and streamlined customer onboarding.',
+    //   href: 'https://yourwebsite.com/case-study/identity-verification',
+    //   image:
+    //     'https://images.unsplash.com/photo-1578496479763-5464c01c0b9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    // },
     {
       id: 'study3',
-      title: 'Aadhaar E-Sign: Simplifying Digital Transactions',
+      title: 'Aadhaar E-Sign: Enabling Secure Digital Transactions',
       description:
-        'Discover how Aadhaar E-Sign transformed businesses by enabling secure, legally compliant document signing.',
-      href: 'https://tailwindcss.com',
+        'Discover how Aadhaar E-Sign transformed businesses by facilitating legally binding digital document signing.',
+      href: 'https://yourwebsite.com/case-study/aadhaar-esign',
       image:
-        'https://images.unsplash.com/photo-1551250928-e4a05afaed1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2NDI3NzN8MHwxfGFsbHwxMjR8fHx8fHwyfHwxNzIzODA2OTM5fA&ixlib=rb-4.0.3&q=80&w=1080',
+        'https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=1080&q=80',
     },
     {
       id: 'study4',
       title: 'Trademark & FSSAI Verification: Protecting Brands & Businesses',
       description:
-        'Case study on how businesses safeguarded their brand identity and ensured regulatory compliance.',
-      href: 'https://astro.build',
+        'A deep dive into how businesses safeguarded their brand identity and ensured regulatory compliance through verification solutions.',
+      href: 'https://yourwebsite.com/case-study/trademark-verification',
       image:
-        'https://images.unsplash.com/photo-1536735561749-fc87494598cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2NDI3NzN8MHwxfGFsbHwxNzd8fHx8fHwyfHwxNzIzNjM0NDc0fA&ixlib=rb-4.0.3&q=80&w=1080',
+        'https://images.unsplash.com/photo-1605379399642-870262d3d051?w=1080&q=80',
     },
     {
       id: 'study5',
       title: 'KYC & KYB: Enabling Seamless Customer Onboarding',
       description:
-        'How our Video KYC and document verification solutions accelerated user onboarding and compliance processes.',
-      href: 'https://react.dev',
+        'How our Video KYC and document verification solutions accelerated user onboarding while maintaining compliance standards.',
+      href: 'https://yourwebsite.com/case-study/kyc-kyb',
       image:
-        'https://images.unsplash.com/photo-1548324215-9133768e4094?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2NDI3NzN8MHwxfGFsbHwxMzF8fHx8fHwyfHwxNzIzNDM1MzA1fA&ixlib=rb-4.0.3&q=80&w=1080',
+        'https://images.pexels.com/photos/6476587/pexels-photo-6476587.jpeg?auto=compress&cs=tinysrgb&fit=max&w=1080',
+    },
+    
+    {
+      id: 'study6',
+      title: 'Bank Account Verification: Preventing Payment Fraud',
+      description:
+        'Case study on how our bank account verification solution helped businesses validate transactions and prevent financial fraud.',
+      href: 'https://yourwebsite.com/case-study/bank-verification',
+      image:
+        'https://images.unsplash.com/photo-1513530534585-c7b1394c6d51?w=1080&q=80',
+    },
+    // {
+    //   id: 'study7',
+    //   title: 'Loan & Credit Verification: Simplifying Lending Processes',
+    //   description:
+    //     'See how financial institutions leveraged our verification services to streamline loan approvals and reduce risk.',
+    //   href: 'https://yourwebsite.com/case-study/loan-verification',
+    //   image:
+    //     'https://images.unsplash.com/photo-1565374391161-0901f4db04c3?w=1080&q=80',
+    // },
+    {
+      id: 'study8',
+      title: 'E-commerce Verification: Reducing Fraudulent Transactions',
+      description:
+        'Learn how online platforms used our verification solutions to authenticate sellers and enhance buyer trust.',
+      href: 'https://yourwebsite.com/case-study/ecommerce-verification',
+      image:
+        'https://images.unsplash.com/photo-1556745757-8d76bdb6984b?w=1080&q=80',
     },
   ],
 }
 
+
 const FAQCTAData = {
-  heading: 'Frequently asked questions',
+  heading: 'Frequently Asked Questions',
   description:
-    "Everything you need to know about shadcnblocks. Can't find the answer you're looking for? Feel free to contact our support team.",
-  ctaHeading: 'Ready To Get Started',
+    "Everything you need to know about our verification solutions. Can't find the answer you're looking for? Feel free to contact our support team.",
+  ctaHeading: 'Ready to Get Started?',
   ctaDescription:
-    'Join thousand of satisfied customers using our platform to build amazing websites.',
+    'Join thousands of businesses using our platform for seamless verification and compliance.',
   items: [
     {
       id: 'faq-1',
-      question: 'What is shadcnblocks?',
+      question: 'What services do you offer?',
       answer:
-        'shadcnblocks is a collection of ready-to-use block components built on top of shadcn/ui, designed to help you build beautiful websites faster.',
+        'We provide identity, business, and document verification solutions, including Aadhaar, PAN, GST, bank verification, and more.',
     },
     {
       id: 'faq-2',
-      question: 'How do I install shadcnblocks?',
+      question: 'How secure is your verification process?',
       answer:
-        'shadcnblocks components are designed to be copied and pasted into your project. Simply browse the components, click on the one you want to use, and copy the code directly into your project. This gives you full control over the code and allows for easy customization.',
+        'Our platform uses industry-leading encryption and compliance measures to ensure secure data processing and fraud prevention.',
     },
     {
       id: 'faq-3',
-      question: 'Is shadcnblocks free to use?',
+      question: 'Do you provide API access?',
       answer:
-        'Yes, shadcnblocks is open-source and free to use in both personal and commercial projects. You can customize and modify the blocks to suit your needs.',
+        'Yes, we offer developer-friendly APIs for seamless integration into your workflows, ensuring quick and efficient verification.',
     },
     {
       id: 'faq-4',
-      question: 'Can I customize the blocks?',
+      question: 'What industries can benefit from your services?',
       answer:
-        'Absolutely! All blocks are built with customization in mind. You can modify the styling, content, and behavior through props and Tailwind CSS classes.',
+        'Our solutions cater to fintech, banking, e-commerce, insurance, and various other sectors that require identity and compliance verification.',
     },
     {
       id: 'faq-5',
-      question: 'Do you offer support?',
+      question: 'Do you offer support for integration?',
       answer:
-        'Yes, we provide support through our GitHub repository where you can report issues, suggest features, or ask questions about implementation.',
+        'Yes, our support team is available to assist with integration, documentation, and troubleshooting any technical issues.',
     },
   ],
   supportHeading: 'Still have questions?',
   supportDescription:
     "Can't find the answer you're looking for? Our support team is here to help with any technical questions or concerns.",
   supportButtonText: 'Contact Support',
-  supportButtonUrl: 'https://shadcnblocks.com',
+  supportButtonUrl: 'https://yourwebsite.com/contact',
 }
+
 
 const homeHeroContent = {
   title: 'Instant. Secure. Hassle-Free Verification',
@@ -308,15 +342,15 @@ const Home = () => {
           />
         </div>
         {/* <AnimatedTestimonialsDemo /> */}
-        <div>
+        <div className="my-16">
           <Partners />
         </div>
-        <div className="mb-16">
+        <div className="my-16">
           <OpenSource
-            repository="codehagen/prismui"
-            title="Join our community"
-            description="PrismUI is built by the community, for the community. We'd love to have you join us!"
-            buttonText="View on GitHub"
+            // repository="codehagen/prismui"
+            // title="Join our community"
+            // description="PrismUI is built by the community, for the community. We'd love to have you join us!"
+            // buttonText="View on GitHub"
             defaultStats={{
               stars: 300,
               contributors: [
@@ -334,8 +368,9 @@ const Home = () => {
             }}
           />
         </div>
-        {/* <SpotlightCard cards={cardData} /> */}
-        {/* <div className="w-full">
+      </Wrapper>
+      {/* <SpotlightCard cards={cardData} /> */}
+      {/* <div className="w-full">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1280px] xl:max-w-[2160px] xl:gap-10 mx-auto">
             {cardsData?.map((card) => (
               <MagicCard
@@ -358,21 +393,21 @@ const Home = () => {
             ))}
           </div>
         </div> */}
-        <div className="w-full">
-          <Who />
-        </div>
-        <div className="mb-6">
-          <Features {...tabsData} />
-        </div>
-        <div className="mb-16">
-          <Why />
-        </div>
-        {/* <TestimonialsSection
+      <div className="my-16">
+        <Features {...tabsData} />
+      </div>
+      <div className="w-full my-16">
+        <Who />
+      </div>
+      <div className="my-16 py-12">
+        <Why />
+      </div>
+      {/* <TestimonialsSection
           title="Trusted by developers worldwide"
           description="Join thousands of developers who are already building the future with our AI platform"
           testimonials={testimonials}
         /> */}
-        <div className="mb-16">
+      {/* <div className="mb-16">
           <LazyLoadMotion>
             <StepsIntegration
               features={featureSteps}
@@ -381,16 +416,32 @@ const Home = () => {
               imageHeight="h-[500px]"
             />
           </LazyLoadMotion>
+        </div> */}
+      {/* <Wrapper>
+        <div className="my-16">
+          <Cta10Demo />
         </div>
+      </Wrapper> */}
+      <Wrapper>
+        <div className="my-16 py-10">
+          <IntegrationBenefits benefits={featureSteps} />
+        </div>
+      </Wrapper>
+      <Wrapper>
         <LazyLoadMotion>
           <CaseStudies {...caseStudiesData} />
         </LazyLoadMotion>
-        <div className="relative z-10 h-[600px] w-full overflow-hidden rounded-lg border bg-background mb-20">
+      </Wrapper>
+      <Wrapper>
+        <div className="relative z-10 h-[600px] w-full overflow-hidden rounded-lg border bg-background my-16">
           <Testimonials />
         </div>
       </Wrapper>
-      <div>
+      <div className="my-16 py-16">
         <FAQCTA FAQCTAData={FAQCTAData} />
+      </div>
+      <div className="my-16 px-16">
+        <Connect />
       </div>
     </div>
   )

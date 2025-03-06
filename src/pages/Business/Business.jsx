@@ -19,7 +19,7 @@ import BusinessProducts from '../../components/BusinessProducts'
 import FeaturesSection from '../../components/ui/features-section'
 import { StaticTestimonialsEldora } from '../../components/StaticTestimonialsEldora'
 import { IntegrationBenefits } from '../../components/IntegrationBenefits'
-import { BusinessCTA } from '../../components/BusinessCTA'
+// import { BusinessCTA } from '../../components/BusinessCTA'
 import { FAQCTA } from '../../components/faq-cta'
 import { InteractiveHoverButton } from '../../components/ui/interactive-hover'
 import { AuroraBackground } from '../../components/ui/aurora-background'
@@ -30,21 +30,21 @@ import { Connect } from '../../components/ui/new-cta'
 const features = [
   {
     badge: <ShieldCheckIcon className="w-4 h-4" />,
-    title: 'HIPAA and SOC2 Compliant',
+    title: 'Fast & Reliable',
     description:
-      'Our applications are HIPAA and SOC2 compliant, your data is safe with us, always.',
+      'Get instant verification with real-time data checks, ensuring accuracy and speed',
   },
   {
     badge: <SendIcon className="w-4 h-4" />,
-    title: 'Automated Social Media Posting',
+    title: 'Secure & Compliant',
     description:
-      'Schedule and automate your social media posts across multiple platforms to save time and maintain a consistent online presence.',
+      ' We follow industry-leading security standards to safeguard your data and ensure compliance. ',
   },
   {
     badge: <BarChartIcon className="w-4 h-4" />,
-    title: 'Advanced Analytics',
+    title: 'Seamless Integration',
     description:
-      'Gain insights into your social media performance with detailed analytics and reporting tools to measure engagement and ROI.',
+      'Our API-based verification enables effortless automation, reducing manual work and errors.',
   },
 ]
 
@@ -367,23 +367,23 @@ const Business = () => {
       </Wrapper>
 
       <Wrapper>
-        <div className="w-full mb-16">
+        <div className="w-full my-16 py-16">
           <FeaturesSection grid={features} gridHeading={featuresHeading} />
         </div>
       </Wrapper>
 
       <Wrapper>
-        <div className="mb-16">
+        <div className="my-16 py-16">
           <IntegrationBenefits benefits={featuresBenefits} />
         </div>
       </Wrapper>
 
-      <div className="mb-16">
+      {/* <div className="mb-16">
         <BusinessCTA />
-      </div>
+      </div> */}
 
       <Wrapper>
-        <div className="mb-16">
+        <div className="my-16">
           <BusinessProducts
             grid={otherProducts}
             gridHeading={otherProductsHeading}

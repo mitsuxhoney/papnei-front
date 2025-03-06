@@ -400,7 +400,7 @@ export function Why() {
     <div>
       <div className="flex flex-col items-center gap-4 text-center mb-6">
         <Badge variant="outline">{why.badge}</Badge>
-        <h1 className="max-w-2xl text-3xl font-semibold md:text-4xl">
+        <h1 className="max-w-2xl text-3xl font-semibold md:text-5xl">
           {why.title}
         </h1>
         <p className="text-muted-foreground">{why.description}</p>

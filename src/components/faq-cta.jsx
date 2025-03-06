@@ -89,32 +89,6 @@ const FAQCTA = ({
           </div>
         </div> */}
 
-        <div className="w-full text-center relative overflow-hidden">
-          {/* <div className="w-full mx-auto">
-            <Meteors number={50} />
-          </div> */}
-          <AuroraBackground className="w-screen h-full py-10">
-            <div className="w-full flex flex-col gap-12 items-center">
-              <Wrapper>
-                <div className="flex flex-col gap-2 items-center">
-                  {/* <h3 className="text-xl font-semibold md:text-4xl">{heading}</h3> */}
-                  <SparklesText
-                    className={`text-3xl font-semibold md:text-5xl`}
-                    text={FAQCTAData.ctaHeading}
-                  />
-                  {/* <TypingAnimation>{heading}</TypingAnimation> */}
-                  <p className="text-muted-foreground text-sm lg:text-md">
-                    {FAQCTAData.ctaDescription}
-                  </p>
-                </div>
-              </Wrapper>
-
-              <div className="max-w-md lg:max-w-lg w-full">
-                <ExpandableCardBasic />
-              </div>
-            </div>
-          </AuroraBackground>
-        </div>
       </div>
     </section>
   )

@@ -7,6 +7,7 @@ import Wrapper from '../../components/Wrapper'
 import { AuroraBackground } from '../../components/ui/aurora-background'
 import { NumberTicker } from '@/components/ui/number-ticker'
 import { MagicCard } from '../../components/ui/magic-card'
+import { Connect } from '../../components/ui/new-cta'
 
 const AboutUs = () => {
   return (
@@ -166,32 +167,8 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <div className="w-full text-center relative overflow-hidden">
-        {/* <div className="w-full mx-auto">
-            <Meteors number={50} />
-          </div> */}
-        <AuroraBackground className="w-screen h-full py-10">
-          <div className="w-full flex flex-col gap-12 items-center">
-            <Wrapper>
-              <div className="flex flex-col gap-2 items-center">
-                {/* <h3 className="text-xl font-semibold md:text-4xl">{heading}</h3> */}
-                <SparklesText
-                  className={`text-3xl font-semibold md:text-5xl`}
-                  text="Ready To Get Started"
-                />
-                {/* <TypingAnimation>{heading}</TypingAnimation> */}
-                <p className="text-muted-foreground text-sm lg:text-md">
-                  Join thousand of satisfied customers using our platform to
-                  build amazing websites.
-                </p>
-              </div>
-            </Wrapper>
-
-            <div className="max-w-md lg:max-w-lg w-full">
-              <ExpandableCardBasic />
-            </div>
-          </div>
-        </AuroraBackground>
+      <div className="mb-16 px-16">
+        <Connect />
       </div>
     </div>
   )
