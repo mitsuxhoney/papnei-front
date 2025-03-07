@@ -12,7 +12,7 @@ import Hero2 from '../../components/Hero2'
 import { Connect } from '../../components/ui/new-cta'
 
 const businessHero = {
-  heading: 'Business Verification Made Simple with XRAY ',
+  heading: 'MCA Data Verification faster with XRAY AI',
   description: 'Trust, Transparency, and Security for Your Business',
   button: {
     text: 'Get API Keys',
@@ -71,19 +71,19 @@ const businessHero = {
 const features = [
   {
     badge: <ShieldCheckIcon className="w-4 h-4" />,
-    title: 'HIPAA and SOC2 Compliant',
+    title: 'Data Security',
     description:
       'Our applications are HIPAA and SOC2 compliant, your data is safe with us, always.',
   },
   {
     badge: <SendIcon className="w-4 h-4" />,
-    title: 'Automated Social Media Posting',
+    title: 'Data Authentication',
     description:
       'Schedule and automate your social media posts across multiple platforms to save time and maintain a consistent online presence.',
   },
   {
     badge: <BarChartIcon className="w-4 h-4" />,
-    title: 'Advanced Analytics',
+    title: 'Data Analytics',
     description:
       'Gain insights into your social media performance with detailed analytics and reporting tools to measure engagement and ROI.',
   },
@@ -242,44 +242,44 @@ const MCAData= () => {
                   Frequently Asked Questions
                 </h2>
                 <p className="text-muted-foreground">
-                  Find answers to common questions about Aadhaar e-Sign verification and our services.
+                  Find answers to common questions about MCA Data Verification and our services.
                 </p>
               </div>
 
               <div className="space-y-4">
                 <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold  mb-2">
-                    What is Aadhaar e-Sign verification?
+                    What is MCA Data Verification?
                   </h3>
                   <p className="text-muted-foreground">
-                    Aadhaar e-Sign verification is a secure digital signing process that allows users to electronically sign documents using their Aadhaar credentials, ensuring authenticity and compliance with legal regulations.
+                    MCA Data Verification is a process that allows users to validate company details registered with the Ministry of Corporate Affairs (MCA), ensuring accuracy and compliance with regulatory requirements.
                   </p>
                 </div>
 
                 <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold  mb-2">
-                    How can I use Aadhaar e-Sign for document verification?
+                    How can I verify MCA data?
                   </h3>
                   <p className="text-muted-foreground">
-                    You can use Aadhaar e-Sign for document verification by linking your Aadhaar number, authenticating via OTP or biometric verification, and digitally signing documents seamlessly through our platform.
+                    You can verify MCA data by entering the company’s Corporate Identification Number (CIN) or other relevant details on our platform, which fetches and validates the information directly from MCA records.
                   </p>
                 </div>
 
                 <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold  mb-2">
-                    Is Aadhaar e-Sign legally valid?
+                    Why is MCA Data Verification important?
                   </h3>
                   <p className="text-muted-foreground">
-                    Yes, Aadhaar e-Sign is legally valid under the Information Technology Act, 2000. It is recognized by regulatory authorities and ensures a secure, tamper-proof digital signature for official documents.
+                    MCA Data Verification ensures transparency, prevents fraud, and helps businesses and individuals confirm the legitimacy of corporate entities before engaging in transactions.
                   </p>
                 </div>
 
                 <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold  mb-2">
-                    Is Aadhaar e-Sign secure?
+                    Is MCA Data Verification secure?
                   </h3>
                   <p className="text-muted-foreground">
-                    Absolutely. Aadhaar e-Sign follows stringent security protocols, including encryption, two-factor authentication, and compliance with UIDAI guidelines, ensuring data integrity and user privacy.
+                    Yes, MCA Data Verification follows strict security measures, accessing official MCA databases securely and ensuring that user data remains protected throughout the process.
                   </p>
                 </div>
               </div>
@@ -287,6 +287,7 @@ const MCAData= () => {
           </div>
         </section>
       </Wrapper>
+
       {/* <div className="mb-16">
         <BusinessCTA />
       </div> */}

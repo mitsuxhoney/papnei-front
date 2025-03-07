@@ -143,7 +143,7 @@ function OpenSourceCard({ repository, stars, contributors }) {
           <div className="flex flex-col items-center mt-2">
             <div className="text-7xl font-bold">{stars}</div>
             <div className="text-xl text-muted-foreground mt-2">
-              Github Stars
+              Industry Rating
             </div>
           </div>
         </motion.a>
@@ -199,7 +199,7 @@ function OpenSourceCard({ repository, stars, contributors }) {
               <NumberTicker value={50} className="text-7xl font-bold" />
             </div>
             <div className="text-lg text-muted-foreground mt-2">
-              Join our growing community
+              Partners
             </div>
           </div>
           <a
@@ -224,7 +224,7 @@ function OpenSourceCard({ repository, stars, contributors }) {
         <div className="space-y-4">
           <div>
             <div className="text-3xl font-bold">
-              <NumberTicker value={50} className="text-7xl font-bold" />
+              <NumberTicker value={200} className="text-7xl font-bold" />
             </div>
             <div className="text-lg text-muted-foreground mt-2">
               Join our growing community
@@ -255,8 +255,8 @@ function OpenSourceContent({
   repository,
   stars,
   contributors,
-  title = 'Proudly open-source',
-  description = 'Our source code is available on GitHub - feel free to read, review, or contribute to it however you want!',
+  title = 'Building Trust Through Security',
+  description = 'we are trusted by industry professionals!',
   buttonText = 'Star on GitHub',
 }) {
   return (

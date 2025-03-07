@@ -12,7 +12,7 @@ import Hero2 from '../../components/Hero2'
 import { Connect } from '../../components/ui/new-cta'
 
 const businessHero = {
-  heading: 'Business Verification Made Simple with XRAY ',
+  heading: 'GST Phone APIs Secured Simple with XRAY AI',
   description: 'Trust, Transparency, and Security for Your Business',
   button: {
     text: 'Get API Keys',
@@ -71,21 +71,21 @@ const businessHero = {
 const features = [
   {
     badge: <ShieldCheckIcon className="w-4 h-4" />,
-    title: 'HIPAA and SOC2 Compliant',
+    title: 'HIghly Secured',
     description:
       'Our applications are HIPAA and SOC2 compliant, your data is safe with us, always.',
   },
   {
     badge: <SendIcon className="w-4 h-4" />,
-    title: 'Automated Social Media Posting',
+    title: 'Automated Verifications',
     description:
-      'Schedule and automate your social media posts across multiple platforms to save time and maintain a consistent online presence.',
+      'Automate your GST Phone Verification with out automation power.',
   },
   {
     badge: <BarChartIcon className="w-4 h-4" />,
     title: 'Advanced Analytics',
     description:
-      'Gain insights into your social media performance with detailed analytics and reporting tools to measure engagement and ROI.',
+      'Gain insights into your verifications performance with detailed analytics and reporting tools to measure engagement and ROI.',
   },
 ]
 
@@ -180,7 +180,7 @@ const GSTPhoneAPI = () => {
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
               <p className="">
-                Transforming digital verification with Aadhaar e-Sign technology.
+                Transforming digital verification with GST Phone technology.
               </p>
             </div>
 
@@ -242,44 +242,44 @@ const GSTPhoneAPI = () => {
                   Frequently Asked Questions
                 </h2>
                 <p className="text-muted-foreground">
-                  Find answers to common questions about Aadhaar e-Sign verification and our services.
+                  Find answers to common questions about GST phone verification and our services.
                 </p>
               </div>
 
               <div className="space-y-4">
                 <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold  mb-2">
-                    What is Aadhaar e-Sign verification?
+                    What is GST phone verification?
                   </h3>
                   <p className="text-muted-foreground">
-                    Aadhaar e-Sign verification is a secure digital signing process that allows users to electronically sign documents using their Aadhaar credentials, ensuring authenticity and compliance with legal regulations.
+                    GST phone verification is a secure process that validates a user's mobile number registered with the GST portal to ensure authenticity and prevent fraudulent activities.
                   </p>
                 </div>
 
                 <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold  mb-2">
-                    How can I use Aadhaar e-Sign for document verification?
+                    How can I verify my phone number for GST?
                   </h3>
                   <p className="text-muted-foreground">
-                    You can use Aadhaar e-Sign for document verification by linking your Aadhaar number, authenticating via OTP or biometric verification, and digitally signing documents seamlessly through our platform.
+                    You can verify your phone number for GST by entering your registered mobile number, receiving an OTP from the GST portal, and submitting the OTP to complete the verification process.
                   </p>
                 </div>
 
                 <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold  mb-2">
-                    Is Aadhaar e-Sign legally valid?
+                    Why is GST phone verification important?
                   </h3>
                   <p className="text-muted-foreground">
-                    Yes, Aadhaar e-Sign is legally valid under the Information Technology Act, 2000. It is recognized by regulatory authorities and ensures a secure, tamper-proof digital signature for official documents.
+                    GST phone verification ensures that the registered mobile number is valid and linked to the correct taxpayer, enhancing security and communication from the tax authorities.
                   </p>
                 </div>
 
                 <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold  mb-2">
-                    Is Aadhaar e-Sign secure?
+                    Is GST phone verification mandatory?
                   </h3>
                   <p className="text-muted-foreground">
-                    Absolutely. Aadhaar e-Sign follows stringent security protocols, including encryption, two-factor authentication, and compliance with UIDAI guidelines, ensuring data integrity and user privacy.
+                    Yes, GST phone verification is mandatory for businesses and individuals registered under GST to facilitate secure transactions and compliance with government regulations.
                   </p>
                 </div>
               </div>
@@ -287,6 +287,7 @@ const GSTPhoneAPI = () => {
           </div>
         </section>
       </Wrapper>
+
       {/* <div className="mb-16">
         <BusinessCTA />
       </div> */}

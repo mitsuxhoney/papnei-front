@@ -12,7 +12,7 @@ import Hero2 from '../../components/Hero2'
 import { Connect } from '../../components/ui/new-cta'
 
 const businessHero = {
-  heading: 'Business Verification Made Simple with XRAY ',
+  heading: 'MCA Documents Verification Automated with XRAY AI ',
   description: 'Trust, Transparency, and Security for Your Business',
   button: {
     text: 'Get API Keys',
@@ -242,44 +242,44 @@ const MCAFiledDocs = () => {
                   Frequently Asked Questions
                 </h2>
                 <p className="text-muted-foreground">
-                  Find answers to common questions about Aadhaar e-Sign verification and our services.
+                  Find answers to common questions about Aadhaar e-Sign verification for MCA filed documents.
                 </p>
               </div>
 
               <div className="space-y-4">
                 <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold  mb-2">
-                    What is Aadhaar e-Sign verification?
+                    What is Aadhaar e-Sign verification for MCA filed documents?
                   </h3>
                   <p className="text-muted-foreground">
-                    Aadhaar e-Sign verification is a secure digital signing process that allows users to electronically sign documents using their Aadhaar credentials, ensuring authenticity and compliance with legal regulations.
+                    Aadhaar e-Sign verification allows users to digitally sign and authenticate MCA (Ministry of Corporate Affairs) filed documents using their Aadhaar credentials, ensuring compliance with regulatory requirements.
                   </p>
                 </div>
 
                 <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold  mb-2">
-                    How can I use Aadhaar e-Sign for document verification?
+                    How can I use Aadhaar e-Sign for MCA document verification?
                   </h3>
                   <p className="text-muted-foreground">
-                    You can use Aadhaar e-Sign for document verification by linking your Aadhaar number, authenticating via OTP or biometric verification, and digitally signing documents seamlessly through our platform.
+                    You can use Aadhaar e-Sign to verify MCA filed documents by linking your Aadhaar number, authenticating via OTP or biometric verification, and digitally signing forms such as INC-32, AOC-4, and MGT-7 seamlessly through our platform.
                   </p>
                 </div>
 
                 <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold  mb-2">
-                    Is Aadhaar e-Sign legally valid?
+                    Is Aadhaar e-Sign legally valid for MCA filings?
                   </h3>
                   <p className="text-muted-foreground">
-                    Yes, Aadhaar e-Sign is legally valid under the Information Technology Act, 2000. It is recognized by regulatory authorities and ensures a secure, tamper-proof digital signature for official documents.
+                    Yes, Aadhaar e-Sign is legally valid for MCA filings under the Information Technology Act, 2000. It is recognized by MCA and regulatory authorities for digitally signing corporate documents.
                   </p>
                 </div>
 
                 <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold  mb-2">
-                    Is Aadhaar e-Sign secure?
+                    Is Aadhaar e-Sign secure for MCA document submission?
                   </h3>
                   <p className="text-muted-foreground">
-                    Absolutely. Aadhaar e-Sign follows stringent security protocols, including encryption, two-factor authentication, and compliance with UIDAI guidelines, ensuring data integrity and user privacy.
+                    Absolutely. Aadhaar e-Sign follows strict security protocols, including encryption, two-factor authentication, and compliance with UIDAI and MCA guidelines, ensuring document integrity and confidentiality.
                   </p>
                 </div>
               </div>
@@ -287,6 +287,7 @@ const MCAFiledDocs = () => {
           </div>
         </section>
       </Wrapper>
+
       {/* <div className="mb-16">
         <BusinessCTA />
       </div> */}

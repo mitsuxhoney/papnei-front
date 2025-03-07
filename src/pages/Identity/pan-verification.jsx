@@ -12,7 +12,7 @@ import Hero2 from '../../components/Hero2'
 import { Connect } from '../../components/ui/new-cta'
 
 const businessHero = {
-  heading: 'Business Verification Made Simple with XRAY ',
+  heading: 'PAN Identity Verification XRAY AI',
   description: 'Trust, Transparency, and Security for Your Business',
   button: {
     text: 'Get API Keys',

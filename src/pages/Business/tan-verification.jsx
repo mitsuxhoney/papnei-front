@@ -12,7 +12,7 @@ import Hero2 from '../../components/Hero2'
 import { Connect } from '../../components/ui/new-cta'
 
 const businessHero = {
-  heading: 'Business Verification Made Simple with XRAY ',
+  heading: 'TAN Verification Secured with XRAY AI',
   description: 'Trust, Transparency, and Security for Your Business',
   button: {
     text: 'Get API Keys',
@@ -242,44 +242,44 @@ const TANVerification = () => {
                   Frequently Asked Questions
                 </h2>
                 <p className="text-muted-foreground">
-                  Find answers to common questions about Aadhaar e-Sign verification and our services.
+                  Find answers to common questions about TAN verification and our services.
                 </p>
               </div>
 
               <div className="space-y-4">
                 <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold  mb-2">
-                    What is Aadhaar e-Sign verification?
+                    What is TAN verification?
                   </h3>
                   <p className="text-muted-foreground">
-                    Aadhaar e-Sign verification is a secure digital signing process that allows users to electronically sign documents using their Aadhaar credentials, ensuring authenticity and compliance with legal regulations.
+                    TAN verification is the process of confirming the validity of a Tax Deduction and Collection Account Number (TAN) issued by the Income Tax Department, ensuring compliance with tax regulations.
                   </p>
                 </div>
 
                 <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold  mb-2">
-                    How can I use Aadhaar e-Sign for document verification?
+                    How can I verify my TAN?
                   </h3>
                   <p className="text-muted-foreground">
-                    You can use Aadhaar e-Sign for document verification by linking your Aadhaar number, authenticating via OTP or biometric verification, and digitally signing documents seamlessly through our platform.
+                    You can verify your TAN by entering your TAN number on the official Income Tax Department portal or through our platform, which provides seamless verification and validation services.
                   </p>
                 </div>
 
                 <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold  mb-2">
-                    Is Aadhaar e-Sign legally valid?
+                    Why is TAN verification important?
                   </h3>
                   <p className="text-muted-foreground">
-                    Yes, Aadhaar e-Sign is legally valid under the Information Technology Act, 2000. It is recognized by regulatory authorities and ensures a secure, tamper-proof digital signature for official documents.
+                    TAN verification is crucial for ensuring accurate tax deductions at source (TDS) and compliance with tax laws. It helps businesses and individuals avoid penalties due to incorrect TAN details.
                   </p>
                 </div>
 
                 <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold  mb-2">
-                    Is Aadhaar e-Sign secure?
+                    Is my TAN information secure during verification?
                   </h3>
                   <p className="text-muted-foreground">
-                    Absolutely. Aadhaar e-Sign follows stringent security protocols, including encryption, two-factor authentication, and compliance with UIDAI guidelines, ensuring data integrity and user privacy.
+                    Yes, TAN verification is conducted through secure channels, ensuring data privacy and protection. Our platform follows strict security protocols to safeguard user information.
                   </p>
                 </div>
               </div>
@@ -287,6 +287,7 @@ const TANVerification = () => {
           </div>
         </section>
       </Wrapper>
+
       {/* <div className="mb-16">
         <BusinessCTA />
       </div> */}

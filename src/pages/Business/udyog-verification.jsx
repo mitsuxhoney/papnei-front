@@ -12,7 +12,7 @@ import Hero2 from '../../components/Hero2'
 import { Connect } from '../../components/ui/new-cta'
 
 const businessHero = {
-  heading: 'Business Verification Made Simple with XRAY ',
+  heading: 'Udyog Verification with XRAY AI',
   description: 'Trust, Transparency, and Security for Your Business',
   button: {
     text: 'Get API Keys',
@@ -71,21 +71,21 @@ const businessHero = {
 const features = [
   {
     badge: <ShieldCheckIcon className="w-4 h-4" />,
-    title: 'HIPAA and SOC2 Compliant',
+    title: 'Advance Security',
     description:
       'Our applications are HIPAA and SOC2 compliant, your data is safe with us, always.',
   },
   {
     badge: <SendIcon className="w-4 h-4" />,
-    title: 'Automated Social Media Posting',
+    title: 'Automated Solutions',
     description:
-      'Schedule and automate your social media posts across multiple platforms to save time and maintain a consistent online presence.',
+      'Schedule and automate across multiple platforms to save time and maintain a consistent online presence.',
   },
   {
     badge: <BarChartIcon className="w-4 h-4" />,
     title: 'Advanced Analytics',
     description:
-      'Gain insights into your social media performance with detailed analytics and reporting tools to measure engagement and ROI.',
+      'Gain insights detailed analytics and reporting tools to measure engagement and ROI.',
   },
 ]
 

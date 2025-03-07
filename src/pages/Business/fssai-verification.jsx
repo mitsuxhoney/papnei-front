@@ -12,7 +12,7 @@ import Hero2 from '../../components/Hero2'
 import { Connect } from '../../components/ui/new-cta'
 
 const businessHero = {
-  heading: 'Business Verification Made Simple with XRAY ',
+  heading: 'FSSAI Verification Made Simple with XRAY AI',
   description: 'Trust, Transparency, and Security for Your Business',
   button: {
     text: 'Get API Keys',
@@ -232,54 +232,53 @@ const FSSAIVerification = () => {
           </div>
         </section>
       </Wrapper>
-
       <Wrapper>
-        <section className="py-16 ">
+        <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold  mb-4">
+                <h2 className="text-3xl font-bold mb-4">
                   Frequently Asked Questions
                 </h2>
                 <p className="text-muted-foreground">
-                  Find answers to common questions about Aadhaar e-Sign verification and our services.
+                  Find answers to common questions about Business Verification and FSSAI verification.
                 </p>
               </div>
 
               <div className="space-y-4">
                 <div className="rounded-md p-5">
-                  <h3 className="text-lg font-bold  mb-2">
-                    What is Aadhaar e-Sign verification?
+                  <h3 className="text-lg font-bold mb-2">
+                    What is Business Verification?
                   </h3>
                   <p className="text-muted-foreground">
-                    Aadhaar e-Sign verification is a secure digital signing process that allows users to electronically sign documents using their Aadhaar credentials, ensuring authenticity and compliance with legal regulations.
+                    Business Verification is a secure process that allows companies to authenticate their identity and legitimacy through official credentials, ensuring compliance with legal and financial regulations.
                   </p>
                 </div>
 
                 <div className="rounded-md p-5">
-                  <h3 className="text-lg font-bold  mb-2">
-                    How can I use Aadhaar e-Sign for document verification?
+                  <h3 className="text-lg font-bold mb-2">
+                    How does Business Verification help with FSSAI compliance?
                   </h3>
                   <p className="text-muted-foreground">
-                    You can use Aadhaar e-Sign for document verification by linking your Aadhaar number, authenticating via OTP or biometric verification, and digitally signing documents seamlessly through our platform.
+                    Business Verification ensures that food businesses comply with FSSAI regulations by verifying their licenses, business details, and adherence to food safety norms, making the compliance process seamless and transparent.
                   </p>
                 </div>
 
                 <div className="rounded-md p-5">
-                  <h3 className="text-lg font-bold  mb-2">
-                    Is Aadhaar e-Sign legally valid?
+                  <h3 className="text-lg font-bold mb-2">
+                    Is Business Verification legally valid for FSSAI registration?
                   </h3>
                   <p className="text-muted-foreground">
-                    Yes, Aadhaar e-Sign is legally valid under the Information Technology Act, 2000. It is recognized by regulatory authorities and ensures a secure, tamper-proof digital signature for official documents.
+                    Yes, Business Verification is legally valid and is required to ensure the authenticity of food businesses before they receive their FSSAI registration, helping in maintaining food safety standards.
                   </p>
                 </div>
 
                 <div className="rounded-md p-5">
-                  <h3 className="text-lg font-bold  mb-2">
-                    Is Aadhaar e-Sign secure?
+                  <h3 className="text-lg font-bold mb-2">
+                    How does Business Verification enhance FSSAI compliance security?
                   </h3>
                   <p className="text-muted-foreground">
-                    Absolutely. Aadhaar e-Sign follows stringent security protocols, including encryption, two-factor authentication, and compliance with UIDAI guidelines, ensuring data integrity and user privacy.
+                    Business Verification enhances FSSAI compliance security by cross-checking business details with official databases, reducing fraud, and ensuring businesses meet regulatory requirements before operating in the food industry.
                   </p>
                 </div>
               </div>
@@ -287,6 +286,7 @@ const FSSAIVerification = () => {
           </div>
         </section>
       </Wrapper>
+
       {/* <div className="mb-16">
         <BusinessCTA />
       </div> */}

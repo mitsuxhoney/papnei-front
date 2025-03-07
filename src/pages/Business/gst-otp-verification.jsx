@@ -12,7 +12,7 @@ import Hero2 from '../../components/Hero2'
 import { Connect } from '../../components/ui/new-cta'
 
 const businessHero = {
-  heading: 'Business Verification Made Simple with XRAY ',
+  heading: 'GST OTP Verification Secured with XRAY AI',
   description: 'Trust, Transparency, and Security for Your Business',
   button: {
     text: 'Get API Keys',
@@ -71,23 +71,24 @@ const businessHero = {
 const features = [
   {
     badge: <ShieldCheckIcon className="w-4 h-4" />,
-    title: 'HIPAA and SOC2 Compliant',
+    title: 'Secure & Compliant',
     description:
-      'Our applications are HIPAA and SOC2 compliant, your data is safe with us, always.',
+      'Our GST OTP verification process follows strict security measures, ensuring compliance with government regulations and data protection standards.',
   },
   {
     badge: <SendIcon className="w-4 h-4" />,
-    title: 'Automated Social Media Posting',
+    title: 'Instant OTP Authentication',
     description:
-      'Schedule and automate your social media posts across multiple platforms to save time and maintain a consistent online presence.',
+      'Verify GST transactions quickly and securely with real-time OTP authentication sent to your registered mobile or email.',
   },
   {
     badge: <BarChartIcon className="w-4 h-4" />,
-    title: 'Advanced Analytics',
+    title: 'Real-time Tracking & Logs',
     description:
-      'Gain insights into your social media performance with detailed analytics and reporting tools to measure engagement and ROI.',
+      'Keep track of all your GST verifications with detailed logs and real-time tracking for enhanced transparency and control.',
   },
 ]
+
 
 const featuresHeading = {
   badge: 'Features',
@@ -180,7 +181,7 @@ const GSTOTPVerification = () => {
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
               <p className="">
-                Transforming digital verification with Aadhaar e-Sign technology.
+                Enhancing GST authentication with seamless OTP verification.
               </p>
             </div>
 
@@ -188,45 +189,45 @@ const GSTOTPVerification = () => {
               <div className="text-center">
                 <div className="text-5xl font-bold mb-2">
                   <NumberTicker
-                    value={500}
+                    value={1000}
                     className="font-bold tracking-normal"
                   />
                   +
                 </div>
-                <p className="text-xl">Organizations </p>
+                <p className="text-xl">Businesses Verified</p>
               </div>
 
               <div className="text-center">
                 <div className="text-5xl font-bold mb-2">
                   <NumberTicker
-                    value={5}
+                    value={10}
                     className="font-bold tracking-normal"
                   />
                   M+
                 </div>
-                <p className="text-xl">Documents Digitally Signed</p>
+                <p className="text-xl">GST Transactions Secured</p>
               </div>
 
               <div className="text-center">
                 <div className="text-5xl font-bold mb-2">
                   <NumberTicker
-                    value={99.9}
+                    value={99.8}
                     className="font-bold tracking-normal"
                   />
                   %
                 </div>
-                <p className="text-xl">Success Rate</p>
+                <p className="text-xl">Verification Success Rate</p>
               </div>
 
               <div className="text-center">
                 <div className="text-5xl font-bold mb-2">
                   <NumberTicker
-                    value={100}
+                    value={200}
                     className="font-bold tracking-normal"
                   />
                   +
                 </div>
-                <p className="text-xl">Trusted Partners</p>
+                <p className="text-xl">Trusted GST Partners</p>
               </div>
             </div>
           </div>
@@ -242,44 +243,70 @@ const GSTOTPVerification = () => {
                   Frequently Asked Questions
                 </h2>
                 <p className="text-muted-foreground">
-                  Find answers to common questions about Aadhaar e-Sign verification and our services.
+                  Find answers to common questions about GST OTP verification
+                  and our services.
                 </p>
               </div>
 
               <div className="space-y-4">
                 <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold  mb-2">
-                    What is Aadhaar e-Sign verification?
+                    What is GST OTP Verification?
                   </h3>
                   <p className="text-muted-foreground">
-                    Aadhaar e-Sign verification is a secure digital signing process that allows users to electronically sign documents using their Aadhaar credentials, ensuring authenticity and compliance with legal regulations.
+                    GST OTP verification is a process that allows taxpayers to
+                    authenticate their identity and approve actions related to
+                    their GST accounts using an OTP (One-Time Password) sent to
+                    their registered mobile number or email address.
                   </p>
                 </div>
 
                 <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold  mb-2">
-                    How can I use Aadhaar e-Sign for document verification?
+                    How can I complete GST OTP Verification?
                   </h3>
                   <p className="text-muted-foreground">
-                    You can use Aadhaar e-Sign for document verification by linking your Aadhaar number, authenticating via OTP or biometric verification, and digitally signing documents seamlessly through our platform.
+                    To complete GST OTP verification, enter your GST login
+                    credentials and request an OTP. Once received on your
+                    registered contact details, input the OTP into the provided
+                    field on the GST portal to authenticate your action.
                   </p>
                 </div>
 
                 <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold  mb-2">
-                    Is Aadhaar e-Sign legally valid?
+                    Is GST OTP Verification mandatory?
                   </h3>
                   <p className="text-muted-foreground">
-                    Yes, Aadhaar e-Sign is legally valid under the Information Technology Act, 2000. It is recognized by regulatory authorities and ensures a secure, tamper-proof digital signature for official documents.
+                    Yes, GST OTP verification is mandatory for certain actions
+                    such as filing GST returns, updating GST registration
+                    details, or accessing sensitive GST information, ensuring
+                    secure access to the taxpayer’s account.
                   </p>
                 </div>
 
                 <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold  mb-2">
-                    Is Aadhaar e-Sign secure?
+                    What should I do if I don’t receive the OTP for GST
+                    verification?
                   </h3>
                   <p className="text-muted-foreground">
-                    Absolutely. Aadhaar e-Sign follows stringent security protocols, including encryption, two-factor authentication, and compliance with UIDAI guidelines, ensuring data integrity and user privacy.
+                    If you do not receive the OTP, ensure that your registered
+                    mobile number or email address is correct. You can also try
+                    requesting a new OTP or check for network or SMS delivery
+                    issues. If the problem persists, contact GST support.
+                  </p>
+                </div>
+
+                <div className="rounded-md p-5">
+                  <h3 className="text-lg font-bold  mb-2">
+                    Is GST OTP Verification secure?
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Yes, GST OTP verification is secure as it uses a unique
+                    one-time password sent to your registered mobile or email,
+                    ensuring that only authorized users can perform sensitive
+                    actions within the GST portal.
                   </p>
                 </div>
               </div>
@@ -287,6 +314,7 @@ const GSTOTPVerification = () => {
           </div>
         </section>
       </Wrapper>
+
       {/* <div className="mb-16">
         <BusinessCTA />
       </div> */}
@@ -334,6 +362,5 @@ const GSTOTPVerification = () => {
     </div>
   )
 }
-
 
 export default GSTOTPVerification
