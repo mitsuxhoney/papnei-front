@@ -1,4 +1,12 @@
-import { BarChartIcon, KeyIcon, SendIcon, ShieldCheckIcon } from 'lucide-react'
+import {
+  BarChartIcon,
+  CheckCircleIcon,
+  ClockIcon,
+  FileSearchIcon,
+  KeyIcon,
+  SendIcon,
+  ShieldCheckIcon,
+} from 'lucide-react'
 import { BusinessCTA } from '../../components/BusinessCTA'
 import BusinessProducts from '../../components/BusinessProducts'
 import { AuroraBackground } from '../../components/ui/aurora-background'
@@ -12,8 +20,8 @@ import Hero2 from '../../components/Hero2'
 import { Connect } from '../../components/ui/new-cta'
 
 const businessHero = {
-  heading: 'Business Verification Made Simple with XRAY ',
-  description: 'Trust, Transparency, and Security for Your Business',
+  heading: 'Voter-ID OCR API',
+  description: 'Extract and validate voter ID details with OCR technology.',
   button: {
     text: 'Get API Keys',
     url: 'https://www.shadcnblocks.com',
@@ -70,22 +78,19 @@ const businessHero = {
 
 const features = [
   {
-    badge: <ShieldCheckIcon className="w-4 h-4" />,
-    title: 'HIPAA and SOC2 Compliant',
-    description:
-      'Our applications are HIPAA and SOC2 compliant, your data is safe with us, always.',
+    badge: <FileSearchIcon className="w-4 h-4" />,
+    title: 'Voter ID OCR',
+    description: 'Extract text and details from Voter ID cards.',
   },
   {
-    badge: <SendIcon className="w-4 h-4" />,
-    title: 'Automated Social Media Posting',
-    description:
-      'Schedule and automate your social media posts across multiple platforms to save time and maintain a consistent online presence.',
+    badge: <CheckCircleIcon className="w-4 h-4" />,
+    title: 'High Accuracy Recognition',
+    description: 'Ensures precise extraction of voter details.',
   },
   {
-    badge: <BarChartIcon className="w-4 h-4" />,
-    title: 'Advanced Analytics',
-    description:
-      'Gain insights into your social media performance with detailed analytics and reporting tools to measure engagement and ROI.',
+    badge: <ClockIcon className="w-4 h-4" />,
+    title: 'Instant Processing',
+    description: 'Fast and reliable OCR for voter IDs.',
   },
 ]
 
@@ -180,7 +185,8 @@ const VoterOCR = () => {
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
               <p className="">
-                Transforming digital verification with Aadhaar e-Sign technology.
+                Transforming digital verification with Aadhaar e-Sign
+                technology.
               </p>
             </div>
 
@@ -242,7 +248,8 @@ const VoterOCR = () => {
                   Frequently Asked Questions
                 </h2>
                 <p className="text-muted-foreground">
-                  Find answers to common questions about Aadhaar e-Sign verification and our services.
+                  Find answers to common questions about Aadhaar e-Sign
+                  verification and our services.
                 </p>
               </div>
 
@@ -252,7 +259,10 @@ const VoterOCR = () => {
                     What is Aadhaar e-Sign verification?
                   </h3>
                   <p className="text-muted-foreground">
-                    Aadhaar e-Sign verification is a secure digital signing process that allows users to electronically sign documents using their Aadhaar credentials, ensuring authenticity and compliance with legal regulations.
+                    Aadhaar e-Sign verification is a secure digital signing
+                    process that allows users to electronically sign documents
+                    using their Aadhaar credentials, ensuring authenticity and
+                    compliance with legal regulations.
                   </p>
                 </div>
 
@@ -261,7 +271,10 @@ const VoterOCR = () => {
                     How can I use Aadhaar e-Sign for document verification?
                   </h3>
                   <p className="text-muted-foreground">
-                    You can use Aadhaar e-Sign for document verification by linking your Aadhaar number, authenticating via OTP or biometric verification, and digitally signing documents seamlessly through our platform.
+                    You can use Aadhaar e-Sign for document verification by
+                    linking your Aadhaar number, authenticating via OTP or
+                    biometric verification, and digitally signing documents
+                    seamlessly through our platform.
                   </p>
                 </div>
 
@@ -270,7 +283,10 @@ const VoterOCR = () => {
                     Is Aadhaar e-Sign legally valid?
                   </h3>
                   <p className="text-muted-foreground">
-                    Yes, Aadhaar e-Sign is legally valid under the Information Technology Act, 2000. It is recognized by regulatory authorities and ensures a secure, tamper-proof digital signature for official documents.
+                    Yes, Aadhaar e-Sign is legally valid under the Information
+                    Technology Act, 2000. It is recognized by regulatory
+                    authorities and ensures a secure, tamper-proof digital
+                    signature for official documents.
                   </p>
                 </div>
 
@@ -279,7 +295,10 @@ const VoterOCR = () => {
                     Is Aadhaar e-Sign secure?
                   </h3>
                   <p className="text-muted-foreground">
-                    Absolutely. Aadhaar e-Sign follows stringent security protocols, including encryption, two-factor authentication, and compliance with UIDAI guidelines, ensuring data integrity and user privacy.
+                    Absolutely. Aadhaar e-Sign follows stringent security
+                    protocols, including encryption, two-factor authentication,
+                    and compliance with UIDAI guidelines, ensuring data
+                    integrity and user privacy.
                   </p>
                 </div>
               </div>
@@ -334,7 +353,5 @@ const VoterOCR = () => {
     </div>
   )
 }
-
-
 
 export default VoterOCR

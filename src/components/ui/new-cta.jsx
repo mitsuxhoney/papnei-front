@@ -114,8 +114,14 @@ export function Connect() {
                     </p>
                     <div className="flex flex-wrap gap-2">
                       <Link
-                        to="https://cal.com/aliimam/designali"
-                        target="_blank"
+                        to="/contact-us"
+                        onClick={() => {
+                          window.scrollTo({
+                            top: 0,
+                            left: 0,
+                            behavior: 'smooth',
+                          })
+                        }}
                       >
                         <Button>Book a call</Button>
                       </Link>
