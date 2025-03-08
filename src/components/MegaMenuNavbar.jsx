@@ -83,77 +83,77 @@ const businessVerificationItems = [
     title: 'GST OTP Verification API',
     description: 'Verify GST details using OTP-based authentication',
     url: '/business/gst-otp-verification',
-    icon: <Key className="w-4 h-4 text-blue-600" />,
+    icon: <Key className="w-4 h-4" />,
   },
   {
     id: 'bv-2',
     title: 'GST Verification API',
     description: 'Validate GST registration and filing status',
     url: '/business/gst-verification',
-    icon: <Database className="w-4 h-4 text-blue-600" />,
+    icon: <Database className="w-4 h-4" />,
   },
   {
     id: 'bv-3',
     title: 'GST To Phone Number API',
     description: 'Fetch phone number linked to a GST registration',
     url: '/business/gst-to-phone',
-    icon: <Phone className="w-4 h-4 text-blue-600" />,
+    icon: <Phone className="w-4 h-4 " />,
   },
   {
     id: 'bv-4',
     title: 'MCA Data APIs (CIN / DIN)',
     description: 'Retrieve company and director information using CIN/DIN',
     url: '/business/mca-data',
-    icon: <Briefcase className="w-4 h-4 text-blue-600" />,
+    icon: <Briefcase className="w-4 h-4 " />,
   },
   {
     id: 'bv-5',
     title: 'MCA Filed Doc Pull API',
     description: 'Fetch company documents filed with MCA',
     url: '/business/mca-filed-docs',
-    icon: <FileText className="w-4 h-4 text-blue-600" />,
+    icon: <FileText className="w-4 h-4 " />,
   },
   {
     id: 'bv-6',
     title: 'TDS-206 Compliance',
     description: 'Verify tax deduction compliance under section 206',
     url: '/business/tds-206-compliance',
-    icon: <DollarSign className="w-4 h-4 text-blue-600" />,
+    icon: <DollarSign className="w-4 h-4 " />,
   },
   {
     id: 'bv-7',
     title: 'FSSAI Verification API',
     description: 'Verify food business registration with FSSAI',
     url: '/business/fssai-verification',
-    icon: <Utensils className="w-4 h-4 text-blue-600" />,
+    icon: <Utensils className="w-4 h-4 " />,
   },
   {
     id: 'bv-8',
     title: 'TAN Verification API',
     description: 'Validate Tax Deduction Account Number (TAN)',
     url: '/business/tan-verification',
-    icon: <CreditCard className="w-4 h-4 text-blue-600" />,
+    icon: <CreditCard className="w-4 h-4 " />,
   },
   {
     id: 'bv-9',
     title: 'Udyog Verification',
     description: 'Verify business details using Udyog Aadhaar',
     url: '/business/udyog-verification',
-    icon: <Factory className="w-4 h-4 text-blue-600" />,
+    icon: <Factory className="w-4 h-4 " />,
   },
   {
     id: 'bv-10',
     title: 'Udyam Verification',
     description: 'Verify MSME registration under Udyam scheme',
     url: '/business/udyam-verification',
-    icon: <BadgeCheck className="w-4 h-4 text-blue-600" />,
+    icon: <BadgeCheck className="w-4 h-4 " />,
   },
   {
     id: 'bv-11',
     title: 'IEC Verification',
     description: 'Validate Import Export Code (IEC) registration',
     url: '/business/iec-verification',
-    icon: <Globe className="w-4 h-4 text-blue-600" />,
+    icon: <Globe className="w-4 h-4 " />,
   },
 ]
 
@@ -164,105 +164,105 @@ const identityVerificationItems = [
     title: 'PAN Verification API',
     description: 'Verify PAN card details and status',
     url: '/identity/pan-verification',
-    icon: <FileText className="w-4 h-4 text-green-600" />,
+    icon: <FileText className="w-4 h-4" />,
   },
   {
     id: 'iv-2',
     title: 'PAN Comprehensive API',
     description: 'Fetch detailed PAN information with verification',
     url: '/identity/pan-comprehensive',
-    icon: <FileCheck className="w-4 h-4 text-green-600" />,
+    icon: <FileCheck className="w-4 h-4 " />,
   },
   {
     id: 'iv-3',
     title: 'Aadhaar to PAN API',
     description: 'Link Aadhaar with PAN and verify details',
     url: '/identity/aadhaar-to-pan',
-    icon: <LinkIcon className="w-4 h-4 text-green-600" />,
+    icon: <LinkIcon className="w-4 h-4 " />,
   },
   {
     id: 'iv-4',
     title: 'PAN Validation API',
     description: 'Validate PAN details for accuracy',
     url: '/identity/pan-validation',
-    icon: <CheckCircle className="w-4 h-4 text-green-600" />,
+    icon: <CheckCircle className="w-4 h-4 " />,
   },
   {
     id: 'iv-5',
     title: 'Aadhaar Verification API',
     description: 'Verify identity using Aadhaar details',
     url: '/identity/aadhar-verification',
-    icon: <User className="w-4 h-4 text-green-600" />,
+    icon: <User className="w-4 h-4 " />,
   },
   {
     id: 'iv-6',
     title: 'Voter-ID Verification API',
     description: 'Verify Voter ID details',
     url: '/identity/voter-id-verification',
-    icon: <UserCheck className="w-4 h-4 text-green-600" />,
+    icon: <UserCheck className="w-4 h-4 " />,
   },
   {
     id: 'iv-7',
     title: 'Voter-ID OCR API',
     description: 'Extract text and details from Voter ID',
     url: '/identity/voter-id-ocr',
-    icon: <Scan className="w-4 h-4 text-green-600" />,
+    icon: <Scan className="w-4 h-4 " />,
   },
   {
     id: 'iv-8',
     title: 'DL Verification API',
     description: 'Verify Driving License details',
     url: '/identity/dl-verification',
-    icon: <Car className="w-4 h-4 text-green-600" />,
+    icon: <Car className="w-4 h-4 " />,
   },
   {
     id: 'iv-9',
     title: 'Passport Verification API',
     description: 'Verify passport details and validity',
     url: '/identity/passport-verification',
-    icon: <Globe className="w-4 h-4 text-green-600" />,
+    icon: <Globe className="w-4 h-4 " />,
   },
   {
     id: 'iv-10',
     title: 'Passport OCR API',
     description: 'Extract text from passport using OCR',
     url: '/identity/passport-ocr',
-    icon: <FileSearch className="w-4 h-4 text-green-600" />,
+    icon: <FileSearch className="w-4 h-4 " />,
   },
   {
     id: 'iv-11',
     title: 'Photo-ID OCR API',
     description: 'Extract text and details from any photo ID',
     url: '/identity/photo-id-ocr',
-    icon: <Camera className="w-4 h-4 text-green-600" />,
+    icon: <Camera className="w-4 h-4 " />,
   },
   {
     id: 'iv-12',
     title: 'Vehicle RC Verification API',
     description: 'Verify vehicle registration certificate details',
     url: '/identity/vehicle-rc-verification',
-    icon: <Truck className="w-4 h-4 text-green-600" />,
+    icon: <Truck className="w-4 h-4 " />,
   },
   {
     id: 'iv-13',
     title: 'Chassis Number to RC API',
     description: 'Retrieve RC details using chassis number',
     url: '/identity/chassis-to-rc',
-    icon: <Settings className="w-4 h-4 text-green-600" />,
+    icon: <Settings className="w-4 h-4 " />,
   },
   {
     id: 'iv-14',
     title: 'RC with Financer Details',
     description: 'Fetch vehicle RC details along with financer info',
     url: '/identity/rc-with-financer',
-    icon: <Banknote className="w-4 h-4 text-green-600" />,
+    icon: <Banknote className="w-4 h-4 " />,
   },
   {
     id: 'iv-15',
     title: 'Aadhaar Masking API',
     description: 'Mask Aadhaar details for privacy and compliance',
     url: '/identity/aadhaar-masking',
-    icon: <EyeOff className="w-4 h-4 text-green-600" />,
+    icon: <EyeOff className="w-4 h-4 " />,
   },
 ]
 
@@ -273,14 +273,14 @@ const aadharESignItems = [
     title: 'Face Verification API',
     description: 'Verify identity using facial recognition technology',
     url: '/aadhar/face-verification',
-    icon: <Smile className="w-4 h-4 text-purple-600" />,
+    icon: <Smile className="w-4 h-4" />,
   },
   {
     id: 'av-2',
     title: 'Aadhaar E-Sign API',
     description: 'Digitally sign documents using Aadhaar-based authentication',
     url: '/aadhar/e-sign',
-    icon: <PenTool className="w-4 h-4 text-purple-600" />,
+    icon: <PenTool className="w-4 h-4" />,
   },
 ]
 
@@ -383,11 +383,11 @@ const Navbar = () => {
   const getActiveCategoryColor = () => {
     switch (activeCategory) {
       case 'business':
-        return 'text-blue-600'
+        return ''
       case 'identity':
-        return 'text-green-600'
+        return ''
       case 'aadhar':
-        return 'text-purple-600'
+        return ''
       default:
         return 'text-foreground'
     }
@@ -440,7 +440,7 @@ const Navbar = () => {
                     >
                       <button
                         onClick={() => toggleDropdown('products')}
-                        className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-2 py-2 text-sm font-medium text-foreground transition-colors hover:text-blue-600"
+                        className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-2 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
                       >
                         Products
                         <ChevronDown
@@ -458,7 +458,7 @@ const Navbar = () => {
                       onClick={() => {
                         window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })
                       }}
-                      className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:text-blue-600"
+                      className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
                     >
                       About Us
                     </Link>
@@ -469,7 +469,7 @@ const Navbar = () => {
                       onClick={() => {
                         window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })
                       }}
-                      className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:text-blue-600"
+                      className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
                     >
                       Contact Us
                     </Link>
@@ -572,7 +572,7 @@ const Navbar = () => {
                                   >
                                     <div className="flex items-center gap-2">
                                       <div>
-                                        <LayoutGrid className="w-4 h-4 text-blue-600" />
+                                        <LayoutGrid className="w-4 h-4" />
                                       </div>
                                       <p className="font-medium text-sm">
                                         View All Services
@@ -625,7 +625,7 @@ const Navbar = () => {
                                   >
                                     <div className="flex items-center gap-2">
                                       <div>
-                                        <LayoutGrid className="w-4 h-4 text-green-600" />
+                                        <LayoutGrid className="w-4 h-4" />
                                       </div>
                                       <p className="font-medium text-sm">
                                         View All Services
@@ -678,7 +678,7 @@ const Navbar = () => {
                                   >
                                     <div className="flex items-center gap-2">
                                       <div>
-                                        <LayoutGrid className="w-4 h-4 text-purple-600" />
+                                        <LayoutGrid className="w-4 h-4" />
                                       </div>
                                       <p className="font-medium text-sm">
                                         View All Services
@@ -761,18 +761,16 @@ const Navbar = () => {
                               handleCategoryMouseEnter('business')
                             }
                             className={cn(
-                              'w-full flex items-center p-3 rounded-md hover:bg-muted group text-left',
+                              'w-full flex items-center p-3 rounded-md hover:bg-accent group text-left',
                               activeCategory === 'business' ? 'bg-muted' : ''
                             )}
                           >
-                            <Building className="w-5 h-5 text-blue-600 mr-3 flex-shrink-0" />
+                            <Building className="w-5 h-5 mr-3 flex-shrink-0" />
                             <div>
                               <h4
                                 className={cn(
-                                  'text-sm font-semibold group-hover:text-blue-600',
-                                  activeCategory === 'business'
-                                    ? 'text-blue-600'
-                                    : ''
+                                  'text-sm font-semibold group',
+                                  activeCategory === 'business' ? '' : ''
                                 )}
                               >
                                 Business Verification
@@ -797,18 +795,16 @@ const Navbar = () => {
                               handleCategoryMouseEnter('identity')
                             }
                             className={cn(
-                              'w-full flex items-center p-3 rounded-md hover:bg-muted group text-left',
-                              activeCategory === 'identity' ? 'bg-muted' : ''
+                              'w-full flex items-center p-3 rounded-md hover:bg-accent group text-left',
+                              activeCategory === 'identity' ? 'bg-accent' : ''
                             )}
                           >
-                            <UserCheck className="w-5 h-5 text-green-600 mr-3 flex-shrink-0" />
+                            <UserCheck className="w-5 h-5 mr-3 flex-shrink-0" />
                             <div>
                               <h4
                                 className={cn(
-                                  'text-sm font-semibold group-hover:text-green-600',
-                                  activeCategory === 'identity'
-                                    ? 'text-green-600'
-                                    : ''
+                                  'text-sm font-semibold group',
+                                  activeCategory === 'identity' ? '' : ''
                                 )}
                               >
                                 Identity Verification
@@ -833,18 +829,16 @@ const Navbar = () => {
                               handleCategoryMouseEnter('aadhar')
                             }
                             className={cn(
-                              'w-full flex items-center p-3 rounded-md hover:bg-muted group text-left',
-                              activeCategory === 'aadhar' ? 'bg-muted' : ''
+                              'w-full flex items-center p-3 rounded-md hover:bg-accent group text-left',
+                              activeCategory === 'aadhar' ? 'bg-accent' : ''
                             )}
                           >
-                            <FileSignature className="w-5 h-5 text-purple-600 mr-3 flex-shrink-0" />
+                            <FileSignature className="w-5 h-5 mr-3 flex-shrink-0" />
                             <div>
                               <h4
                                 className={cn(
-                                  'text-sm font-semibold group-hover:text-purple-600',
-                                  activeCategory === 'aadhar'
-                                    ? 'text-purple-600'
-                                    : ''
+                                  'text-sm font-semibold',
+                                  activeCategory === 'aadhar' ? '' : ''
                                 )}
                               >
                                 Aadhaar E-Sign
@@ -887,7 +881,7 @@ const Navbar = () => {
                                   })
                                 }}
                                 className={cn(
-                                  'text-sm font-medium flex items-center',
+                                  'text-sm font-medium flex items-center hover:bg-accent rounded-md p-2',
                                   getActiveCategoryColor()
                                 )}
                               >

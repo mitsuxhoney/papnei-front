@@ -1,5 +1,3 @@
-'use client'
-
 import * as React from 'react'
 import { Link } from 'react-router-dom'
 import { cn } from '@/lib/utils'
@@ -12,6 +10,7 @@ import {
 } from '@/components/ui/cta-highlight'
 import { Mail, MessageCircle, PenTool } from 'lucide-react'
 import { DotPattern } from '@/components/ui/dot-pattern'
+import { Pointer } from './pointer'
 
 export function Connect() {
   const [scope, animate] = useAnimate()
