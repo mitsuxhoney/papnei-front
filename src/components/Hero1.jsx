@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import { AuroraBackground } from './ui/aurora-background'
 import { AnimatedTooltip } from './ui/animated-tooltip'
 import Wrapper from './Wrapper'
+import { Link } from 'react-router-dom'
 
 const Hero1 = ({ businessHero }) => {
   return (
@@ -19,8 +20,8 @@ const Hero1 = ({ businessHero }) => {
                 {businessHero.description}
               </p>
             </div>
-            <Button asChild size="lg" className="mt-10">
-              <a href={businessHero.button.url}>{businessHero.button.text}</a>
+            <Button asChild size="lg" className="mt-8 relative">
+              <Link to="/contact-us">{businessHero.button.text}</Link>
             </Button>
             <div className="mx-auto mt-10 flex w-fit flex-col items-center gap-4 sm:flex-row">
               <span className="mx-4 inline-flex items-center -space-x-4">

@@ -6,9 +6,10 @@ import { AnimatedTooltip } from './ui/animated-tooltip'
 import Wrapper from './Wrapper'
 import { InteractiveGridPattern } from './ui/interactive-grid'
 import { cn } from '../lib/utils'
-import { DotPattern } from "@/components/ui/dot-pattern";
+import { DotPattern } from '@/components/ui/dot-pattern'
 import { Tiles } from '@/components/ui/tiles'
-import { BorderBeamForm }from '@/components/border-beam-form'
+import { BorderBeamForm } from '@/components/border-beam-form'
+import { Link } from 'react-router-dom'
 
 function Hero2({ businessHero }) {
   return (
@@ -20,8 +21,8 @@ function Hero2({ businessHero }) {
           cr={2}
           cx={2}
           className={cn(
-            "absolute inset-0 h-full w-full opacity-40",
-            "[mask-image:radial-gradient(1000px_circle_at_center,white,transparent)]"
+            'absolute inset-0 h-full w-full opacity-40',
+            '[mask-image:radial-gradient(1000px_circle_at_center,white,transparent)]'
           )}
         />
 
@@ -39,7 +40,7 @@ function Hero2({ businessHero }) {
                 </p>
 
                 <Button asChild size="lg" className="mt-8 relative">
-                  <a href={businessHero.button.url}>{businessHero.button.text}</a>
+                  <Link to="/contact-us">{businessHero.button.text}</Link>
                 </Button>
 
                 {/* Reviews Section */}
