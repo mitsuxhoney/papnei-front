@@ -49,7 +49,7 @@ function HeroContent({
       >
         {primaryAction && (
           <Link
-            path={primaryAction.href}
+            to="/contact-us"
             className={cn(
               buttonVariants({ size: 'lg' }),
               'gap-2 w-full sm:w-auto justify-center'

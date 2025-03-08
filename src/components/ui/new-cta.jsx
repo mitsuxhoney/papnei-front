@@ -125,17 +125,17 @@ export function Connect() {
                       >
                         <Button>Book a call</Button>
                       </Link>
-                      <Link
-                        to="mailto:contact@designali.in"
+                      <a
+                        href="mailto:letstalk@xettle.net"
                         target="_blank"
                         className={cn(
                           buttonVariants({ variant: 'outline', size: 'icon' })
                         )}
                       >
                         <Mail className="h-5 w-5" />
-                      </Link>
+                      </a>
                       <Link
-                        to="https://wa.me/917678432186"
+                        to="https://wa.me/8448954679"
                         target="_blank"
                         className={cn(
                           buttonVariants({ variant: 'outline', size: 'icon' })
