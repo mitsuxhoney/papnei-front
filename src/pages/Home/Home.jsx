@@ -1,8 +1,6 @@
 import HeroDemo from '../../components/HeroDemo'
-import { FaReact } from 'react-icons/fa'
-import { SiNextdotjs, SiFramer } from 'react-icons/si'
+
 import { Logos3 as Partners } from '../../components/ui/logos3'
-import { useTheme } from '@/components/theme-provider'
 
 import {
   IconArrowWaveRightUp,
@@ -13,40 +11,22 @@ import {
   IconSignature,
   IconTableColumn,
 } from '@tabler/icons-react'
-import {
-  Banknote,
-  ShoppingCart,
-  Rocket,
-  Briefcase,
-  BanknoteIcon,
-  ShoppingCartIcon,
-  RocketIcon,
-  BriefcaseIcon,
-  CodeIcon,
-  Clock,
-  ShieldCheck,
-  Server,
-} from 'lucide-react'
+
 import { Icons } from '@/components/ui/icons'
-import { Code, Key, Layout, Pointer, Zap } from 'lucide-react'
+import { Code, Layout, Pointer, Zap } from 'lucide-react'
 import { Feature108 as Features } from '@/components/ui/features'
 import Wrapper from '../../components/Wrapper'
 import { Testimonials } from '../../components/ui/eldora-testimonials'
-import { FeatureSteps as StepsIntegration } from '../../components/steps-section'
 import { IntegrationBenefits } from '../../components/IntegrationBenefits'
 import { CaseStudies } from '../../components/case-studies'
 import { FAQCTA } from '../../components/faq-cta'
 import { AnimatedBeamDemo as HomeHero } from '../../components/ui/animated-beam-hero'
 import LazyLoadMotion from '../../components/LazyLoadMotion'
-import { BentoGrid, BentoGridItem } from '../../components/ui/bento-grid'
-import { CardDemo } from '../../components/ui/aceternity-card'
-import { MagicCard } from '../../components/ui/magic-card'
+
 import Who from '../../components/Who'
 import { Why } from '../../components/Why'
-import { BusinessCTA } from '../../components/BusinessCTA'
-import OpenSource from '../../components/ui/open-source'
 import { Connect } from '../../components/ui/new-cta'
-import Cta10Demo from '../../components/ui/cta10-demo'
+import OpenSource from '../../components/ui/open-source'
 
 const tabsData = {
   badge: 'shadcnblocks.com',
@@ -177,7 +157,7 @@ const caseStudiesData = {
       image:
         'https://images.pexels.com/photos/6476587/pexels-photo-6476587.jpeg?auto=compress&cs=tinysrgb&fit=max&w=1080',
     },
-    
+
     {
       id: 'study6',
       title: 'Bank Account Verification: Preventing Payment Fraud',
@@ -207,7 +187,6 @@ const caseStudiesData = {
     },
   ],
 }
-
 
 const FAQCTAData = {
   heading: 'Frequently Asked Questions',
@@ -255,7 +234,6 @@ const FAQCTAData = {
   supportButtonUrl: 'https://yourwebsite.com/contact',
 }
 
-
 const homeHeroContent = {
   title: 'Instant. Secure. Hassle-Free Verification',
 
@@ -281,54 +259,26 @@ const homeHeroBadge = {
   size: 'md',
 }
 
-const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
-)
-const items = [
-  {
-    title: 'The Dawn of Innovation',
-    description: 'Explore the birth of groundbreaking ideas and inventions.',
-    header: <Skeleton />,
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: 'The Digital Revolution',
-    description: 'Dive into the transformative power of technology.',
-    header: <Skeleton />,
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: 'The Art of Design',
-    description: 'Discover the beauty of thoughtful and functional design.',
-    header: <Skeleton />,
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: 'The Power of Communication',
-    description:
-      'Understand the impact of effective communication in our lives.',
-    header: <Skeleton />,
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: 'The Pursuit of Knowledge',
-    description: 'Join the quest for understanding and enlightenment.',
-    header: <Skeleton />,
-    icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: 'The Joy of Creation',
-    description: 'Experience the thrill of bringing ideas to life.',
-    header: <Skeleton />,
-    icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: 'The Spirit of Adventure',
-    description: 'Embark on exciting journeys and thrilling discoveries.',
-    header: <Skeleton />,
-    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
-  },
-]
+const staticProps = {
+  title: 'Open API',
+  description: 'Open API for Aadhaar, PAN, GST, Bank Verification, and more.',
+  repository: 'codehagen/prismui',
+  stars: 300,
+  contributors: [
+    {
+      login: 'codehagen',
+      avatar_url: 'https://avatars.githubusercontent.com/u/12345678?v=4',
+    },
+    {
+      login: 'contributor2',
+      avatar_url: 'https://avatars.githubusercontent.com/u/23456789?v=4',
+    },
+    {
+      login: 'contributor3',
+      avatar_url: 'https://avatars.githubusercontent.com/u/34567890?v=4',
+    },
+  ],
+}
 
 const Home = () => {
   return (
@@ -346,27 +296,7 @@ const Home = () => {
           <Partners />
         </div>
         <div className="my-16">
-          <OpenSource
-            // repository="codehagen/prismui"
-            // title="Join our community"
-            // description="PrismUI is built by the community, for the community. We'd love to have you join us!"
-            // buttonText="View on GitHub"
-            defaultStats={{
-              stars: 300,
-              contributors: [
-                {
-                  login: 'codehagen',
-                  avatar_url:
-                    'https://avatars.githubusercontent.com/u/12345678?v=4',
-                },
-                {
-                  login: 'contributor2',
-                  avatar_url:
-                    'https://avatars.githubusercontent.com/u/23456789?v=4',
-                },
-              ],
-            }}
-          />
+          <OpenSource {...staticProps} />
         </div>
       </Wrapper>
       {/* <SpotlightCard cards={cardData} /> */}
