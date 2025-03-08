@@ -36,6 +36,8 @@ import {
 import { Spotlight } from '../../components/ui/spotlight'
 import { Connect } from '../../components/ui/new-cta'
 import { FAQCTA } from '../../components/faq-cta'
+import confetti from 'canvas-confetti'
+import toast from 'react-hot-toast'
 const FAQCTAData = {
   heading: 'Frequently Asked Questions',
   description:
@@ -83,21 +85,59 @@ const FAQCTAData = {
 }
 
 const formSchema = z.object({
-  name: z.string().min(2, 'Name must be at least 2 characters').max(50),
-  email: z.string().email('Invalid email address'),
-  phone: z.string().regex(/^\d{10}$/, 'Phone must be exactly 10 digits'),
-  subject: z.string().nonempty('Subject is required'),
+  name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
+  businessName: z
+    .string()
+    .min(2, { message: 'Business Name must be at least 2 characters.' }),
+  email: z.string().email({ message: 'Invalid email address.' }),
+  workEmail: z.string().email({ message: 'Invalid work email address.' }),
 })
 
 const ContactUs = () => {
+  const shoot = () => {
+    const end = Date.now() + 1 * 1000 // 3 seconds
+    const colors = ['#a786ff', '#fd8bbc', '#eca184', '#f8deb1']
+
+    const frame = () => {
+      if (Date.now() > end) return
+
+      confetti({
+        particleCount: 2,
+        angle: 60,
+        spread: 55,
+        startVelocity: 60,
+        origin: { x: 0, y: 0.5 },
+        colors: colors,
+      })
+      confetti({
+        particleCount: 2,
+        angle: 120,
+        spread: 55,
+        startVelocity: 60,
+        origin: { x: 1, y: 0.5 },
+        colors: colors,
+      })
+
+      requestAnimationFrame(frame)
+    }
+
+    frame()
+  }
+
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: '',
+      name: '',
+      businessName: '',
+      email: '',
+      workEmail: '',
     },
   })
   function onSubmit(values) {
-    console.log(values)
+    shoot()
+    toast.success('Your data is successfully submitted.', {
+      duration: 4000,
+    })
   }
   return (
     <div className="">
@@ -193,7 +233,23 @@ const ContactUs = () => {
                           <FormItem>
                             <FormLabel className="text-md">Name</FormLabel>
                             <FormControl>
-                              <Input placeholder="shadcn" {...field} />
+                              <Input placeholder="Enter Your Name" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="businessName"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Business Name</FormLabel>
+                            <FormControl>
+                              <Input
+                                placeholder="Enter Your Business Name"
+                                {...field}
+                              />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -206,7 +262,10 @@ const ContactUs = () => {
                           <FormItem>
                             <FormLabel>Email</FormLabel>
                             <FormControl>
-                              <Input placeholder="shadcn" {...field} />
+                              <Input
+                                placeholder="Enter Your Email"
+                                {...field}
+                              />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -214,44 +273,18 @@ const ContactUs = () => {
                       />
                       <FormField
                         control={form.control}
-                        name="phone"
+                        name="workEmail"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Phone</FormLabel>
+                            <FormLabel>Work Email</FormLabel>
                             <FormControl>
-                              <Input placeholder="shadcn" {...field} />
+                              <Input
+                                type="email"
+                                placeholder="Enter Your Work Email"
+                                {...field}
+                                className="w-full"
+                              />
                             </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={form.control}
-                        name="subject"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Subject</FormLabel>
-                            <Select
-                              onValueChange={field.onChange}
-                              defaultValue={field.value}
-                            >
-                              <FormControl>
-                                <SelectTrigger>
-                                  <SelectValue placeholder="Select a verified email to display" />
-                                </SelectTrigger>
-                              </FormControl>
-                              <SelectContent>
-                                <SelectItem value="m@example.com">
-                                  m@example.com
-                                </SelectItem>
-                                <SelectItem value="m@google.com">
-                                  m@google.com
-                                </SelectItem>
-                                <SelectItem value="m@support.com">
-                                  m@support.com
-                                </SelectItem>
-                              </SelectContent>
-                            </Select>
                             <FormMessage />
                           </FormItem>
                         )}
@@ -318,7 +351,7 @@ const ContactUs = () => {
       </div>
       {/* CTA Section */}
       <div className="mb-16 px-16">
-        <Connect/>
+        <Connect />
       </div>
     </div>
   )
