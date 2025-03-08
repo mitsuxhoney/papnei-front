@@ -2,6 +2,10 @@ import { forwardRef, useRef } from 'react'
 
 import { cn } from '@/lib/utils'
 import { AnimatedBeam } from '@/components/ui/animated-beam'
+import fssai from '/src/assets/fssai.png'
+import pan from '/src/assets/pancardbanner.png'
+import verification from '/src/assets/verification.png'
+import document from '/src/assets/document.png'
 
 const Circle = forwardRef(({ className, children }, ref) => {
   return (
@@ -37,29 +41,29 @@ export function AnimatedBeamDemo() {
       <div className="flex size-full max-h-[200px] max-w-lg flex-col items-stretch justify-between gap-10">
         <div className="flex flex-row items-center justify-between">
           <Circle ref={div1Ref}>
-            <Icons.googleDrive />
+            <Icons.panCard />
           </Circle>
           <Circle ref={div5Ref} className="size-14">
-            <Icons.googleDocs />
+            <Icons.verification />
           </Circle>
         </div>
         <div className="flex flex-row items-center justify-between">
           <Circle ref={div2Ref} className="size-14">
-            <Icons.notion />
+            <Icons.aadhar />
           </Circle>
           <Circle ref={div4Ref} className="size-16">
             <Icons.openai />
           </Circle>
           <Circle ref={div6Ref}>
-            <Icons.zapier />
+            <Icons.document />
           </Circle>
         </div>
         <div className="flex flex-row items-center justify-between">
           <Circle ref={div3Ref}>
-            <Icons.whatsapp />
+            <Icons.fssai />
           </Circle>
           <Circle ref={div7Ref}>
-            <Icons.messenger />
+            <Icons.photo />
           </Circle>
         </div>
       </div>
@@ -110,7 +114,7 @@ export function AnimatedBeamDemo() {
 }
 
 const Icons = {
-  notion: () => (
+  aadhar: () => (
     <svg
       width="105"
       height="105"
@@ -186,19 +190,13 @@ const Icons = {
       />
     </svg>
   ),
-  googleDrive: () => (
-    <img src="/src/assets/pancardbanner.png" alt="" width={100} height={100} />
+  panCard: () => <img src={pan} alt="" width={100} height={100} />,
+  fssai: () => <img src={fssai} alt="" width={100} height={100} />,
+  verification: () => (
+    <img src={verification} alt="" width={100} height={100} />
   ),
-  whatsapp: () => (
-    <img src="/src/assets/fssai.png" alt="" width={100} height={100} />
-  ),
-  googleDocs: () => (
-    <img src="/src/assets/verification.png" alt="" width={100} height={100} />
-  ),
-  zapier: () => (
-    <img src="/src/assets/document.png" alt="" width={100} height={100} />
-  ),
-  messenger: () => (
+  document: () => <img src={document} alt="" width={100} height={100} />,
+  photo: () => (
     <svg
       width="100"
       height="100"
@@ -210,26 +208,26 @@ const Icons = {
       <path
         d="M48.9017 44.509C55.4724 44.509 60.799 39.1824 60.799 32.6117C60.799 26.041 55.4724 20.7144 48.9017 20.7144C42.331 20.7144 37.0044 26.041 37.0044 32.6117C37.0044 39.1824 42.331 44.509 48.9017 44.509Z"
         stroke="#2B2B2B"
-        stroke-width="4"
-        stroke-miterlimit="10"
+        strokeWidth="4"
+        strokeMiterlimit="10"
       />
       <path
         d="M9 35.1741V9H35.1741"
         stroke="#2B2B2B"
-        stroke-width="4"
-        stroke-miterlimit="10"
+        strokeWidth="4"
+        strokeMiterlimit="10"
       />
       <path
         d="M35.1741 88.8035H9V62.6294"
         stroke="#2B2B2B"
-        stroke-width="4"
-        stroke-miterlimit="10"
+        strokeWidth="4"
+        strokeMiterlimit="10"
       />
       <path
         d="M62.6294 9H88.8035V35.1741"
         stroke="#2B2B2B"
-        stroke-width="4"
-        stroke-miterlimit="10"
+        strokeWidth="4"
+        strokeMiterlimit="10"
       />
       <path
         d="M71.5985 73.0625C68.8529 73.0625 66.6565 75.2589 66.6565 78.0045C66.6565 80.75 68.8529 82.9464 71.5985 82.9464C74.344 82.9464 76.5404 80.75 76.5404 78.0045C76.5404 75.2589 74.344 73.0625 71.5985 73.0625Z"
@@ -242,8 +240,8 @@ const Icons = {
       <path
         d="M24.741 78.5535C24.741 65.1919 35.5401 54.3928 48.9017 54.3928C50.732 54.3928 52.3794 54.5759 54.0267 54.9419"
         stroke="#2B2B2B"
-        stroke-width="4"
-        stroke-miterlimit="10"
+        strokeWidth="4"
+        strokeMiterlimit="10"
       />
     </svg>
   ),
