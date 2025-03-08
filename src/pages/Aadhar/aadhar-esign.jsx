@@ -12,7 +12,7 @@ import Hero2 from '../../components/Hero2'
 import { Connect } from '../../components/ui/new-cta'
 
 const businessHero = {
-  heading: 'Aadhar E-Sign Verification Made Simple with XRAY ',
+  heading: 'Aadhar E-Sign Verification API',
   description: 'Trust, Transparency, and Security for Your Business',
   button: {
     text: 'Get API Keys',
@@ -180,7 +180,8 @@ const AadharESign = () => {
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
               <p className="">
-                Transforming digital verification with Aadhaar e-Sign technology.
+                Transforming digital verification with Aadhaar e-Sign
+                technology.
               </p>
             </div>
 
@@ -242,7 +243,8 @@ const AadharESign = () => {
                   Frequently Asked Questions
                 </h2>
                 <p className="text-muted-foreground">
-                  Find answers to common questions about Aadhaar e-Sign verification and our services.
+                  Find answers to common questions about Aadhaar e-Sign
+                  verification and our services.
                 </p>
               </div>
 
@@ -252,7 +254,10 @@ const AadharESign = () => {
                     What is Aadhaar e-Sign verification?
                   </h3>
                   <p className="text-muted-foreground">
-                    Aadhaar e-Sign verification is a secure digital signing process that allows users to electronically sign documents using their Aadhaar credentials, ensuring authenticity and compliance with legal regulations.
+                    Aadhaar e-Sign verification is a secure digital signing
+                    process that allows users to electronically sign documents
+                    using their Aadhaar credentials, ensuring authenticity and
+                    compliance with legal regulations.
                   </p>
                 </div>
 
@@ -261,7 +266,10 @@ const AadharESign = () => {
                     How can I use Aadhaar e-Sign for document verification?
                   </h3>
                   <p className="text-muted-foreground">
-                    You can use Aadhaar e-Sign for document verification by linking your Aadhaar number, authenticating via OTP or biometric verification, and digitally signing documents seamlessly through our platform.
+                    You can use Aadhaar e-Sign for document verification by
+                    linking your Aadhaar number, authenticating via OTP or
+                    biometric verification, and digitally signing documents
+                    seamlessly through our platform.
                   </p>
                 </div>
 
@@ -270,7 +278,10 @@ const AadharESign = () => {
                     Is Aadhaar e-Sign legally valid?
                   </h3>
                   <p className="text-muted-foreground">
-                    Yes, Aadhaar e-Sign is legally valid under the Information Technology Act, 2000. It is recognized by regulatory authorities and ensures a secure, tamper-proof digital signature for official documents.
+                    Yes, Aadhaar e-Sign is legally valid under the Information
+                    Technology Act, 2000. It is recognized by regulatory
+                    authorities and ensures a secure, tamper-proof digital
+                    signature for official documents.
                   </p>
                 </div>
 
@@ -279,7 +290,10 @@ const AadharESign = () => {
                     Is Aadhaar e-Sign secure?
                   </h3>
                   <p className="text-muted-foreground">
-                    Absolutely. Aadhaar e-Sign follows stringent security protocols, including encryption, two-factor authentication, and compliance with UIDAI guidelines, ensuring data integrity and user privacy.
+                    Absolutely. Aadhaar e-Sign follows stringent security
+                    protocols, including encryption, two-factor authentication,
+                    and compliance with UIDAI guidelines, ensuring data
+                    integrity and user privacy.
                   </p>
                 </div>
               </div>

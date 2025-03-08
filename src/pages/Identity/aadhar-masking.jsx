@@ -1,4 +1,11 @@
-import { BarChartIcon, KeyIcon, SendIcon, ShieldCheckIcon } from 'lucide-react'
+import {
+  BarChartIcon,
+  CheckIcon,
+  EyeOffIcon,
+  KeyIcon,
+  SendIcon,
+  ShieldCheckIcon,
+} from 'lucide-react'
 import { BusinessCTA } from '../../components/BusinessCTA'
 import BusinessProducts from '../../components/BusinessProducts'
 import { AuroraBackground } from '../../components/ui/aurora-background'
@@ -12,8 +19,9 @@ import Hero2 from '../../components/Hero2'
 import { Connect } from '../../components/ui/new-cta'
 
 const businessHero = {
-  heading: 'Aadhar Masking Verification with XRAY ',
-  description: 'Trust, Transparency, and Security for Your Business',
+  heading: 'Aadhaar Masking API',
+  description:
+    'Automatically mask Aadhaar details to ensure privacy and compliance with data protection laws.',
   button: {
     text: 'Get API Keys',
     url: 'https://www.shadcnblocks.com',
@@ -70,22 +78,19 @@ const businessHero = {
 
 const features = [
   {
+    badge: <EyeOffIcon className="w-4 h-4" />,
+    title: 'Aadhaar Masking',
+    description: 'Mask Aadhaar details for privacy compliance.',
+  },
+  {
     badge: <ShieldCheckIcon className="w-4 h-4" />,
-    title: 'HIPAA and SOC2 Compliant',
-    description:
-      'Our applications are HIPAA and SOC2 compliant, your data is safe with us, always.',
+    title: 'Data Privacy Protection',
+    description: 'Ensures sensitive information is hidden.',
   },
   {
-    badge: <SendIcon className="w-4 h-4" />,
-    title: 'Automated Social Media Posting',
-    description:
-      'Schedule and automate your social media posts across multiple platforms to save time and maintain a consistent online presence.',
-  },
-  {
-    badge: <BarChartIcon className="w-4 h-4" />,
-    title: 'Advanced Analytics',
-    description:
-      'Gain insights into your social media performance with detailed analytics and reporting tools to measure engagement and ROI.',
+    badge: <CheckIcon className="w-4 h-4" />,
+    title: 'Regulatory Compliance',
+    description: 'Meets legal requirements for Aadhaar handling.',
   },
 ]
 
@@ -180,7 +185,8 @@ const AadharMasking = () => {
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
               <p className="">
-                Transforming digital verification with Aadhaar masking technology.
+                Transforming digital verification with Aadhaar masking
+                technology.
               </p>
             </div>
 
@@ -242,7 +248,8 @@ const AadharMasking = () => {
                   Frequently Asked Questions
                 </h2>
                 <p className="text-muted-foreground">
-                  Find answers to common questions about Aadhaar masking verification and our services.
+                  Find answers to common questions about Aadhaar masking
+                  verification and our services.
                 </p>
               </div>
 
@@ -252,7 +259,10 @@ const AadharMasking = () => {
                     What is Aadhaar masking verification?
                   </h3>
                   <p className="text-muted-foreground">
-                    Aadhaar masking verification is a secure digital signing process that allows users to electronically sign documents using their Aadhaar credentials, ensuring authenticity and compliance with legal regulations.
+                    Aadhaar masking verification is a secure digital signing
+                    process that allows users to electronically sign documents
+                    using their Aadhaar credentials, ensuring authenticity and
+                    compliance with legal regulations.
                   </p>
                 </div>
 
@@ -261,7 +271,10 @@ const AadharMasking = () => {
                     How can I use Aadhaar masking for document verification?
                   </h3>
                   <p className="text-muted-foreground">
-                    You can use Aadhaar masking for document verification by linking your Aadhaar number, authenticating via OTP or biometric verification, and digitally signing documents seamlessly through our platform.
+                    You can use Aadhaar masking for document verification by
+                    linking your Aadhaar number, authenticating via OTP or
+                    biometric verification, and digitally signing documents
+                    seamlessly through our platform.
                   </p>
                 </div>
 
@@ -270,7 +283,10 @@ const AadharMasking = () => {
                     Is Aadhaar masking legally valid?
                   </h3>
                   <p className="text-muted-foreground">
-                    Yes, Aadhaar masking is legally valid under the Information Technology Act, 2000. It is recognized by regulatory authorities and ensures a secure, tamper-proof digital signature for official documents.
+                    Yes, Aadhaar masking is legally valid under the Information
+                    Technology Act, 2000. It is recognized by regulatory
+                    authorities and ensures a secure, tamper-proof digital
+                    signature for official documents.
                   </p>
                 </div>
 
@@ -279,7 +295,10 @@ const AadharMasking = () => {
                     Is Aadhaar masking secure?
                   </h3>
                   <p className="text-muted-foreground">
-                    Absolutely. Aadhaar masking follows stringent security protocols, including encryption, two-factor authentication, and compliance with UIDAI guidelines, ensuring data integrity and user privacy.
+                    Absolutely. Aadhaar masking follows stringent security
+                    protocols, including encryption, two-factor authentication,
+                    and compliance with UIDAI guidelines, ensuring data
+                    integrity and user privacy.
                   </p>
                 </div>
               </div>
@@ -334,6 +353,5 @@ const AadharMasking = () => {
     </div>
   )
 }
-
 
 export default AadharMasking
