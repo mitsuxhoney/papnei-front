@@ -4,7 +4,7 @@ import { AnimatedList } from '@/components/ui/animated-list'
 let notifications = [
   {
     name: 'Payment received',
-    description: 'Magic UI',
+    description: 'XRAY AI',
     time: '15m ago',
 
     icon: '💸',
@@ -12,21 +12,21 @@ let notifications = [
   },
   {
     name: 'User signed up',
-    description: 'Magic UI',
+    description: 'XRAY AI',
     time: '10m ago',
     icon: '👤',
     color: '#FFB800',
   },
   {
     name: 'New message',
-    description: 'Magic UI',
+    description: 'XRAY AI',
     time: '5m ago',
     icon: '💬',
     color: '#FF3D71',
   },
   {
     name: 'New event',
-    description: 'Magic UI',
+    description: 'XRAY AI',
     time: '2m ago',
     icon: '🗞️',
     color: '#1E86FF',

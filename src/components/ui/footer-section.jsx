@@ -39,7 +39,7 @@ function Footerdemo() {
   return (
     <Wrapper>
       <footer className="relative bg-background text-foreground transition-colors duration-300">
-        <div className="mx-auto py-12">
+        <div className="mx-auto pb-12">
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
             <div className="relative">
               <h2 className="mb-4 text-3xl font-bold tracking-tight">
@@ -221,7 +221,7 @@ function Footerdemo() {
               </div>
             </div>
           </div>
-          <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t pt-8 text-center md:flex-row relative">
+          <div className="mt-4 flex flex-col items-center justify-between gap-4 border-t pt-8 text-center md:flex-row relative">
             <p className="text-sm text-muted-foreground">
               © 2024 Your Company. All rights reserved.
             </p>

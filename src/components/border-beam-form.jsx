@@ -8,7 +8,6 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
 import { BorderBeam } from '@/components/ui/magic-border-beam'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
@@ -16,24 +15,26 @@ import { z } from 'zod'
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from '@/components/ui/form'
 
 const formSchema = z.object({
-  username: z.string().min(2, {
-    message: 'Username must be at least 2 characters.',
-  }),
+  name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
+  businessName: z.string().min(2, { message: 'Business Name must be at least 2 characters.' }),
+  email: z.string().email({ message: 'Invalid email address.' }),
+  workEmail: z.string().email({ message: 'Invalid work email address.' }),
 })
 
 export function BorderBeamForm() {
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: '',
+      name: '',
+      businessName: '',
+      email: '',
+      workEmail: '',
     },
   })
 
@@ -41,65 +42,71 @@ export function BorderBeamForm() {
     console.log(values)
   }
   return (
-    <Card className="relative max-w-2xl mx-auto flex flex-col items-start overflow-hidden">
+    <Card className="relative flex flex-col items-start overflow-hidden">
       <CardHeader>
-        <CardTitle>Login</CardTitle>
+        <CardTitle>Contact us</CardTitle>
         <CardDescription>
-          Enter your credentials to access your account.
+          Request a callback by filling the details below.
         </CardDescription>
       </CardHeader>
       <CardContent>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 flex flex-col">
             <FormField
               control={form.control}
-              name="username"
+              name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Username</FormLabel>
                   <FormControl>
-                    <Input placeholder="shadcn" {...field} />
+                    <Input placeholder="Name" {...field} className="w-full" />
                   </FormControl>
-
                   <FormMessage />
                 </FormItem>
               )}
             />
             <FormField
               control={form.control}
-              name="username"
+              name="businessName"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Username</FormLabel>
                   <FormControl>
-                    <Input placeholder="shadcn" {...field} />
+                    <Input placeholder="Business Name" {...field} className="w-full" />
                   </FormControl>
-
                   <FormMessage />
                 </FormItem>
               )}
             />
             <FormField
               control={form.control}
-              name="username"
+              name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Username</FormLabel>
                   <FormControl>
-                    <Input placeholder="shadcn" {...field} />
+                    <Input type="email" placeholder="Email" {...field} className="w-full" />
                   </FormControl>
-
                   <FormMessage />
                 </FormItem>
               )}
             />
+            <FormField
+              control={form.control}
+              name="workEmail"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input type="email" placeholder="Work Email" {...field} className="w-full" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <Button type="submit" className="w-full">Get your API key</Button>
           </form>
         </Form>
       </CardContent>
-      <CardFooter className="flex justify-between">
-        <Button variant="outline">Register</Button>
-      </CardFooter>
-      <BorderBeam duration={8} size={100} />
+      <CardFooter />
+      <BorderBeam duration={8} size={100} className="from-transparent via-red-500 to-transparent" />
+      <BorderBeam duration={8} delay={3} size={100} className="from-transparent via-blue-500 to-transparent" />
     </Card>
   )
 }

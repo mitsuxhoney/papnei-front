@@ -8,18 +8,18 @@ import { Info } from 'lucide-react'
 export function TerminalDemo({ steps }) {
   return (
     <Terminal>
-      <TypingAnimation>&gt; pnpm dlx shadcn@latest init</TypingAnimation>
+      <TypingAnimation>&gt; npm i xray-ai@latest init</TypingAnimation>
 
       <AnimatedSpan delay={1500} className="text-green-500">
-        <span>✔ Preflight checks.</span>
+        <span>✔ Security checks.</span>
       </AnimatedSpan>
 
       <AnimatedSpan delay={2000} className="text-green-500">
-        <span>✔ Verifying framework. Found Next.js.</span>
+        <span>✔ Authentication Checks Found xray.js.</span>
       </AnimatedSpan>
 
       <AnimatedSpan delay={2500} className="text-green-500">
-        <span>✔ Validating Tailwind CSS.</span>
+        <span>✔ Validating User.</span>
       </AnimatedSpan>
 
       <AnimatedSpan delay={3000} className="text-green-500">

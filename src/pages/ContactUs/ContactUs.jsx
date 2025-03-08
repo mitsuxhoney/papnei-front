@@ -34,6 +34,53 @@ import {
   CardContent,
 } from '../../components/ui/card'
 import { Spotlight } from '../../components/ui/spotlight'
+import { Connect } from '../../components/ui/new-cta'
+import { FAQCTA } from '../../components/faq-cta'
+const FAQCTAData = {
+  heading: 'Frequently Asked Questions',
+  description:
+    "Everything you need to know about our verification solutions. Can't find the answer you're looking for? Feel free to contact our support team.",
+  ctaHeading: 'Ready to Get Started?',
+  ctaDescription:
+    'Join thousands of businesses using our platform for seamless verification and compliance.',
+  items: [
+    {
+      id: 'faq-1',
+      question: 'What services do you offer?',
+      answer:
+        'We provide identity, business, and document verification solutions, including Aadhaar, PAN, GST, bank verification, and more.',
+    },
+    {
+      id: 'faq-2',
+      question: 'How secure is your verification process?',
+      answer:
+        'Our platform uses industry-leading encryption and compliance measures to ensure secure data processing and fraud prevention.',
+    },
+    {
+      id: 'faq-3',
+      question: 'Do you provide API access?',
+      answer:
+        'Yes, we offer developer-friendly APIs for seamless integration into your workflows, ensuring quick and efficient verification.',
+    },
+    {
+      id: 'faq-4',
+      question: 'What industries can benefit from your services?',
+      answer:
+        'Our solutions cater to fintech, banking, e-commerce, insurance, and various other sectors that require identity and compliance verification.',
+    },
+    {
+      id: 'faq-5',
+      question: 'Do you offer support for integration?',
+      answer:
+        'Yes, our support team is available to assist with integration, documentation, and troubleshooting any technical issues.',
+    },
+  ],
+  supportHeading: 'Still have questions?',
+  supportDescription:
+    "Can't find the answer you're looking for? Our support team is here to help with any technical questions or concerns.",
+  supportButtonText: 'Contact Support',
+  supportButtonUrl: 'https://yourwebsite.com/contact',
+}
 
 const formSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters').max(50),
@@ -265,100 +312,13 @@ const ContactUs = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 ">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold  mb-4">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-muted-foreground">
-                Find answers to common questions about Papnei and our services.
-              </p>
-            </div>
 
-            <div className="space-y-4">
-              <div className=" rounded-md p-5">
-                <h3 className="text-lg font-bold  mb-2">
-                  What healthcare solutions does Papnei offer?
-                </h3>
-                <p className="text-muted-foreground">
-                  Papnei offers a comprehensive suite of healthcare technology
-                  solutions, including patient management systems, telehealth
-                  platforms, healthcare analytics, and custom software
-                  development for healthcare providers.
-                </p>
-              </div>
-
-              <div className=" rounded-md p-5">
-                <h3 className="text-lg font-bold  mb-2">
-                  How can I schedule a demo of your products?
-                </h3>
-                <p className="text-muted-foreground">
-                  You can schedule a demo by filling out the contact form on
-                  this page, calling our sales team at +1 (555) 123-4567, or
-                  emailing us at sales@papnei.com. We&apos;ll be happy to
-                  showcase our solutions and discuss how they can benefit your
-                  organization.
-                </p>
-              </div>
-
-              <div className=" rounded-md p-5">
-                <h3 className="text-lg font-bold  mb-2">
-                  Do you offer technical support for your products?
-                </h3>
-                <p className="text-muted-foreground">
-                  Yes, we provide comprehensive technical support for all our
-                  products. Our support team is available Monday through Friday
-                  from 9AM to 5PM. For urgent issues, we also offer 24/7
-                  emergency support for our enterprise clients.
-                </p>
-              </div>
-
-              <div className=" rounded-md p-5">
-                <h3 className="text-lg font-bold  mb-2">
-                  Is my data secure with Papnei&apos;s solutions?
-                </h3>
-                <p className="text-muted-foreground">
-                  Data security is our top priority. All Papnei solutions are
-                  HIPAA-compliant and implement industry-leading security
-                  measures, including end-to-end encryption, secure
-                  authentication, and regular security audits. We are committed
-                  to protecting your sensitive healthcare data.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <div className="my-16 py-16">
+        <FAQCTA FAQCTAData={FAQCTAData} />
+      </div>
       {/* CTA Section */}
-      <div className="w-full text-center relative overflow-hidden">
-        {/* <div className="w-full mx-auto">
-            <Meteors number={50} />
-          </div> */}
-        <AuroraBackground className="w-screen h-full py-10">
-          <div className="w-full flex flex-col gap-12 items-center">
-            <Wrapper>
-              <div className="flex flex-col gap-2 items-center">
-                {/* <h3 className="text-xl font-semibold md:text-4xl">{heading}</h3> */}
-                <SparklesText
-                  className={`text-3xl font-semibold md:text-5xl`}
-                  text="Ready To Get Started"
-                />
-                {/* <TypingAnimation>{heading}</TypingAnimation> */}
-                <p className="text-muted-foreground text-sm lg:text-md">
-                  Join thousand of satisfied customers using our platform to
-                  build amazing websites.
-                </p>
-              </div>
-            </Wrapper>
-
-            <div className="max-w-md lg:max-w-lg w-full">
-              <ExpandableCardBasic />
-            </div>
-          </div>
-        </AuroraBackground>
+      <div className="mb-16 px-16">
+        <Connect/>
       </div>
     </div>
   )

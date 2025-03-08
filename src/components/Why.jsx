@@ -211,14 +211,14 @@ const SkeletonFour = () => {
         className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
       >
         <img
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
+          src="https://avatars.githubusercontent.com/u/124599?v=4"
           alt="avatar"
           height="100"
           width="100"
           className="rounded-full h-10 w-10"
         />
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Just code in Vanilla Javascript
+          Secured Authentication
         </p>
         <p className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
           Delusional
@@ -226,14 +226,14 @@ const SkeletonFour = () => {
       </motion.div>
       <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
         <img
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
+          src="https://avatars.githubusercontent.com/u/124599?v=4"
           alt="avatar"
           height="100"
           width="100"
           className="rounded-full h-10 w-10"
         />
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Tailwind CSS is cool, you know
+          Our APIs is Fast, you know
         </p>
         <p className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
           Sensible
@@ -244,7 +244,7 @@ const SkeletonFour = () => {
         className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
       >
         <img
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
+          src="https://avatars.githubusercontent.com/u/124599?v=4"
           alt="avatar"
           height="100"
           width="100"
@@ -297,7 +297,7 @@ const SkeletonFive = () => {
         className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2  items-start space-x-2 bg-white dark:bg-black"
       >
         <img
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
+          src="https://avatars.githubusercontent.com/u/124599?v=4"
           alt="avatar"
           height="100"
           width="100"
@@ -320,10 +320,10 @@ const SkeletonFive = () => {
 }
 const items = [
   {
-    title: 'AI Content Generation',
+    title: 'AI Powered Verification',
     description: (
       <span className="text-sm">
-        Experience the power of AI in generating unique content.
+        Experience the power of AI in Verification.
       </span>
     ),
     header: (
@@ -335,7 +335,7 @@ const items = [
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: 'Automated Proofreading',
+    title: 'Automated Scanning',
     description: (
       <span className="text-sm">
         Let AI handle the proofreading of your documents.
@@ -350,10 +350,10 @@ const items = [
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: 'Contextual Suggestions',
+    title: 'One to Many Integrations',
     description: (
       <span className="text-sm">
-        Get AI-powered suggestions based on your writing context.
+        Get one to many integration benefits.
       </span>
     ),
     header: (
@@ -365,7 +365,7 @@ const items = [
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: 'Sentiment Analysis',
+    title: 'Document Analysis',
     description: (
       <span className="text-sm">
         Understand the sentiment of your text with AI analysis.
@@ -400,7 +400,7 @@ export function Why() {
     <div>
       <div className="flex flex-col items-center gap-4 text-center mb-6">
         <Badge variant="outline">{why.badge}</Badge>
-        <h1 className="max-w-2xl text-3xl font-semibold md:text-4xl">
+        <h1 className="max-w-2xl text-3xl font-semibold md:text-5xl">
           {why.title}
         </h1>
         <p className="text-muted-foreground">{why.description}</p>

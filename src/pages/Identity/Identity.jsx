@@ -36,13 +36,15 @@ import { BusinessCTA } from '../../components/BusinessCTA'
 import { FAQCTA } from '../../components/faq-cta'
 import { InteractiveHoverButton } from '../../components/ui/interactive-hover'
 import { Hero1 } from '../../components/Hero1'
+import Hero2 from '../../components/Hero2'
+import { Connect } from '../../components/ui/new-cta'
 
 const businessHero = {
-  heading: 'XRAY provides fast, and secure identity verification solutions.',
+  heading: 'Fast & Secure Identity Verification XRAY AI',
   description:
     'Our advanced technology simplifies the process while maintaining the highest security standards.',
   button: {
-    text: 'Discover all components',
+    text: 'GET API KEYS',
     url: 'https://www.shadcnblocks.com',
   },
 
@@ -98,21 +100,21 @@ const businessHero = {
 const features = [
   {
     badge: <ShieldCheckIcon className="w-4 h-4" />,
-    title: 'HIPAA and SOC2 Compliant',
+    title: 'Fast & Reliable',
     description:
-      'Our applications are HIPAA and SOC2 compliant, your data is safe with us, always.',
+      'Get instant verification with real-time data checks, ensuring accuracy and speed',
   },
   {
     badge: <SendIcon className="w-4 h-4" />,
-    title: 'Automated Social Media Posting',
+    title: 'Secure & Compliant',
     description:
-      'Schedule and automate your social media posts across multiple platforms to save time and maintain a consistent online presence.',
+      ' We follow industry-leading security standards to safeguard your data and ensure compliance. ',
   },
   {
     badge: <BarChartIcon className="w-4 h-4" />,
-    title: 'Advanced Analytics',
+    title: 'Seamless Integration',
     description:
-      'Gain insights into your social media performance with detailed analytics and reporting tools to measure engagement and ROI.',
+      'Our API-based verification enables effortless automation, reducing manual work and errors.',
   },
 ]
 const featuresHeading = {
@@ -146,50 +148,46 @@ const featuresBenefits = [
 ]
 
 const FAQCTAData = {
-  heading: 'Frequently asked questions',
+  heading: 'Frequently Asked Questions',
   description:
-    "Everything you need to know about shadcnblocks. Can't find the answer you're looking for? Feel free to contact our support team.",
+    "Everything you need to know about our identity verification solutions. Can't find the answer you're looking for? Feel free to contact our support team.",
   ctaHeading: 'Ready To Get Started',
   ctaDescription:
-    'Join thousand of satisfied customers using our platform to build amazing websites.',
+    'Join thousands of businesses using our fast and secure identity verification solutions to prevent fraud and ensure compliance.',
   items: [
     {
       id: 'faq-1',
-      question: 'What is shadcnblocks?',
+      question: 'What is identity verification?',
       answer:
-        'shadcnblocks is a collection of ready-to-use block components built on top of shadcn/ui, designed to help you build beautiful websites faster.',
+        'Identity verification is the process of confirming a person’s identity using official documents, biometric data, or digital verification methods.',
     },
     {
       id: 'faq-2',
-      question: 'How do I install shadcnblocks?',
+      question: 'How does your identity verification process work?',
       answer:
-        'shadcnblocks components are designed to be copied and pasted into your project. Simply browse the components, click on the one you want to use, and copy the code directly into your project. This gives you full control over the code and allows for easy customization.',
+        'Our system verifies identities by cross-checking government-issued IDs, biometric data, and other authentication factors to ensure accuracy and security.',
     },
     {
       id: 'faq-3',
-      question: 'Is shadcnblocks free to use?',
+      question: 'Why is identity verification important?',
       answer:
-        'Yes, shadcnblocks is open-source and free to use in both personal and commercial projects. You can customize and modify the blocks to suit your needs.',
+        'Identity verification helps prevent fraud, enhances security, ensures regulatory compliance, and builds trust between businesses and customers.',
     },
     {
       id: 'faq-4',
-      question: 'Can I customize the blocks?',
+      question: 'Is the verification process secure?',
       answer:
-        'Absolutely! All blocks are built with customization in mind. You can modify the styling, content, and behavior through props and Tailwind CSS classes.',
+        'Yes, we use industry-leading encryption and compliance measures to ensure that all identity verification data is protected and secure.',
     },
     {
       id: 'faq-5',
-      question: 'Do you offer support?',
+      question: 'How long does the verification process take?',
       answer:
-        'Yes, we provide support through our GitHub repository where you can report issues, suggest features, or ask questions about implementation.',
+        'Our identity verification process is instant or takes just a few minutes, depending on the method used and the data provided.',
     },
   ],
-  supportHeading: 'Still have questions?',
-  supportDescription:
-    "Can't find the answer you're looking for? Our support team is here to help with any technical questions or concerns.",
-  supportButtonText: 'Contact Support',
-  supportButtonUrl: 'https://shadcnblocks.com',
 }
+
 
 const identityProducts = [
   {
@@ -351,7 +349,7 @@ const identityProducts = [
 
 const identityProductsHeading = {
   badge: 'Instant Verification',
-  title: 'Business & Compliance Verification Solutions',
+  title: 'Identity Verification Solutions',
   description:
     'Seamlessly verify business details, tax compliance, and legal registrations with our comprehensive suite of verification tools.',
 }
@@ -392,7 +390,7 @@ const Identity = () => {
   return (
     <div>
       <div className="mb-16">
-        <Hero1 businessHero={businessHero} />
+        <Hero2 businessHero={businessHero} />
       </div>
       <Wrapper>
         <div className="mb-16">
@@ -421,11 +419,9 @@ const Identity = () => {
         </div>
       </Wrapper>
 
-      <div className="mb-16">
-        <BusinessCTA />
-      </div>
+      
       <Wrapper>
-        <div className="mb-16">
+        <div className=" py-16">
           <BusinessProducts
             grid={otherProducts}
             gridHeading={otherProductsHeading}
@@ -433,8 +429,11 @@ const Identity = () => {
           />
         </div>
       </Wrapper>
-      <div className="">
+      <div className="py-16">
         <FAQCTA FAQCTAData={FAQCTAData} />
+      </div>
+      <div className="mb-16 px-16">
+        <Connect />
       </div>
     </div>
   )

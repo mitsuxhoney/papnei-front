@@ -253,11 +253,11 @@ const tabs = [
 const Feature108 = () => {
   console.log(tabs[0].features)
   return (
-    <section className="">
+    <section className="py-10">
       <div className="mx-auto">
         <div className="flex flex-col items-center gap-4 text-center">
           <Badge variant="outline">{features.badge}</Badge>
-          <h1 className="max-w-2xl text-3xl font-semibold md:text-4xl">
+          <h1 className="max-w-2xl text-3xl font-semibold md:text-5xl">
             {features.heading}
           </h1>
           <p className="text-muted-foreground">{features.description}</p>

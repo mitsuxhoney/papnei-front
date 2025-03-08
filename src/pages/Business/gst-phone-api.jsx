@@ -1,7 +1,6 @@
 import { BarChartIcon, KeyIcon, SendIcon, ShieldCheckIcon } from 'lucide-react'
 import { BusinessCTA } from '../../components/BusinessCTA'
 import BusinessProducts from '../../components/BusinessProducts'
-import Hero2 from '../../components/Hero2'
 import { AuroraBackground } from '../../components/ui/aurora-background'
 import FeaturesSection from '../../components/ui/features-section'
 import { InteractiveHoverButton } from '../../components/ui/interactive-hover'
@@ -9,16 +8,17 @@ import Wrapper from '../../components/Wrapper'
 import { NumberTicker } from '@/components/ui/number-ticker'
 import ExpandableCardBasic from '../../components/ExpandableCardDemo'
 import { SparklesText } from '../../components/ui/sparkle-text'
+import Hero2 from '../../components/Hero2'
+import { Connect } from '../../components/ui/new-cta'
 
 const businessHero = {
-  heading: 'A Collection of Components Built With Shadcn & Tailwind',
-  description:
-    'Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.',
+  heading: 'GST Phone APIs Secured Simple with XRAY AI',
+  description: 'Trust, Transparency, and Security for Your Business',
   button: {
-    text: 'Discover all components',
+    text: 'Get API Keys',
     url: 'https://www.shadcnblocks.com',
   },
-  background: <AuroraBackground />,
+  // background: <Ripple />,
   reviews: {
     count: 200,
     avatars: [
@@ -71,21 +71,21 @@ const businessHero = {
 const features = [
   {
     badge: <ShieldCheckIcon className="w-4 h-4" />,
-    title: 'HIPAA and SOC2 Compliant',
+    title: 'HIghly Secured',
     description:
       'Our applications are HIPAA and SOC2 compliant, your data is safe with us, always.',
   },
   {
     badge: <SendIcon className="w-4 h-4" />,
-    title: 'Automated Social Media Posting',
+    title: 'Automated Verifications',
     description:
-      'Schedule and automate your social media posts across multiple platforms to save time and maintain a consistent online presence.',
+      'Automate your GST Phone Verification with out automation power.',
   },
   {
     badge: <BarChartIcon className="w-4 h-4" />,
     title: 'Advanced Analytics',
     description:
-      'Gain insights into your social media performance with detailed analytics and reporting tools to measure engagement and ROI.',
+      'Gain insights into your verifications performance with detailed analytics and reporting tools to measure engagement and ROI.',
   },
 ]
 
@@ -129,10 +129,10 @@ const otherProductsHeading = {
 const GSTPhoneAPI = () => {
   return (
     <div>
-      <div className="">
+      <div className="mb-16">
         <Hero2 businessHero={businessHero} />
       </div>
-      <Wrapper>
+      {/* <Wrapper>
         <section className="py-16">
           <div className=" mx-auto px-4">
             <div className="max-w-3xl mx-auto">
@@ -166,12 +166,73 @@ const GSTPhoneAPI = () => {
             </div>
           </div>
         </section>
-      </Wrapper>
+      </Wrapper> */}
+
       <Wrapper>
         <div className="w-full">
           <FeaturesSection grid={features} gridHeading={featuresHeading} />
         </div>
       </Wrapper>
+
+      <Wrapper>
+        <section className="py-16">
+          <div className="mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
+              <p className="">
+                Transforming digital verification with GST Phone technology.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+              <div className="text-center">
+                <div className="text-5xl font-bold mb-2">
+                  <NumberTicker
+                    value={500}
+                    className="font-bold tracking-normal"
+                  />
+                  +
+                </div>
+                <p className="text-xl">Organizations </p>
+              </div>
+
+              <div className="text-center">
+                <div className="text-5xl font-bold mb-2">
+                  <NumberTicker
+                    value={5}
+                    className="font-bold tracking-normal"
+                  />
+                  M+
+                </div>
+                <p className="text-xl">Documents Digitally Signed</p>
+              </div>
+
+              <div className="text-center">
+                <div className="text-5xl font-bold mb-2">
+                  <NumberTicker
+                    value={99.9}
+                    className="font-bold tracking-normal"
+                  />
+                  %
+                </div>
+                <p className="text-xl">Success Rate</p>
+              </div>
+
+              <div className="text-center">
+                <div className="text-5xl font-bold mb-2">
+                  <NumberTicker
+                    value={100}
+                    className="font-bold tracking-normal"
+                  />
+                  +
+                </div>
+                <p className="text-xl">Trusted Partners</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </Wrapper>
+
       <Wrapper>
         <section className="py-16 ">
           <div className="container mx-auto px-4">
@@ -181,59 +242,44 @@ const GSTPhoneAPI = () => {
                   Frequently Asked Questions
                 </h2>
                 <p className="text-muted-foreground">
-                  Find answers to common questions about Papnei and our
-                  services.
+                  Find answers to common questions about GST phone verification and our services.
                 </p>
               </div>
 
               <div className="space-y-4">
-                <div className=" rounded-md p-5">
+                <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold  mb-2">
-                    What healthcare solutions does Papnei offer?
+                    What is GST phone verification?
                   </h3>
                   <p className="text-muted-foreground">
-                    Papnei offers a comprehensive suite of healthcare technology
-                    solutions, including patient management systems, telehealth
-                    platforms, healthcare analytics, and custom software
-                    development for healthcare providers.
+                    GST phone verification is a secure process that validates a user's mobile number registered with the GST portal to ensure authenticity and prevent fraudulent activities.
                   </p>
                 </div>
 
-                <div className=" rounded-md p-5">
+                <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold  mb-2">
-                    How can I schedule a demo of your products?
+                    How can I verify my phone number for GST?
                   </h3>
                   <p className="text-muted-foreground">
-                    You can schedule a demo by filling out the contact form on
-                    this page, calling our sales team at +1 (555) 123-4567, or
-                    emailing us at sales@papnei.com. We&apos;ll be happy to
-                    showcase our solutions and discuss how they can benefit your
-                    organization.
+                    You can verify your phone number for GST by entering your registered mobile number, receiving an OTP from the GST portal, and submitting the OTP to complete the verification process.
                   </p>
                 </div>
 
-                <div className=" rounded-md p-5">
+                <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold  mb-2">
-                    Do you offer technical support for your products?
+                    Why is GST phone verification important?
                   </h3>
                   <p className="text-muted-foreground">
-                    Yes, we provide comprehensive technical support for all our
-                    products. Our support team is available Monday through
-                    Friday from 9AM to 5PM. For urgent issues, we also offer
-                    24/7 emergency support for our enterprise clients.
+                    GST phone verification ensures that the registered mobile number is valid and linked to the correct taxpayer, enhancing security and communication from the tax authorities.
                   </p>
                 </div>
 
-                <div className=" rounded-md p-5">
+                <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold  mb-2">
-                    Is my data secure with Papnei&apos;s solutions?
+                    Is GST phone verification mandatory?
                   </h3>
                   <p className="text-muted-foreground">
-                    Data security is our top priority. All Papnei solutions are
-                    HIPAA-compliant and implement industry-leading security
-                    measures, including end-to-end encryption, secure
-                    authentication, and regular security audits. We are
-                    committed to protecting your sensitive healthcare data.
+                    Yes, GST phone verification is mandatory for businesses and individuals registered under GST to facilitate secure transactions and compliance with government regulations.
                   </p>
                 </div>
               </div>
@@ -241,9 +287,10 @@ const GSTPhoneAPI = () => {
           </div>
         </section>
       </Wrapper>
-      <div className="mb-16">
+
+      {/* <div className="mb-16">
         <BusinessCTA />
-      </div>
+      </div> */}
 
       <Wrapper>
         <div className="">
@@ -254,78 +301,21 @@ const GSTPhoneAPI = () => {
           />
         </div>
       </Wrapper>
-      <Wrapper>
-        <section className="py-16">
-          <div className=" mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
-              <p className="">
-                Making a difference in healthcare through innovation and
-                dedication.
-              </p>
-            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-2">
-                  <NumberTicker
-                    value={50}
-                    className="font-bold tracking-normal"
-                  />
-                  +
-                </div>
-                <p className="text-xl ">Healthcare Partners</p>
-              </div>
-
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-2">
-                  <NumberTicker
-                    value={100}
-                    className="font-bold tracking-normal"
-                  />
-                  k+
-                </div>
-                <p className="text-xl">Patients Served</p>
-              </div>
-
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-2">
-                  <NumberTicker
-                    value={15}
-                    className="font-bold tracking-normal"
-                  />
-                  +
-                </div>
-                <p className="text-xl">Innovative Solutions</p>
-              </div>
-
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-2">
-                  <NumberTicker
-                    value={12}
-                    className="font-bold tracking-normal"
-                  />
-                </div>
-                <p className="text-xl ">Industry Awards</p>
-              </div>
-            </div>
+      {/* <div className="w-full text-center relative overflow-hidden">
+        <div className="w-full mx-auto">
+            <Meteors number={50} />
           </div>
-        </section>
-      </Wrapper>
-      <div className="w-full text-center relative overflow-hidden">
-        {/* <div className="w-full mx-auto">
-        <Meteors number={50} />
-      </div> */}
         <AuroraBackground className="w-screen h-full py-10">
           <div className="w-full flex flex-col gap-12 items-center">
             <Wrapper>
               <div className="flex flex-col gap-2 items-center">
-                {/* <h3 className="text-xl font-semibold md:text-4xl">{heading}</h3> */}
+                <h3 className="text-xl font-semibold md:text-4xl">{heading}</h3>
                 <SparklesText
                   className={`text-3xl font-semibold md:text-5xl`}
                   text="Ready To Get Started"
                 />
-                {/* <TypingAnimation>{heading}</TypingAnimation> */}
+                <TypingAnimation>{heading}</TypingAnimation>
                 <p className="text-muted-foreground text-sm lg:text-md">
                   Join thousand of satisfied customers using our platform to
                   build amazing websites.
@@ -338,9 +328,13 @@ const GSTPhoneAPI = () => {
             </div>
           </div>
         </AuroraBackground>
+      </div> */}
+      <div className="mb-16 px-16">
+        <Connect />
       </div>
     </div>
   )
 }
+
 
 export default GSTPhoneAPI
