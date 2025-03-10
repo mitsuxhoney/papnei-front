@@ -371,9 +371,7 @@ const Home = () => {
         <FAQCTA FAQCTAData={FAQCTAData} />
       </div>
       <div className="my-16 w-full">
-        <Wrapper>
-          <Connect />
-        </Wrapper>
+        <Connect />
       </div>
     </div>
   )

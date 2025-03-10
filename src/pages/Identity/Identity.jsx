@@ -432,7 +432,7 @@ const Identity = () => {
       <div className="py-16">
         <FAQCTA FAQCTAData={FAQCTAData} />
       </div>
-      <div className="mb-16 px-16">
+      <div className="mb-16">
         <Connect />
       </div>
     </div>
