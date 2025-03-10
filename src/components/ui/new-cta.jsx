@@ -12,6 +12,7 @@ import { Mail, MessageCircle, PenTool } from 'lucide-react'
 import { DotPattern } from '@/components/ui/dot-pattern'
 import { Pointer } from './pointer'
 import Wrapper from '../Wrapper'
+import { PulsatingButton } from './pulsating-button'
 
 export function Connect() {
   const [scope, animate] = useAnimate()
@@ -63,8 +64,8 @@ export function Connect() {
             className="group/item grid w-full h-full md:col-span-6 lg:col-span-12"
             data-aos="fade-down"
           >
-            <HighlighterItem className="rounded-3xl w-full">
-              <div className="relative z-20 h-full w-full overflow-hidden rounded-3xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-black">
+            <HighlighterItem className="rounded-xl w-full">
+              <div className="relative z-20 h-full w-full overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800">
                 <Particles
                   className="absolute inset-0 -z-10 opacity-10 transition-opacity duration-1000 ease-in-out group-hover/item:opacity-100"
                   quantity={200}
@@ -72,7 +73,7 @@ export function Connect() {
                   vy={-0.2}
                 />
                 <div className="flex justify-center w-full">
-                  <div className="w-full flex h-full flex-col justify-center gap-10 p-4 md:h-[300px] md:flex-row md:justify-between md:items-center">
+                  <div className="w-full flex h-full flex-col justify-center gap-10 p-4 md:h-[300px] md:flex-row md:justify-center md:items-center">
                     <div
                       className="relative md:mx-auto h-[270px] md:h-[270px] md:w-[300px] w-full"
                       ref={scope}
@@ -103,14 +104,14 @@ export function Connect() {
                         KYC & KYB
                       </div>
                     </div>
-                    <div className="flex h-full flex-col justify-center p-2 gap-2 md:w-[400px] md:mx-auto w-full">
+                    <div className="flex h-full flex-col justify-center p-2 gap-3 md:w-[400px] md:mx-auto w-full">
                       <div className="flex flex-col items-start font-bold text-2xl md:text-4xl">
                         Ready to Get Started?
                       </div>
                       <p className=" text-slate-400">
                         Feel free to reach out to me!
                       </p>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-4">
                         <Link
                           to="/contact-us"
                           onClick={() => {
@@ -121,7 +122,7 @@ export function Connect() {
                             })
                           }}
                         >
-                          <Button>Book a call</Button>
+                          <PulsatingButton>Book a call</PulsatingButton>
                         </Link>
                         <div className="flex gap-2">
                           <a
