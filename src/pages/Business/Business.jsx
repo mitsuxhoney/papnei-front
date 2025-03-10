@@ -57,8 +57,7 @@ const featuresHeading = {
 
 const businessHero = {
   heading: 'Business Verification Made Simple with XRAY ',
-  description:
-    'Trust, Transparency, and Security for Your Business',
+  description: 'Trust, Transparency, and Security for Your Business',
   button: {
     text: 'Get API Keys',
     url: 'https://www.shadcnblocks.com',
@@ -397,7 +396,7 @@ const Business = () => {
       {/* <div className="mb-16">
         <BusinessCTA />
       </div> */}
-      <div className="mb-16 px-16">
+      <div className="mb-16">
         <Connect />
       </div>
     </div>

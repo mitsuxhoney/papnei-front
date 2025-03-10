@@ -346,7 +346,7 @@ const RCFinancer = () => {
           </div>
         </AuroraBackground>
       </div> */}
-      <div className="mb-16 px-16">
+      <div className="mb-16">
         <Connect />
       </div>
     </div>

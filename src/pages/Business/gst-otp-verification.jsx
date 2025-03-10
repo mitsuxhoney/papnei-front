@@ -89,7 +89,6 @@ const features = [
   },
 ]
 
-
 const featuresHeading = {
   badge: 'Features',
   heading: 'Features at a glance',
@@ -356,7 +355,7 @@ const GSTOTPVerification = () => {
           </div>
         </AuroraBackground>
       </div> */}
-      <div className="mb-16 px-16">
+      <div className="mb-16">
         <Connect />
       </div>
     </div>

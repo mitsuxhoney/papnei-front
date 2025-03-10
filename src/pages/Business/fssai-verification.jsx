@@ -180,7 +180,8 @@ const FSSAIVerification = () => {
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
               <p className="">
-                Transforming digital verification with Aadhaar e-Sign technology.
+                Transforming digital verification with Aadhaar e-Sign
+                technology.
               </p>
             </div>
 
@@ -241,7 +242,8 @@ const FSSAIVerification = () => {
                   Frequently Asked Questions
                 </h2>
                 <p className="text-muted-foreground">
-                  Find answers to common questions about Business Verification and FSSAI verification.
+                  Find answers to common questions about Business Verification
+                  and FSSAI verification.
                 </p>
               </div>
 
@@ -251,7 +253,10 @@ const FSSAIVerification = () => {
                     What is Business Verification?
                   </h3>
                   <p className="text-muted-foreground">
-                    Business Verification is a secure process that allows companies to authenticate their identity and legitimacy through official credentials, ensuring compliance with legal and financial regulations.
+                    Business Verification is a secure process that allows
+                    companies to authenticate their identity and legitimacy
+                    through official credentials, ensuring compliance with legal
+                    and financial regulations.
                   </p>
                 </div>
 
@@ -260,25 +265,36 @@ const FSSAIVerification = () => {
                     How does Business Verification help with FSSAI compliance?
                   </h3>
                   <p className="text-muted-foreground">
-                    Business Verification ensures that food businesses comply with FSSAI regulations by verifying their licenses, business details, and adherence to food safety norms, making the compliance process seamless and transparent.
+                    Business Verification ensures that food businesses comply
+                    with FSSAI regulations by verifying their licenses, business
+                    details, and adherence to food safety norms, making the
+                    compliance process seamless and transparent.
                   </p>
                 </div>
 
                 <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold mb-2">
-                    Is Business Verification legally valid for FSSAI registration?
+                    Is Business Verification legally valid for FSSAI
+                    registration?
                   </h3>
                   <p className="text-muted-foreground">
-                    Yes, Business Verification is legally valid and is required to ensure the authenticity of food businesses before they receive their FSSAI registration, helping in maintaining food safety standards.
+                    Yes, Business Verification is legally valid and is required
+                    to ensure the authenticity of food businesses before they
+                    receive their FSSAI registration, helping in maintaining
+                    food safety standards.
                   </p>
                 </div>
 
                 <div className="rounded-md p-5">
                   <h3 className="text-lg font-bold mb-2">
-                    How does Business Verification enhance FSSAI compliance security?
+                    How does Business Verification enhance FSSAI compliance
+                    security?
                   </h3>
                   <p className="text-muted-foreground">
-                    Business Verification enhances FSSAI compliance security by cross-checking business details with official databases, reducing fraud, and ensuring businesses meet regulatory requirements before operating in the food industry.
+                    Business Verification enhances FSSAI compliance security by
+                    cross-checking business details with official databases,
+                    reducing fraud, and ensuring businesses meet regulatory
+                    requirements before operating in the food industry.
                   </p>
                 </div>
               </div>
@@ -328,12 +344,11 @@ const FSSAIVerification = () => {
           </div>
         </AuroraBackground>
       </div> */}
-      <div className="mb-16 px-16">
+      <div className="mb-16">
         <Connect />
       </div>
     </div>
   )
 }
-
 
 export default FSSAIVerification

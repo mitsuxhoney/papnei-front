@@ -21,19 +21,24 @@ const AboutUs = () => {
       <section className="py-16 ">
         <div className=" mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">About XRAY AI</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">
+              About XRAY AI
+            </h2>
             <div className="space-y-6 text-muted-foreground text-center">
               <p>
-                XRAY AI is transforming digital verification with cutting-edge API solutions.
-                Our mission is to enhance security, efficiency, and trust in identity and business verification.
+                XRAY AI is transforming digital verification with cutting-edge
+                API solutions. Our mission is to enhance security, efficiency,
+                and trust in identity and business verification.
               </p>
               <p>
-                Since our inception, we have collaborated with enterprises and technology leaders
-                to develop API-driven solutions that streamline verification processes.
+                Since our inception, we have collaborated with enterprises and
+                technology leaders to develop API-driven solutions that
+                streamline verification processes.
               </p>
               <p>
-                Today, XRAY AI is a trusted partner for businesses, leveraging innovation to redefine
-                identity verification, Aadhaar e-sign verification, and business authentication.
+                Today, XRAY AI is a trusted partner for businesses, leveraging
+                innovation to redefine identity verification, Aadhaar e-sign
+                verification, and business authentication.
               </p>
             </div>
           </div>
@@ -46,8 +51,8 @@ const AboutUs = () => {
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Our Mission & Values</h2>
             <p className="text-muted-foreground">
-              At XRAY AI, we are committed to enabling secure and seamless digital verification
-              through AI-driven solutions.
+              At XRAY AI, we are committed to enabling secure and seamless
+              digital verification through AI-driven solutions.
             </p>
           </div>
 
@@ -80,8 +85,8 @@ const AboutUs = () => {
               </div>
               <h3 className="text-xl font-bold mb-3">Integrity</h3>
               <p className="text-muted-foreground">
-                We are committed to ethical AI practices, maintaining transparency
-                and accountability in all verification processes.
+                We are committed to ethical AI practices, maintaining
+                transparency and accountability in all verification processes.
               </p>
             </MagicCard>
 
@@ -105,35 +110,43 @@ const AboutUs = () => {
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
             <p className="">
-              Enhancing trust and security in digital transactions through AI-driven verification.
+              Enhancing trust and security in digital transactions through
+              AI-driven verification.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <div className="text-center">
               <div className="text-5xl font-bold mb-2">
-                <NumberTicker value={500} className="font-bold tracking-normal" />+
+                <NumberTicker
+                  value={500}
+                  className="font-bold tracking-normal"
+                />
+                +
               </div>
               <p className="text-xl ">Businesses Verified</p>
             </div>
 
             <div className="text-center">
               <div className="text-5xl font-bold mb-2">
-                <NumberTicker value={1} className="font-bold tracking-normal" />M+
+                <NumberTicker value={1} className="font-bold tracking-normal" />
+                M+
               </div>
               <p className="text-xl">Identities Verified</p>
             </div>
 
             <div className="text-center">
               <div className="text-5xl font-bold mb-2">
-                <NumberTicker value={1} className="font-bold tracking-normal" />M+
+                <NumberTicker value={1} className="font-bold tracking-normal" />
+                M+
               </div>
               <p className="text-xl">Documents Verified</p>
             </div>
 
             <div className="text-center">
               <div className="text-5xl font-bold mb-2">
-                <NumberTicker value={1} className="font-bold tracking-normal" />M+
+                <NumberTicker value={1} className="font-bold tracking-normal" />
+                M+
               </div>
               <p className="text-xl">Users Verified</p>
             </div>
@@ -141,7 +154,7 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <div className="mb-16 px-16">
+      <div className="mb-16">
         <Connect />
       </div>
     </div>
