@@ -370,8 +370,10 @@ const Home = () => {
       <div className="my-16 py-16">
         <FAQCTA FAQCTAData={FAQCTAData} />
       </div>
-      <div className="my-16 px-16">
-        <Connect />
+      <div className="my-16 w-full">
+        <Wrapper>
+          <Connect />
+        </Wrapper>
       </div>
     </div>
   )
