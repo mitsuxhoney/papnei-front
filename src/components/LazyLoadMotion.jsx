@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 export default function LazyLoadMotion({ children }) {
   const { ref, inView } = useInView({
     triggerOnce: true, // Ensures it loads only once
-    threshold: 0.5, // Triggers when 20% is visible
+    threshold: 0.2, // Triggers when 20% is visible
   })
 
   return (
