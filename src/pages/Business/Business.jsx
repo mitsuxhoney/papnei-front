@@ -26,7 +26,6 @@ import { AuroraBackground } from '../../components/ui/aurora-background'
 import Hero2 from '../../components/Hero2'
 import Ripple from '../../components/ui/Ripple'
 import { Connect } from '../../components/ui/new-cta'
-
 const features = [
   {
     badge: <ShieldCheckIcon className="w-4 h-4" />,
