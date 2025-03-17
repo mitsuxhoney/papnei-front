@@ -88,7 +88,12 @@ const CaseStudies = ({
       <div className="mx-auto ">
         <div className="mb-8 flex items-center justify-center md:mb-14 lg:mb-10">
           <div className="flex flex-col items-center gap-4 text-center mb-10">
-            <Badge variant="outline">Success Stories</Badge>
+            <Badge
+              variant="outline"
+              className="bg-primary/10 border border-primary/20 text-xs font-medium text-primary"
+            >
+              Success Stories
+            </Badge>
             <h1 className="max-w-2xl text-3xl font-semibold md:text-5xl">
               Case Studies
             </h1>

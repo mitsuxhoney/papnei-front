@@ -12,6 +12,14 @@ import { useTheme } from '@/components/theme-provider'
 import LazyLoadMotion from './LazyLoadMotion'
 import { DotPattern } from '@/components/ui/dot-pattern'
 import { cn } from '../lib/utils'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
 import Wrapper from './Wrapper'
 
 const whoData = [
@@ -51,9 +59,9 @@ const Who = () => {
     setColor(theme === 'dark' ? '#ffffff' : '#000000')
   }, [theme])
   return (
-    <div className="relative w-full h-full py-8 overflow-hidden">
+    <div className="relative w-full h-full py-8 overflow-hidden bg-primary/10">
       {/* Move DotPattern outside of LazyLoadMotion so it's always rendered */}
-      <DotPattern
+      {/* <DotPattern
         cy={2}
         cr={2}
         cx={2}
@@ -61,13 +69,18 @@ const Who = () => {
           'absolute inset-0 w-screen min-h-screen opacity-40 z-[-1]',
           '[mask-image:radial-gradient(1200px_circle_at_center,white,transparent)]'
         )}
-      />
+      /> */}
 
       <div className="relative z-10 px-4 md:px-14">
         {' '}
         {/* Ensures content is above the pattern */}
         <div className="flex flex-col items-center gap-4 text-center mb-6">
-          <Badge variant="outline">{who.badge}</Badge>
+          <Badge
+            variant="outline"
+            className="bg-primary/10 border border-primary/20 text-xs font-medium text-primary"
+          >
+            {who.badge}
+          </Badge>
           <h1 className="max-w-2xl text-3xl font-semibold md:text-5xl">
             {who.title}
           </h1>
@@ -75,17 +88,24 @@ const Who = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full gap-4 h-full">
           {whoData?.map((item) => (
-            <MagicCard key={item.title} className="p-4 h-full">
+            <Card
+              key={item.title}
+              className="h-full border border-primary/20 text-xs font-medium"
+            >
               <div className="w-full flex flex-col gap-4">
-                <div className="flex flex-col gap-2">
-                  <div>{item.icon}</div>
-                  <div className="max-w-2xl text-lg font-semibold md:text-xl">
-                    {item.title}
+                <CardHeader>
+                  <div className="flex flex-col gap-2">
+                    <div className="text-primary">{item.icon}</div>
+                    <CardTitle className="max-w-2xl text-lg font-semibold md:text-xl">
+                      {item.title}
+                    </CardTitle>
+                    <CardDescription className="text-muted-foreground">
+                      {item.description}
+                    </CardDescription>
                   </div>
-                </div>
-                <div className="text-muted-foreground">{item.description}</div>
+                </CardHeader>
               </div>
-            </MagicCard>
+            </Card>
           ))}
         </div>
       </div>

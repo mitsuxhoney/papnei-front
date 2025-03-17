@@ -15,7 +15,12 @@ export function IntegrationBenefits({
     <div className={cn('', className)}>
       <div className=" mx-auto w-full">
         <div className="flex flex-col items-center gap-4 text-center mb-10">
-          <Badge variant="outline">How it works ?</Badge>
+          <Badge
+            variant="outline"
+            className="bg-primary/10 border border-primary/20 text-xs font-medium text-primary"
+          >
+            How it works ?
+          </Badge>
           <h1 className="max-w-2xl text-3xl font-semibold md:text-4xl">
             Seamless API Integration
           </h1>

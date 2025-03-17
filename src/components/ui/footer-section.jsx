@@ -1,8 +1,6 @@
 import * as React from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import { Switch } from '@/components/ui/switch'
 import {
   Tooltip,
   TooltipContent,
@@ -12,20 +10,17 @@ import {
 import {
   ArrowUpIcon,
   Facebook,
+  Twitter,
   Instagram,
   Linkedin,
-  Moon,
   Send,
-  Sun,
-  Twitter,
 } from 'lucide-react'
-import { useTheme } from '@/components/theme-provider'
+
 import Wrapper from '../Wrapper'
 import { Link } from 'react-router-dom'
 
 function Footerdemo() {
   const [visible, setVisible] = React.useState(false)
-  const { theme, setTheme } = useTheme()
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -38,7 +33,7 @@ function Footerdemo() {
 
   return (
     <Wrapper>
-      <footer className="relative bg-background text-foreground transition-colors duration-300">
+      <footer className="relative text-foreground transition-colors duration-300">
         <div className="mx-auto pb-12">
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
             <div className="relative">

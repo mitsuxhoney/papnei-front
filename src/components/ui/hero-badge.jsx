@@ -58,7 +58,7 @@ export default function HeroBadge({
       >
         {icon && (
           <motion.div
-            className="text-foreground/60 transition-colors group-hover:text-primary"
+            className="group-hover:text-primary/80 text-xs font-medium text-primary"
             variants={iconAnimationVariants}
             initial="initial"
             animate={controls}
@@ -67,10 +67,8 @@ export default function HeroBadge({
             {icon}
           </motion.div>
         )}
-        <span>{text}</span>
-        {endIcon && (
-          <motion.div className="text-foreground/60">{endIcon}</motion.div>
-        )}
+        <span className="font-medium text-sm text-primary">{text}</span>
+        {endIcon && <motion.div className="">{endIcon}</motion.div>}
       </motion.div>
     </BadgeWrapper>
   )

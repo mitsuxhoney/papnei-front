@@ -12,10 +12,11 @@ import {
 } from '@tabler/icons-react'
 import { Badge } from '@/components/ui/badge'
 import { FeaturesSectionWithHoverEffects } from './features-hover'
+import RotatedBox from '@/assets/RotatedBox.png'
 
 const features = {
   badge: 'Products & Services',
-  heading: 'Our Products',
+  heading: 'Comprehensive Verification Solutions',
   description:
     'Discover our suite of verification services designed to enhance your business operations.',
 }
@@ -256,9 +257,18 @@ const Feature108 = () => {
     <section className="py-10">
       <div className="mx-auto">
         <div className="flex flex-col items-center gap-4 text-center">
-          <Badge variant="outline">{features.badge}</Badge>
-          <h1 className="max-w-2xl text-3xl font-semibold md:text-5xl">
-            {features.heading}
+          {/* <Badge
+            variant="outline"
+            className="bg-primary/10 border border-primary/20 text-xs font-medium text-primary"
+          >
+            {features.badge}
+          </Badge> */}
+          <h1 className="text-3xl font-semibold md:text-5xl w-full">
+            Comprehensive{' '}
+            <span className=" text-white rounded-lg bg-[url('@/assets/rotatedBox.png')] bg-no-repeat bg-contain px-2 py-1">
+              Verification
+            </span>{' '}
+            Solutions
           </h1>
           <p className="text-muted-foreground">{features.description}</p>
         </div>
@@ -268,7 +278,7 @@ const Feature108 = () => {
               <TabsTrigger
                 key={tab.value}
                 value={tab.value}
-                className="flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold text-muted-foreground data-[state=active]:bg-muted data-[state=active]:text-primary"
+                className="flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold text-muted-foreground data-[state=active]:bg-primary data-[state=active]:text-white"
               >
                 {tab.icon} {tab.label}
               </TabsTrigger>

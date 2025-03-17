@@ -12,31 +12,11 @@ import {
   CreditCard,
   Briefcase,
   FileCheck,
-  Lock,
   Globe,
-  Zap,
-  BarChart,
   CheckCircle,
-  Clock,
-  Fingerprint,
-  Search,
-  AlertCircle,
   FileSearch,
-  Landmark,
   DollarSign,
-  Percent,
-  Award,
-  Layers,
-  Network,
-  PieChart,
-  Users,
   Key,
-  ShieldCheck,
-  Smartphone,
-  Mail,
-  Calendar,
-  Moon,
-  Sun,
   Phone,
   Utensils,
   Factory,
@@ -51,7 +31,6 @@ import {
   Smile,
   PenTool,
   LinkIcon,
-  Layout,
   LayoutGrid,
 } from 'lucide-react'
 import { cn } from '../lib/utils'
@@ -71,9 +50,6 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 import { Button } from '@/components/ui/button'
-import { useTheme } from './theme-provider'
-import { IconLetterCaseToggle } from '@tabler/icons-react'
-import { Link1Icon } from '@radix-ui/react-icons'
 import { ScrollProgress } from '@/components/ui/scroll-progress'
 
 // Business Verification Items - 15 items
@@ -285,7 +261,6 @@ const aadharESignItems = [
 ]
 
 const Navbar = () => {
-  const { theme, setTheme } = useTheme()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState(null)
   const [activeCategory, setActiveCategory] = useState(null)
@@ -425,7 +400,7 @@ const Navbar = () => {
                     >
                       <button
                         onClick={() => toggleDropdown('products')}
-                        className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-2 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+                        className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-2 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted"
                       >
                         Products
                         <ChevronDown
@@ -443,7 +418,7 @@ const Navbar = () => {
                       onClick={() => {
                         window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })
                       }}
-                      className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+                      className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted"
                     >
                       About Us
                     </Link>
@@ -454,7 +429,7 @@ const Navbar = () => {
                       onClick={() => {
                         window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })
                       }}
-                      className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+                      className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted"
                     >
                       Contact Us
                     </Link>
@@ -742,7 +717,7 @@ const Navbar = () => {
                               handleCategoryMouseEnter('business')
                             }
                             className={cn(
-                              'w-full flex items-center p-3 rounded-md hover:bg-accent group text-left',
+                              'w-full flex items-center p-3 rounded-md hover:bg-muted group text-left',
                               activeCategory === 'business' ? 'bg-muted' : ''
                             )}
                           >
@@ -776,8 +751,8 @@ const Navbar = () => {
                               handleCategoryMouseEnter('identity')
                             }
                             className={cn(
-                              'w-full flex items-center p-3 rounded-md hover:bg-accent group text-left',
-                              activeCategory === 'identity' ? 'bg-accent' : ''
+                              'w-full flex items-center p-3 rounded-md group text-left hover:bg-muted',
+                              activeCategory === 'identity' ? '' : ''
                             )}
                           >
                             <UserCheck className="w-5 h-5 mr-3 flex-shrink-0" />
@@ -810,8 +785,8 @@ const Navbar = () => {
                               handleCategoryMouseEnter('aadhar')
                             }
                             className={cn(
-                              'w-full flex items-center p-3 rounded-md hover:bg-accent group text-left',
-                              activeCategory === 'aadhar' ? 'bg-accent' : ''
+                              'w-full flex items-center p-3 rounded-md group text-left hover:bg-muted',
+                              activeCategory === 'aadhar' ? '' : ''
                             )}
                           >
                             <FileSignature className="w-5 h-5 mr-3 flex-shrink-0" />
@@ -862,7 +837,7 @@ const Navbar = () => {
                                   })
                                 }}
                                 className={cn(
-                                  'text-sm font-medium flex items-center hover:bg-accent rounded-md p-2',
+                                  'text-sm font-medium flex items-center hover:bg-muted rounded-md p-2',
                                   getActiveCategoryColor()
                                 )}
                               >
