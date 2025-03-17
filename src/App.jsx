@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import { Spinner } from './components/ui/spinner'
 import Layout from './components/Layout'
-import React, { Suspense, lazy } from 'react'
+import { Suspense, lazy } from 'react'
 
 const Home = lazy(() => import('@/pages/Home/Home'))
 const Aadhar = lazy(() => import('@/pages/Aadhar/Aadhar'))

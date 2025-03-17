@@ -395,21 +395,6 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="bg-primary py-2 px-4 text-center text-primary-foreground">
-        <p className="text-sm font-medium">
-          New: Enhanced Business Verification API now available{' '}
-          <Link
-            to="/contact-us"
-            className="underline ml-2"
-            onClick={() => {
-              window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })
-            }}
-          >
-            Learn more →
-          </Link>
-        </p>
-      </div>
-
       <div className="relative ">
         <ScrollProgress className="bottom-0 absolute" />
 
@@ -488,16 +473,6 @@ const Navbar = () => {
                     >
                       Get API Keys
                     </button>
-                  </div>
-
-                  <div
-                    className="rounded-md border p-3 hover:bg-muted cursor-pointer"
-                    onClick={() =>
-                      setTheme(theme === 'light' ? 'dark' : 'light')
-                    }
-                  >
-                    {theme === 'light' && <Moon className="h-4 w-4" />}
-                    {theme === 'dark' && <Sun className="h-4 w-4" />}
                   </div>
 
                   {/* Mobile menu button */}
