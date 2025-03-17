@@ -31,7 +31,7 @@ const FAQCTA = ({
       <div className="space-y-16 w-full">
         <Wrapper>
           <div className="mx-auto flex max-w-3xl flex-col text-left md:text-center">
-            <h2 className="mb-3 md:mb-4 lg:mb-6 text-5xl font-bold leading-[1.2] tracking-tighter text-foreground">
+            <h2 className="mb-3 md:mb-4 lg:mb-6 text-5xl font-bold leading-[1.2] tracking-tighter text-primary">
               {faq.heading}
             </h2>
             <p className="text-lg font-medium tracking-tight text-foreground/80">
@@ -46,7 +46,7 @@ const FAQCTA = ({
             {FAQCTAData.items.map((item) => (
               <AccordionItem key={item.id} value={item.id}>
                 <AccordionTrigger className="transition-opacity duration-200 hover:no-underline">
-                  <div className="font-medium sm:py-1 lg:py-2 text-lg text-left">
+                  <div className="font-medium sm:py-1 lg:py-2 text-lg text-left ">
                     {item.question}
                   </div>
                 </AccordionTrigger>
@@ -88,7 +88,6 @@ const FAQCTA = ({
             </Button>
           </div>
         </div> */}
-
       </div>
     </section>
   )
