@@ -12,7 +12,6 @@ import {
 } from '@tabler/icons-react'
 import { Badge } from '@/components/ui/badge'
 import { FeaturesSectionWithHoverEffects } from './features-hover'
-import RotatedBox from '@/assets/RotatedBox.png'
 
 const features = {
   badge: 'Products & Services',
