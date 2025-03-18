@@ -523,11 +523,11 @@ const Home = () => {
           <Testimonials />
         </div>
       </Wrapper>
-      <div className="mt-16 py-16">
-        <FAQCTA FAQCTAData={FAQCTAData} />
-      </div>
       <div className="w-full">
         <Connect />
+      </div>
+      <div className="mt-16 py-16">
+        <FAQCTA FAQCTAData={FAQCTAData} />
       </div>
     </div>
   )
