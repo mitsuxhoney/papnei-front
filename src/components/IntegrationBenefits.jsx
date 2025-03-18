@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Badge } from '@/components/ui/badge'
 import { cn } from '@/lib/utils'
-import { TerminalDemo } from './TerminalDemo'
 
 export function IntegrationBenefits({
   benefits,
@@ -11,6 +10,7 @@ export function IntegrationBenefits({
   autoPlayInterval = 3000,
   imageHeight = 'h-[400px]',
 }) {
+  const [step, setStep] = useState('Step 1')
   return (
     <div className={cn('', className)}>
       <div className=" mx-auto w-full">
@@ -33,35 +33,76 @@ export function IntegrationBenefits({
         <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-12">
           <div
             className={cn(
-              'order-1 md:order-2 relative lg:h-[370px] overflow-hidden rounded-lg'
+              'order-1 md:order-2 relative overflow-hidden rounded-lg'
             )}
           >
-            <TerminalDemo />
+            {benefits.map((feature) => {
+              if (feature.step === step) {
+                return (
+                  <motion.div
+                    key={feature.step}
+                    className="lg:h-[400px]"
+                    initial={{ width: '0%' }}
+                    animate={{ width: '100%' }}
+                    transition={{ duration: 0.5, ease: 'easeInOut' }}
+                  >
+                    {feature.terminal}
+                  </motion.div>
+                )
+              }
+            })}
           </div>
-          <div className="order-2 md:order-1 space-y-8 flex flex-col justify-center">
+          <div className="order-2 md:order-1 space-y-2 flex flex-col justify-center">
             {benefits.map((feature, index) => (
               <motion.div
                 key={index}
                 className={cn(
-                  'flex items-center gap-6 md:gap-8 cursor-pointer'
+                  `flex items-start gap-6 md:gap-4 cursor-pointer rounded-md px-6 py-4 relative ${
+                    step === feature.step ? 'bg-primary/10' : ''
+                  } `
                 )}
+                onClick={() => {
+                  setStep(feature.step)
+                }}
               >
                 <motion.div
                   className={cn(
-                    'w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center border-2 bg-primary border-primary text-primary-foreground'
+                    'w-8 h-8 md:w-10 md:h-10 flex items-start justify-center'
                   )}
                 >
-                  <span className="text-lg font-bold">✓</span>
+                  {feature.step === step ? (
+                    <span className={`text-md font-semibold`}>
+                      {feature.selectedIcon}
+                    </span>
+                  ) : (
+                    <span className={`text-md font-semibold`}>
+                      {feature.icon}
+                    </span>
+                  )}
                 </motion.div>
 
                 <div className="flex-1">
-                  <h3 className="max-md:text-xs md:text-2xl font-semibold">
+                  <h3
+                    className={`max-md:text-sm md:text-xl font-semibold ${
+                      step === feature.step ? 'text-tertiary' : ''
+                    }`}
+                  >
                     {feature.title || feature.step}
                   </h3>
-                  <p className="max-md:text-sm md:text-lg text-muted-foreground">
-                    {feature.content}
-                  </p>
+                  {step === feature.step && (
+                    <p className="max-md:text-sm md:text-lg text-muted-foreground">
+                      {feature.content}
+                    </p>
+                  )}
                 </div>
+                {step === feature.step && (
+                  <motion.div
+                    className="absolute bottom-0 left-0 h-1 bg-primary rounded-md"
+                    initial={{ width: '0%' }}
+                    animate={{ width: '100%' }}
+                    transition={{ duration: 4, ease: 'easeInOut' }}
+                  />
+                )}
               </motion.div>
             ))}
           </div>

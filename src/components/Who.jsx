@@ -47,7 +47,8 @@ const whoData = [
 
 const who = {
   badge: 'Use Cases',
-  title: 'Industries We Serve',
+  title: 'Industries We',
+  span: 'Serve',
   description: 'Who Can Use Our APIs?',
 }
 
@@ -81,9 +82,10 @@ const Who = () => {
           >
             {who.badge}
           </Badge>
-          <h1 className="max-w-2xl text-3xl font-semibold md:text-5xl">
-            {who.title}
-          </h1>
+          {/* <h1 className="max-w-2xl text-3xl font-semibold md:text-5xl relative">
+            {who.title} <span>{who.span}</span>
+          </h1> */}
+          
           <p className="text-muted-foreground">{who.description}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full gap-4 h-full">

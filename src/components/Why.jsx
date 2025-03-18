@@ -14,10 +14,16 @@ import { useEffect, useState } from 'react'
 import { useTheme } from '@/components/theme-provider'
 import { Badge } from '@/components/ui/badge'
 import { AnimatedBeamDemo } from './ui/animated-beam-hero'
-import { OrbitingCirclesDemo as OrbitingCirclesHome } from './OrbitingCirclesHome'
+import {
+  OrbitingCirclesDemo,
+  OrbitingCirclesDemo as OrbitingCirclesHome,
+} from './OrbitingCirclesHome'
 import { AnimatedListDemo } from './AnimatedListHome'
 import LazyLoadMotion from './LazyLoadMotion'
 import DisplayCardsHome from './ui/PrismDisplayCardsHome'
+import { TerminalDemo } from './TerminalBentoItem'
+import Wrapper from './Wrapper'
+import Ripple from './ui/Ripple'
 
 const whyData = [
   {
@@ -317,6 +323,7 @@ const SkeletonFive = () => {
 const items = [
   {
     title: 'AI Powered Verification',
+    heading: <h2>Find out who&apos;s behind any phone number</h2>,
     description: (
       <span className="text-sm">
         Experience the power of AI in Verification.
@@ -324,61 +331,80 @@ const items = [
     ),
     header: (
       <LazyLoadMotion>
-        <AnimatedListDemo />
+        <div className="absolute -bottom-40 right-0 lg:-bottom-42 lg:-right-2">
+          <TerminalDemo />
+        </div>
       </LazyLoadMotion>
     ),
-    className: 'max-md:col-span-2 lg:col-span-1',
+    className: 'max-md:col-span-2 lg:col-span-1 lg:h-[260px]',
     icon: <IconClipboardCopy className="h-4 w-4" />,
   },
   {
     title: 'Automated Scanning',
+    heading: <h2>Find out who&apos;s behind any phone number</h2>,
+    header: (
+      <LazyLoadMotion>
+        <div className="absolute left-0 right-0 -bottom-48 lg:-bottom-50 lg:left-0 lg:-right-52">
+          <OrbitingCirclesHome />
+        </div>
+      </LazyLoadMotion>
+    ),
     description: (
       <span className="text-sm">
         Let AI handle the proofreading of your documents.
       </span>
     ),
-    header: (
-      <LazyLoadMotion>
-        <OrbitingCirclesHome />
-      </LazyLoadMotion>
-    ),
-    className: 'max-md:col-span-2 lg:col-span-1',
+
+    className: 'max-md:col-span-2 lg:col-span-1 lg:h-[260px]',
     icon: <IconFileBroken className="h-4 w-4" />,
   },
   {
     title: 'One to Many Integrations',
+    heading: <h2>Find out who&apos;s behind any phone number</h2>,
     description: (
       <span className="text-sm">Get one to many integration benefits.</span>
     ),
     header: (
-      <LazyLoadMotion>
-        <AnimatedBeamDemo />
-      </LazyLoadMotion>
+      <div className="relative w-full h-full">
+        <div className="absolute left-20 bottom-0">
+          <Ripple className="!left-0 !bottom-20 !translate-x-0 !translate-y-0" />
+        </div>
+      </div>
     ),
-    className: 'max-md:col-span-2 lg:col-span-1',
+    className: 'max-md:col-span-2 lg:col-span-1 lg:h-[260px]',
     icon: <IconSignature className="h-4 w-4" />,
   },
   {
     title: 'Document Analysis',
+    heading: <h2>Find out who&apos;s behind any phone number</h2>,
     description: (
       <span className="text-sm">
         Understand the sentiment of your text with AI analysis.
       </span>
     ),
-    header: <SkeletonFour />,
-    className: 'max-md:col-span-2 lg:col-span-2',
+    contentClassName: 'gap-6',
+    header: (
+      <LazyLoadMotion>
+        <div className="absolute lg:-bottom-48 lg:right-10 lg:left-auto -bottom-56 left-0 right-0">
+          <AnimatedListDemo />
+        </div>
+      </LazyLoadMotion>
+    ),
+    className: 'max-md:col-span-2 lg:col-span-2 lg:h-[170px]',
     icon: <IconTableColumn className="h-4 w-4" />,
   },
 
   {
     title: 'Text Summarization',
+    heading: <h2>Find out who&apos;s behind any phone number</h2>,
     description: (
       <span className="text-sm">
         Summarize your lengthy documents with AI technology.
       </span>
     ),
-    header: <SkeletonFive />,
-    className: 'max-md:col-span-2 lg:col-span-1 relative z-[0]',
+    header: '',
+    contentClassName: 'gap-6',
+    className: 'max-md:col-span-2 lg:col-span-1 lg:h-[170px]',
     icon: <IconBoxAlignRightFilled className="h-4 w-4" />,
   },
 ]
@@ -391,31 +417,32 @@ export function Why() {
     setColor(theme === 'dark' ? '#ffffff' : '#000000')
   }, [theme])
   return (
-    <div>
+    <div className="bg-primary/5 py-16">
       <div className="flex flex-col items-center gap-4 text-center mb-6">
-        <Badge
-          variant="outline"
-          className="bg-primary/10 border border-primary/20 text-xs font-medium text-primary"
-        >
-          {why.badge}
-        </Badge>
         <h1 className="max-w-2xl text-3xl font-semibold md:text-5xl">
           {why.title}
         </h1>
         <p className="text-muted-foreground">{why.description}</p>
       </div>
-      <BentoGrid gap={20}>
-        {items.map((item, index) => (
-          <BentoGridItem
-            key={index}
-            title={item.title}
-            description={item.description}
-            header={item.header}
-            className={cn('[&>p:text-lg]', item.className)}
-            icon={item.icon}
-          ></BentoGridItem>
-        ))}
-      </BentoGrid>
+      <Wrapper>
+        <BentoGrid gap={20}>
+          {items.map((item, index) => (
+            <BentoGridItem
+              key={index}
+              title={item.title}
+              description={item.description}
+              heading={item.heading}
+              header={item.header}
+              contentClassName={item.contentClassName}
+              className={cn(
+                '[&>p:text-lg] rounded-sm bg-primary/10 relative',
+                item.className
+              )}
+              icon={item.icon}
+            ></BentoGridItem>
+          ))}
+        </BentoGrid>
+      </Wrapper>
     </div>
   )
 }
