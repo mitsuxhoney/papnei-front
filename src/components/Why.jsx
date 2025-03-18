@@ -366,8 +366,166 @@ const items = [
     ),
     header: (
       <div className="relative w-full h-full">
-        <div className="absolute left-20 bottom-0">
-          <Ripple className="!left-0 !bottom-20 !translate-x-0 !translate-y-0" />
+        <div className="absolute lg:-right-4 lg:-bottom-4">
+          <svg
+            width="242"
+            height="154"
+            viewBox="0 0 242 154"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M115.989 119.545L119.177 125.06H119.313L122.535 119.545H127.256L121.989 128.273L127.427 137H122.586L119.313 131.426H119.177L115.904 137H111.097L116.509 128.273L111.234 119.545H115.989ZM129.438 137V119.545H136.648C137.955 119.545 139.083 119.781 140.032 120.253C140.987 120.719 141.722 121.389 142.239 122.264C142.756 123.134 143.015 124.165 143.015 125.358C143.015 126.568 142.751 127.597 142.222 128.443C141.694 129.284 140.944 129.926 139.972 130.369C139.001 130.807 137.85 131.026 136.521 131.026H131.961V127.702H135.737C136.373 127.702 136.904 127.619 137.33 127.455C137.762 127.284 138.089 127.028 138.31 126.688C138.532 126.341 138.643 125.898 138.643 125.358C138.643 124.818 138.532 124.372 138.31 124.02C138.089 123.662 137.762 123.395 137.33 123.219C136.898 123.037 136.367 122.946 135.737 122.946H133.657V137H129.438ZM139.265 129.023L143.612 137H139.009L134.748 129.023H139.265ZM149.104 137H144.57L150.46 119.545H156.076L161.965 137H157.431L153.332 123.943H153.195L149.104 137ZM148.499 130.131H157.977V133.335H148.499V130.131ZM161.194 119.545H165.907L169.597 126.849H169.751L173.441 119.545H178.154L171.771 131.17V137H167.577V131.17L161.194 119.545Z"
+              fill="#0D9488"
+            />
+            <g filter="url(#filter0_dii_248_20967)">
+              <rect
+                x="80.5"
+                y="80.5"
+                width="127"
+                height="127"
+                rx="31.5"
+                stroke="#9292AF"
+                shapeRendering="crispEdges"
+              />
+            </g>
+            <rect
+              opacity="0.1"
+              x="0.5"
+              y="0.5"
+              width="287"
+              height="287"
+              rx="111.5"
+              stroke="#0F172A"
+            />
+            <rect
+              opacity="0.3"
+              x="20.5"
+              y="20.5"
+              width="247"
+              height="247"
+              rx="91.5"
+              stroke="#0F172A"
+            />
+            <rect
+              opacity="0.6"
+              x="40.5"
+              y="40.5"
+              width="207"
+              height="207"
+              rx="71.5"
+              stroke="#0F172A"
+            />
+            <rect
+              x="60.5"
+              y="60.5"
+              width="167"
+              height="167"
+              rx="51.5"
+              stroke="#0F172A"
+            />
+            <defs>
+              <filter
+                id="filter0_dii_248_20967"
+                x="61"
+                y="79"
+                width="166"
+                height="173"
+                filterUnits="userSpaceOnUse"
+                colorInterpolationFilters="sRGB"
+              >
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feMorphology
+                  radius="1"
+                  operator="erode"
+                  in="SourceAlpha"
+                  result="effect1_dropShadow_248_20967"
+                />
+                <feOffset dy="25" />
+                <feGaussianBlur stdDeviation="10" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="BackgroundImageFix"
+                  result="effect1_dropShadow_248_20967"
+                />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="effect1_dropShadow_248_20967"
+                  result="shape"
+                />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feMorphology
+                  radius="1"
+                  operator="erode"
+                  in="SourceAlpha"
+                  result="effect2_innerShadow_248_20967"
+                />
+                <feOffset dy="1" />
+                <feGaussianBlur stdDeviation="0.5" />
+                <feComposite
+                  in2="hardAlpha"
+                  operator="arithmetic"
+                  k2="-1"
+                  k3="1"
+                />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0.8 0 0 0 0 0.780392 0 0 0 0 0.780392 0 0 0 0.2 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="shape"
+                  result="effect2_innerShadow_248_20967"
+                />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feMorphology
+                  radius="1"
+                  operator="erode"
+                  in="SourceAlpha"
+                  result="effect3_innerShadow_248_20967"
+                />
+                <feOffset dy="-1" />
+                <feGaussianBlur stdDeviation="0.5" />
+                <feComposite
+                  in2="hardAlpha"
+                  operator="arithmetic"
+                  k2="-1"
+                  k3="1"
+                />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0.8 0 0 0 0 0.780392 0 0 0 0 0.780392 0 0 0 0.2 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="effect2_innerShadow_248_20967"
+                  result="effect3_innerShadow_248_20967"
+                />
+              </filter>
+            </defs>
+          </svg>
         </div>
       </div>
     ),
@@ -417,11 +575,15 @@ export function Why() {
     setColor(theme === 'dark' ? '#ffffff' : '#000000')
   }, [theme])
   return (
-    <div className="bg-primary/5 py-16">
+    <div className="bg-[#5359EF0A] py-16">
       <div className="flex flex-col items-center gap-4 text-center mb-6">
-        <h1 className="max-w-2xl text-3xl font-semibold md:text-5xl">
-          {why.title}
-        </h1>
+        <div className="max-w-2xl text-3xl font-semibold md:text-5xl ">
+          Why{' '}
+          <div className="inline-block bg-primary rounded-md -rotate-2 p-2">
+            <div className="rotate-2 text-white ">Choose</div>
+          </div>{' '}
+          Us ?
+        </div>
         <p className="text-muted-foreground">{why.description}</p>
       </div>
       <Wrapper>

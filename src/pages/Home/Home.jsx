@@ -479,15 +479,7 @@ const Home = () => {
       <div className="my-16">
         <Features {...tabsData} />
       </div>
-      <div className="w-full my-16">
-        <ShortCTA />
-      </div>
-      <div className="w-full my-16">
-        <Industries />
-      </div>
-      <div className="my-16 py-12">
-        <Why />
-      </div>
+
       {/* <TestimonialsSection
           title="Trusted by developers worldwide"
           description="Join thousands of developers who are already building the future with our AI platform"
@@ -508,16 +500,25 @@ const Home = () => {
           <Cta10Demo />
         </div>
       </Wrapper> */}
+      <div className="mt-16 py-12">
+        <Why />
+      </div>
       <Wrapper>
-        <div className="my-16 py-10">
+        <div className="pb-10">
           <IntegrationBenefits benefits={featureSteps} />
         </div>
       </Wrapper>
-      <Wrapper>
-        <LazyLoadMotion>
-          <CaseStudies {...caseStudiesData} />
-        </LazyLoadMotion>
-      </Wrapper>
+      <div className="w-full mt-16">
+        <ShortCTA />
+      </div>
+      <div className="w-full mb-16">
+        <Industries />
+      </div>
+
+      <LazyLoadMotion>
+        <CaseStudies {...caseStudiesData} />
+      </LazyLoadMotion>
+
       <Wrapper>
         <div className="relative z-10 h-[600px] w-full overflow-hidden rounded-lg border bg-background my-16">
           <Testimonials />

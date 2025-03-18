@@ -6,25 +6,35 @@ export function OrbitingCirclesDemo() {
   return (
     <div className="relative flex h-[342px] w-full flex-col items-center justify-center overflow-hidden">
       <OrbitingCircles iconSize={30}>
-        <div className="text-tertiary rounded-full bg-white p-2">
+        <div className="text-tertiary">
           <IconTerminal2 />
         </div>
-        <div className="text-tertiary rounded-full bg-white p-2">
+        <div className="text-tertiary ">
           <CreditCard />
         </div>
-        <div className="text-tertiary rounded-full bg-white p-2">
+        <div className="text-tertiary ">
           <IndianRupee />
         </div>
-        <div className="text-tertiary rounded-full bg-white p-2">
+        <div className="text-tertiary ">
           <User />
         </div>
-        <Icons.whatsapp />
+        <div className="text-tertiary ">
+          <IconTerminal2 />
+        </div>
       </OrbitingCircles>
       <OrbitingCircles iconSize={30} radius={80} reverse speed={2}>
-        <Icons.whatsapp />
-        <Icons.notion />
-        <Icons.openai />
-        <Icons.googleDrive />
+        <div className="text-tertiary ">
+          <IndianRupee />
+        </div>
+        <div className="text-tertiary ">
+          <CreditCard />
+        </div>
+        <div className="text-tertiary ">
+          <IndianRupee />
+        </div>
+        <div className="text-tertiary ">
+          <CreditCard />
+        </div>
       </OrbitingCircles>
     </div>
   )

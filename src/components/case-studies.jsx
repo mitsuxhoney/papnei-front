@@ -219,11 +219,38 @@ export function CaseStudies() {
   }, [emblaApi])
   useEffect(() => {
     if (!emblaApi) return
+
     onSelect()
-    console.log('Scroll Snaps:', emblaApi.scrollSnapList()) // Debugging
     setScrollSnaps(emblaApi.scrollSnapList())
     emblaApi.on('select', onSelect)
     emblaApi.on('reInit', onSelect)
+
+    let autoplay
+
+    const startAutoplay = () => {
+      autoplay = setInterval(() => {
+        if (emblaApi) {
+          emblaApi.scrollNext()
+        }
+      }, 3000)
+    }
+
+    const stopAutoplay = () => {
+      clearInterval(autoplay)
+    }
+
+    startAutoplay() // Start autoplay initially
+
+    // Add event listeners to pause on hover
+    const carouselElement = emblaApi.containerNode()
+    carouselElement.addEventListener('mouseenter', stopAutoplay)
+    carouselElement.addEventListener('mouseleave', startAutoplay)
+
+    return () => {
+      stopAutoplay() // Cleanup
+      carouselElement.removeEventListener('mouseenter', stopAutoplay)
+      carouselElement.removeEventListener('mouseleave', startAutoplay)
+    }
   }, [emblaApi, onSelect])
   const industries = [
     {
@@ -298,7 +325,7 @@ export function CaseStudies() {
     },
   ]
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
+    <section className="py-20 bg-[#5359EF0A] relative overflow-hidden">
       <div className="absolute inset-0 -z-10" />
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
@@ -307,10 +334,13 @@ export function CaseStudies() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
-              Industries We Serve
-            </h2>
-            <p className="text-xl text-secondary-600 max-w-2xl mx-auto">
+            <div className="text-3xl font-semibold md:text-5xl w-full flex justify-center items-center gap-1">
+              Recent
+              <div className="inline-block bg-primary rounded-md -rotate-2 p-2">
+                <div className="rotate-2 text-white ">Case Studies</div>
+              </div>{' '}
+            </div>
+            <p className="text-xl text-secondary-600 max-w-2xl mx-auto mt-4">
               Tailored verification solutions for every sector
             </p>
           </motion.div>

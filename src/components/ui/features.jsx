@@ -262,13 +262,15 @@ const Feature108 = () => {
           >
             {features.badge}
           </Badge> */}
-          <h1 className="text-3xl font-semibold md:text-5xl w-full">
+          <div className="text-3xl flex gap-2 justify-center items-center font-semibold md:text-5xl w-full">
             Comprehensive{' '}
-            <span className=" text-white rounded-lg bg-[url('@/assets/rotatedBox.png')] bg-no-repeat bg-contain px-2 py-1">
-              Verification  
-            </span>{' '}
+            <div className="bg-primary rounded-md p-2 -rotate-2">
+              <div className="inline-block rotate-2 text-white">
+                Verification{' '}
+              </div>
+            </div>{' '}
             Solutions
-          </h1>
+          </div>
           <p className="text-muted-foreground">{features.description}</p>
         </div>
         <Tabs defaultValue={tabs[0].value} className="mt-8">

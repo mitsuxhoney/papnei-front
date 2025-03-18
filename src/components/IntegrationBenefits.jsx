@@ -15,14 +15,11 @@ export function IntegrationBenefits({
     <div className={cn('', className)}>
       <div className=" mx-auto w-full">
         <div className="flex flex-col items-center gap-4 text-center mb-10">
-          <Badge
-            variant="outline"
-            className="bg-primary/10 border border-primary/20 text-xs font-medium text-primary"
-          >
-            How it works ?
-          </Badge>
           <h1 className="max-w-2xl text-3xl font-semibold md:text-4xl">
-            Seamless API Integration
+            Seamless API{' '}
+            <div className="inline-block bg-primary rounded-md -rotate-2 p-2">
+              <div className="rotate-2 text-white ">Integration</div>
+            </div>{' '}
           </h1>
           <p className="text-muted-foreground">
             Our APIs are designed to be developer-friendly, secure, and easy to
@@ -70,21 +67,15 @@ export function IntegrationBenefits({
                     'w-8 h-8 md:w-10 md:h-10 flex items-start justify-center'
                   )}
                 >
-                  {feature.step === step ? (
-                    <span className={`text-md font-semibold`}>
-                      {feature.selectedIcon}
-                    </span>
-                  ) : (
-                    <span className={`text-md font-semibold`}>
-                      {feature.icon}
-                    </span>
-                  )}
+                  <span className={`text-md font-semibold`}>
+                    {feature.icon}
+                  </span>
                 </motion.div>
 
                 <div className="flex-1">
                   <h3
                     className={`max-md:text-sm md:text-xl font-semibold ${
-                      step === feature.step ? 'text-tertiary' : ''
+                      step === feature.step ? 'text-primary' : ''
                     }`}
                   >
                     {feature.title || feature.step}

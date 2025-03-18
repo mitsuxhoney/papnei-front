@@ -192,8 +192,8 @@ export function Connect() {
             className="flex-1 text-left"
           >
             <div className="inline-flex items-center px-4 py-2 bg-white/10 rounded-full mb-6">
-              <Zap className="h-4 w-4 text-[#C7D2FE] mr-2" />
-              <span className="text-sm font-medium text-[#C7D2FE]">
+              <Zap className="h-4 w-4 text-muted/80 mr-2" />
+              <span className="text-sm font-medium text-muted/80">
                 Ready to Get Started?
               </span>
             </div>
@@ -216,7 +216,7 @@ export function Connect() {
                   className="flex items-center text-[#34D399]"
                 >
                   <benefit.icon className="h-5 w-5 mr-3 text-accent-400" />
-                  <span className="text-[#C7D2FE]">{benefit.text}</span>
+                  <span className="text-muted/80">{benefit.text}</span>
                 </motion.div>
               ))}
             </div>

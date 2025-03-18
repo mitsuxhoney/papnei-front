@@ -224,13 +224,16 @@ function Footerdemo() {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="rounded-full"
+                  className="rounded-full hover:bg-primary hover:bg-white"
                   onClick={() => {
                     window.scrollTo({ top: 0, behavior: 'smooth' })
                   }}
                 >
-                  <ArrowUpIcon className="h-6 w-6" />
-                  <span className="sr-only">Scroll to top</span>
+                  <ArrowUpIcon
+                    className="h-6 w-6 text-primary"
+                    strokeWidth={3}
+                  />
+                  <span className="sr-only ">Scroll to top</span>
                 </Button>
               </div>
             </div>
