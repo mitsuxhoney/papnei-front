@@ -45,24 +45,6 @@ export function TerminalDemo({ steps }) {
       <AnimatedSpan delay={5500} className="text-green-500">
         <span>✔ Installing dependencies.</span>
       </AnimatedSpan>
-
-      <AnimatedSpan delay={6000} className="text-blue-500">
-        <div className="flex flex-col gap-1">
-          <div className="flex items-center gap-1">
-            <Info className="w-4 h-4" />
-            <span>Updated 1 file:</span>
-          </div>
-          <div className="pl-2">- lib/utils.ts</div>
-        </div>
-      </AnimatedSpan>
-
-      <TypingAnimation delay={6500} className="text-muted-foreground">
-        Success! Project initialization completed.
-      </TypingAnimation>
-
-      <TypingAnimation delay={7000} className="text-muted-foreground">
-        You may now add components.
-      </TypingAnimation>
     </Terminal>
   )
 }

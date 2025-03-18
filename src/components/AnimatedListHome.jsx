@@ -1,5 +1,7 @@
 import { cn } from '@/lib/utils'
 import { AnimatedList } from '@/components/ui/animated-list'
+import { IconTerminal2 } from '@tabler/icons-react'
+import { CreditCard, IndianRupee, User } from 'lucide-react'
 
 let notifications = [
   {
@@ -7,28 +9,28 @@ let notifications = [
     description: 'XRAY AI',
     time: '15m ago',
 
-    icon: '💸',
+    icon: <IconTerminal2 />,
     color: '#00C9A7',
   },
   {
     name: 'User signed up',
     description: 'XRAY AI',
     time: '10m ago',
-    icon: '👤',
+    icon: <CreditCard />,
     color: '#FFB800',
   },
   {
     name: 'New message',
     description: 'XRAY AI',
     time: '5m ago',
-    icon: '💬',
+    icon: <IndianRupee />,
     color: '#FF3D71',
   },
   {
     name: 'New event',
     description: 'XRAY AI',
     time: '2m ago',
-    icon: '🗞️',
+    icon: <User />,
     color: '#1E86FF',
   },
 ]
@@ -39,7 +41,7 @@ const Notification = ({ name, description, icon, color, time }) => {
   return (
     <figure
       className={cn(
-        'relative mx-auto min-h-fit w-full max-w-[400px] cursor-pointer overflow-hidden rounded-2xl p-4',
+        'relative mx-auto min-h-fit w-full max-w-[400px] cursor-pointer overflow-hidden rounded-2xl p-2',
         // animation styles
         'transition-all duration-200 ease-in-out hover:scale-[103%]',
         // light styles
@@ -49,12 +51,7 @@ const Notification = ({ name, description, icon, color, time }) => {
       )}
     >
       <div className="flex flex-row items-center gap-3">
-        <div
-          className="flex size-10 items-center justify-center rounded-2xl"
-          style={{
-            backgroundColor: color,
-          }}
-        >
+        <div className="flex size-10 items-center justify-center rounded-2xl bg-primary/10 text-primary">
           <span className="text-lg">{icon}</span>
         </div>
         <div className="flex flex-col overflow-hidden">

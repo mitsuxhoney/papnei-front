@@ -10,7 +10,7 @@ import {
   IconRouteAltLeft,
   IconTerminal2,
 } from '@tabler/icons-react'
-import { Badge } from '@/components/ui/badge'
+
 import { FeaturesSectionWithHoverEffects } from './features-hover'
 
 const features = {
@@ -265,7 +265,7 @@ const Feature108 = () => {
           <h1 className="text-3xl font-semibold md:text-5xl w-full">
             Comprehensive{' '}
             <span className=" text-white rounded-lg bg-[url('@/assets/rotatedBox.png')] bg-no-repeat bg-contain px-2 py-1">
-              Verification
+              Verification  
             </span>{' '}
             Solutions
           </h1>

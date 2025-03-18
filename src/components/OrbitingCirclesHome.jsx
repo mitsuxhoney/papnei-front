@@ -1,13 +1,23 @@
 import { OrbitingCircles } from '@/components/ui/OrbitingCircles'
+import { IconTerminal2 } from '@tabler/icons-react'
+import { CreditCard, IndianRupee, User } from 'lucide-react'
 
 export function OrbitingCirclesDemo() {
   return (
-    <div className="relative flex h-[350px] w-full flex-col items-center justify-center overflow-hidden">
+    <div className="relative flex h-[342px] w-full flex-col items-center justify-center overflow-hidden">
       <OrbitingCircles iconSize={30}>
-        <Icons.whatsapp />
-        <Icons.notion />
-        <Icons.openai />
-        <Icons.googleDrive />
+        <div className="text-tertiary rounded-full bg-white p-2">
+          <IconTerminal2 />
+        </div>
+        <div className="text-tertiary rounded-full bg-white p-2">
+          <CreditCard />
+        </div>
+        <div className="text-tertiary rounded-full bg-white p-2">
+          <IndianRupee />
+        </div>
+        <div className="text-tertiary rounded-full bg-white p-2">
+          <User />
+        </div>
         <Icons.whatsapp />
       </OrbitingCircles>
       <OrbitingCircles iconSize={30} radius={80} reverse speed={2}>
