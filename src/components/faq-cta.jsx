@@ -14,7 +14,8 @@ import { Meteors } from './ui/meteors'
 import { AuroraBackground } from './ui/aurora-background'
 
 const faq = {
-  heading: 'Frequently asked questions',
+  heading: 'Frequently Asked',
+  span: 'Questions',
   description:
     'Find answers to common questions about our verification APIs. Need more help? Contact our support team anytime!',
 }
@@ -31,9 +32,12 @@ const FAQCTA = ({
       <div className="space-y-16 w-full">
         <Wrapper>
           <div className="mx-auto flex max-w-3xl flex-col text-left md:text-center">
-            <h2 className="mb-3 md:mb-4 lg:mb-6 text-5xl font-bold leading-[1.2] tracking-tighter text-primary">
-              {faq.heading}
-            </h2>
+            <div className="mb-3 md:mb-4 lg:mb-6 text-5xl font-bold leading-[1.2] tracking-tighter">
+              {faq.heading}{' '}
+              <div className="inline-block bg-primary rounded-md -rotate-2 p-2">
+                <div className="rotate-2 text-white ">{faq.span}</div>
+              </div>{' '}
+            </div>
             <p className="text-lg font-medium tracking-tight text-foreground/80">
               {faq.description}
             </p>

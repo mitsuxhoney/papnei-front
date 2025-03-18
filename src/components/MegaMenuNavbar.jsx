@@ -380,10 +380,15 @@ const Navbar = () => {
             <nav className="relative z-30">
               <div className="flex justify-between items-center">
                 {/* Logo */}
-                <Link to="/">
+                <Link
+                  to="/"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+                  }}
+                >
                   <div className="flex gap-1 items-center cursor-pointer">
-                    <Shield className="h-5 w-5 text-primary" />
-                    <span className="text-lg font-semibold text-foreground">
+                    <Shield className="h-5 w-5 text-primary" strokeWidth={2} />
+                    <span className="text-lg font-extrabold text-primary">
                       XRAY
                     </span>
                   </div>
@@ -400,7 +405,7 @@ const Navbar = () => {
                     >
                       <button
                         onClick={() => toggleDropdown('products')}
-                        className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-2 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+                        className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-2 py-2 text-sm font-medium text-foreground transition-colors hover:bg-primary/10"
                       >
                         Products
                         <ChevronDown
@@ -418,7 +423,7 @@ const Navbar = () => {
                       onClick={() => {
                         window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })
                       }}
-                      className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+                      className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-primary/10"
                     >
                       About Us
                     </Link>
@@ -429,7 +434,7 @@ const Navbar = () => {
                       onClick={() => {
                         window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })
                       }}
-                      className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+                      className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-primary/10"
                     >
                       Contact Us
                     </Link>
@@ -489,7 +494,7 @@ const Navbar = () => {
                               value="business"
                               className="border-none"
                             >
-                              <AccordionTrigger className="hover:no-underline py-2">
+                              <AccordionTrigger className="hover:no-underline py-2 text-primary">
                                 Business Verification
                               </AccordionTrigger>
                               <AccordionContent>
@@ -542,7 +547,7 @@ const Navbar = () => {
                               value="identity"
                               className="border-none"
                             >
-                              <AccordionTrigger className="hover:no-underline py-2">
+                              <AccordionTrigger className="hover:no-underline py-2 text-primary">
                                 Identity Verification
                               </AccordionTrigger>
                               <AccordionContent>
@@ -595,7 +600,7 @@ const Navbar = () => {
                               value="aadhar"
                               className="border-none"
                             >
-                              <AccordionTrigger className="hover:no-underline py-2">
+                              <AccordionTrigger className="hover:no-underline py-2 text-primary">
                                 Aadhar E-sign
                               </AccordionTrigger>
                               <AccordionContent>
@@ -647,7 +652,11 @@ const Navbar = () => {
                           </Accordion>
 
                           <div className="flex flex-col gap-2">
-                            <Button asChild variant="outline">
+                            <Button
+                              asChild
+                              variant="outline"
+                              className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+                            >
                               <Link
                                 to="/about-us"
                                 onClick={() => {
@@ -662,9 +671,10 @@ const Navbar = () => {
                                 About Us
                               </Link>
                             </Button>
-                            <Button asChild>
+                            <Button asChild variant="outline">
                               <Link
                                 to="/contact-us"
+                                className=""
                                 onClick={() => {
                                   setOpen(false)
                                   window.scrollTo({
@@ -717,7 +727,7 @@ const Navbar = () => {
                               handleCategoryMouseEnter('business')
                             }
                             className={cn(
-                              'w-full flex items-center p-3 rounded-md hover:bg-muted group text-left',
+                              'w-full flex items-center p-3 rounded-md hover:bg-primary/10 group text-left',
                               activeCategory === 'business' ? 'bg-muted' : ''
                             )}
                           >
@@ -751,7 +761,7 @@ const Navbar = () => {
                               handleCategoryMouseEnter('identity')
                             }
                             className={cn(
-                              'w-full flex items-center p-3 rounded-md group text-left hover:bg-muted',
+                              'w-full flex items-center p-3 rounded-md group text-left hover:bg-primary/10',
                               activeCategory === 'identity' ? '' : ''
                             )}
                           >
@@ -785,7 +795,7 @@ const Navbar = () => {
                               handleCategoryMouseEnter('aadhar')
                             }
                             className={cn(
-                              'w-full flex items-center p-3 rounded-md group text-left hover:bg-muted',
+                              'w-full flex items-center p-3 rounded-md group text-left hover:bg-primary/10',
                               activeCategory === 'aadhar' ? '' : ''
                             )}
                           >
@@ -837,7 +847,7 @@ const Navbar = () => {
                                   })
                                 }}
                                 className={cn(
-                                  'text-sm font-medium flex items-center hover:bg-muted rounded-md p-2',
+                                  'text-sm font-medium flex items-center hover:bg-primary/10 rounded-md p-2',
                                   getActiveCategoryColor()
                                 )}
                               >
@@ -859,7 +869,7 @@ const Navbar = () => {
                                       behavior: 'smooth',
                                     })
                                   }}
-                                  className="flex select-none gap-3 rounded-md p-3 leading-none outline-none transition-colors hover:bg-muted"
+                                  className="flex select-none gap-3 rounded-md p-3 leading-none outline-none transition-colors hover:bg-primary/10"
                                 >
                                   <div className="flex-shrink-0">
                                     {item.icon}

@@ -211,10 +211,14 @@ const testimonials = [
 export function Testimonials() {
   return (
     <section id="testimonials" className="py-10">
-      <h2 className="mb-4 text-center text-5xl font-bold leading-[1.2] tracking-tighter text-primary">
-        What People Are Saying
-      </h2>
-      <h3 className="mx-auto mb-8 max-w-lg text-balance text-center text-lg font-medium tracking-tight text-foreground/80">
+      <div className="mb-4 text-center text-5xl font-bold leading-[1.2] ">
+        What{' '}
+        <div className="inline-block bg-primary rounded-md -rotate-2 p-2">
+          <div className="rotate-2 text-white ">People</div>
+        </div>{' '}
+        Are Saying
+      </div>
+      <h3 className="mx-auto mb-8 max-w-lg text-balance text-center text-lg font-medium text-foreground/80">
         Don&apos;t just take our word for it. Here&apos;s what{' '}
         <span className="from-fg-onAccent text-primary">real people</span> are
         saying about{' '}
