@@ -173,6 +173,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Zap, Shield, CheckCircle2 } from 'lucide-react'
 import Wrapper from '../Wrapper'
 import { BorderBeamForm } from '../border-beam-form'
+import IndustryCarousel from '../IndustryCarousel'
 
 export function Connect() {
   const benefits = [
@@ -248,7 +249,7 @@ export function Connect() {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="max-sm:hidden w-full md:flex-1 md:rounded-2xl md:p-8"
+              className="max-sm:hidden md:flex-1 md:rounded-2xl md:p-8 relative"
             >
               <BorderBeamForm className="" />
             </motion.div>

@@ -14,6 +14,7 @@ import {
   Home,
 } from 'lucide-react'
 import { useRef, useEffect } from 'react'
+import IndustryCarousel from './IndustryCarousel'
 
 export function Industries() {
   // References for the animation containers
@@ -136,7 +137,7 @@ export function Industries() {
 
   return (
     <section className="pt-20 pb-20 relative overflow-hidden">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto">
         <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -151,53 +152,8 @@ export function Industries() {
             </div>
           </motion.div>
         </div>
-
-        {/* First Row (Moves Forward) */}
-        <div
-          className="overflow-hidden"
-          style={{ transform: 'rotateX(-25deg) rotateY(25deg)' }}
-        >
-          <motion.div
-            ref={containerRef1}
-            className="flex"
-            animate={{
-              x: [0, -100 * industries.length], // Adjust based on your card width
-            }}
-            transition={{
-              x: {
-                repeat: Infinity,
-                repeatType: 'loop',
-                duration: 25,
-                ease: 'linear',
-              },
-            }}
-          >
-            {firstRow.map(renderIndustryCard)}
-          </motion.div>
-        </div>
-
-        {/* Second Row (Moves Backward) */}
-        <div
-          className="overflow-hidden mt-8"
-          style={{ transform: 'rotateX(-25deg) rotateY(25deg)' }}
-        >
-          <motion.div
-            ref={containerRef2}
-            className="flex"
-            animate={{
-              x: [-100 * industries.length, 0], // Moving in opposite direction
-            }}
-            transition={{
-              x: {
-                repeat: Infinity,
-                repeatType: 'loop',
-                duration: 30, // Slightly different speed for visual interest
-                ease: 'linear',
-              },
-            }}
-          >
-            {secondRow.map(renderIndustryCard)}
-          </motion.div>
+        <div className="w-screen">
+          <IndustryCarousel />
         </div>
       </div>
     </section>

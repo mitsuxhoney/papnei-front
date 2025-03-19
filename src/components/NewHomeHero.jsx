@@ -18,7 +18,7 @@ const NewHomeHero = ({ businessHero }) => {
           </Badge>
           <h2 className="text-5xl xl:text-[82px] xl:leading-[95px] tracking-[-2px] font-bold max-w-[1171px] capitalize">
             Onboard{' '}
-            <span className="px-4 text-primary bg-[url('@/assets/boxStroke.png')] bg-contain bg-no-repeat">
+            <span className="px-4 text-secondary bg-[url('@/assets/boxStroke.png')] bg-contain bg-no-repeat">
               Verified
             </span>
             <span className="">Customers In Minutes</span>
@@ -43,7 +43,7 @@ const NewHomeHero = ({ businessHero }) => {
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full sm:w-auto px-6 py-4 bg-primary text-primary-foreground 
+              className="w-full sm:w-auto px-6 py-4 bg-secondary text-primary-foreground 
                 rounded-lg flex items-center justify-center group font-semibold
                 hover:bg-primary/90 transition-colors"
             >

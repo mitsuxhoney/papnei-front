@@ -352,7 +352,7 @@ export function CaseStudies() {
                 key={index}
                 className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.33%] pl-4"
               >
-                <div className="group overflow-hidden relative rounded-[4px] bg-primary/10 lg:h-[400px] px-4 py-4 border border-primary-100 hover:border-primary-200 transition-all duration-300 hover:shadow-sm h-full">
+                <div className="group overflow-hidden relative rounded-[4px] bg-secondary/10 lg:h-[400px] px-4 py-4 border border-primary-100 hover:border-primary-200 transition-all duration-300 hover:shadow-sm h-full">
                   <div className="flex flex-col gap-3 items-start">
                     <h3 className="text-lg font-semibold text-tertiary">
                       {industry.title}
