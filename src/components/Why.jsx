@@ -597,7 +597,7 @@ export function Why() {
               header={item.header}
               contentClassName={item.contentClassName}
               className={cn(
-                '[&>p:text-lg] rounded-lg bg-primary/10 relative',
+                '[&>p:text-lg] rounded-lg bg-[#14b8a6]/10 relative',
                 item.className
               )}
               icon={item.icon}

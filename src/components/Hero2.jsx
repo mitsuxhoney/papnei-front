@@ -10,11 +10,12 @@ import { DotPattern } from '@/components/ui/dot-pattern'
 import { Tiles } from '@/components/ui/tiles'
 import { BorderBeamForm } from '@/components/border-beam-form'
 import { Link } from 'react-router-dom'
+import IndustryCarousel from './IndustryCarousel'
 
 function Hero2({ businessHero }) {
   return (
     <>
-      <main className="w-full overflow-hidden dark:bg-black bg-white relative bg-cover bg-center bg-no-repeat bg-[url('@/assets/homeHeroPNG.png')]">
+      <main className="w-full overflow-hidden dark:bg-black bg-white bg-cover bg-center bg-no-repeat bg-[url('@/assets/homeHeroPNG.png')]">
         {/* Full-Height Dot Pattern */}
 
         <section className="relative z-10 border-white/10 w-full overflow-hidden">

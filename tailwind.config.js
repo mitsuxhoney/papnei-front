@@ -1,5 +1,5 @@
 import defaultTheme from 'tailwindcss/defaultTheme'
-import colors from 'tailwindcss/colors'
+import colors, { violet } from 'tailwindcss/colors'
 import { default as flattenColorPalette } from 'tailwindcss/lib/util/flattenColorPalette'
 import scrollBarHide from 'tailwind-scrollbar-hide'
 import svgToDataUri from 'mini-svg-data-uri'
@@ -154,8 +154,21 @@ export default {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))',
         },
-        tertiary: {
-          DEFAULT: 'hsl(var(--tertiary))',
+
+        purple: {
+          DEFAULT: 'hsl(var(--purple))',
+        },
+        pink: {
+          DEFAULT: 'hsl(var(--pink))',
+        },
+        violet: {
+          DEFAULT: 'hsl(var(--violet))',
+        },
+        cyan: {
+          DEFAULT: 'hsl(var(--cyan))',
+        },
+        yellow: {
+          DEFAULT: 'hsl(var(--yellow))',
         },
         muted: {
           DEFAULT: 'hsl(var(--muted))',

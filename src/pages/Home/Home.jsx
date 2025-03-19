@@ -448,7 +448,7 @@ const Home = () => {
       </div>
       {/* <AnimatedTestimonialsDemo /> */}
       <Wrapper>
-        <div className="my-16">
+        <div className="py-8">
           <Partners />
         </div>
       </Wrapper>
@@ -476,7 +476,7 @@ const Home = () => {
             ))}
           </div>
         </div> */}
-      <div className="my-16">
+      <div className="my-8">
         <Features {...tabsData} />
       </div>
 
@@ -500,7 +500,7 @@ const Home = () => {
           <Cta10Demo />
         </div>
       </Wrapper> */}
-      <div className="mt-16 py-12">
+      <div className=" py-12">
         <Why />
       </div>
       <Wrapper>
@@ -508,9 +508,7 @@ const Home = () => {
           <IntegrationBenefits benefits={featureSteps} />
         </div>
       </Wrapper>
-      <div className="w-full mt-16">
-        <ShortCTA />
-      </div>
+
       <div className="w-full mb-16">
         <Industries />
       </div>

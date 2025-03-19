@@ -32,7 +32,7 @@ function Footerdemo() {
   }, [])
 
   return (
-    <footer className="bg-primary text-white py-8">
+    <footer className="bg-secondary text-white py-8">
       <Wrapper>
         <div className="relative transition-colors duration-300">
           <div className="mx-auto pb-12">

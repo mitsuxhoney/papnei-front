@@ -703,7 +703,7 @@ const otherProductsHeading = {
 const Identity = () => {
   return (
     <div>
-      <div className="mb-16">
+      <div className="mb-16 relative overflow-hidden">
         <Hero2 businessHero={businessHero} />
       </div>
       <Wrapper>
