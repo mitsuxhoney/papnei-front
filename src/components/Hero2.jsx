@@ -14,21 +14,12 @@ import { Link } from 'react-router-dom'
 function Hero2({ businessHero }) {
   return (
     <>
-      <main className="w-full overflow-hidden dark:bg-black bg-white relative">
+      <main className="w-full overflow-hidden dark:bg-black bg-white relative bg-cover bg-center bg-no-repeat bg-[url('@/assets/homeHeroPNG.png')]">
         {/* Full-Height Dot Pattern */}
-        <DotPattern
-          cy={2}
-          cr={2}
-          cx={2}
-          className={cn(
-            'absolute inset-0 h-full w-full opacity-40',
-            '[mask-image:radial-gradient(1000px_circle_at_center,white,transparent)]'
-          )}
-        />
 
         <section className="relative z-10 border-white/10 w-full overflow-hidden">
           <Wrapper>
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-10 py-24 relative z-20">
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 py-24 relative z-20">
               {/* Hero Content */}
               <div className="relative flex flex-col items-start justify-center text-left">
                 <h1 className="2xl:text-6xl xl:text-6xl text-xl font-semibold bg-gradient-to-b from-[#edeffd] to-[#7b9cda] bg-clip-text relative">

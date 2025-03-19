@@ -8,6 +8,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from '@/components/ui/eldora-carousel'
+import { ArrowRight } from 'lucide-react'
 
 const Logos3 = ({
   heading = '',
@@ -69,6 +70,12 @@ const Logos3 = ({
           {heading}
         </h1>
       </div> */}
+      <div className="mb-12 flex justify-center items-center gap-4">
+        <h2 className="font-semibold text-lg">Companies Who Trust Us</h2>
+        <p>
+          <ArrowRight className="w-5 text-primary" />
+        </p>
+      </div>
 
       <div className="relative flex items-center justify-center xl:max-w-[2160px] xl:mx-auto">
         <Carousel

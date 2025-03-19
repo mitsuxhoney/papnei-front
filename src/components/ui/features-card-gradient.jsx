@@ -1,30 +1,32 @@
 import { useId } from 'react'
-import { Badge } from '@/components/ui/badge'
+import { cn } from '../../lib/utils'
 
 export function FeaturesSectionWithCardGradient({ grid, gridHeading }) {
   return (
     <div className="w-full">
       <div className="flex flex-col items-center gap-4 text-center mb-10">
-        <Badge variant="outline">{gridHeading.badge}</Badge>
         <h1 className="max-w-2xl text-3xl font-semibold md:text-4xl">
           {gridHeading.heading}
         </h1>
         <p className="text-muted-foreground">{gridHeading.description}</p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-4 mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-4 mx-auto">
         {grid.map((feature) => (
           <div
             key={feature.title}
-            className="relative bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white p-6 flex flex-col gap-4 rounded-3xl overflow-hidden"
+            className={cn(
+              'relative h-[300px] p-6 flex flex-col gap-4 overflow-hidden rounded-[4px] bg-primary/10',
+              feature.className
+            )}
           >
-            <Grid size={20} />
-            <div>{feature.badge}</div>
-            <p className="text-base font-bold text-neutral-800 dark:text-white relative z-20">
+            <div className="rounded-full p-4 bg-primary/10 text-primary max-w-min">
+              {feature.badge}
+            </div>
+            <p className="text-lg font-semibold text-primary ">
               {feature.title}
             </p>
-            <p className="text-neutral-600 dark:text-neutral-400 text-base font-normal relative z-20">
-              {feature.description}
-            </p>
+            <p className="text-sm text-black mb-4">{feature.description}</p>
+            {feature.component}
           </div>
         ))}
       </div>

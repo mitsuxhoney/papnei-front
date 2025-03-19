@@ -575,13 +575,13 @@ export function Why() {
     setColor(theme === 'dark' ? '#ffffff' : '#000000')
   }, [theme])
   return (
-    <div className="bg-[#5359EF0A] py-16">
+    <div className="bg-[#5359EF0A] py-20">
       <div className="flex flex-col items-center gap-4 text-center mb-6">
         <div className="max-w-2xl text-3xl font-semibold md:text-5xl ">
-          Why{' '}
-          <div className="inline-block bg-primary rounded-md -rotate-2 p-2">
+          Why Choose {` `}
+          {/* <div className="inline-block bg-primary rounded-md -rotate-2 p-2">
             <div className="rotate-2 text-white ">Choose</div>
-          </div>{' '}
+          </div>{' '} */}
           Us ?
         </div>
         <p className="text-muted-foreground">{why.description}</p>
@@ -597,7 +597,7 @@ export function Why() {
               header={item.header}
               contentClassName={item.contentClassName}
               className={cn(
-                '[&>p:text-lg] rounded-sm bg-primary/10 relative',
+                '[&>p:text-lg] rounded-lg bg-primary/10 relative',
                 item.className
               )}
               icon={item.icon}

@@ -12,7 +12,7 @@ const Layout = () => {
       <section className=" select-none">
         <Outlet />
       </section>
-      <footer className="">
+      <footer className="mt-16">
         <Footerdemo />
       </footer>
     </div>

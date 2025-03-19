@@ -38,6 +38,7 @@ import { Connect } from '../../components/ui/new-cta'
 import { FAQCTA } from '../../components/faq-cta'
 import confetti from 'canvas-confetti'
 import toast from 'react-hot-toast'
+
 const FAQCTAData = {
   heading: 'Frequently Asked Questions',
   description:
@@ -346,13 +347,10 @@ const ContactUs = () => {
 
       {/* FAQ Section */}
 
-      <div className="my-16 py-16">
+      <div className="">
         <FAQCTA FAQCTAData={FAQCTAData} />
       </div>
       {/* CTA Section */}
-      <div className="mb-16">
-        <Connect />
-      </div>
     </div>
   )
 }
