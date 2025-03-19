@@ -262,7 +262,7 @@ const Feature108 = () => {
           >
             {features.badge}
           </Badge> */}
-          <div className="text-3xl flex gap-2 justify-center items-center font-semibold md:text-5xl w-full">
+          <div className="text-xl flex gap-2 justify-center items-center font-semibold md:text-5xl w-full">
             Comprehensive{' '}
             <div className="bg-primary rounded-md p-2 -rotate-2">
               <div className="inline-block rotate-2 text-white">

@@ -439,13 +439,9 @@ const Home = () => {
   return (
     <div>
       <div>
-        {/* <HeroDemo
-          preview={<HomeHero />}
-          content={homeHeroContent}
-          pill={homeHeroBadge}
-        /> */}
         <NewHomeHero businessHero={businessHero} />
       </div>
+
       {/* <AnimatedTestimonialsDemo /> */}
       <Wrapper>
         <div className="py-8">
@@ -476,9 +472,11 @@ const Home = () => {
             ))}
           </div>
         </div> */}
-      <div className="my-8">
-        <Features {...tabsData} />
-      </div>
+      <Wrapper>
+        <div className="my-8">
+          <Features {...tabsData} />
+        </div>
+      </Wrapper>
 
       {/* <TestimonialsSection
           title="Trusted by developers worldwide"
@@ -500,7 +498,7 @@ const Home = () => {
           <Cta10Demo />
         </div>
       </Wrapper> */}
-      <div className=" py-12">
+      <div className="py-12">
         <Why />
       </div>
       <Wrapper>

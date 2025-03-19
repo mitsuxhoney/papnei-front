@@ -408,7 +408,7 @@ const Navbar = () => {
                     >
                       <button
                         onClick={() => toggleDropdown('products')}
-                        className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-2 py-2 text-sm font-medium text-foreground transition-colors hover:bg-primary/10"
+                        className="group inline-flex h-10 w-max items-center justify-center rounded-lg px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary/5"
                       >
                         Products
                         <ChevronDown
@@ -426,7 +426,7 @@ const Navbar = () => {
                       onClick={() => {
                         window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })
                       }}
-                      className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-primary/10"
+                      className="group inline-flex h-10 w-max items-center justify-center rounded-lg px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary/5"
                     >
                       About Us
                     </Link>
@@ -437,7 +437,7 @@ const Navbar = () => {
                       onClick={() => {
                         window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })
                       }}
-                      className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-primary/10"
+                      className="group inline-flex h-10 w-max items-center justify-center rounded-lg px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary/5"
                     >
                       Contact Us
                     </Link>
@@ -730,7 +730,7 @@ const Navbar = () => {
                               handleCategoryMouseEnter('business')
                             }
                             className={cn(
-                              'w-full flex items-center p-3 rounded-md hover:bg-primary/10 group text-left',
+                              'w-full flex items-center p-3 rounded-md hover:bg-secondary/5 group text-left',
                               activeCategory === 'business' ? 'bg-muted' : ''
                             )}
                           >
@@ -764,7 +764,7 @@ const Navbar = () => {
                               handleCategoryMouseEnter('identity')
                             }
                             className={cn(
-                              'w-full flex items-center p-3 rounded-md group text-left hover:bg-primary/10',
+                              'w-full flex items-center p-3 rounded-md group text-left hover:bg-secondary/5',
                               activeCategory === 'identity' ? '' : ''
                             )}
                           >
@@ -798,7 +798,7 @@ const Navbar = () => {
                               handleCategoryMouseEnter('aadhar')
                             }
                             className={cn(
-                              'w-full flex items-center p-3 rounded-md group text-left hover:bg-primary/10',
+                              'w-full flex items-center p-3 rounded-md group text-left hover:bg-secondary/5',
                               activeCategory === 'aadhar' ? '' : ''
                             )}
                           >
@@ -850,7 +850,7 @@ const Navbar = () => {
                                   })
                                 }}
                                 className={cn(
-                                  'text-sm font-medium flex items-center hover:bg-primary/10 rounded-md p-2',
+                                  'text-sm font-medium flex items-center hover:bg-secondary/5 rounded-md p-2',
                                   getActiveCategoryColor()
                                 )}
                               >
@@ -872,7 +872,7 @@ const Navbar = () => {
                                       behavior: 'smooth',
                                     })
                                   }}
-                                  className="flex select-none gap-3 rounded-md p-3 leading-none outline-none transition-colors hover:bg-primary/10"
+                                  className="flex select-none gap-3 rounded-md p-3 leading-none outline-none transition-colors hover:bg-secondary/5"
                                 >
                                   <div className="flex-shrink-0">
                                     {item.icon}

@@ -32,7 +32,7 @@ function Footerdemo() {
   }, [])
 
   return (
-    <footer className="bg-secondary text-white py-8">
+    <footer className="bg-secondary text-white py-8 select-none">
       <Wrapper>
         <div className="relative transition-colors duration-300">
           <div className="mx-auto pb-12">
@@ -54,7 +54,7 @@ function Footerdemo() {
                   <Button
                     type="submit"
                     size="icon"
-                    className="absolute right-1 top-1 h-8 w-8 rounded-full bg-primary text-primary-foreground transition-transform hover:scale-105"
+                    className="absolute right-1 top-1 h-8 w-8 rounded-full bg-secondary hover:bg-secondary/90 text-primary-foreground transition-transform hover:scale-105"
                   >
                     <Send className="h-4 w-4" />
                     <span className="sr-only">Subscribe</span>

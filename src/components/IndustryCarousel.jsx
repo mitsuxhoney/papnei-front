@@ -201,14 +201,14 @@ const IndustryCarousel = ({ className }) => {
   const thirdRow = useMemo(() => shuffleArray(industries), [])
 
   return (
-    <div className="relative w-full overflow-hidden py-12">
+    <div className="relative w-full py-12">
       {/* First Row - Moving Right */}
       <div className={cn('relative -rotate-3 mb-8', className)}>
         <div className="animate-scroll-right flex gap-6 whitespace-nowrap">
           {[...firstRow, ...firstRow].map((industry, index) => (
             <div
               key={index}
-              className={`flex items-center gap-3 bg-gradient-to-br ${industry.color} p-3 rounded-xl 
+              className={`flex items-center gap-3 ${industry.color} p-3 rounded-xl 
                 shadow-[0_8px_30px_rgb(0,0,0,0.03)] backdrop-blur-xl border border-white
                 transform hover:scale-105 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]`}
             >

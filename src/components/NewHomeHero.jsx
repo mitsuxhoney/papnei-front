@@ -12,11 +12,12 @@ const NewHomeHero = ({ businessHero }) => {
         <div className="w-full flex flex-col gap-8 items-center mx-auto text-center">
           <Badge
             variant="outline"
-            className="bg-primary/10 border border-primary/20 text-sm font-medium text-primary flex gap-1 cursor-pointer hover:bg-primary/20"
+            className="bg-secondary border border-primary/20 text-sm p-1.5 font-medium text-white flex gap-1 cursor-pointer hover:bg-secondary/90"
           >
-            <SparklesIcon size={14} /> Start Verfying In Minutes
+            <SparklesIcon className="" size={14} />
+            <span className="">Start Verfying In Minutes</span>
           </Badge>
-          <h2 className="text-5xl xl:text-[82px] xl:leading-[95px] tracking-[-2px] font-bold max-w-[1171px] capitalize">
+          <h2 className="text-[44px] xl:text-[82px] xl:leading-[95px] tracking-[-2px] font-bold max-w-[1171px] capitalize">
             Onboard{' '}
             <span className="px-4 text-secondary bg-[url('@/assets/boxStroke.png')] bg-contain bg-no-repeat">
               Verified
@@ -33,7 +34,7 @@ const NewHomeHero = ({ businessHero }) => {
               <AnimatedTooltip items={businessHero.reviews.avatars} />
             </span>
             <div>
-              <p className="text-left font-medium text-muted-foreground italic text-primary">
+              <p className="text-left font-medium italic text-secondary">
                 We are trusted by fortune {businessHero.reviews.count}+
                 companies
               </p>
@@ -45,7 +46,7 @@ const NewHomeHero = ({ businessHero }) => {
               whileTap={{ scale: 0.98 }}
               className="w-full sm:w-auto px-6 py-4 bg-secondary text-primary-foreground 
                 rounded-lg flex items-center justify-center group font-semibold
-                hover:bg-primary/90 transition-colors"
+                hover:bg-secondary/90 transition-colors"
             >
               Get API Keys
               <ArrowRight className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
@@ -55,8 +56,8 @@ const NewHomeHero = ({ businessHero }) => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="w-full sm:w-auto px-6 py-4 rounded-lg
-                border border-border bg-background/50
-                text-foreground hover:bg-accent/5
+                border border-border bg-primary
+                text-primary-foreground hover:bg-primary/90
                 transition-colors font-semibold"
             >
               View Documentation
