@@ -171,6 +171,8 @@
 
 import { motion } from 'framer-motion'
 import { ArrowRight, Zap, Shield, CheckCircle2 } from 'lucide-react'
+import Wrapper from '../Wrapper'
+import { BorderBeamForm } from '../border-beam-form'
 
 export function Connect() {
   const benefits = [
@@ -181,105 +183,78 @@ export function Connect() {
 
   return (
     <section className="py-20 bg-primary relative overflow-hidden">
-      <div className="absolute inset-0 bg-grid-primary-700/[0.05] -z-10" />
+      <Wrapper>
+        <div className="absolute inset-0 bg-grid-primary-700/[0.05] -z-10" />
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="flex-1 text-left"
-          >
-            <div className="inline-flex items-center px-4 py-2 bg-white/10 rounded-full mb-6">
-              <Zap className="h-4 w-4 text-muted/80 mr-2" />
-              <span className="text-sm font-medium text-muted/80">
-                Ready to Get Started?
-              </span>
-            </div>
-
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-              Transform Your
-              <span className="block mt-2">
-                <span className=" bg-clip-text">Verification Process</span>
-              </span>
-            </h2>
-
-            <div className="space-y-4 mb-8">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.2 }}
-                  className="flex items-center text-[#34D399]"
-                >
-                  <benefit.icon className="h-5 w-5 mr-3 text-accent-400" />
-                  <span className="text-muted/80">{benefit.text}</span>
-                </motion.div>
-              ))}
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="px-8 py-4 text-primary hover:primary/10 bg-white rounded-xl hover:bg-accent-600 transition-colors flex items-center justify-center group font-semibold shadow-lg"
-              >
-                GET API KEYS
-                <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
-              </motion.button>
-
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-xl hover:bg-white/20 transition-colors border border-white/20"
-              >
-                Contact Us
-              </motion.button>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="flex-1 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"
-          >
-            <div className="space-y-6">
-              <div className="flex items-center gap-4 text-white/90">
-                <div className="w-12 h-12 rounded-xl bg-accent-500/20 flex items-center justify-center">
-                  <Zap className="h-6 w-6 text-[#34D399]" />
-                </div>
-                <div>
-                  <h3 className="font-semibold">Lightning Fast Setup</h3>
-                  <p className="text-sm text-white/70">
-                    Get started in less than 15 minutes
-                  </p>
-                </div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="flex-1 text-left flex flex-col items-start w-full"
+            >
+              <div className="inline-flex items-center px-4 py-2 bg-white/10 rounded-full mb-6">
+                <Zap className="h-4 w-4 text-muted/80 mr-2" />
+                <span className="text-sm font-medium text-muted/80">
+                  Ready to Get Started?
+                </span>
               </div>
 
-              <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                Transform Your
+                <span className="block mt-2">
+                  <span className=" bg-clip-text">Verification Process</span>
+                </span>
+              </h2>
 
-              <ul className="space-y-3 text-sm text-white/80">
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-[#34D399]" />
-                  No credit card required
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-[#34D399]" />
-                  Full access to all features
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-[#34D399]" />
-                  Premium support included
-                </li>
-              </ul>
-            </div>
-          </motion.div>
+              <div className="space-y-4 mb-8">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.2 }}
+                    className="flex items-center text-[#34D399]"
+                  >
+                    <benefit.icon className="h-5 w-5 mr-3 text-accent-400" />
+                    <span className="text-muted/80">{benefit.text}</span>
+                  </motion.div>
+                ))}
+              </div>
+
+              <div className="flex gap-4 max-sm:text-sm">
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="px-8 py-4 max-sm:px-4 max-sm:py-2  text-primary hover:primary/10 bg-white rounded-xl hover:bg-accent-600 transition-colors flex items-center justify-center group font-semibold shadow-lg"
+                >
+                  GET API KEYS
+                  <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
+                </motion.button>
+
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-xl hover:bg-white/20 transition-colors border border-white/20"
+                >
+                  Contact Us
+                </motion.button>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="max-sm:hidden w-full md:flex-1 md:rounded-2xl md:p-8"
+            >
+              <BorderBeamForm className="" />
+            </motion.div>
+          </div>
         </div>
-      </div>
+      </Wrapper>
     </section>
   )
 }

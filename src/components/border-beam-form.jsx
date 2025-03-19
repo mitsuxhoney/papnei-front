@@ -21,6 +21,7 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import toast from 'react-hot-toast'
+import { cn } from '../lib/utils'
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -31,7 +32,7 @@ const formSchema = z.object({
   workEmail: z.string().email({ message: 'Invalid work email address.' }),
 })
 
-export function BorderBeamForm() {
+export function BorderBeamForm({ className }) {
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -79,7 +80,12 @@ export function BorderBeamForm() {
     })
   }
   return (
-    <Card className="relative flex flex-col items-start overflow-hidden">
+    <Card
+      className={cn(
+        'relative flex flex-col items-start overflow-hidden',
+        className
+      )}
+    >
       <CardHeader>
         <CardTitle>Contact us</CardTitle>
         <CardDescription>

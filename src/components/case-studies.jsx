@@ -335,10 +335,10 @@ export function CaseStudies() {
             viewport={{ once: true }}
           >
             <div className="text-3xl font-semibold md:text-5xl w-full flex justify-center items-center gap-1">
-              Recent
-              <div className="inline-block bg-primary rounded-md -rotate-2 p-2">
+              Recent Case Studies
+              {/* <div className="inline-block bg-primary rounded-md -rotate-2 p-2">
                 <div className="rotate-2 text-white ">Case Studies</div>
-              </div>{' '}
+              </div>{' '} */}
             </div>
             <p className="text-xl text-secondary-600 max-w-2xl mx-auto mt-4">
               Tailored verification solutions for every sector

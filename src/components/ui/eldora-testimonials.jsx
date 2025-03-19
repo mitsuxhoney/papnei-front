@@ -212,10 +212,10 @@ export function Testimonials() {
   return (
     <section id="testimonials" className="py-10">
       <div className="mb-4 text-center text-5xl font-bold leading-[1.2] ">
-        What{' '}
-        <div className="inline-block bg-primary rounded-md -rotate-2 p-2">
+        What People {` `}
+        {/* <div className="inline-block bg-primary rounded-md -rotate-2 p-2">
           <div className="rotate-2 text-white ">People</div>
-        </div>{' '}
+        </div>{' '} */}
         Are Saying
       </div>
       <h3 className="mx-auto mb-8 max-w-lg text-balance text-center text-lg font-medium text-foreground/80">

@@ -34,7 +34,7 @@ function Footerdemo() {
   return (
     <footer className="bg-primary text-white py-8">
       <Wrapper>
-        <div className="relative   transition-colors duration-300">
+        <div className="relative transition-colors duration-300">
           <div className="mx-auto pb-12">
             <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
               <div className="relative">
@@ -49,7 +49,7 @@ function Footerdemo() {
                   <Input
                     type="email"
                     placeholder="Enter your email"
-                    className="pr-12 backdrop-blur-sm"
+                    className="pr-12"
                   />
                   <Button
                     type="submit"
@@ -67,7 +67,7 @@ function Footerdemo() {
                 <nav className="space-y-2 text-sm">
                   <Link
                     to="/"
-                    className="block transition-colors hover:text-primary"
+                    className="block transition-colors hover:underline"
                     onClick={() => {
                       window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })
                     }}
@@ -76,7 +76,7 @@ function Footerdemo() {
                   </Link>
                   <Link
                     to="/business"
-                    className="block transition-colors hover:text-primary"
+                    className="block transition-colors hover:underline"
                     onClick={() => {
                       window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })
                     }}
@@ -85,7 +85,7 @@ function Footerdemo() {
                   </Link>
                   <Link
                     to="identity"
-                    className="block transition-colors hover:text-primary"
+                    className="block transition-colors hover:underline"
                     onClick={() => {
                       window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })
                     }}
@@ -94,7 +94,7 @@ function Footerdemo() {
                   </Link>
                   <Link
                     to="/aadhar"
-                    className="block transition-colors hover:text-primary"
+                    className="block transition-colors hover:underline"
                     onClick={() => {
                       window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })
                     }}
@@ -103,7 +103,7 @@ function Footerdemo() {
                   </Link>
                   <Link
                     to="/contact-us"
-                    className="block transition-colors hover:text-primary"
+                    className="block transition-colors hover:underline"
                     onClick={() => {
                       window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })
                     }}
@@ -112,7 +112,7 @@ function Footerdemo() {
                   </Link>
                   <Link
                     to="/about-us"
-                    className="block transition-colors hover:text-primary"
+                    className="block transition-colors hover:underline"
                     onClick={() => {
                       window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })
                     }}
@@ -209,10 +209,10 @@ function Footerdemo() {
                 © 2024 Your Company. All rights reserved.
               </p>
               <nav className="flex gap-4 text-sm">
-                <Link to="#" className="transition-colors hover:text-primary">
+                <Link to="#" className="transition-colors hover:underline">
                   Privacy Policy
                 </Link>
-                <Link to="#" className="transition-colors hover:text-primary">
+                <Link to="#" className="transition-colors hover:underline">
                   Terms of Service
                 </Link>
               </nav>
