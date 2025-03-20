@@ -168,69 +168,68 @@ const GSTPhoneAPI = () => {
         </section>
       </Wrapper> */}
 
+      <section className="py-16 bg-secondary/10 mb-16">
+        <div className=" mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
+            <p className="">
+              Enhancing trust and security in digital transactions through
+              AI-driven verification.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">
+                <NumberTicker
+                  value={500}
+                  className="font-bold tracking-normal text-secondary"
+                />
+                <span className="text-secondary">+</span>
+              </div>
+              <p className="text-xl ">Businesses Verified</p>
+            </div>
+
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">
+                <NumberTicker
+                  value={1}
+                  className="font-bold tracking-normal text-secondary"
+                />
+                <span className="text-secondary">M+</span>
+              </div>
+              <p className="text-xl">Identities Verified</p>
+            </div>
+
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">
+                <NumberTicker
+                  value={1}
+                  className="font-bold tracking-normal text-secondary"
+                />
+                <span className="text-secondary">M+</span>
+              </div>
+              <p className="text-xl">Documents Verified</p>
+            </div>
+
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">
+                <NumberTicker
+                  value={1}
+                  className="font-bold tracking-normal text-secondary"
+                />
+                <span className="text-secondary">M+</span>
+              </div>
+              <p className="text-xl">Users Verified</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Wrapper>
         <div className="w-full">
           <FeaturesSection grid={features} gridHeading={featuresHeading} />
         </div>
-      </Wrapper>
-
-      <Wrapper>
-        <section className="py-16">
-          <div className="mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
-              <p className="">
-                Transforming digital verification with GST Phone technology.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-2">
-                  <NumberTicker
-                    value={500}
-                    className="font-bold tracking-normal"
-                  />
-                  +
-                </div>
-                <p className="text-xl">Organizations </p>
-              </div>
-
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-2">
-                  <NumberTicker
-                    value={5}
-                    className="font-bold tracking-normal"
-                  />
-                  M+
-                </div>
-                <p className="text-xl">Documents Digitally Signed</p>
-              </div>
-
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-2">
-                  <NumberTicker
-                    value={99.9}
-                    className="font-bold tracking-normal"
-                  />
-                  %
-                </div>
-                <p className="text-xl">Success Rate</p>
-              </div>
-
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-2">
-                  <NumberTicker
-                    value={100}
-                    className="font-bold tracking-normal"
-                  />
-                  +
-                </div>
-                <p className="text-xl">Trusted Partners</p>
-              </div>
-            </div>
-          </div>
-        </section>
       </Wrapper>
 
       <Wrapper>
@@ -242,7 +241,8 @@ const GSTPhoneAPI = () => {
                   Frequently Asked Questions
                 </h2>
                 <p className="text-muted-foreground">
-                  Find answers to common questions about GST phone verification and our services.
+                  Find answers to common questions about GST phone verification
+                  and our services.
                 </p>
               </div>
 
@@ -252,7 +252,9 @@ const GSTPhoneAPI = () => {
                     What is GST phone verification?
                   </h3>
                   <p className="text-muted-foreground">
-                    GST phone verification is a secure process that validates a user's mobile number registered with the GST portal to ensure authenticity and prevent fraudulent activities.
+                    GST phone verification is a secure process that validates a
+                    user's mobile number registered with the GST portal to
+                    ensure authenticity and prevent fraudulent activities.
                   </p>
                 </div>
 
@@ -261,7 +263,10 @@ const GSTPhoneAPI = () => {
                     How can I verify my phone number for GST?
                   </h3>
                   <p className="text-muted-foreground">
-                    You can verify your phone number for GST by entering your registered mobile number, receiving an OTP from the GST portal, and submitting the OTP to complete the verification process.
+                    You can verify your phone number for GST by entering your
+                    registered mobile number, receiving an OTP from the GST
+                    portal, and submitting the OTP to complete the verification
+                    process.
                   </p>
                 </div>
 
@@ -270,7 +275,10 @@ const GSTPhoneAPI = () => {
                     Why is GST phone verification important?
                   </h3>
                   <p className="text-muted-foreground">
-                    GST phone verification ensures that the registered mobile number is valid and linked to the correct taxpayer, enhancing security and communication from the tax authorities.
+                    GST phone verification ensures that the registered mobile
+                    number is valid and linked to the correct taxpayer,
+                    enhancing security and communication from the tax
+                    authorities.
                   </p>
                 </div>
 
@@ -279,7 +287,9 @@ const GSTPhoneAPI = () => {
                     Is GST phone verification mandatory?
                   </h3>
                   <p className="text-muted-foreground">
-                    Yes, GST phone verification is mandatory for businesses and individuals registered under GST to facilitate secure transactions and compliance with government regulations.
+                    Yes, GST phone verification is mandatory for businesses and
+                    individuals registered under GST to facilitate secure
+                    transactions and compliance with government regulations.
                   </p>
                 </div>
               </div>
@@ -335,6 +345,5 @@ const GSTPhoneAPI = () => {
     </div>
   )
 }
-
 
 export default GSTPhoneAPI

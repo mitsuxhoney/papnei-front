@@ -1,4 +1,4 @@
-import { Star } from 'lucide-react'
+import { ArrowRight, Star } from 'lucide-react'
 import { Sparkles } from './ui/layouts-sparkles'
 import { Avatar, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
@@ -30,10 +30,15 @@ function Hero2({ businessHero }) {
                 <p className="text-balance text-muted-foreground pt-4 lg:text-lg relative">
                   {businessHero.description}
                 </p>
-
-                <Button asChild size="lg" className="mt-8 relative">
-                  <Link to="/contact-us">{businessHero.button.text}</Link>
-                </Button>
+                <Link to="/contact-us">
+                  <Button
+                    size="lg"
+                    className="mt-8 relative bg-secondary hover:bg-secondary/90 flex items-center"
+                  >
+                    <p>{businessHero.button.text}</p>
+                    <ArrowRight />
+                  </Button>
+                </Link>
 
                 {/* Reviews Section */}
                 <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row">

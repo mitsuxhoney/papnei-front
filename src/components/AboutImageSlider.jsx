@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion'
+import { Button } from '@/components/ui/button'
 import { useNavigate } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
 
 export function AboutImageSlider() {
   const navigate = useNavigate()
@@ -26,16 +28,19 @@ export function AboutImageSlider() {
         <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
           You Seem Interested About US!
         </motion.p>
-        <button className="px-4 py-2 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
-          <span
+        <button className="  ">
+          <Button
+            size="lg"
+            className="relative bg-white text-secondary hover:bg-white/80 flex items-center px-4 py-2 backdrop-blur-sm mx-auto text-center rounded-full mt-4"
             onClick={() => {
               navigate('/contact-us')
               window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
             }}
-            className="cursor-pointer"
           >
-            Join now →
-          </span>
+            <p>Schedule a call</p>
+            <ArrowRight />
+          </Button>
+
           <div className="absolute inset-x-0 h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
         </button>
       </motion.div>

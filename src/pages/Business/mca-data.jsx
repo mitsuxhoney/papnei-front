@@ -126,7 +126,7 @@ const otherProductsHeading = {
     'Seamlessly verify business details, tax compliance, and legal registrations with our comprehensive suite of verification tools.',
 }
 
-const MCAData= () => {
+const MCAData = () => {
   return (
     <div>
       <div className="mb-16">
@@ -168,69 +168,68 @@ const MCAData= () => {
         </section>
       </Wrapper> */}
 
+      <section className="py-16 bg-secondary/10 mb-16">
+        <div className=" mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
+            <p className="">
+              Enhancing trust and security in digital transactions through
+              AI-driven verification.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">
+                <NumberTicker
+                  value={500}
+                  className="font-bold tracking-normal text-secondary"
+                />
+                <span className="text-secondary">+</span>
+              </div>
+              <p className="text-xl ">Businesses Verified</p>
+            </div>
+
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">
+                <NumberTicker
+                  value={1}
+                  className="font-bold tracking-normal text-secondary"
+                />
+                <span className="text-secondary">M+</span>
+              </div>
+              <p className="text-xl">Identities Verified</p>
+            </div>
+
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">
+                <NumberTicker
+                  value={1}
+                  className="font-bold tracking-normal text-secondary"
+                />
+                <span className="text-secondary">M+</span>
+              </div>
+              <p className="text-xl">Documents Verified</p>
+            </div>
+
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">
+                <NumberTicker
+                  value={1}
+                  className="font-bold tracking-normal text-secondary"
+                />
+                <span className="text-secondary">M+</span>
+              </div>
+              <p className="text-xl">Users Verified</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Wrapper>
         <div className="w-full">
           <FeaturesSection grid={features} gridHeading={featuresHeading} />
         </div>
-      </Wrapper>
-
-      <Wrapper>
-        <section className="py-16">
-          <div className="mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
-              <p className="">
-                Transforming digital verification with Aadhaar e-Sign technology.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-2">
-                  <NumberTicker
-                    value={500}
-                    className="font-bold tracking-normal"
-                  />
-                  +
-                </div>
-                <p className="text-xl">Organizations </p>
-              </div>
-
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-2">
-                  <NumberTicker
-                    value={5}
-                    className="font-bold tracking-normal"
-                  />
-                  M+
-                </div>
-                <p className="text-xl">Documents Digitally Signed</p>
-              </div>
-
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-2">
-                  <NumberTicker
-                    value={99.9}
-                    className="font-bold tracking-normal"
-                  />
-                  %
-                </div>
-                <p className="text-xl">Success Rate</p>
-              </div>
-
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-2">
-                  <NumberTicker
-                    value={100}
-                    className="font-bold tracking-normal"
-                  />
-                  +
-                </div>
-                <p className="text-xl">Trusted Partners</p>
-              </div>
-            </div>
-          </div>
-        </section>
       </Wrapper>
 
       <Wrapper>
@@ -242,7 +241,8 @@ const MCAData= () => {
                   Frequently Asked Questions
                 </h2>
                 <p className="text-muted-foreground">
-                  Find answers to common questions about MCA Data Verification and our services.
+                  Find answers to common questions about MCA Data Verification
+                  and our services.
                 </p>
               </div>
 
@@ -252,7 +252,10 @@ const MCAData= () => {
                     What is MCA Data Verification?
                   </h3>
                   <p className="text-muted-foreground">
-                    MCA Data Verification is a process that allows users to validate company details registered with the Ministry of Corporate Affairs (MCA), ensuring accuracy and compliance with regulatory requirements.
+                    MCA Data Verification is a process that allows users to
+                    validate company details registered with the Ministry of
+                    Corporate Affairs (MCA), ensuring accuracy and compliance
+                    with regulatory requirements.
                   </p>
                 </div>
 
@@ -261,7 +264,10 @@ const MCAData= () => {
                     How can I verify MCA data?
                   </h3>
                   <p className="text-muted-foreground">
-                    You can verify MCA data by entering the company’s Corporate Identification Number (CIN) or other relevant details on our platform, which fetches and validates the information directly from MCA records.
+                    You can verify MCA data by entering the company’s Corporate
+                    Identification Number (CIN) or other relevant details on our
+                    platform, which fetches and validates the information
+                    directly from MCA records.
                   </p>
                 </div>
 
@@ -270,7 +276,9 @@ const MCAData= () => {
                     Why is MCA Data Verification important?
                   </h3>
                   <p className="text-muted-foreground">
-                    MCA Data Verification ensures transparency, prevents fraud, and helps businesses and individuals confirm the legitimacy of corporate entities before engaging in transactions.
+                    MCA Data Verification ensures transparency, prevents fraud,
+                    and helps businesses and individuals confirm the legitimacy
+                    of corporate entities before engaging in transactions.
                   </p>
                 </div>
 
@@ -279,7 +287,9 @@ const MCAData= () => {
                     Is MCA Data Verification secure?
                   </h3>
                   <p className="text-muted-foreground">
-                    Yes, MCA Data Verification follows strict security measures, accessing official MCA databases securely and ensuring that user data remains protected throughout the process.
+                    Yes, MCA Data Verification follows strict security measures,
+                    accessing official MCA databases securely and ensuring that
+                    user data remains protected throughout the process.
                   </p>
                 </div>
               </div>
@@ -335,6 +345,5 @@ const MCAData= () => {
     </div>
   )
 }
-
 
 export default MCAData

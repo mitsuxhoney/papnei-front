@@ -22,26 +22,38 @@ import { Card } from './ui/card'
 
 const BusinessProducts = ({ grid, gridHeading, className }) => {
   return (
-    <div className="w-full">
-      <div className="flex flex-col items-center gap-4 text-center mb-6">
-        <h1 className="text-3xl font-semibold md:text-5xl max-w-5xl">
+    <div className="w-full flex flex-col gap-4">
+      <div className="flex flex-col items-center gap-2 text-center mb-6">
+        <h1 className="text-center text-5xl font-bold leading-[1.2]">
           {gridHeading.title}
         </h1>
-        <p className="text-muted-foreground">{gridHeading.description}</p>
+        <p className="mx-auto max-w-lg text-center text-lg font-medium text-foreground/80">
+          {gridHeading.description}
+        </p>
       </div>
       <div className={cn('grid w-full gap-4 mb-16', className)}>
         {grid?.map((item) => (
-          <Card key={item.title} className={`p-4 rounded-[4px] bg-primary/10`}>
+          <Card
+            key={item.title}
+            className={cn(`p-4 rounded-[4px]`, item.className)}
+          >
             <div className="w-full flex flex-col gap-4">
-              <div className="rounded-full bg-primary/10 flex max-w-min p-4 text-primary">
+              <div
+                className={cn(
+                  'rounded-full flex max-w-min p-4',
+                  item.iconColor
+                )}
+              >
                 {item.icon}
               </div>
-              <div className="text-lg font-semibold text-primary ">
-                {item.title}
-              </div>
+              <div className="text-lg font-semibold">{item.title}</div>
 
-              <div className="text-sm text-black mb-4">{item.description}</div>
-              <Link to={item.url}>{item.button}</Link>
+              <div className="text-sm text-foreground/80 mb-4">
+                {item.description}
+              </div>
+              <Link to={item.url} className="">
+                {item.button}
+              </Link>
             </div>
           </Card>
         ))}

@@ -203,14 +203,14 @@ const IndustryCarousel = ({ className }) => {
   return (
     <div className="relative w-full py-12">
       {/* First Row - Moving Right */}
-      <div className={cn('relative -rotate-3 mb-8', className)}>
+      <div className={cn('relative mb-8', className)}>
         <div className="animate-scroll-right flex gap-6 whitespace-nowrap">
           {[...firstRow, ...firstRow].map((industry, index) => (
             <div
               key={index}
-              className={`flex items-center gap-3 ${industry.color} p-3 rounded-xl 
+              className={`flex items-center gap-3 bg-gradient-to-br ${industry.color} p-3 rounded-xl 
                 shadow-[0_8px_30px_rgb(0,0,0,0.03)] backdrop-blur-xl border border-white
-                transform hover:scale-105 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]`}
+ hover:scale-105 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]`}
             >
               <span className="text-gray-500">{industry.icon}</span>
               <span className="text-gray-600 font-light text-sm tracking-wide">
@@ -222,14 +222,14 @@ const IndustryCarousel = ({ className }) => {
       </div>
 
       {/* Second Row - Moving Left */}
-      <div className={cn('relative -rotate-3 mb-8', className)}>
+      <div className={cn('relative mb-8', className)}>
         <div className="animate-scroll-left flex gap-6 whitespace-nowrap">
           {[...secondRow, ...secondRow].map((industry, index) => (
             <div
               key={index}
               className={`flex items-center gap-3 bg-gradient-to-br ${industry.color} p-3 rounded-xl 
                 shadow-[0_8px_30px_rgb(0,0,0,0.03)] backdrop-blur-xl border border-white
-                transform hover:scale-105 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]`}
+                 hover:scale-105 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]`}
             >
               <span className="text-gray-500">{industry.icon}</span>
               <span className="text-gray-600 font-light text-sm tracking-wide">
@@ -241,14 +241,14 @@ const IndustryCarousel = ({ className }) => {
       </div>
 
       {/* Third Row - Moving Right */}
-      <div className={cn('relative -rotate-3 mb-8', className)}>
+      <div className={cn('relative', className)}>
         <div className="animate-scroll-right flex gap-6 whitespace-nowrap">
           {[...thirdRow, ...thirdRow].map((industry, index) => (
             <div
               key={index}
               className={`flex items-center gap-3 bg-gradient-to-br ${industry.color} p-3 rounded-xl 
                 shadow-[0_8px_30px_rgb(0,0,0,0.03)] backdrop-blur-xl border border-white
-                transform hover:scale-105 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]`}
+                 hover:scale-105 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]`}
             >
               <span className="text-gray-500">{industry.icon}</span>
               <span className="text-gray-600 font-light text-sm tracking-wide">

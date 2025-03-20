@@ -73,7 +73,13 @@ const Logos3 = ({
       <div className="relative flex items-center justify-center xl:max-w-[2160px] xl:mx-auto">
         <Carousel
           opts={{ loop: true }}
-          plugins={[AutoScroll({ playOnInit: true })]}
+          plugins={[
+            AutoScroll({
+              playOnInit: true,
+              speed: 0.3, // Reduced speed (default is 1.0)
+              stopOnInteraction: false, // Optional: continues scrolling after user interaction
+            }),
+          ]}
           className="w-full "
         >
           <CarouselContent className="flex gap-2">

@@ -136,22 +136,8 @@ export function Industries() {
   )
 
   return (
-    <section className="pt-20 pb-20 relative overflow-x-hidden">
+    <section className="relative overflow-x-hidden bg-secondary/5">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <div className="text-3xl font-semibold md:text-5xl">
-              <div className="inline-block bg-primary rounded-md -rotate-2 p-2">
-                <div className="rotate-2 text-white">Industries</div>
-              </div>{' '}
-              We Serve
-            </div>
-          </motion.div>
-        </div>
         <div className="">
           <IndustryCarousel />
         </div>
