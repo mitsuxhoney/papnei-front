@@ -201,7 +201,7 @@ const IndustryCarousel = ({ className }) => {
   const thirdRow = useMemo(() => shuffleArray(industries), [])
 
   return (
-    <div className="relative w-full py-12">
+    <div className="relative w-full">
       {/* First Row - Moving Right */}
       <div className={cn('relative mb-8', className)}>
         <div className="animate-scroll-right flex gap-6 whitespace-nowrap">

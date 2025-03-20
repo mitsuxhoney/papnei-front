@@ -647,10 +647,14 @@ const ContactUs = () => {
                                 <Select
                                   onValueChange={field.onChange}
                                   defaultValue={field.value}
+                                  className="bg-secondary focus:outline-none"
                                 >
                                   <FormControl>
                                     <SelectTrigger>
-                                      <SelectValue placeholder="Select a subject" />
+                                      <SelectValue
+                                        className="hover:bg-secondary"
+                                        placeholder="Select a subject"
+                                      />
                                     </SelectTrigger>
                                   </FormControl>
                                   <SelectContent>

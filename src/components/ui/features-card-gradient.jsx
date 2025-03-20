@@ -29,7 +29,9 @@ export function FeaturesSectionWithCardGradient({ grid, gridHeading }) {
             >
               {feature.badge}
             </div>
-            <p className="text-lg font-semibold">{feature.title}</p>
+            <p className="text-lg font-semibold text-secondary">
+              {feature.title}
+            </p>
             <p className="text-sm text-black mb-4">{feature.description}</p>
             {feature.component}
           </div>

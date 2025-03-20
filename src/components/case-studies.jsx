@@ -255,11 +255,7 @@ export function CaseStudies() {
   }, [emblaApi, onSelect])
   const industries = [
     {
-      title: (
-        <h3 className="text-lg font-semibold text-yellow-500">
-          Fintech Startup
-        </h3>
-      ),
+      title: <h3 className="text-lg font-semibold">Fintech Startup</h3>,
       heading: (
         <p className="text-md font-semibold ">
           Boosted Loan Approvals with Instant KYC
@@ -275,11 +271,7 @@ export function CaseStudies() {
       color: 'bg-yellow-500/10',
     },
     {
-      title: (
-        <h3 className="text-lg font-semibold text-purple-500">
-          E-commerce Platform
-        </h3>
-      ),
+      title: <h3 className="text-lg font-semibold">E-commerce Platform</h3>,
       heading: (
         <p className="text-md font-semibold ">
           Prevented Fraudulent Sellers with Business
@@ -295,11 +287,7 @@ export function CaseStudies() {
       color: 'bg-purple-500/10',
     },
     {
-      title: (
-        <h3 className="text-lg font-semibold text-pink-500">
-          Ride-Sharing Company
-        </h3>
-      ),
+      title: <h3 className="text-lg font-semibold">Ride-Sharing Company</h3>,
       heading: (
         <p className="text-md font-semibold ">
           Enhanced Driver Verification with Identity API
@@ -315,11 +303,7 @@ export function CaseStudies() {
       color: 'bg-pink-500/10',
     },
     {
-      title: (
-        <h3 className="text-lg font-semibold text-violet-500">
-          Fintech1 Startup
-        </h3>
-      ),
+      title: <h3 className="text-lg font-semibold">Fintech1 Startup</h3>,
       heading: (
         <p className="text-md font-semibold ">
           Boosted Loan Approvals with Instant KYC
@@ -335,11 +319,7 @@ export function CaseStudies() {
       color: 'bg-violet-500/10',
     },
     {
-      title: (
-        <h3 className="text-lg font-semibold text-cyan-500">
-          E-commerce Platform1
-        </h3>
-      ),
+      title: <h3 className="text-lg font-semibold">E-commerce Platform1</h3>,
       heading: (
         <p className="text-md font-semibold ">
           Prevented Fraudulent Sellers with Business
@@ -355,11 +335,7 @@ export function CaseStudies() {
       color: 'bg-cyan-500/10',
     },
     {
-      title: (
-        <h3 className="text-lg font-semibold text-yellow-500">
-          Ride-Sharing Company1
-        </h3>
-      ),
+      title: <h3 className="text-lg font-semibold">Ride-Sharing Company1</h3>,
       heading: (
         <p className="text-md font-semibold ">
           Enhanced Driver Verification with Identity API
@@ -375,11 +351,7 @@ export function CaseStudies() {
       color: 'bg-yellow-500/10',
     },
     {
-      title: (
-        <h3 className="text-lg font-semibold text-purple-500">
-          Fintech Startup2
-        </h3>
-      ),
+      title: <h3 className="text-lg font-semibold">Fintech Startup2</h3>,
       heading: (
         <p className="text-md font-semibold ">
           Boosted Loan Approvals with Instant KYC
@@ -395,11 +367,7 @@ export function CaseStudies() {
       color: 'bg-purple-500/10',
     },
     {
-      title: (
-        <h3 className="text-lg font-semibold text-violet-500">
-          E-commerce Platform2
-        </h3>
-      ),
+      title: <h3 className="text-lg font-semibold">E-commerce Platform2</h3>,
       heading: (
         <p className="text-md font-semibold ">
           Prevented Fraudulent Sellers with Business
@@ -415,11 +383,7 @@ export function CaseStudies() {
       color: 'bg-violet-500/10',
     },
     {
-      title: (
-        <h3 className="text-lg font-semibold text-cyan-500">
-          Ride-Sharing Company2
-        </h3>
-      ),
+      title: <h3 className="text-lg font-semibold ">Ride-Sharing Company2</h3>,
       heading: (
         <p className="text-md font-semibold ">
           Enhanced Driver Verification with Identity API
@@ -435,11 +399,7 @@ export function CaseStudies() {
       color: 'bg-cyan-500/10',
     },
     {
-      title: (
-        <h3 className="text-lg font-semibold text-pink-500">
-          Fintech Startup3
-        </h3>
-      ),
+      title: <h3 className="text-lg font-semibold">Fintech Startup3</h3>,
       heading: (
         <p className="text-md font-semibold ">
           Boosted Loan Approvals with Instant KYC
@@ -486,12 +446,12 @@ export function CaseStudies() {
               >
                 <div
                   className={cn(
-                    'group overflow-hidden relative rounded-[4px] lg:h-[400px] px-4 py-4 border border-primary-100 transition-all duration-300 hover:shadow-sm h-full',
+                    'group overflow-hidden relative rounded-[4px] h-[370px] md:h-[390px] lg:h-[400px] px-4 py-4 border border-primary-100 transition-all duration-300 hover:shadow-sm',
                     industry.color
                   )}
                 >
                   <div className="flex flex-col gap-3 items-start">
-                    <div>{industry.title}</div>
+                    <div className="!text-secondary">{industry.title}</div>
                     <div className="text-neutral-600">{industry.heading}</div>
                     <div className="text-foreground/80">
                       {industry.description}
