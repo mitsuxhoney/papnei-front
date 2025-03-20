@@ -136,10 +136,10 @@ export function Industries() {
   )
 
   return (
-    <section className="relative overflow-x-hidden bg-secondary/5">
-      <div className="container mx-auto">
-        <div className="">
-          <IndustryCarousel />
+    <section className="relative">
+      <div className="mx-auto overflow-hidden">
+        <div className="w-screen">
+          <IndustryCarousel className="-rotate-3" />
         </div>
       </div>
     </section>

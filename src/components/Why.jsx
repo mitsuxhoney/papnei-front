@@ -322,7 +322,7 @@ const SkeletonFive = () => {
 }
 const items = [
   {
-    title: <h2 className="text-yellow-500">AI Powered Verification</h2>,
+    title: <h2 className="">AI Powered Verification</h2>,
     heading: <h3 className="">Find out who&apos;s behind any phone number</h3>,
     description: (
       <span className="text-sm">
@@ -340,7 +340,7 @@ const items = [
     icon: <IconClipboardCopy className="h-4 w-4" />,
   },
   {
-    title: <h2 className="text-violet-500">Automated Scanning</h2>,
+    title: <h2 className="">Automated Scanning</h2>,
     heading: <h3>Find out who&apos;s behind any phone number</h3>,
     header: (
       <LazyLoadMotion>
@@ -359,7 +359,7 @@ const items = [
     icon: <IconFileBroken className="h-4 w-4" />,
   },
   {
-    title: <h2 className="text-purple-500">One to Many Integrations</h2>,
+    title: <h2 className="">One to Many Integrations</h2>,
     heading: <h3>Find out who&apos;s behind any phone number</h3>,
     description: (
       <span className="text-sm">Get one to many integration benefits.</span>
@@ -533,7 +533,7 @@ const items = [
     icon: <IconSignature className="h-4 w-4" />,
   },
   {
-    title: <h2 className="text-primary">Document Analysis</h2>,
+    title: <h2 className="">Document Analysis</h2>,
     heading: <h3>Find out who&apos;s behind any phone number</h3>,
     description: (
       <span className="text-sm">
@@ -553,7 +553,7 @@ const items = [
   },
 
   {
-    title: <h2 className="text-cyan-500">Text Summarization</h2>,
+    title: <h2 className="">Text Summarization</h2>,
     heading: <h2>Find out who&apos;s behind any phone number</h2>,
     description: (
       <span className="text-sm">

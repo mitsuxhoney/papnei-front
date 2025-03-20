@@ -393,10 +393,7 @@ const FAQCTAData = {
   supportButtonUrl: 'https://yourwebsite.com/contact',
 }
 
-
-
 const Home = () => {
-  
   return (
     <div>
       <div>
@@ -468,7 +465,7 @@ const Home = () => {
         </div>
       </Wrapper>
 
-      <div className="w-full mb-16">
+      <div className="w-full">
         <Industries />
       </div>
 

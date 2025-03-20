@@ -307,44 +307,52 @@ const AboutUs = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            <Card className="p-8 rounded-lg shadow-md duration-300 hover:shadow-lg bg-yellow-500/10 text-yellow-500 ">
-              <div className="p-3 rounded-full bg-yellow-600/10 inline-block mb-4">
+            <Card className="p-8 rounded-lg shadow-md duration-300 hover:shadow-lg bg-yellow-500/10 ">
+              <div className="p-3 rounded-full bg-yellow-600/10 inline-block mb-4 text-yellow-500">
                 <Heart className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Trust & Security</h3>
+              <h3 className="text-xl font-bold mb-3 text-secondary">
+                Trust & Security
+              </h3>
               <p className="text-foreground/80">
                 Our solutions prioritize security and data integrity, ensuring
                 compliance and trust in digital transactions.
               </p>
             </Card>
 
-            <Card className=" p-8 rounded-lg shadow-md duration-300 hover:shadow-lg bg-purple-500/10 text-purple-500 ">
-              <div className=" p-3 rounded-full inline-block mb-4 text-primary bg-purple-500/10 text-purple-500 ">
+            <Card className=" p-8 rounded-lg shadow-md duration-300 hover:shadow-lg bg-purple-500/10">
+              <div className=" p-3 rounded-full inline-block mb-4 text-primary bg-purple-500/10 text-purple-500">
                 <Award className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Excellence</h3>
+              <h3 className="text-xl font-bold mb-3 text-secondary">
+                Excellence
+              </h3>
               <p className="text-foreground/80">
                 We uphold the highest standards in verification technology,
                 ensuring accuracy and reliability in every API service.
               </p>
             </Card>
 
-            <Card className=" p-8 rounded-lg shadow-md duration-300 hover:shadow-lg bg-cyan-500/10 text-cyan-500">
+            <Card className=" p-8 rounded-lg shadow-md duration-300 hover:shadow-lg bg-cyan-500/10">
               <div className=" p-3 rounded-full inline-block mb-4 bg-cyan-500/10 text-cyan-500">
                 <Shield className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Integrity</h3>
+              <h3 className="text-xl font-bold mb-3 text-secondary">
+                Integrity
+              </h3>
               <p className="text-muted-foreground ">
                 We are committed to ethical AI practices, maintaining
                 transparency and accountability in all verification processes.
               </p>
             </Card>
 
-            <Card className=" p-8 rounded-lg shadow-md duration-300 hover:shadow-lg bg-pink-500/10 text-pink-500">
+            <Card className=" p-8 rounded-lg shadow-md duration-300 hover:shadow-lg bg-pink-500/10">
               <div className=" p-3 rounded-full inline-block mb-4 bg-pink-500/10 text-pink-500">
                 <Users className="w-6 h-6 " />
               </div>
-              <h3 className="text-xl font-bold mb-3">Collaboration</h3>
+              <h3 className="text-xl font-bold mb-3 text-secondary">
+                Collaboration
+              </h3>
               <p className="text-muted-foreground">
                 We partner with businesses and organizations to develop
                 verification solutions that enhance digital security worldwide.

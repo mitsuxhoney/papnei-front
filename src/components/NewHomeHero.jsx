@@ -64,7 +64,7 @@ const NewHomeHero = ({ businessHero }) => {
             <SparklesIcon className="" size={14} />
             <span className="">Start Verfying In Minutes</span>
           </Badge>
-          <h2 className="text-[44px] xl:text-[82px] xl:leading-[95px] tracking-[-2px] font-bold max-w-[1171px] capitalize">
+          <h2 className="text-[44px] xl:text-[82px] xl:leading-[95px] tracking-[-2px] font-bold sora-heading max-w-[76rem] capitalize">
             Onboard{' '}
             <span className="px-4 text-secondary bg-[url('@/assets/boxStroke.png')] bg-contain bg-no-repeat">
               Verified

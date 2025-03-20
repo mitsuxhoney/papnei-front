@@ -105,13 +105,13 @@ export function Connect() {
                 ))}
               </div>
 
-              <div className="flex gap-4 max-sm:text-sm">
+              <div className="flex flex-col gap-4 text-sm lg:flex-row lg:gap-4 lg:text-md">
                 <Dialog>
                   <DialogTrigger asChild>
                     <motion.button
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      className="px-8 py-4 max-sm:px-4 max-sm:py-2  text-white hover:text-white bg-secondary rounded-xl hover:bg-secondary/90 transition-colors flex items-center justify-center group font-semibold shadow-lg"
+                      className="py-3 px-6 text-white hover:text-white bg-secondary rounded-xl hover:bg-secondary/90 transition-colors flex items-center justify-center group font-semibold shadow-lg"
                     >
                       GET API KEYS
                       <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
@@ -211,13 +211,13 @@ export function Connect() {
                 </Dialog>
 
                 <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="px-8 py-4 bg- backdrop-blur-sm text-secondary rounded-xl hover:bg-white/20 transition-colors border border-secondary"
+                  className="backdrop-blur-sm text-secondary font-medium text-md rounded-xl px-6 py-3 hover:bg-white/20 transition-colors border border-secondary"
                   onClick={() => {
                     navigate('/contact-us')
                     window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })
                   }}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                 >
                   Contact Us
                 </motion.button>
