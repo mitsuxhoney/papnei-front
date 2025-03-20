@@ -168,69 +168,68 @@ const MCAFiledDocs = () => {
         </section>
       </Wrapper> */}
 
+      <section className="py-16 bg-secondary/10 mb-16">
+        <div className=" mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
+            <p className="">
+              Enhancing trust and security in digital transactions through
+              AI-driven verification.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">
+                <NumberTicker
+                  value={500}
+                  className="font-bold tracking-normal text-secondary"
+                />
+                <span className="text-secondary">+</span>
+              </div>
+              <p className="text-xl ">Businesses Verified</p>
+            </div>
+
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">
+                <NumberTicker
+                  value={1}
+                  className="font-bold tracking-normal text-secondary"
+                />
+                <span className="text-secondary">M+</span>
+              </div>
+              <p className="text-xl">Identities Verified</p>
+            </div>
+
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">
+                <NumberTicker
+                  value={1}
+                  className="font-bold tracking-normal text-secondary"
+                />
+                <span className="text-secondary">M+</span>
+              </div>
+              <p className="text-xl">Documents Verified</p>
+            </div>
+
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">
+                <NumberTicker
+                  value={1}
+                  className="font-bold tracking-normal text-secondary"
+                />
+                <span className="text-secondary">M+</span>
+              </div>
+              <p className="text-xl">Users Verified</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Wrapper>
         <div className="w-full">
           <FeaturesSection grid={features} gridHeading={featuresHeading} />
         </div>
-      </Wrapper>
-
-      <Wrapper>
-        <section className="py-16">
-          <div className="mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
-              <p className="">
-                Transforming digital verification with Aadhaar e-Sign technology.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-2">
-                  <NumberTicker
-                    value={500}
-                    className="font-bold tracking-normal"
-                  />
-                  +
-                </div>
-                <p className="text-xl">Organizations </p>
-              </div>
-
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-2">
-                  <NumberTicker
-                    value={5}
-                    className="font-bold tracking-normal"
-                  />
-                  M+
-                </div>
-                <p className="text-xl">Documents Digitally Signed</p>
-              </div>
-
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-2">
-                  <NumberTicker
-                    value={99.9}
-                    className="font-bold tracking-normal"
-                  />
-                  %
-                </div>
-                <p className="text-xl">Success Rate</p>
-              </div>
-
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-2">
-                  <NumberTicker
-                    value={100}
-                    className="font-bold tracking-normal"
-                  />
-                  +
-                </div>
-                <p className="text-xl">Trusted Partners</p>
-              </div>
-            </div>
-          </div>
-        </section>
       </Wrapper>
 
       <Wrapper>
@@ -242,7 +241,8 @@ const MCAFiledDocs = () => {
                   Frequently Asked Questions
                 </h2>
                 <p className="text-muted-foreground">
-                  Find answers to common questions about Aadhaar e-Sign verification for MCA filed documents.
+                  Find answers to common questions about Aadhaar e-Sign
+                  verification for MCA filed documents.
                 </p>
               </div>
 
@@ -252,7 +252,10 @@ const MCAFiledDocs = () => {
                     What is Aadhaar e-Sign verification for MCA filed documents?
                   </h3>
                   <p className="text-muted-foreground">
-                    Aadhaar e-Sign verification allows users to digitally sign and authenticate MCA (Ministry of Corporate Affairs) filed documents using their Aadhaar credentials, ensuring compliance with regulatory requirements.
+                    Aadhaar e-Sign verification allows users to digitally sign
+                    and authenticate MCA (Ministry of Corporate Affairs) filed
+                    documents using their Aadhaar credentials, ensuring
+                    compliance with regulatory requirements.
                   </p>
                 </div>
 
@@ -261,7 +264,10 @@ const MCAFiledDocs = () => {
                     How can I use Aadhaar e-Sign for MCA document verification?
                   </h3>
                   <p className="text-muted-foreground">
-                    You can use Aadhaar e-Sign to verify MCA filed documents by linking your Aadhaar number, authenticating via OTP or biometric verification, and digitally signing forms such as INC-32, AOC-4, and MGT-7 seamlessly through our platform.
+                    You can use Aadhaar e-Sign to verify MCA filed documents by
+                    linking your Aadhaar number, authenticating via OTP or
+                    biometric verification, and digitally signing forms such as
+                    INC-32, AOC-4, and MGT-7 seamlessly through our platform.
                   </p>
                 </div>
 
@@ -270,7 +276,10 @@ const MCAFiledDocs = () => {
                     Is Aadhaar e-Sign legally valid for MCA filings?
                   </h3>
                   <p className="text-muted-foreground">
-                    Yes, Aadhaar e-Sign is legally valid for MCA filings under the Information Technology Act, 2000. It is recognized by MCA and regulatory authorities for digitally signing corporate documents.
+                    Yes, Aadhaar e-Sign is legally valid for MCA filings under
+                    the Information Technology Act, 2000. It is recognized by
+                    MCA and regulatory authorities for digitally signing
+                    corporate documents.
                   </p>
                 </div>
 
@@ -279,7 +288,10 @@ const MCAFiledDocs = () => {
                     Is Aadhaar e-Sign secure for MCA document submission?
                   </h3>
                   <p className="text-muted-foreground">
-                    Absolutely. Aadhaar e-Sign follows strict security protocols, including encryption, two-factor authentication, and compliance with UIDAI and MCA guidelines, ensuring document integrity and confidentiality.
+                    Absolutely. Aadhaar e-Sign follows strict security
+                    protocols, including encryption, two-factor authentication,
+                    and compliance with UIDAI and MCA guidelines, ensuring
+                    document integrity and confidentiality.
                   </p>
                 </div>
               </div>
@@ -335,6 +347,5 @@ const MCAFiledDocs = () => {
     </div>
   )
 }
-
 
 export default MCAFiledDocs

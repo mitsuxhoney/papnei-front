@@ -14,14 +14,11 @@ export function IntegrationBenefits({
   return (
     <div className={cn('', className)}>
       <div className=" mx-auto w-full">
-        <div className="flex flex-col items-center gap-4 text-center mb-10">
-          <h1 className="max-w-2xl text-3xl font-semibold md:text-4xl">
-            Seamless API{' '}
-            <div className="inline-block bg-primary rounded-md -rotate-2 p-2">
-              <div className="rotate-2 text-white ">Integration</div>
-            </div>{' '}
+        <div className="text-center mb-10">
+          <h1 className="mb-4 text-center text-5xl font-bold leading-[1.2]">
+            Seamless API Integration
           </h1>
-          <p className="text-muted-foreground">
+          <p className="mx-auto mb-8 max-w-lg text-center text-lg font-medium text-foreground/80">
             Our APIs are designed to be developer-friendly, secure, and easy to
             implement—ensuring a hassle-free verification process.
           </p>
@@ -55,7 +52,7 @@ export function IntegrationBenefits({
                 key={index}
                 className={cn(
                   `flex items-start gap-6 md:gap-4 cursor-pointer rounded-md px-6 py-4 relative ${
-                    step === feature.step ? 'bg-primary/10' : ''
+                    step === feature.step ? 'bg-secondary/5' : ''
                   } `
                 )}
                 onClick={() => {
@@ -75,7 +72,7 @@ export function IntegrationBenefits({
                 <div className="flex-1">
                   <h3
                     className={`max-md:text-sm md:text-xl font-semibold ${
-                      step === feature.step ? 'text-primary' : ''
+                      step === feature.step ? 'text-secondary' : ''
                     }`}
                   >
                     {feature.title || feature.step}
@@ -88,7 +85,7 @@ export function IntegrationBenefits({
                 </div>
                 {step === feature.step && (
                   <motion.div
-                    className="absolute bottom-0 left-0 h-1 bg-primary rounded-md"
+                    className="absolute bottom-0 left-0 h-1 bg-secondary rounded-md"
                     initial={{ width: '0%' }}
                     animate={{ width: '100%' }}
                     transition={{ duration: 4, ease: 'easeInOut' }}

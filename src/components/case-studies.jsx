@@ -201,6 +201,7 @@ import {
 } from 'lucide-react'
 import useEmblaCarousel from 'embla-carousel-react'
 import { useCallback, useEffect, useState } from 'react'
+import { cn } from '../lib/utils'
 export function CaseStudies() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
@@ -254,78 +255,208 @@ export function CaseStudies() {
   }, [emblaApi, onSelect])
   const industries = [
     {
-      title: 'Fintech Startup',
-      heading: 'Boosted Loan Approvals with Instant KYC',
-      description:
-        'A fintech startup reduced onboarding time by 60% using Aadhaar-based e-KYC verification.',
+      title: (
+        <h3 className="text-lg font-semibold text-yellow-500">
+          Fintech Startup
+        </h3>
+      ),
+      heading: (
+        <p className="text-md font-semibold ">
+          Boosted Loan Approvals with Instant KYC
+        </p>
+      ),
+      description: (
+        <p className="text-sm  mb-4">
+          A fintech startup reduced onboarding time by 60% using Aadhaar-based
+          e-KYC verification.{' '}
+        </p>
+      ),
       image: '/src/assets/case1.png',
+      color: 'bg-yellow-500/10',
     },
     {
-      title: 'E-commerce Platform',
-      heading: 'Prevented Fraudulent Sellers with Business',
-      description:
-        'An e-commerce giant verified business registrations to eliminate fake sellers and ensure trust.',
+      title: (
+        <h3 className="text-lg font-semibold text-purple-500">
+          E-commerce Platform
+        </h3>
+      ),
+      heading: (
+        <p className="text-md font-semibold ">
+          Prevented Fraudulent Sellers with Business
+        </p>
+      ),
+      description: (
+        <p className="text-sm  mb-4">
+          An e-commerce giant verified business registrations to eliminate fake
+          sellers and ensure trust.
+        </p>
+      ),
       image: '/src/assets/case2.png',
+      color: 'bg-purple-500/10',
     },
     {
-      title: 'Ride-Sharing Company',
-      heading: 'Enhanced Driver Verification with Identity API',
-      description:
-        'A mobility startup ensured passenger safety by verifying driver backgrounds in real time.',
+      title: (
+        <h3 className="text-lg font-semibold text-pink-500">
+          Ride-Sharing Company
+        </h3>
+      ),
+      heading: (
+        <p className="text-md font-semibold ">
+          Enhanced Driver Verification with Identity API
+        </p>
+      ),
+      description: (
+        <p className="text-sm  mb-4">
+          A mobility startup ensured passenger safety by verifying driver
+          backgrounds in real time.
+        </p>
+      ),
       image: '/src/assets/case3.png',
+      color: 'bg-pink-500/10',
     },
     {
-      title: 'Digital Bank',
-      heading: 'Seamless Customer Onboarding with Aadhaar',
-      description:
-        'A neobank improved conversion rates by 45% with instant Aadhaar-based account verification.',
-      image: '/src/assets/case2.png',
-    },
-    {
-      title: 'Insurance Provider',
-      heading: 'Reduced Fraudulent Claims Using Identity',
-      description:
-        'An insurance firm prevented fake claims by cross-checking customer details with government records.',
-      image: '/src/assets/case3.png',
-    },
-    {
-      title: 'Crypto Exchange',
-      heading: 'Ensured Regulatory Compliance with User',
-      description:
-        'A crypto platform met compliance requirements by verifying user identities before transactions.',
-      image: '/src/assets/case3.png',
-    },
-    {
-      title: 'Gig Economy Platform',
-      heading: 'Verified Freelancer Identities for Secure',
-      description:
-        'A freelancing platform ensured payments go to verified users with real-time ID checks.',
+      title: (
+        <h3 className="text-lg font-semibold text-violet-500">
+          Fintech1 Startup
+        </h3>
+      ),
+      heading: (
+        <p className="text-md font-semibold ">
+          Boosted Loan Approvals with Instant KYC
+        </p>
+      ),
+      description: (
+        <p className="text-sm  mb-4">
+          A fintech startup reduced onboarding time by 60% using Aadhaar-based
+          e-KYC verification.{' '}
+        </p>
+      ),
       image: '/src/assets/case1.png',
+      color: 'bg-violet-500/10',
     },
     {
-      title: 'Healthcare Provider',
-      heading: 'Verified Patient Identities for Secure',
-      description:
-        'A healthcare provider ensured patient data security by linking records with Aadhaar.',
+      title: (
+        <h3 className="text-lg font-semibold text-cyan-500">
+          E-commerce Platform1
+        </h3>
+      ),
+      heading: (
+        <p className="text-md font-semibold ">
+          Prevented Fraudulent Sellers with Business
+        </p>
+      ),
+      description: (
+        <p className="text-sm  mb-4">
+          An e-commerce giant verified business registrations to eliminate fake
+          sellers and ensure trust.
+        </p>
+      ),
       image: '/src/assets/case2.png',
+      color: 'bg-cyan-500/10',
     },
     {
-      title: 'Real Estate Platform',
-      heading: 'Tenant Screening with Instant ID Verification',
-      description:
-        'A property rental platform reduced fraud by verifying tenant identities before leasing.',
+      title: (
+        <h3 className="text-lg font-semibold text-yellow-500">
+          Ride-Sharing Company1
+        </h3>
+      ),
+      heading: (
+        <p className="text-md font-semibold ">
+          Enhanced Driver Verification with Identity API
+        </p>
+      ),
+      description: (
+        <p className="text-sm  mb-4">
+          A mobility startup ensured passenger safety by verifying driver
+          backgrounds in real time.
+        </p>
+      ),
       image: '/src/assets/case3.png',
+      color: 'bg-yellow-500/10',
     },
     {
-      title: 'Education Portal',
-      heading: 'Prevented Fake Student Applications with KYC',
-      description:
-        'An online learning platform ensured genuine enrollments by verifying student identities.',
+      title: (
+        <h3 className="text-lg font-semibold text-purple-500">
+          Fintech Startup2
+        </h3>
+      ),
+      heading: (
+        <p className="text-md font-semibold ">
+          Boosted Loan Approvals with Instant KYC
+        </p>
+      ),
+      description: (
+        <p className="text-sm  mb-4">
+          A fintech startup reduced onboarding time by 60% using Aadhaar-based
+          e-KYC verification.{' '}
+        </p>
+      ),
       image: '/src/assets/case1.png',
+      color: 'bg-purple-500/10',
+    },
+    {
+      title: (
+        <h3 className="text-lg font-semibold text-violet-500">
+          E-commerce Platform2
+        </h3>
+      ),
+      heading: (
+        <p className="text-md font-semibold ">
+          Prevented Fraudulent Sellers with Business
+        </p>
+      ),
+      description: (
+        <p className="text-sm  mb-4">
+          An e-commerce giant verified business registrations to eliminate fake
+          sellers and ensure trust.
+        </p>
+      ),
+      image: '/src/assets/case2.png',
+      color: 'bg-violet-500/10',
+    },
+    {
+      title: (
+        <h3 className="text-lg font-semibold text-cyan-500">
+          Ride-Sharing Company2
+        </h3>
+      ),
+      heading: (
+        <p className="text-md font-semibold ">
+          Enhanced Driver Verification with Identity API
+        </p>
+      ),
+      description: (
+        <p className="text-sm  mb-4">
+          A mobility startup ensured passenger safety by verifying driver
+          backgrounds in real time.
+        </p>
+      ),
+      image: '/src/assets/case3.png',
+      color: 'bg-cyan-500/10',
+    },
+    {
+      title: (
+        <h3 className="text-lg font-semibold text-pink-500">
+          Fintech Startup3
+        </h3>
+      ),
+      heading: (
+        <p className="text-md font-semibold ">
+          Boosted Loan Approvals with Instant KYC
+        </p>
+      ),
+      description: (
+        <p className="text-sm  mb-4">
+          A fintech startup reduced onboarding time by 60% using Aadhaar-based
+          e-KYC verification.{' '}
+        </p>
+      ),
+      image: '/src/assets/case1.png',
+      color: 'bg-pink-500/10',
     },
   ]
   return (
-    <section className="py-20 bg-[#5359EF0A] relative overflow-hidden">
+    <section className="pb-20 relative overflow-hidden">
       <div className="absolute inset-0 -z-10" />
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
@@ -334,14 +465,15 @@ export function CaseStudies() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="text-3xl font-semibold md:text-5xl w-full flex justify-center items-center gap-1">
+            <div className="mb-4 text-center text-5xl font-bold leading-[1.2]">
               Recent Case Studies
               {/* <div className="inline-block bg-primary rounded-md -rotate-2 p-2">
                 <div className="rotate-2 text-white ">Case Studies</div>
               </div>{' '} */}
             </div>
-            <p className="text-xl text-secondary-600 max-w-2xl mx-auto mt-4">
-              Tailored verification solutions for every sector
+            <p className="mx-auto mb-8 max-w-lg text-center text-lg font-medium text-foreground/80">
+              Explore our recent case studies showcasing real-world success
+              stories and impactful solutions.
             </p>
           </motion.div>
         </div>
@@ -352,17 +484,18 @@ export function CaseStudies() {
                 key={index}
                 className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.33%] pl-4"
               >
-                <div className="group overflow-hidden relative rounded-[4px] bg-secondary/10 lg:h-[400px] px-4 py-4 border border-primary-100 hover:border-primary-200 transition-all duration-300 hover:shadow-sm h-full">
+                <div
+                  className={cn(
+                    'group overflow-hidden relative rounded-[4px] lg:h-[400px] px-4 py-4 border border-primary-100 transition-all duration-300 hover:shadow-sm h-full',
+                    industry.color
+                  )}
+                >
                   <div className="flex flex-col gap-3 items-start">
-                    <h3 className="text-lg font-semibold text-tertiary">
-                      {industry.title}
-                    </h3>
-                    <p className="text-md font-semibold text-black">
-                      {industry.heading}
-                    </p>
-                    <p className="text-sm text-black mb-4">
+                    <div>{industry.title}</div>
+                    <div className="text-neutral-600">{industry.heading}</div>
+                    <div className="text-foreground/80">
                       {industry.description}
-                    </p>
+                    </div>
                   </div>
                   <div className="absolute lg:-right-1">
                     <img

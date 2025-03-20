@@ -32,7 +32,7 @@ const formSchema = z.object({
   workEmail: z.string().email({ message: 'Invalid work email address.' }),
 })
 
-export function BorderBeamForm({ className }) {
+export function BorderBeamForm({ borderExists }) {
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -80,12 +80,7 @@ export function BorderBeamForm({ className }) {
     })
   }
   return (
-    <Card
-      className={cn(
-        'relative flex flex-col items-start overflow-hidden',
-        className
-      )}
-    >
+    <Card className={cn('relative flex flex-col items-start overflow-hidden')}>
       <CardHeader>
         <CardTitle>Contact us</CardTitle>
         <CardDescription>
@@ -160,7 +155,7 @@ export function BorderBeamForm({ className }) {
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full">
+            <Button type="submit" className="w-full bg-secondary">
               Get your API key
             </Button>
           </form>
@@ -172,6 +167,7 @@ export function BorderBeamForm({ className }) {
         size={100}
         className="from-transparent via-red-500 to-transparent"
       />
+
       <BorderBeam
         duration={8}
         delay={3}

@@ -141,7 +141,7 @@ function Footerdemo() {
                           size="icon"
                           className="rounded-full hover:bg-primary/10 hover:bg-white hover:border-transparent hover:shadow-none"
                         >
-                          <Facebook className="h-4 w-4 text-primary" />
+                          <Facebook className="h-4 w-4 text-secondary" />
                           <span className="sr-only">Facebook</span>
                         </Button>
                       </TooltipTrigger>
@@ -158,7 +158,7 @@ function Footerdemo() {
                           size="icon"
                           className="rounded-full hover:bg-primary/10 hover:bg-white hover:border-transparent hover:shadow-none"
                         >
-                          <Twitter className="h-4 w-4 text-primary " />
+                          <Twitter className="h-4 w-4 text-secondary" />
                           <span className="sr-only">Twitter</span>
                         </Button>
                       </TooltipTrigger>
@@ -175,7 +175,7 @@ function Footerdemo() {
                           size="icon"
                           className="rounded-full hover:bg-primary/10 hover:bg-white hover:border-transparent hover:shadow-none"
                         >
-                          <Instagram className="h-4 w-4 text-primary" />
+                          <Instagram className="h-4 w-4 text-secondary" />
                           <span className="sr-only">Instagram</span>
                         </Button>
                       </TooltipTrigger>
@@ -192,7 +192,7 @@ function Footerdemo() {
                           size="icon"
                           className="rounded-full hover:bg-primary/10 hover:bg-white hover:border-transparent hover:shadow-none"
                         >
-                          <Linkedin className="h-4 w-4 text-primary" />
+                          <Linkedin className="h-4 w-4 text-secondary" />
                           <span className="sr-only">LinkedIn</span>
                         </Button>
                       </TooltipTrigger>
@@ -224,13 +224,13 @@ function Footerdemo() {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="rounded-full hover:bg-primary hover:bg-white"
+                  className="rounded-full hover:bg-secondary hover:bg-white"
                   onClick={() => {
                     window.scrollTo({ top: 0, behavior: 'smooth' })
                   }}
                 >
                   <ArrowUpIcon
-                    className="h-6 w-6 text-primary"
+                    className="h-6 w-6 text-secondary"
                     strokeWidth={3}
                   />
                   <span className="sr-only ">Scroll to top</span>

@@ -322,8 +322,8 @@ const SkeletonFive = () => {
 }
 const items = [
   {
-    title: 'AI Powered Verification',
-    heading: <h2>Find out who&apos;s behind any phone number</h2>,
+    title: <h2 className="text-yellow-500">AI Powered Verification</h2>,
+    heading: <h3 className="">Find out who&apos;s behind any phone number</h3>,
     description: (
       <span className="text-sm">
         Experience the power of AI in Verification.
@@ -336,12 +336,12 @@ const items = [
         </div>
       </LazyLoadMotion>
     ),
-    className: 'max-md:col-span-2 lg:col-span-1 lg:h-[260px]',
+    className: 'max-md:col-span-2 lg:col-span-1 lg:h-[260px] bg-yellow-500/10',
     icon: <IconClipboardCopy className="h-4 w-4" />,
   },
   {
-    title: 'Automated Scanning',
-    heading: <h2>Find out who&apos;s behind any phone number</h2>,
+    title: <h2 className="text-violet-500">Automated Scanning</h2>,
+    heading: <h3>Find out who&apos;s behind any phone number</h3>,
     header: (
       <LazyLoadMotion>
         <div className="absolute left-0 right-0 -bottom-48 lg:-bottom-50 lg:left-0 lg:-right-52">
@@ -355,12 +355,12 @@ const items = [
       </span>
     ),
 
-    className: 'max-md:col-span-2 lg:col-span-1 lg:h-[260px]',
+    className: 'max-md:col-span-2 lg:col-span-1 lg:h-[260px] bg-violet-500/10',
     icon: <IconFileBroken className="h-4 w-4" />,
   },
   {
-    title: 'One to Many Integrations',
-    heading: <h2>Find out who&apos;s behind any phone number</h2>,
+    title: <h2 className="text-purple-500">One to Many Integrations</h2>,
+    heading: <h3>Find out who&apos;s behind any phone number</h3>,
     description: (
       <span className="text-sm">Get one to many integration benefits.</span>
     ),
@@ -529,12 +529,12 @@ const items = [
         </div>
       </div>
     ),
-    className: 'max-md:col-span-2 lg:col-span-1 lg:h-[260px]',
+    className: 'max-md:col-span-2 lg:col-span-1 lg:h-[260px] bg-purple-500/10',
     icon: <IconSignature className="h-4 w-4" />,
   },
   {
-    title: 'Document Analysis',
-    heading: <h2>Find out who&apos;s behind any phone number</h2>,
+    title: <h2 className="text-primary">Document Analysis</h2>,
+    heading: <h3>Find out who&apos;s behind any phone number</h3>,
     description: (
       <span className="text-sm">
         Understand the sentiment of your text with AI analysis.
@@ -548,12 +548,12 @@ const items = [
         </div>
       </LazyLoadMotion>
     ),
-    className: 'max-md:col-span-2 lg:col-span-2 lg:h-[170px]',
+    className: 'max-md:col-span-2 lg:col-span-2 lg:h-[170px] bg-primary/10',
     icon: <IconTableColumn className="h-4 w-4" />,
   },
 
   {
-    title: 'Text Summarization',
+    title: <h2 className="text-cyan-500">Text Summarization</h2>,
     heading: <h2>Find out who&apos;s behind any phone number</h2>,
     description: (
       <span className="text-sm">
@@ -562,7 +562,7 @@ const items = [
     ),
     header: '',
     contentClassName: 'gap-6',
-    className: 'max-md:col-span-2 lg:col-span-1 lg:h-[170px]',
+    className: 'max-md:col-span-2 lg:col-span-1 lg:h-[170px] bg-cyan-500/10',
     icon: <IconBoxAlignRightFilled className="h-4 w-4" />,
   },
 ]
@@ -575,16 +575,18 @@ export function Why() {
     setColor(theme === 'dark' ? '#ffffff' : '#000000')
   }, [theme])
   return (
-    <div className="bg-[#5359EF0A] py-20">
-      <div className="flex flex-col items-center gap-4 text-center mb-6">
-        <div className="max-w-2xl text-3xl font-semibold md:text-5xl ">
+    <div className="py-20">
+      <div className="text-center mb-6">
+        <div className="mb-4 text-center text-5xl font-bold leading-[1.2]">
           Why Choose {` `}
           {/* <div className="inline-block bg-primary rounded-md -rotate-2 p-2">
             <div className="rotate-2 text-white ">Choose</div>
           </div>{' '} */}
           Us ?
         </div>
-        <p className="text-muted-foreground">{why.description}</p>
+        <p className="mx-auto mb-8 max-w-lg text-center text-lg font-medium text-foreground/80">
+          {why.description}
+        </p>
       </div>
       <Wrapper>
         <BentoGrid gap={20}>

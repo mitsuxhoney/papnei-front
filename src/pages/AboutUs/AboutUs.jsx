@@ -14,7 +14,7 @@ const insightsArray = [
   {
     id: 1,
     heading:
-      '"Integration of Trustfulls identity scoring algorithms in our AML/KYC process allowed our bank to tap into alternative data sources to identify suspicious behavior in the account opening phase, with positive impacts on overall onboarding process and account opening times."',
+      '"Integration of Trustfulls identity scoring algorithms in our AML/KYC process allowed our bank to tap into alternative data sources to identify suspicious behavior."',
     user: {
       name: 'Luca Crivellari',
       position:
@@ -31,7 +31,7 @@ const insightsArray = [
         <g clipPath="url(#clip0_255_21279)">
           <path
             d="M109.06 59.1822C108.221 60.2555 106.062 62.3035 101.954 62.3035C97.1546 62.3035 93.8236 59.3056 93.8236 55.037C93.8236 50.3613 97.1916 48.4614 100.93 47.2894L106.469 45.5622V50.46L102.916 51.8541C101.621 52.4092 101.028 53.2975 101.028 54.3708C101.028 55.5428 102.052 57.122 104.446 57.122C107.357 57.122 109.047 55.111 109.047 52.5449V44.9947C109.047 42.8851 107.752 41.5897 105.161 41.5897C101.744 41.5897 100.967 43.724 100.967 45.2291H94.3664C94.3664 39.5418 98.4253 35.9517 105.383 35.9517C112.341 35.9517 116.042 38.7029 116.042 44.4395V61.9704H109.035V59.1699L109.06 59.1822ZM83.954 27.4639H90.9244V61.9704H83.954V27.4639ZM73.1962 27.4639H80.1665V61.9704H73.1962V27.4639ZM55.3816 46.5738H62.8948C62.7097 43.724 60.8222 41.8241 58.2437 41.8241C55.6653 41.8241 52.8031 43.7363 52.8031 49.0166V49.7198C52.9018 53.5072 54.5673 56.3447 58.3794 56.3447C61.0566 56.3447 62.574 54.852 63.0798 53.3468L69.31 55.3578C68.2367 58.5284 65.0661 62.3158 58.0093 62.3158C50.3481 62.3158 45.586 56.5791 45.586 49.6334C45.586 41.6514 50.3357 35.964 58.0834 35.964C66.3368 35.964 69.9885 41.9845 69.9885 49.2016V51.1632H55.3692V46.5738H55.3816ZM17.3713 51.2989H24.9339V52.2365C24.9339 55.3578 27.389 56.6655 30.6089 56.6655C34.347 56.6655 35.6424 55.1234 35.6424 53.1618C35.6424 51.1015 33.6561 50.3119 30.4239 49.325L26.9202 48.2517C21.9484 46.7096 18.1116 44.6986 17.9758 39.0606C17.9758 33.7434 21.6646 28.8456 30.757 28.8456C38.7883 28.8456 42.8472 32.4357 42.8472 38.3204V39.3074H35.9261V38.5671C35.9261 35.9024 34.162 34.5083 30.6089 34.5083C27.5123 34.5083 25.6248 35.9517 25.6248 37.9626C25.6248 39.4061 26.1799 40.6644 29.5109 41.7007L34.5938 43.2429C39.8123 44.822 43.4887 47.0303 43.4887 52.6683C43.4887 58.3063 39.2448 62.4762 30.6583 62.4762C20.5666 62.4639 17.3713 57.2083 17.3713 52.2489V51.2989Z"
-            fill="#0D9488"
+            fill="#151515"
           />
         </g>
         <defs>
@@ -225,17 +225,17 @@ const AboutUs = () => {
       </Wrapper>
 
       {/* Our Story Section */}
-      <section className="py-20 bg-[#5359EF0A]">
+      <section className="py-20 bg-secondary/10">
         <Wrapper>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div className="flex flex-col gap-4 items-start">
-              <h2 className="text-primary text-[14px] font-semibold leading-[26px] tracking-[0.131px] uppercase">
+              <h2 className="text-secondary text-[14px] font-semibold leading-[26px] tracking-[0.131px] uppercase">
                 WHAT WE DO
               </h2>
-              <p className="text-black font-semibold leading-[48px] tracking-[-0.317px] text-[37px]">
+              <p className="font-semibold leading-[48px] tracking-[-0.317px] text-[37px]">
                 We power trust building solutions
               </p>
-              <p className="text-[19px] font-extralight leading-[30px] tracking-[0.417px]">
+              <p className="text-[19px] font-extralight text-foreground/80 leading-[30px] tracking-[0.417px]">
                 Trustfull&apos;s Identity Intelligence solution helps businesses
                 reduce risks, protect integrity and accelerate growth on a
                 global scale. Our solutions unlock hundreds of digital signals
@@ -245,10 +245,10 @@ const AboutUs = () => {
             </div>
             <div className="grid grid-cols-2 gap-4 lg:place-items-center ">
               <div className="flex flex-col gap-2">
-                <h3 className="text-primary font-bold leading-[64px] text-[60px]">
+                <h3 className="text-secondary font-bold leading-[64px] text-[60px]">
                   <NumberTicker
                     value={50}
-                    className="font-bold tracking-normal text-primary"
+                    className="font-bold tracking-normal text-secondary"
                   />
                   K
                 </h3>
@@ -257,7 +257,7 @@ const AboutUs = () => {
                 </p>
               </div>
               <div className="flex flex-col gap-2">
-                <h3 className="text-primary font-bold leading-[64px] text-[60px]">
+                <h3 className="text-secondary font-bold leading-[64px] text-[60px]">
                   0%
                 </h3>
                 <p className="text-[19px] font-light leading-[30px] tracking-[0.214px]">
@@ -265,10 +265,10 @@ const AboutUs = () => {
                 </p>
               </div>
               <div className="flex flex-col gap-2 mr-3">
-                <h3 className="text-primary font-bold leading-[64px] text-[60px]">
+                <h3 className="text-secondary font-bold leading-[64px] text-[60px]">
                   <NumberTicker
                     value={40}
-                    className="font-bold tracking-normal text-primary"
+                    className="font-bold tracking-normal text-secondary"
                   />
                   %
                 </h3>
@@ -277,10 +277,10 @@ const AboutUs = () => {
                 </p>
               </div>
               <div className="flex flex-col gap-2 mr-4">
-                <h3 className="text-primary font-bold leading-[64px] text-[60px]">
+                <h3 className="text-secondary font-bold leading-[64px] text-[60px]">
                   <NumberTicker
                     value={60}
-                    className="font-bold tracking-normal text-primary"
+                    className="font-bold tracking-normal text-secondary"
                   />
                   +
                 </h3>
@@ -297,58 +297,54 @@ const AboutUs = () => {
       <section id="mission" className="py-24">
         <div className=" mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Mission & Values</h2>
-            <p className="text-muted-foreground">
+            <h2 className="mb-4 text-center text-5xl font-bold leading-[1.2]">
+              Our Mission & Values
+            </h2>
+            <p className="mx-auto mb-8 max-w-lg text-center text-lg font-medium text-foreground/80">
               At XRAY AI, we are committed to enabling secure and seamless
               digital verification through AI-driven solutions.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            <Card className="p-8 rounded-lg shadow-md duration-300 hover:shadow-lg bg-primary/10">
-              <div className="p-3 rounded-full bg-primary/10 text-primary inline-block mb-4">
+            <Card className="p-8 rounded-lg shadow-md duration-300 hover:shadow-lg bg-yellow-500/10 text-yellow-500 ">
+              <div className="p-3 rounded-full bg-yellow-600/10 inline-block mb-4">
                 <Heart className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-primary">
-                Trust & Security
-              </h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-xl font-bold mb-3">Trust & Security</h3>
+              <p className="text-foreground/80">
                 Our solutions prioritize security and data integrity, ensuring
                 compliance and trust in digital transactions.
               </p>
             </Card>
 
-            <Card className=" p-8 rounded-lg shadow-md duration-300 hover:shadow-lg bg-primary/10">
-              <div className=" p-3 rounded-full inline-block mb-4 text-primary bg-primary/10">
+            <Card className=" p-8 rounded-lg shadow-md duration-300 hover:shadow-lg bg-purple-500/10 text-purple-500 ">
+              <div className=" p-3 rounded-full inline-block mb-4 text-primary bg-purple-500/10 text-purple-500 ">
                 <Award className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-primary">
-                Excellence
-              </h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-xl font-bold mb-3">Excellence</h3>
+              <p className="text-foreground/80">
                 We uphold the highest standards in verification technology,
                 ensuring accuracy and reliability in every API service.
               </p>
             </Card>
 
-            <Card className=" p-8 rounded-lg shadow-md duration-300 hover:shadow-lg bg-primary/10">
-              <div className=" p-3 rounded-full inline-block mb-4 text-primary bg-primary/10">
+            <Card className=" p-8 rounded-lg shadow-md duration-300 hover:shadow-lg bg-cyan-500/10 text-cyan-500">
+              <div className=" p-3 rounded-full inline-block mb-4 bg-cyan-500/10 text-cyan-500">
                 <Shield className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-primary">Integrity</h3>
+              <h3 className="text-xl font-bold mb-3">Integrity</h3>
               <p className="text-muted-foreground ">
                 We are committed to ethical AI practices, maintaining
                 transparency and accountability in all verification processes.
               </p>
             </Card>
 
-            <Card className=" p-8 rounded-lg shadow-md duration-300 hover:shadow-lg bg-primary/10">
-              <div className=" p-3 rounded-full inline-block mb-4 text-primary bg-primary/10">
+            <Card className=" p-8 rounded-lg shadow-md duration-300 hover:shadow-lg bg-pink-500/10 text-pink-500">
+              <div className=" p-3 rounded-full inline-block mb-4 bg-pink-500/10 text-pink-500">
                 <Users className="w-6 h-6 " />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-primary">
-                Collaboration
-              </h3>
+              <h3 className="text-xl font-bold mb-3">Collaboration</h3>
               <p className="text-muted-foreground">
                 We partner with businesses and organizations to develop
                 verification solutions that enhance digital security worldwide.
@@ -359,7 +355,7 @@ const AboutUs = () => {
       </section>
 
       {/* Achievements Section */}
-      <section className="py-16 bg-primary/10">
+      <section className="py-16 bg-secondary/10">
         <div className=" mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
@@ -374,9 +370,9 @@ const AboutUs = () => {
               <div className="text-5xl font-bold mb-2">
                 <NumberTicker
                   value={500}
-                  className="font-bold tracking-normal text-primary"
+                  className="font-bold tracking-normal text-secondary"
                 />
-                <span className="text-primary">+</span>
+                <span className="text-secondary">+</span>
               </div>
               <p className="text-xl ">Businesses Verified</p>
             </div>
@@ -385,9 +381,9 @@ const AboutUs = () => {
               <div className="text-5xl font-bold mb-2">
                 <NumberTicker
                   value={1}
-                  className="font-bold tracking-normal text-primary"
+                  className="font-bold tracking-normal text-secondary"
                 />
-                <span className="text-primary">M+</span>
+                <span className="text-secondary">M+</span>
               </div>
               <p className="text-xl">Identities Verified</p>
             </div>
@@ -396,9 +392,9 @@ const AboutUs = () => {
               <div className="text-5xl font-bold mb-2">
                 <NumberTicker
                   value={1}
-                  className="font-bold tracking-normal text-primary"
+                  className="font-bold tracking-normal text-secondary"
                 />
-                <span className="text-primary">M+</span>
+                <span className="text-secondary">M+</span>
               </div>
               <p className="text-xl">Documents Verified</p>
             </div>
@@ -407,9 +403,9 @@ const AboutUs = () => {
               <div className="text-5xl font-bold mb-2">
                 <NumberTicker
                   value={1}
-                  className="font-bold tracking-normal text-primary"
+                  className="font-bold tracking-normal text-secondary"
                 />
-                <span className="text-primary">M+</span>
+                <span className="text-secondary">M+</span>
               </div>
               <p className="text-xl">Users Verified</p>
             </div>
@@ -419,7 +415,7 @@ const AboutUs = () => {
       <section className="py-24">
         <Wrapper>
           <div className="flex flex-col gap-4">
-            <div className="flex flex-col gap-4 order-2 bg-primary text-white p-6 lg:p-24 rounded-[4px]">
+            <div className="flex flex-col gap-4 order-2 bg-secondary text-white p-6 lg:p-24 rounded-[4px]">
               {insightsArray.map((insight) => {
                 if (insights === insight.id) {
                   return (
@@ -439,7 +435,7 @@ const AboutUs = () => {
                           </p>
                         </div>
                         <div>
-                          <Button className="bg-white text-primary font-bold tracking-wide hover:bg-white">
+                          <Button className="bg-white text-secondary font-bold tracking-wide hover:bg-white">
                             Read the Case Study
                           </Button>
                         </div>
@@ -454,7 +450,7 @@ const AboutUs = () => {
                 <div
                   key={insight.id}
                   className={`cursor-pointer p-2 max-sm:w-24 flex items-center justify-center max-w-min ${
-                    insights === insight.id ? 'border-b-2 border-primary' : ''
+                    insights === insight.id ? 'border-b-2 border-secondary' : ''
                   }`}
                   onClick={() => {
                     setInsights(insight.id)

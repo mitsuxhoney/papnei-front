@@ -168,6 +168,64 @@ const GSTOTPVerification = () => {
         </section>
       </Wrapper> */}
 
+      <section className="py-16 bg-secondary/10 mb-16">
+        <div className=" mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
+            <p className="">
+              Enhancing trust and security in digital transactions through
+              AI-driven verification.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">
+                <NumberTicker
+                  value={500}
+                  className="font-bold tracking-normal text-secondary"
+                />
+                <span className="text-secondary">+</span>
+              </div>
+              <p className="text-xl ">Businesses Verified</p>
+            </div>
+
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">
+                <NumberTicker
+                  value={1}
+                  className="font-bold tracking-normal text-secondary"
+                />
+                <span className="text-secondary">M+</span>
+              </div>
+              <p className="text-xl">Identities Verified</p>
+            </div>
+
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">
+                <NumberTicker
+                  value={1}
+                  className="font-bold tracking-normal text-secondary"
+                />
+                <span className="text-secondary">M+</span>
+              </div>
+              <p className="text-xl">Documents Verified</p>
+            </div>
+
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">
+                <NumberTicker
+                  value={1}
+                  className="font-bold tracking-normal text-secondary"
+                />
+                <span className="text-secondary">M+</span>
+              </div>
+              <p className="text-xl">Users Verified</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Wrapper>
         <div className="w-full">
           <FeaturesSection grid={features} gridHeading={featuresHeading} />
@@ -175,66 +233,7 @@ const GSTOTPVerification = () => {
       </Wrapper>
 
       <Wrapper>
-        <section className="py-16">
-          <div className="mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
-              <p className="">
-                Enhancing GST authentication with seamless OTP verification.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-2">
-                  <NumberTicker
-                    value={1000}
-                    className="font-bold tracking-normal"
-                  />
-                  +
-                </div>
-                <p className="text-xl">Businesses Verified</p>
-              </div>
-
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-2">
-                  <NumberTicker
-                    value={10}
-                    className="font-bold tracking-normal"
-                  />
-                  M+
-                </div>
-                <p className="text-xl">GST Transactions Secured</p>
-              </div>
-
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-2">
-                  <NumberTicker
-                    value={99.8}
-                    className="font-bold tracking-normal"
-                  />
-                  %
-                </div>
-                <p className="text-xl">Verification Success Rate</p>
-              </div>
-
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-2">
-                  <NumberTicker
-                    value={200}
-                    className="font-bold tracking-normal"
-                  />
-                  +
-                </div>
-                <p className="text-xl">Trusted GST Partners</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </Wrapper>
-
-      <Wrapper>
-        <section className="py-16 ">
+        <section className="py-16 mt-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">

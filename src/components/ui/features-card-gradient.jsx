@@ -5,10 +5,12 @@ export function FeaturesSectionWithCardGradient({ grid, gridHeading }) {
   return (
     <div className="w-full">
       <div className="flex flex-col items-center gap-4 text-center mb-10">
-        <h1 className="max-w-2xl text-3xl font-semibold md:text-4xl">
+        <h1 className="text-center text-5xl font-bold leading-[1.2]">
           {gridHeading.heading}
         </h1>
-        <p className="text-muted-foreground">{gridHeading.description}</p>
+        <p className="mx-auto max-w-lg text-center text-lg font-medium text-foreground/80">
+          {gridHeading.description}
+        </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-4 mx-auto">
         {grid.map((feature) => (
@@ -19,12 +21,15 @@ export function FeaturesSectionWithCardGradient({ grid, gridHeading }) {
               feature.className
             )}
           >
-            <div className="rounded-full p-4 bg-primary/10 text-primary max-w-min">
+            <div
+              className={cn(
+                'rounded-full p-4 bg-primary/10 text-primary max-w-min',
+                feature.iconColor
+              )}
+            >
               {feature.badge}
             </div>
-            <p className="text-lg font-semibold text-primary ">
-              {feature.title}
-            </p>
+            <p className="text-lg font-semibold">{feature.title}</p>
             <p className="text-sm text-black mb-4">{feature.description}</p>
             {feature.component}
           </div>
