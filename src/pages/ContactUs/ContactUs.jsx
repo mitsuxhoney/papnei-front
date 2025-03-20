@@ -361,11 +361,11 @@ const ContactUs = () => {
                 className="lg:w-1/2 text-left"
               >
                 <div className="relative flex flex-col items-center justify-center text-left">
-                  <h1 className="2xl:text-6xl xl:text-6xl text-xl font-semibold bg-gradient-to-b from-[#edeffd] to-[#7b9cda] bg-clip-text relative">
+                  <h1 className="2xl:text-6xl xl:text-6xl text-xl font-semibold sora-heading bg-gradient-to-b from-[#edeffd] to-[#7b9cda] bg-clip-text relative">
                     {businessHero.heading}
                   </h1>
 
-                  <p className="text-balance text-muted-foreground pt-4 lg:text-lg relative text-center">
+                  <p className="text-balance text-foreground/80 pt-4 lg:text-lg relative text-center">
                     {businessHero.description}
                   </p>
                   <Link to="/contact-us" className="flex gap-2">
@@ -399,8 +399,10 @@ const ContactUs = () => {
       <section className="py-20 relative">
         <div className="max-w-6xl mx-auto px-4">
           <div className="mb-16 text-center">
-            <h2 className="text-3xl font-bold mb-4">How to Reach Us</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="mb-4 text-center text-5xl font-bold leading-[1.2] sora-heading">
+              How to Reach Us
+            </h2>
+            <p className="text-foreground/80 max-w-2xl mx-auto">
               Multiple ways to connect with our team for support, sales
               inquiries, or general questions.
             </p>
@@ -455,8 +457,10 @@ const ContactUs = () => {
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:20px_20px]"></div>
         <div className="max-w-6xl mx-auto px-4 relative z-10">
           <div className="mb-16 text-center">
-            <h2 className="text-3xl font-bold mb-4">Send Us a Message</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="mb-4 text-center text-5xl font-bold leading-[1.2] sora-heading">
+              Send Us a Message
+            </h2>
+            <p className="text-foreground/80 max-w-2xl mx-auto">
               Choose the right department and we&apos;ll make sure your message
               reaches the right team.
             </p>
@@ -538,7 +542,7 @@ const ContactUs = () => {
                         'Contact Form'}
                     </CardTitle>
                     <CardDescription>
-                      We'll get back to you as soon as possible.
+                      We&apos;ll get back to you as soon as possible.
                     </CardDescription>
                   </CardHeader>
 
@@ -712,8 +716,10 @@ const ContactUs = () => {
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4">
           <div className="mb-16 text-center">
-            <h2 className="text-3xl font-bold mb-4">Find Our Location</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="mb-4 text-center text-5xl font-bold leading-[1.2] sora-heading">
+              Find Our Location
+            </h2>
+            <p className="text-foreground/80 max-w-2xl mx-auto">
               Visit our office or plan your trip with the transportation options
               below.
             </p>

@@ -577,7 +577,7 @@ export function Why() {
   return (
     <div className="py-20">
       <div className="text-center mb-6">
-        <div className="mb-4 text-center text-5xl font-bold leading-[1.2]">
+        <div className="mb-4 text-center sora-heading text-5xl font-bold leading-[1.2]">
           Why Choose {` `}
           {/* <div className="inline-block bg-primary rounded-md -rotate-2 p-2">
             <div className="rotate-2 text-white ">Choose</div>

@@ -5,7 +5,7 @@ export function FeaturesSectionWithCardGradient({ grid, gridHeading }) {
   return (
     <div className="w-full">
       <div className="flex flex-col items-center gap-4 text-center mb-10">
-        <h1 className="text-center text-5xl font-bold leading-[1.2]">
+        <h1 className="text-center text-5xl font-bold leading-[1.2] sora-heading">
           {gridHeading.heading}
         </h1>
         <p className="mx-auto max-w-lg text-center text-lg font-medium text-foreground/80">

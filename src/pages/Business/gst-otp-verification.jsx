@@ -10,6 +10,10 @@ import ExpandableCardBasic from '../../components/ExpandableCardDemo'
 import { SparklesText } from '../../components/ui/sparkle-text'
 import Hero2 from '../../components/Hero2'
 import { Connect } from '../../components/ui/new-cta'
+import LazyLoadMotion from '../../components/LazyLoadMotion'
+import { TerminalDemo } from '../../components/TerminalBentoItem'
+import { AnimatedListDemo } from '../../components/AnimatedListHome'
+import { FAQCTA } from '../../components/faq-cta'
 
 const businessHero = {
   heading: 'GST OTP Verification Secured with XRAY AI',
@@ -70,24 +74,258 @@ const businessHero = {
 
 const features = [
   {
-    badge: <ShieldCheckIcon className="w-4 h-4" />,
+    badge: <ShieldCheckIcon className="w-5 h-5" />,
+    title: 'Fast & Reliable',
+    iconColor: 'text-purple-600 bg-purple-600/10',
+    backgroundColor: 'bg-purple-600/10',
+    className: 'lg:h-[340px] bg-purple-600/10 text-purple-600',
+    description:
+      'Get instant verification with real-time data checks, ensuring accuracy and speed',
+
+    component: (
+      <LazyLoadMotion>
+        <div className="absolute -bottom-48 -right-2 lg:-bottom-40 lg:-right-2">
+          <TerminalDemo />
+        </div>
+      </LazyLoadMotion>
+    ),
+  },
+  {
+    badge: <SendIcon className="w-5 h-5" />,
     title: 'Secure & Compliant',
     description:
-      'Our GST OTP verification process follows strict security measures, ensuring compliance with government regulations and data protection standards.',
+      ' We follow industry-leading security standards to safeguard your data.',
+    iconColor: 'text-primary bg-primary/10',
+    backgroundColor: 'bg-primary/10',
+    className: 'lg:h-[340px] bg-primary/10 text-primary',
+    component: (
+      <LazyLoadMotion>
+        <div className="absolute -bottom-56 right-1 lg:-bottom-48 lg:right-2 lg:left-auto ">
+          <AnimatedListDemo />
+        </div>
+      </LazyLoadMotion>
+    ),
   },
   {
-    badge: <SendIcon className="w-4 h-4" />,
-    title: 'Instant OTP Authentication',
-    description:
-      'Verify GST transactions quickly and securely with real-time OTP authentication sent to your registered mobile or email.',
-  },
-  {
-    badge: <BarChartIcon className="w-4 h-4" />,
-    title: 'Real-time Tracking & Logs',
-    description:
-      'Keep track of all your GST verifications with detailed logs and real-time tracking for enhanced transparency and control.',
+    badge: <BarChartIcon className="w-5 h-5" />,
+    title: 'Seamless Integration',
+    description: 'Our API-based verification enables effortless automation.',
+    iconColor: 'text-yellow-600 bg-yellow-600/10',
+    backgroundColor: 'bg-yellow-600/10',
+    className: 'lg:h-[340px] bg-yellow-600/10 text-yellow-600',
+    component: (
+      <div className="relative w-full h-full">
+        <div className="absolute -right-8 -bottom-12 lg:-right-10 lg:-bottom-7">
+          <svg
+            width="242"
+            height="154"
+            viewBox="0 0 242 154"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M115.989 119.545L119.177 125.06H119.313L122.535 119.545H127.256L121.989 128.273L127.427 137H122.586L119.313 131.426H119.177L115.904 137H111.097L116.509 128.273L111.234 119.545H115.989ZM129.438 137V119.545H136.648C137.955 119.545 139.083 119.781 140.032 120.253C140.987 120.719 141.722 121.389 142.239 122.264C142.756 123.134 143.015 124.165 143.015 125.358C143.015 126.568 142.751 127.597 142.222 128.443C141.694 129.284 140.944 129.926 139.972 130.369C139.001 130.807 137.85 131.026 136.521 131.026H131.961V127.702H135.737C136.373 127.702 136.904 127.619 137.33 127.455C137.762 127.284 138.089 127.028 138.31 126.688C138.532 126.341 138.643 125.898 138.643 125.358C138.643 124.818 138.532 124.372 138.31 124.02C138.089 123.662 137.762 123.395 137.33 123.219C136.898 123.037 136.367 122.946 135.737 122.946H133.657V137H129.438ZM139.265 129.023L143.612 137H139.009L134.748 129.023H139.265ZM149.104 137H144.57L150.46 119.545H156.076L161.965 137H157.431L153.332 123.943H153.195L149.104 137ZM148.499 130.131H157.977V133.335H148.499V130.131ZM161.194 119.545H165.907L169.597 126.849H169.751L173.441 119.545H178.154L171.771 131.17V137H167.577V131.17L161.194 119.545Z"
+              fill="#0D9488"
+            />
+            <g filter="url(#filter0_dii_248_20967)">
+              <rect
+                x="80.5"
+                y="80.5"
+                width="127"
+                height="127"
+                rx="31.5"
+                stroke="#9292AF"
+                shapeRendering="crispEdges"
+              />
+            </g>
+            <rect
+              opacity="0.1"
+              x="0.5"
+              y="0.5"
+              width="287"
+              height="287"
+              rx="111.5"
+              stroke="#0F172A"
+            />
+            <rect
+              opacity="0.3"
+              x="20.5"
+              y="20.5"
+              width="247"
+              height="247"
+              rx="91.5"
+              stroke="#0F172A"
+            />
+            <rect
+              opacity="0.6"
+              x="40.5"
+              y="40.5"
+              width="207"
+              height="207"
+              rx="71.5"
+              stroke="#0F172A"
+            />
+            <rect
+              x="60.5"
+              y="60.5"
+              width="167"
+              height="167"
+              rx="51.5"
+              stroke="#0F172A"
+            />
+            <defs>
+              <filter
+                id="filter0_dii_248_20967"
+                x="61"
+                y="79"
+                width="166"
+                height="173"
+                filterUnits="userSpaceOnUse"
+                colorInterpolationFilters="sRGB"
+              >
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feMorphology
+                  radius="1"
+                  operator="erode"
+                  in="SourceAlpha"
+                  result="effect1_dropShadow_248_20967"
+                />
+                <feOffset dy="25" />
+                <feGaussianBlur stdDeviation="10" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="BackgroundImageFix"
+                  result="effect1_dropShadow_248_20967"
+                />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="effect1_dropShadow_248_20967"
+                  result="shape"
+                />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feMorphology
+                  radius="1"
+                  operator="erode"
+                  in="SourceAlpha"
+                  result="effect2_innerShadow_248_20967"
+                />
+                <feOffset dy="1" />
+                <feGaussianBlur stdDeviation="0.5" />
+                <feComposite
+                  in2="hardAlpha"
+                  operator="arithmetic"
+                  k2="-1"
+                  k3="1"
+                />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0.8 0 0 0 0 0.780392 0 0 0 0 0.780392 0 0 0 0.2 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="shape"
+                  result="effect2_innerShadow_248_20967"
+                />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feMorphology
+                  radius="1"
+                  operator="erode"
+                  in="SourceAlpha"
+                  result="effect3_innerShadow_248_20967"
+                />
+                <feOffset dy="-1" />
+                <feGaussianBlur stdDeviation="0.5" />
+                <feComposite
+                  in2="hardAlpha"
+                  operator="arithmetic"
+                  k2="-1"
+                  k3="1"
+                />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0.8 0 0 0 0 0.780392 0 0 0 0 0.780392 0 0 0 0.2 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="effect2_innerShadow_248_20967"
+                  result="effect3_innerShadow_248_20967"
+                />
+              </filter>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    ),
   },
 ]
+
+const FAQCTAData = {
+  heading: 'Frequently Asked Questions',
+  description:
+    "Everything you need to know about identity verification. Can't find the answer you're looking for? Feel free to contact our support team.",
+  ctaHeading: 'Ready for Secure Business Verification?',
+  ctaDescription:
+    'Join thousands of businesses using our platform for seamless and compliant business verification.',
+  items: [
+    {
+      id: 'faq-1',
+      question: 'What is business verification, and why is it important?',
+      answer:
+        'Business verification is the process of validating a company’s legal existence, ownership, and compliance status. It is essential for fraud prevention, regulatory adherence, and secure transactions.',
+    },
+    {
+      id: 'faq-2',
+      question: 'How does business verification work?',
+      answer:
+        'Business verification involves checking company details against official registries, validating key identifiers such as GSTIN, PAN, or CIN, and ensuring compliance through real-time data verification.',
+    },
+    {
+      id: 'faq-3',
+      question: 'Is business verification secure?',
+      answer:
+        'Yes, business verification uses encrypted data transmission, AI-powered fraud detection, and secure APIs to safeguard sensitive company information and prevent misuse.',
+    },
+    {
+      id: 'faq-4',
+      question: 'Can business verification be done remotely?',
+      answer:
+        'Yes, business verification can be conducted online using automated document validation, API integrations, and real-time database checks.',
+    },
+    {
+      id: 'faq-5',
+      question: 'What happens if business verification fails?',
+      answer:
+        'If verification fails, users may need to update their business details, provide clearer documentation, or complete a manual review. Our support team is available to assist.',
+    },
+  ],
+  supportHeading: 'Still have questions?',
+  supportDescription:
+    "Can't find the answer you're looking for? Our support team is here to help with any verification-related concerns.",
+  supportButtonText: 'Contact Support',
+  supportButtonUrl: 'https://yourbusinessverificationsite.com',
+}
 
 const featuresHeading = {
   badge: 'Features',
@@ -231,94 +469,8 @@ const GSTOTPVerification = () => {
           <FeaturesSection grid={features} gridHeading={featuresHeading} />
         </div>
       </Wrapper>
-
       <Wrapper>
-        <section className="py-16 mt-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold  mb-4">
-                  Frequently Asked Questions
-                </h2>
-                <p className="text-muted-foreground">
-                  Find answers to common questions about GST OTP verification
-                  and our services.
-                </p>
-              </div>
-
-              <div className="space-y-4">
-                <div className="rounded-md p-5">
-                  <h3 className="text-lg font-bold  mb-2">
-                    What is GST OTP Verification?
-                  </h3>
-                  <p className="text-muted-foreground">
-                    GST OTP verification is a process that allows taxpayers to
-                    authenticate their identity and approve actions related to
-                    their GST accounts using an OTP (One-Time Password) sent to
-                    their registered mobile number or email address.
-                  </p>
-                </div>
-
-                <div className="rounded-md p-5">
-                  <h3 className="text-lg font-bold  mb-2">
-                    How can I complete GST OTP Verification?
-                  </h3>
-                  <p className="text-muted-foreground">
-                    To complete GST OTP verification, enter your GST login
-                    credentials and request an OTP. Once received on your
-                    registered contact details, input the OTP into the provided
-                    field on the GST portal to authenticate your action.
-                  </p>
-                </div>
-
-                <div className="rounded-md p-5">
-                  <h3 className="text-lg font-bold  mb-2">
-                    Is GST OTP Verification mandatory?
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Yes, GST OTP verification is mandatory for certain actions
-                    such as filing GST returns, updating GST registration
-                    details, or accessing sensitive GST information, ensuring
-                    secure access to the taxpayer’s account.
-                  </p>
-                </div>
-
-                <div className="rounded-md p-5">
-                  <h3 className="text-lg font-bold  mb-2">
-                    What should I do if I don’t receive the OTP for GST
-                    verification?
-                  </h3>
-                  <p className="text-muted-foreground">
-                    If you do not receive the OTP, ensure that your registered
-                    mobile number or email address is correct. You can also try
-                    requesting a new OTP or check for network or SMS delivery
-                    issues. If the problem persists, contact GST support.
-                  </p>
-                </div>
-
-                <div className="rounded-md p-5">
-                  <h3 className="text-lg font-bold  mb-2">
-                    Is GST OTP Verification secure?
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Yes, GST OTP verification is secure as it uses a unique
-                    one-time password sent to your registered mobile or email,
-                    ensuring that only authorized users can perform sensitive
-                    actions within the GST portal.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </Wrapper>
-
-      {/* <div className="mb-16">
-        <BusinessCTA />
-      </div> */}
-
-      <Wrapper>
-        <div className="">
+        <div className="py-20">
           <BusinessProducts
             grid={otherProducts}
             gridHeading={otherProductsHeading}
@@ -327,36 +479,16 @@ const GSTOTPVerification = () => {
         </div>
       </Wrapper>
 
-      {/* <div className="w-full text-center relative overflow-hidden">
-        <div className="w-full mx-auto">
-            <Meteors number={50} />
-          </div>
-        <AuroraBackground className="w-screen h-full py-10">
-          <div className="w-full flex flex-col gap-12 items-center">
-            <Wrapper>
-              <div className="flex flex-col gap-2 items-center">
-                <h3 className="text-xl font-semibold md:text-4xl">{heading}</h3>
-                <SparklesText
-                  className={`text-3xl font-semibold md:text-5xl`}
-                  text="Ready To Get Started"
-                />
-                <TypingAnimation>{heading}</TypingAnimation>
-                <p className="text-muted-foreground text-sm lg:text-md">
-                  Join thousand of satisfied customers using our platform to
-                  build amazing websites.
-                </p>
-              </div>
-            </Wrapper>
-
-            <div className="max-w-md lg:max-w-lg w-full">
-              <ExpandableCardBasic />
-            </div>
-          </div>
-        </AuroraBackground>
-      </div> */}
       <div className="mb-16">
         <Connect />
       </div>
+      <div className="">
+        <FAQCTA FAQCTAData={FAQCTAData} />
+      </div>
+
+      {/* <div className="mb-16">
+        <BusinessCTA />
+      </div> */}
     </div>
   )
 }

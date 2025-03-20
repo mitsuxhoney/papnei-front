@@ -9,6 +9,7 @@ import {
   CarouselItem,
 } from '@/components/ui/eldora-carousel'
 import { ArrowRight } from 'lucide-react'
+import { cn } from '../../lib/utils'
 
 const Logos3 = ({
   heading = '',
@@ -38,12 +39,6 @@ const Logos3 = ({
       className: 'h-7 w-full',
     },
     {
-      id: 'logo-5',
-      description: 'Logo 5',
-      image: 'https://shadcnblocks.com/images/block/logos/shadcn-ui.svg',
-      className: 'h-7 w-full',
-    },
-    {
       id: 'logo-6',
       description: 'Logo 6',
       image: 'https://shadcnblocks.com/images/block/logos/supabase.svg',
@@ -64,13 +59,13 @@ const Logos3 = ({
   ],
 }) => {
   return (
-    <section className="w-full">
+    <section className="">
       {/* <div className="container flex flex-col items-center text-center">
         <h1 className="my-6 text-pretty text-2xl font-bold lg:text-4xl">
           {heading}
         </h1>
       </div> */}
-      <div className="relative flex items-center justify-center xl:max-w-[2160px] xl:mx-auto">
+      <div className="relative flex items-center justify-start xl:max-w-[2160px] xl:mx-auto">
         <Carousel
           opts={{ loop: true }}
           plugins={[
@@ -80,7 +75,7 @@ const Logos3 = ({
               stopOnInteraction: false, // Optional: continues scrolling after user interaction
             }),
           ]}
-          className="w-full "
+          className={cn('w-full')}
         >
           <CarouselContent className="flex gap-2">
             {logos.map((logo) => (
@@ -101,7 +96,7 @@ const Logos3 = ({
             ))}
           </CarouselContent>
         </Carousel>
-        <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-background to-transparent"></div>
+
         <div className="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-background to-transparent"></div>
       </div>
     </section>
