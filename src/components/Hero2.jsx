@@ -1,16 +1,12 @@
-import { ArrowRight, Star } from 'lucide-react'
-import { Sparkles } from './ui/layouts-sparkles'
-import { Avatar, AvatarImage } from '@/components/ui/avatar'
+import { ArrowRight } from 'lucide-react'
+
+import { Logos3 as Partners } from '@/components/ui/logos3'
 import { Button } from '@/components/ui/button'
-import { AnimatedTooltip } from './ui/animated-tooltip'
+
 import Wrapper from './Wrapper'
-import { InteractiveGridPattern } from './ui/interactive-grid'
-import { cn } from '../lib/utils'
-import { DotPattern } from '@/components/ui/dot-pattern'
-import { Tiles } from '@/components/ui/tiles'
+
 import { BorderBeamForm } from '@/components/border-beam-form'
 import { Link } from 'react-router-dom'
-import IndustryCarousel from './IndustryCarousel'
 
 function Hero2({ businessHero }) {
   return (
@@ -23,7 +19,7 @@ function Hero2({ businessHero }) {
             <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 py-24 relative z-20">
               {/* Hero Content */}
               <div className="relative flex flex-col items-start justify-center text-left">
-                <h1 className="2xl:text-6xl xl:text-6xl text-xl font-semibold bg-gradient-to-b from-[#edeffd] to-[#7b9cda] bg-clip-text relative">
+                <h1 className="2xl:text-6xl xl:text-6xl text-xl font-semibold bg-gradient-to-b from-[#edeffd] to-[#7b9cda] bg-clip-text relative sora-heading">
                   {businessHero.heading}
                 </h1>
 
@@ -42,22 +38,7 @@ function Hero2({ businessHero }) {
 
                 {/* Reviews Section */}
                 <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row">
-                  <span className="inline-flex items-start -space-x-4">
-                    <AnimatedTooltip items={businessHero.reviews.avatars} />
-                  </span>
-                  <div>
-                    <div className="flex items-center gap-1">
-                      {[...Array(5)].map((_, index) => (
-                        <Star
-                          key={index}
-                          className="size-5 fill-yellow-400 text-yellow-400"
-                        />
-                      ))}
-                    </div>
-                    <p className="text-left font-medium text-muted-foreground">
-                      from {businessHero.reviews.count}+ reviews
-                    </p>
-                  </div>
+                  <Partners />
                 </div>
               </div>
 

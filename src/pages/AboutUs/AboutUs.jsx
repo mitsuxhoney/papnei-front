@@ -297,7 +297,7 @@ const AboutUs = () => {
       <section id="mission" className="py-24">
         <div className=" mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="mb-4 text-center text-5xl font-bold leading-[1.2]">
+            <h2 className="mb-4 text-center text-5xl font-bold leading-[1.2] sora-heading">
               Our Mission & Values
             </h2>
             <p className="mx-auto mb-8 max-w-lg text-center text-lg font-medium text-foreground/80">
@@ -358,7 +358,9 @@ const AboutUs = () => {
       <section className="py-16 bg-secondary/10">
         <div className=" mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
+            <h2 className="mb-4 text-center text-5xl font-bold leading-[1.2] sora-heading">
+              Our Impact
+            </h2>
             <p className="">
               Enhancing trust and security in digital transactions through
               AI-driven verification.

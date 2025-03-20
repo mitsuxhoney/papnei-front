@@ -724,11 +724,7 @@ const Business = () => {
       <div className="mb-16">
         <Hero2 businessHero={businessHero} />
       </div>
-      <Wrapper>
-        <div className="mb-16">
-          <StaticTestimonialsEldora />
-        </div>
-      </Wrapper>
+
       <Wrapper>
         <div className="mb-16">
           <BusinessProducts

@@ -198,9 +198,7 @@ const NewHomeHero = ({ businessHero }) => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="w-full sm:w-auto px-6 py-4 rounded-lg
-                border border-border bg-primary
-                text-primary-foreground hover:bg-primary/90
-                transition-colors font-semibold"
+                bg-white text-secondary border border-secondary hover:bg-white/80 flex items-center font-semibold"
             >
               View Documentation
             </motion.button>
