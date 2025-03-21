@@ -31,7 +31,7 @@ export const BentoGridItem = ({
     >
       <div
         className={cn(
-          'group-hover/bento:translate-x-2 transition duration-200 flex flex-col gap-2',
+          'group-hover/bento:translate-x-2 transition duration-200 flex flex-col gap-2 relative z-[1]',
           contentClassName
         )}
       >

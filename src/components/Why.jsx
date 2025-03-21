@@ -331,7 +331,7 @@ const items = [
     ),
     header: (
       <LazyLoadMotion>
-        <div className="absolute -bottom-40 right-0 lg:-bottom-42 lg:-right-2">
+        <div className="absolute -bottom-44 right-0 lg:-bottom-42 lg:-right-2">
           <TerminalDemo />
         </div>
       </LazyLoadMotion>
@@ -344,7 +344,7 @@ const items = [
     heading: <h3>Find out who&apos;s behind any phone number</h3>,
     header: (
       <LazyLoadMotion>
-        <div className="absolute left-0 right-0 -bottom-48 lg:-bottom-50 lg:left-0 lg:-right-52">
+        <div className="relative -right-20">
           <OrbitingCirclesHome />
         </div>
       </LazyLoadMotion>
@@ -355,7 +355,8 @@ const items = [
       </span>
     ),
 
-    className: 'max-md:col-span-2 lg:col-span-1 lg:h-[260px] bg-violet-500/10',
+    className:
+      'max-md:col-span-2 lg:col-span-1 lg:h-[260px] bg-violet-500/10 relative z-[1]',
     icon: <IconFileBroken className="h-4 w-4" />,
   },
   {
@@ -366,7 +367,7 @@ const items = [
     ),
     header: (
       <div className="relative w-full h-full">
-        <div className="absolute lg:-right-4 lg:-bottom-4">
+        <div className="absolute -bottom-8 -right-10 lg:-right-4 lg:-bottom-4">
           <svg
             width="242"
             height="154"
@@ -543,7 +544,7 @@ const items = [
     contentClassName: 'gap-6',
     header: (
       <LazyLoadMotion>
-        <div className="absolute lg:-bottom-48 lg:right-10 lg:left-auto -bottom-56 left-0 right-0">
+        <div className="absolute -bottom-[17rem] right-0 lg:-bottom-48 lg:right-10">
           <AnimatedListDemo />
         </div>
       </LazyLoadMotion>

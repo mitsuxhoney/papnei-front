@@ -453,7 +453,7 @@ const ContactUs = () => {
       </section>
 
       {/* Contact Form and Map Section */}
-      <section className="py-20 bg-secondary/5 relative">
+      <section className="py-20 relative">
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:20px_20px]"></div>
         <div className="max-w-6xl mx-auto px-4 relative z-10">
           <div className="mb-16 text-center">

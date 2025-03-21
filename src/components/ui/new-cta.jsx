@@ -74,7 +74,7 @@ export function Connect() {
   ]
 
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden">
       <Wrapper>
         <div className="absolute inset-0 bg-grid-primary-700/[0.05] -z-10" />
 

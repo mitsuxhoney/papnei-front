@@ -225,7 +225,7 @@ const AboutUs = () => {
       </Wrapper>
 
       {/* Our Story Section */}
-      <section className="py-20 bg-secondary/10">
+      <section className="py-20">
         <Wrapper>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div className="flex flex-col gap-4 items-start">
@@ -363,7 +363,7 @@ const AboutUs = () => {
       </section>
 
       {/* Achievements Section */}
-      <section className="py-16 bg-secondary/10">
+      <section className="py-16">
         <div className=" mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="mb-4 text-center text-5xl font-bold leading-[1.2] sora-heading">

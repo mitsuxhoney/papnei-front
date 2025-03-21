@@ -31,11 +31,11 @@ const BusinessProducts = ({ grid, gridHeading, className }) => {
           {gridHeading.description}
         </p>
       </div>
-      <div className={cn('grid w-full gap-4 mb-16', className)}>
+      <div className={cn('grid w-full gap-4', className)}>
         {grid?.map((item) => (
           <Card
             key={item.title}
-            className={cn(`p-4 rounded-[4px]`, item.className)}
+            className={cn(`p-4 rounded-[4px] group`, item.className)}
           >
             <div className="w-full flex flex-col gap-4">
               <div

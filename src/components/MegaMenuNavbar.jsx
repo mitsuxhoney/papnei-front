@@ -662,8 +662,8 @@ const Navbar = () => {
                                 })
                               }}
                             >
-                              <Shield className="h-5 w-5 text-primary" />
-                              <span className="text-lg font-semibold text-foreground">
+                              <Shield className="h-5 w-5 text-secondary" />
+                              <span className="text-lg font-semibold text-secondary">
                                 XRAY
                               </span>
                             </Link>
@@ -679,7 +679,7 @@ const Navbar = () => {
                               value="business"
                               className="border-none"
                             >
-                              <AccordionTrigger className="hover:no-underline py-2 text-primary">
+                              <AccordionTrigger className="hover:no-underline py-2 text-secondary">
                                 Business Verification
                               </AccordionTrigger>
                               <AccordionContent>
@@ -699,7 +699,7 @@ const Navbar = () => {
                                     >
                                       <div className="flex items-center gap-2">
                                         <div>{item.icon}</div>
-                                        <p className="font-medium text-sm">
+                                        <p className="font-medium text-sm hover:border-b-[1.5px] hover:border-secondary">
                                           {item.title}
                                         </p>
                                       </div>
@@ -720,7 +720,7 @@ const Navbar = () => {
                                       <div>
                                         <LayoutGrid className="w-4 h-4" />
                                       </div>
-                                      <p className="font-medium text-sm">
+                                      <p className="font-medium text-sm hover:border-b-[1.5px] hover:border-secondary">
                                         View All Services
                                       </p>
                                     </div>
@@ -732,7 +732,7 @@ const Navbar = () => {
                               value="identity"
                               className="border-none"
                             >
-                              <AccordionTrigger className="hover:no-underline py-2 text-primary">
+                              <AccordionTrigger className="hover:no-underline py-2 text-secondary">
                                 Identity Verification
                               </AccordionTrigger>
                               <AccordionContent>
@@ -752,7 +752,7 @@ const Navbar = () => {
                                     >
                                       <div className="flex items-center gap-2">
                                         <div>{item.icon}</div>
-                                        <p className="font-medium text-sm">
+                                        <p className="font-medium text-sm hover:border-b-[1.5px] hover:border-secondary">
                                           {item.title}
                                         </p>
                                       </div>
@@ -773,7 +773,7 @@ const Navbar = () => {
                                       <div>
                                         <LayoutGrid className="w-4 h-4" />
                                       </div>
-                                      <p className="font-medium text-sm">
+                                      <p className="font-medium text-sm hover:border-b-[1.5px] hover:border-secondary">
                                         View All Services
                                       </p>
                                     </div>
@@ -785,7 +785,7 @@ const Navbar = () => {
                               value="aadhar"
                               className="border-none"
                             >
-                              <AccordionTrigger className="hover:no-underline py-2 text-primary">
+                              <AccordionTrigger className="hover:no-underline py-2 text-secondary">
                                 Aadhar E-sign
                               </AccordionTrigger>
                               <AccordionContent>
@@ -803,9 +803,9 @@ const Navbar = () => {
                                         })
                                       }}
                                     >
-                                      <div className="flex items-center gap-2">
+                                      <div className="flex items-center gap-2 ">
                                         <div>{item.icon}</div>
-                                        <p className="font-medium text-sm">
+                                        <p className="font-medium text-sm hover:border-b-[1.5px] hover:border-secondary">
                                           {item.title}
                                         </p>
                                       </div>
@@ -826,7 +826,7 @@ const Navbar = () => {
                                       <div>
                                         <LayoutGrid className="w-4 h-4" />
                                       </div>
-                                      <p className="font-medium text-sm">
+                                      <p className="font-medium text-sm hover:border-b-[1.5px] hover:border-secondary">
                                         View All Services
                                       </p>
                                     </div>
@@ -840,7 +840,7 @@ const Navbar = () => {
                             <Button
                               asChild
                               variant="outline"
-                              className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+                              className="inline-flex hover:scale-[1.01] items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-primary-foreground hover:bg-secondary/90 hover:text-white h-10 px-4 py-2"
                             >
                               <Link
                                 to="/about-us"
@@ -856,7 +856,11 @@ const Navbar = () => {
                                 About Us
                               </Link>
                             </Button>
-                            <Button asChild variant="outline">
+                            <Button
+                              asChild
+                              variant="outline"
+                              className=" border border-secondary text-secondary hover:scale-[1.01] hover:bg-white hover:text-secondary"
+                            >
                               <Link
                                 to="/contact-us"
                                 className=""
