@@ -13,6 +13,8 @@ import { CaseStudies } from '../../components/case-studies'
 import { FAQCTA } from '../../components/faq-cta'
 import { AnimatedBeamDemo as HomeHero } from '../../components/ui/animated-beam-hero'
 import LazyLoadMotion from '../../components/LazyLoadMotion'
+import step2 from '../../assets/step2.png'
+import step3 from '../../assets/step3.png'
 
 import Who from '../../components/Who'
 import { Why } from '../../components/Why'
@@ -169,7 +171,7 @@ const featureSteps = [
     content: 'Sign up and access our API dashboard in minutes.',
     image:
       'https://images.unsplash.com/photo-1723958929247-ef054b525153?q=80&w=2070&auto=format&fit=crop',
-    terminal: <TerminalDemo1 />,
+    terminal: <img src={step2} alt="" />,
   },
   {
     step: 'Step 2',
@@ -206,7 +208,7 @@ const featureSteps = [
       'Use our well-documented APIs to connect seamlessly with your system.',
     image:
       'https://images.unsplash.com/photo-1723931464622-b7df7c71e380?q=80&w=2070&auto=format&fit=crop',
-    terminal: <TerminalDemo2 />,
+    terminal: <TerminalDemo1 />,
   },
   {
     step: 'Step 3',
@@ -243,7 +245,7 @@ const featureSteps = [
       'Leverage our real-time verification tools to enhance security and compliance.',
     image:
       'https://images.unsplash.com/photo-1725961476494-efa87ae3106a?q=80&w=2070&auto=format&fit=crop',
-    terminal: <TerminalDemo3 />,
+    terminal: <img src={step3} className="" />,
   },
   // {
   //   step: 'Step 4',
@@ -460,14 +462,14 @@ const Home = () => {
         <Why />
       </div>
       <Wrapper>
-        <div className="pb-10">
+        <div className="">
           <IntegrationBenefits benefits={featureSteps} />
         </div>
       </Wrapper>
 
-      <div className="w-full">
+      <LazyLoadMotion className="w-full">
         <Industries />
-      </div>
+      </LazyLoadMotion>
 
       <LazyLoadMotion>
         <CaseStudies {...caseStudiesData} />

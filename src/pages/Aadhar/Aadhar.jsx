@@ -10,6 +10,8 @@ import {
 } from 'lucide-react'
 
 import Wrapper from '../../components/Wrapper'
+import step2 from '../../assets/step2.png'
+import step3 from '../../assets/step3.png'
 
 import BusinessProducts from '../../components/BusinessProducts'
 import FeaturesSection from '../../components/ui/features-section'
@@ -337,7 +339,7 @@ const featureSteps = [
     content: 'Sign up and access our API dashboard in minutes.',
     image:
       'https://images.unsplash.com/photo-1723958929247-ef054b525153?q=80&w=2070&auto=format&fit=crop',
-    terminal: <TerminalDemo1 />,
+    terminal: <img src={step2} alt="" />,
   },
   {
     step: 'Step 2',
@@ -374,7 +376,7 @@ const featureSteps = [
       'Use our well-documented APIs to connect seamlessly with your system.',
     image:
       'https://images.unsplash.com/photo-1723931464622-b7df7c71e380?q=80&w=2070&auto=format&fit=crop',
-    terminal: <TerminalDemo2 />,
+    terminal: <TerminalDemo1 />,
   },
   {
     step: 'Step 3',
@@ -411,45 +413,45 @@ const featureSteps = [
       'Leverage our real-time verification tools to enhance security and compliance.',
     image:
       'https://images.unsplash.com/photo-1725961476494-efa87ae3106a?q=80&w=2070&auto=format&fit=crop',
-    terminal: <TerminalDemo3 />,
+    terminal: <img src={step3} className="" />,
   },
-  {
-    step: 'Step 4',
-    title: 'Automate Verification',
-    icon: (
-      <svg
-        width="30"
-        height="25"
-        viewBox="0 0 30 25"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M17.7468 10.7537L15.0002 9.50033L17.7468 8.24699L19.0002 5.50033L20.2535 8.24699L23.0002 9.50033L20.2535 10.7537L19.0002 13.5003L17.7468 10.7537ZM4.3335 16.167L5.58683 13.4203L8.3335 12.167L5.58683 10.9137L4.3335 8.16699L3.08016 10.9137L0.333496 12.167L3.08016 13.4203L4.3335 16.167ZM10.3335 9.50033L11.7868 6.28699L15.0002 4.83366L11.7868 3.38033L10.3335 0.166992L8.88016 3.38033L5.66683 4.83366L8.88016 6.28699L10.3335 9.50033ZM5.00016 24.8337L13.0002 16.8203L18.3335 22.1537L29.6668 9.40699L27.7868 7.52699L18.3335 18.1537L13.0002 12.8203L3.00016 22.8337L5.00016 24.8337Z"
-          fill="#1c3149"
-        />
-      </svg>
-    ),
-    selectedIcon: (
-      <svg
-        width="30"
-        height="25"
-        viewBox="0 0 30 25"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M17.7468 10.7537L15.0002 9.50033L17.7468 8.24699L19.0002 5.50033L20.2535 8.24699L23.0002 9.50033L20.2535 10.7537L19.0002 13.5003L17.7468 10.7537ZM4.3335 16.167L5.58683 13.4203L8.3335 12.167L5.58683 10.9137L4.3335 8.16699L3.08016 10.9137L0.333496 12.167L3.08016 13.4203L4.3335 16.167ZM10.3335 9.50033L11.7868 6.28699L15.0002 4.83366L11.7868 3.38033L10.3335 0.166992L8.88016 3.38033L5.66683 4.83366L8.88016 6.28699L10.3335 9.50033ZM5.00016 24.8337L13.0002 16.8203L18.3335 22.1537L29.6668 9.40699L27.7868 7.52699L18.3335 18.1537L13.0002 12.8203L3.00016 22.8337L5.00016 24.8337Z"
-          fill="#5359EF"
-        />
-      </svg>
-    ),
-    content:
-      'Leverage our real-time verification tools to enhance security and compliance.',
-    image:
-      'https://images.unsplash.com/photo-1725961476494-efa87ae3106a?q=80&w=2070&auto=format&fit=crop',
-    terminal: <TerminalDemo4 />,
-  },
+  // {
+  //   step: 'Step 4',
+  //   title: 'Automate Verification',
+  //   icon: (
+  //     <svg
+  //       width="30"
+  //       height="25"
+  //       viewBox="0 0 30 25"
+  //       fill="none"
+  //       xmlns="http://www.w3.org/2000/svg"
+  //     >
+  //       <path
+  //         d="M17.7468 10.7537L15.0002 9.50033L17.7468 8.24699L19.0002 5.50033L20.2535 8.24699L23.0002 9.50033L20.2535 10.7537L19.0002 13.5003L17.7468 10.7537ZM4.3335 16.167L5.58683 13.4203L8.3335 12.167L5.58683 10.9137L4.3335 8.16699L3.08016 10.9137L0.333496 12.167L3.08016 13.4203L4.3335 16.167ZM10.3335 9.50033L11.7868 6.28699L15.0002 4.83366L11.7868 3.38033L10.3335 0.166992L8.88016 3.38033L5.66683 4.83366L8.88016 6.28699L10.3335 9.50033ZM5.00016 24.8337L13.0002 16.8203L18.3335 22.1537L29.6668 9.40699L27.7868 7.52699L18.3335 18.1537L13.0002 12.8203L3.00016 22.8337L5.00016 24.8337Z"
+  //         fill="#1c3149"
+  //       />
+  //     </svg>
+  //   ),
+  //   selectedIcon: (
+  //     <svg
+  //       width="30"
+  //       height="25"
+  //       viewBox="0 0 30 25"
+  //       fill="none"
+  //       xmlns="http://www.w3.org/2000/svg"
+  //     >
+  //       <path
+  //         d="M17.7468 10.7537L15.0002 9.50033L17.7468 8.24699L19.0002 5.50033L20.2535 8.24699L23.0002 9.50033L20.2535 10.7537L19.0002 13.5003L17.7468 10.7537ZM4.3335 16.167L5.58683 13.4203L8.3335 12.167L5.58683 10.9137L4.3335 8.16699L3.08016 10.9137L0.333496 12.167L3.08016 13.4203L4.3335 16.167ZM10.3335 9.50033L11.7868 6.28699L15.0002 4.83366L11.7868 3.38033L10.3335 0.166992L8.88016 3.38033L5.66683 4.83366L8.88016 6.28699L10.3335 9.50033ZM5.00016 24.8337L13.0002 16.8203L18.3335 22.1537L29.6668 9.40699L27.7868 7.52699L18.3335 18.1537L13.0002 12.8203L3.00016 22.8337L5.00016 24.8337Z"
+  //         fill="#5359EF"
+  //       />
+  //     </svg>
+  //   ),
+  //   content:
+  //     'Leverage our real-time verification tools to enhance security and compliance.',
+  //   image:
+  //     'https://images.unsplash.com/photo-1725961476494-efa87ae3106a?q=80&w=2070&auto=format&fit=crop',
+  //   terminal: <TerminalDemo4 />,
+  // },
 ]
 
 const FAQCTAData = {

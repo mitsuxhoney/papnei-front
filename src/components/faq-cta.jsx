@@ -28,7 +28,7 @@ const FAQCTA = ({
   FAQCTAData,
 }) => {
   return (
-    <section className="w-full">
+    <section className="w-full py-16">
       <div className="space-y-16 w-full">
         <Wrapper>
           <div className="mx-auto flex max-w-3xl flex-col text-left md:text-center">
