@@ -205,7 +205,7 @@ const IndustryCarousel = ({ className }) => {
       {/* First Row - Moving Right */}
       <div className={cn('relative mb-8', className)}>
         <div className="animate-scroll-right flex gap-6 whitespace-nowrap">
-          {[...firstRow, ...firstRow].map((industry, index) => (
+          {[...firstRow, ...firstRow].map((industry, index) =>  (
             <div
               key={index}
               className={`flex items-center gap-3 bg-gradient-to-br ${industry.color} p-3 rounded-xl 

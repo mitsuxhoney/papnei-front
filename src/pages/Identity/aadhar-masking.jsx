@@ -2,6 +2,8 @@ import {
   BarChartIcon,
   CheckIcon,
   EyeOffIcon,
+  File,
+  Fingerprint,
   KeyIcon,
   SendIcon,
   ShieldCheckIcon,
@@ -287,21 +289,29 @@ const featuresHeading = {
 
 const otherProducts = [
   {
-    title: 'Identity Verfication',
+    title: 'Business Verification',
     description: 'Verify GST details using OTP-based authentication.',
-    icon: <KeyIcon className="w-4 h-4" />,
+    icon: <File className="w-5 h-5" />,
+    iconColor: 'text-yellow-600 bg-yellow-600/10',
+    backgroundColor: 'bg-yellow-600/10',
+    className: 'bg-yellow-600/10',
+    url: '/business',
     button: (
-      <InteractiveHoverButton className="rounded-md h-8 flex items-center text-sm">
+      <InteractiveHoverButton className="rounded-md flex items-center text-sm">
         Learn More
       </InteractiveHoverButton>
     ),
   },
   {
-    title: 'Aadhar E-Sign',
-    description: 'Authenticate businesses by verifying their GST details.',
-    icon: <ShieldCheckIcon className="w-4 h-4 " />,
+    title: 'Aadhar E-Signature',
+    description: 'Authenticate businesses by verifying GST details.',
+    icon: <Fingerprint className="w-5 h-5" />,
+    iconColor: 'text-violet-600 bg-violet-600/10',
+    className: 'bg-violet-600/10',
+    backgroundColor: 'bg-violet-600/10',
+    url: '/aadhar',
     button: (
-      <InteractiveHoverButton className="rounded-md h-8 flex items-center text-sm">
+      <InteractiveHoverButton className="rounded-md flex items-center text-sm">
         Learn More
       </InteractiveHoverButton>
     ),
@@ -357,7 +367,7 @@ const AadharMasking = () => {
         </section>
       </Wrapper> */}
 
-      <section className="py-16 bg-secondary/10 mb-16">
+      <section className="py-20 bg-secondary/10 mb-16">
         <div className=" mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Our Impact</h2>

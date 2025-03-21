@@ -245,43 +245,43 @@ const featureSteps = [
       'https://images.unsplash.com/photo-1725961476494-efa87ae3106a?q=80&w=2070&auto=format&fit=crop',
     terminal: <TerminalDemo3 />,
   },
-  {
-    step: 'Step 4',
-    title: 'Automate Verification',
-    icon: (
-      <svg
-        width="30"
-        height="25"
-        viewBox="0 0 30 25"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M17.7468 10.7537L15.0002 9.50033L17.7468 8.24699L19.0002 5.50033L20.2535 8.24699L23.0002 9.50033L20.2535 10.7537L19.0002 13.5003L17.7468 10.7537ZM4.3335 16.167L5.58683 13.4203L8.3335 12.167L5.58683 10.9137L4.3335 8.16699L3.08016 10.9137L0.333496 12.167L3.08016 13.4203L4.3335 16.167ZM10.3335 9.50033L11.7868 6.28699L15.0002 4.83366L11.7868 3.38033L10.3335 0.166992L8.88016 3.38033L5.66683 4.83366L8.88016 6.28699L10.3335 9.50033ZM5.00016 24.8337L13.0002 16.8203L18.3335 22.1537L29.6668 9.40699L27.7868 7.52699L18.3335 18.1537L13.0002 12.8203L3.00016 22.8337L5.00016 24.8337Z"
-          fill="#1c3149"
-        />
-      </svg>
-    ),
-    selectedIcon: (
-      <svg
-        width="30"
-        height="25"
-        viewBox="0 0 30 25"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M17.7468 10.7537L15.0002 9.50033L17.7468 8.24699L19.0002 5.50033L20.2535 8.24699L23.0002 9.50033L20.2535 10.7537L19.0002 13.5003L17.7468 10.7537ZM4.3335 16.167L5.58683 13.4203L8.3335 12.167L5.58683 10.9137L4.3335 8.16699L3.08016 10.9137L0.333496 12.167L3.08016 13.4203L4.3335 16.167ZM10.3335 9.50033L11.7868 6.28699L15.0002 4.83366L11.7868 3.38033L10.3335 0.166992L8.88016 3.38033L5.66683 4.83366L8.88016 6.28699L10.3335 9.50033ZM5.00016 24.8337L13.0002 16.8203L18.3335 22.1537L29.6668 9.40699L27.7868 7.52699L18.3335 18.1537L13.0002 12.8203L3.00016 22.8337L5.00016 24.8337Z"
-          fill="#5359EF"
-        />
-      </svg>
-    ),
-    content:
-      'Leverage our real-time verification tools to enhance security and compliance.',
-    image:
-      'https://images.unsplash.com/photo-1725961476494-efa87ae3106a?q=80&w=2070&auto=format&fit=crop',
-    terminal: <TerminalDemo4 />,
-  },
+  // {
+  //   step: 'Step 4',
+  //   title: 'Automate Verification',
+  //   icon: (
+  //     <svg
+  //       width="30"
+  //       height="25"
+  //       viewBox="0 0 30 25"
+  //       fill="none"
+  //       xmlns="http://www.w3.org/2000/svg"
+  //     >
+  //       <path
+  //         d="M17.7468 10.7537L15.0002 9.50033L17.7468 8.24699L19.0002 5.50033L20.2535 8.24699L23.0002 9.50033L20.2535 10.7537L19.0002 13.5003L17.7468 10.7537ZM4.3335 16.167L5.58683 13.4203L8.3335 12.167L5.58683 10.9137L4.3335 8.16699L3.08016 10.9137L0.333496 12.167L3.08016 13.4203L4.3335 16.167ZM10.3335 9.50033L11.7868 6.28699L15.0002 4.83366L11.7868 3.38033L10.3335 0.166992L8.88016 3.38033L5.66683 4.83366L8.88016 6.28699L10.3335 9.50033ZM5.00016 24.8337L13.0002 16.8203L18.3335 22.1537L29.6668 9.40699L27.7868 7.52699L18.3335 18.1537L13.0002 12.8203L3.00016 22.8337L5.00016 24.8337Z"
+  //         fill="#1c3149"
+  //       />
+  //     </svg>
+  //   ),
+  //   selectedIcon: (
+  //     <svg
+  //       width="30"
+  //       height="25"
+  //       viewBox="0 0 30 25"
+  //       fill="none"
+  //       xmlns="http://www.w3.org/2000/svg"
+  //     >
+  //       <path
+  //         d="M17.7468 10.7537L15.0002 9.50033L17.7468 8.24699L19.0002 5.50033L20.2535 8.24699L23.0002 9.50033L20.2535 10.7537L19.0002 13.5003L17.7468 10.7537ZM4.3335 16.167L5.58683 13.4203L8.3335 12.167L5.58683 10.9137L4.3335 8.16699L3.08016 10.9137L0.333496 12.167L3.08016 13.4203L4.3335 16.167ZM10.3335 9.50033L11.7868 6.28699L15.0002 4.83366L11.7868 3.38033L10.3335 0.166992L8.88016 3.38033L5.66683 4.83366L8.88016 6.28699L10.3335 9.50033ZM5.00016 24.8337L13.0002 16.8203L18.3335 22.1537L29.6668 9.40699L27.7868 7.52699L18.3335 18.1537L13.0002 12.8203L3.00016 22.8337L5.00016 24.8337Z"
+  //         fill="#5359EF"
+  //       />
+  //     </svg>
+  //   ),
+  //   content:
+  //     'Leverage our real-time verification tools to enhance security and compliance.',
+  //   image:
+  //     'https://images.unsplash.com/photo-1725961476494-efa87ae3106a?q=80&w=2070&auto=format&fit=crop',
+  //   terminal: <TerminalDemo4 />,
+  // },
 ]
 
 const caseStudiesData = {
@@ -474,14 +474,14 @@ const Home = () => {
       </LazyLoadMotion>
 
       <Wrapper>
-        <div className="relative z-10 h-[600px] w-full overflow-hidden rounded-lg border bg-background my-16">
+        <div className="relative z-10 h-[600px] w-full overflow-hidden rounded-lg border bg-background">
           <Testimonials />
         </div>
       </Wrapper>
-      <div className="w-full">
+      <div className="w-full mt-20">
         <Connect />
       </div>
-      <div className="mt-16 py-16">
+      <div className="mt-8 py-16">
         <FAQCTA FAQCTAData={FAQCTAData} />
       </div>
     </div>

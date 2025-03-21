@@ -9,7 +9,9 @@ import {
   DatabaseIcon,
   EyeOffIcon,
   FactoryIcon,
+  File,
   FileTextIcon,
+  Fingerprint,
   FingerprintIcon,
   GlobeIcon,
   IdCardIcon,
@@ -692,7 +694,7 @@ const otherProducts = [
   {
     title: 'Business Verification',
     description: 'Verify GST details using OTP-based authentication.',
-    icon: <KeyIcon className="w-4 h-4" />,
+    icon: <File className="w-5 h-5" />,
     iconColor: 'text-yellow-600 bg-yellow-600/10',
     backgroundColor: 'bg-yellow-600/10',
     className: 'bg-yellow-600/10',
@@ -706,7 +708,7 @@ const otherProducts = [
   {
     title: 'Aadhar E-Signature',
     description: 'Authenticate businesses by verifying GST details.',
-    icon: <ShieldCheckIcon className="w-4 h-4 " />,
+    icon: <Fingerprint className="w-5 h-5" />,
     iconColor: 'text-violet-600 bg-violet-600/10',
     className: 'bg-violet-600/10',
     backgroundColor: 'bg-violet-600/10',
@@ -732,13 +734,13 @@ const Identity = () => {
       <div className="mb-16 relative overflow-hidden">
         <Hero2 businessHero={businessHero} />
       </div>
-      <Wrapper>
+      {/* <Wrapper>
         <div className="mb-16">
           <StaticTestimonialsEldora />
         </div>
-      </Wrapper>
+      </Wrapper> */}
       <Wrapper>
-        <div className="mb-16">
+        <div className="">
           <BusinessProducts
             grid={identityProducts}
             gridHeading={identityProductsHeading}
@@ -748,13 +750,13 @@ const Identity = () => {
       </Wrapper>
 
       <Wrapper>
-        <div className="w-full mb-16">
+        <div className="w-full">
           <FeaturesSection grid={features} gridHeading={featuresHeading} />
         </div>
       </Wrapper>
 
       <Wrapper>
-        <div className="mb-16">
+        <div className="my-16">
           <IntegrationBenefits benefits={featureSteps} />
         </div>
       </Wrapper>

@@ -7,7 +7,9 @@ import {
   DatabaseIcon,
   FactoryIcon,
   FileTextIcon,
+  Fingerprint,
   GlobeIcon,
+  IdCard,
   KeyIcon,
   PhoneIcon,
   SendIcon,
@@ -684,7 +686,7 @@ const otherProducts = [
   {
     title: 'Identity Verfication',
     description: 'Verify GST details using OTP-based authentication.',
-    icon: <KeyIcon className="w-4 h-4" />,
+    icon: <IdCard className="w-5 h-5" />,
     iconColor: 'text-yellow-600 bg-yellow-600/10',
     backgroundColor: 'bg-yellow-600/10',
     className: 'bg-yellow-600/10',
@@ -698,7 +700,7 @@ const otherProducts = [
   {
     title: 'Aadhar E-Signature',
     description: 'Authenticate businesses by verifying GST details.',
-    icon: <ShieldCheckIcon className="w-4 h-4 " />,
+    icon: <Fingerprint className="w-5 h-5" />,
     iconColor: 'text-violet-600 bg-violet-600/10',
     className: 'bg-violet-600/10',
     backgroundColor: 'bg-violet-600/10',
