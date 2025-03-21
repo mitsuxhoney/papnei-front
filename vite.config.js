@@ -12,4 +12,10 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  assetsInclude: ['**/*.svg'],
+  svgr: {
+    svgrOptions: {
+      // your SVGR options
+    },
+  },
 })

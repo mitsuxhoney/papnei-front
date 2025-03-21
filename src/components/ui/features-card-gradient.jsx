@@ -3,8 +3,8 @@ import { cn } from '../../lib/utils'
 
 export function FeaturesSectionWithCardGradient({ grid, gridHeading }) {
   return (
-    <div className="w-full">
-      <div className="flex flex-col items-center gap-4 text-center mb-10">
+    <div className="w-full py-20">
+      <div className="flex flex-col items-center gap-4 text-center">
         <h1 className="text-center text-5xl font-bold leading-[1.2] sora-heading">
           {gridHeading.heading}
         </h1>
@@ -12,7 +12,7 @@ export function FeaturesSectionWithCardGradient({ grid, gridHeading }) {
           {gridHeading.description}
         </p>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-4 mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-4 mx-auto mt-8">
         {grid.map((feature) => (
           <div
             key={feature.title}

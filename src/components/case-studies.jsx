@@ -202,6 +202,10 @@ import {
 import useEmblaCarousel from 'embla-carousel-react'
 import { useCallback, useEffect, useState } from 'react'
 import { cn } from '../lib/utils'
+import case1 from '../assets/case1.png'
+import case2 from '../assets/case2.png'
+import case3 from '../assets/case3.png'
+
 export function CaseStudies() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
@@ -267,7 +271,7 @@ export function CaseStudies() {
           e-KYC verification.{' '}
         </p>
       ),
-      image: '/src/assets/case1.png',
+      image: case1,
       color: 'bg-yellow-500/10',
     },
     {
@@ -283,7 +287,7 @@ export function CaseStudies() {
           sellers and ensure trust.
         </p>
       ),
-      image: '/src/assets/case2.png',
+      image: case2,
       color: 'bg-purple-500/10',
     },
     {
@@ -299,7 +303,7 @@ export function CaseStudies() {
           backgrounds in real time.
         </p>
       ),
-      image: '/src/assets/case3.png',
+      image: case3,
       color: 'bg-pink-500/10',
     },
     {
@@ -315,7 +319,7 @@ export function CaseStudies() {
           e-KYC verification.{' '}
         </p>
       ),
-      image: '/src/assets/case1.png',
+      image: case1,
       color: 'bg-violet-500/10',
     },
     {
@@ -331,7 +335,7 @@ export function CaseStudies() {
           sellers and ensure trust.
         </p>
       ),
-      image: '/src/assets/case2.png',
+      image: case2,
       color: 'bg-cyan-500/10',
     },
     {
@@ -347,7 +351,7 @@ export function CaseStudies() {
           backgrounds in real time.
         </p>
       ),
-      image: '/src/assets/case3.png',
+      image: case3,
       color: 'bg-yellow-500/10',
     },
     {
@@ -363,7 +367,7 @@ export function CaseStudies() {
           e-KYC verification.{' '}
         </p>
       ),
-      image: '/src/assets/case1.png',
+      image: case1,
       color: 'bg-purple-500/10',
     },
     {
@@ -379,7 +383,7 @@ export function CaseStudies() {
           sellers and ensure trust.
         </p>
       ),
-      image: '/src/assets/case2.png',
+      image: case2,
       color: 'bg-violet-500/10',
     },
     {
@@ -395,7 +399,7 @@ export function CaseStudies() {
           backgrounds in real time.
         </p>
       ),
-      image: '/src/assets/case3.png',
+      image: case3,
       color: 'bg-cyan-500/10',
     },
     {
@@ -411,15 +415,15 @@ export function CaseStudies() {
           e-KYC verification.{' '}
         </p>
       ),
-      image: '/src/assets/case1.png',
+      image: case1,
       color: 'bg-pink-500/10',
     },
   ]
   return (
-    <section className="pb-20 relative overflow-hidden">
+    <section className="pb-20 pt-6 relative overflow-hidden">
       <div className="absolute inset-0 -z-10" />
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+      <div className="mx-auto">
+        <div className="text-center mb-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -431,7 +435,7 @@ export function CaseStudies() {
                 <div className="rotate-2 text-white ">Case Studies</div>
               </div>{' '} */}
             </div>
-            <p className="mx-auto mb-8 max-w-lg text-center text-lg font-medium text-foreground/80">
+            <p className="mx-auto max-w-lg text-center text-lg font-medium text-foreground/80">
               Explore our recent case studies showcasing real-world success
               stories and impactful solutions.
             </p>

@@ -1,29 +1,22 @@
 import {
-  BanknoteIcon,
   BarChartIcon,
-  BuildingIcon,
-  ClipboardCheckIcon,
-  DatabaseIcon,
-  FactoryIcon,
-  FileTextIcon,
-  GlobeIcon,
+  File,
+  Fingerprint,
   KeyIcon,
   PenIcon,
-  PhoneIcon,
   SendIcon,
   ShieldCheckIcon,
   SmileIcon,
-  UtensilsIcon,
 } from 'lucide-react'
 
 import Wrapper from '../../components/Wrapper'
 
 import BusinessProducts from '../../components/BusinessProducts'
 import FeaturesSection from '../../components/ui/features-section'
-import { Hero1 } from '../../components/Hero1'
+
 import { StaticTestimonialsEldora } from '../../components/StaticTestimonialsEldora'
 import { IntegrationBenefits } from '../../components/IntegrationBenefits'
-import { BusinessCTA } from '../../components/BusinessCTA'
+
 import { FAQCTA } from '../../components/faq-cta'
 import { InteractiveHoverButton } from '../../components/ui/interactive-hover'
 import Hero2 from '../../components/Hero2'
@@ -538,7 +531,7 @@ const otherProducts = [
   {
     title: 'Business Verfication',
     description: 'Verify GST details using OTP-based authentication.',
-    icon: <KeyIcon className="w-4 h-4" />,
+    icon: <File className="w-5 h-5" />,
     iconColor: 'text-yellow-600 bg-yellow-600/10',
     backgroundColor: 'bg-yellow-600/10',
     className: 'bg-yellow-600/10',
@@ -552,7 +545,7 @@ const otherProducts = [
   {
     title: 'Identity Verfication',
     description: 'Authenticate businesses by verifying GST details.',
-    icon: <ShieldCheckIcon className="w-4 h-4 " />,
+    icon: <Fingerprint className="w-5 h-5" />,
     iconColor: 'text-violet-600 bg-violet-600/10',
     className: 'bg-violet-600/10',
     backgroundColor: 'bg-violet-600/10',
@@ -579,12 +572,7 @@ const Aadhar = () => {
         <Hero2 businessHero={businessHero} />
       </div>
       <Wrapper>
-        <div className="mb-16">
-          <StaticTestimonialsEldora />
-        </div>
-      </Wrapper>
-      <Wrapper>
-        <div className="mb-16">
+        <div className="">
           <BusinessProducts
             grid={aadharProducts}
             gridHeading={aadharProductsHeading}
@@ -617,11 +605,11 @@ const Aadhar = () => {
           />
         </div>
       </Wrapper>
-      <div className="">
+      <div className="mb-16">
         <Connect />
       </div>
 
-      <div className="mt-16">
+      <div className="">
         <FAQCTA FAQCTAData={FAQCTAData} />
       </div>
     </div>

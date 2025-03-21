@@ -1,5 +1,31 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@radix-ui/react-tabs'
-import { File, Fingerprint, IdCard, Layout, Pointer, Zap } from 'lucide-react'
+
+import {
+  BadgeCheck,
+  Briefcase,
+  Building,
+  Building2,
+  CheckCircle,
+  File,
+  FileCheck,
+  FileCode,
+  FileDigit,
+  FileSignature,
+  FileText,
+  Fingerprint,
+  IdCard,
+  KeyRound,
+  Landmark,
+  Layout,
+  Pointer,
+  Scale,
+  ScanEye,
+  ScanFace,
+  ShieldCheck,
+  Store,
+  UserRoundCheck,
+  Zap,
+} from 'lucide-react'
 import {
   IconAdjustmentsBolt,
   IconCloud,
@@ -12,6 +38,8 @@ import {
 } from '@tabler/icons-react'
 
 import { FeaturesSectionWithHoverEffects } from './features-hover'
+import GSTVerificationSVG from '../../assets/gst-verification.svg?react'
+import { HugeiconsIcon } from '@hugeicons/react'
 
 const features = {
   badge: 'Products & Services',
@@ -31,57 +59,58 @@ const tabs = [
       description:
         'Ensure business legitimacy with automated verification solutions for GST, PAN, and more.',
       buttonText: 'Explore Solutions',
-      imageSrc: 'https://shadcnblocks.com/images/block/placeholder-dark-1.svg',
+
       imageAlt: 'Business Verification',
     },
     features: [
       {
         title: 'GST Verification',
         description: 'Validate GST details to ensure business legitimacy.',
-        icon: <IconTerminal2 />,
+        icon: <FileText />,
         iconColor: 'bg-yellow-500/10 text-yellow-500',
       },
+
       {
         title: 'PAN Verification',
         description: 'Verify business PAN for compliance and authenticity.',
-        icon: <IconEaseInOut />,
+        icon: <IdCard />,
         iconColor: 'bg-violet-500/10 text-violet-500',
       },
       {
         title: 'CIN Verification',
         description: 'Check company registration details via MCA records.',
-        icon: <IconCurrencyDollar />,
+        icon: <FileDigit />,
         iconColor: 'bg-cyan-500/10 text-cyan-500',
       },
       {
         title: 'Shop & Establishment Verification',
         description: 'Confirm business registration under state laws.',
-        icon: <IconAdjustmentsBolt />,
+        icon: <Store />,
         iconColor: 'bg-pink-500/10 text-pink-500',
       },
       {
         title: 'Bank Account Verification',
         description: 'Instantly verify business bank account details.',
-        icon: <IconHeart />,
+        icon: <Landmark />,
         iconColor: 'bg-yellow-500/10 text-yellow-500',
       },
       {
         title: 'UDYAM Registration Check',
         description:
           'Authenticate MSME registration for eligibility verification.',
-        icon: <IconRouteAltLeft />,
+        icon: <Briefcase />,
         iconColor: 'bg-violet-500/10 text-violet-500',
       },
       {
         title: 'FSSAI License Verification',
         description: 'Ensure food businesses are legally registered.',
-        icon: <IconHelp />,
+        icon: <ShieldCheck />,
         iconColor: 'bg-cyan-500/10 text-cyan-500',
       },
       {
         title: 'Trademark Verification',
         description: 'Validate trademark registration for brand protection.',
-        icon: <IconCloud />,
+        icon: <BadgeCheck />,
         iconColor: 'bg-pink-500/10 text-pink-500',
       },
     ],
@@ -96,57 +125,58 @@ const tabs = [
       description:
         'Leverage AI-driven verification for Aadhaar, PAN, and more to enhance security.',
       buttonText: 'Get Started',
-      imageSrc: 'https://shadcnblocks.com/images/block/placeholder-dark-2.svg',
+
       imageAlt: 'Identity Verification',
     },
     features: [
       {
-        title: 'Aadhaar Verification',
-        description:
-          'Instantly verify Aadhaar details for identity authentication.',
-        icon: <IconTerminal2 />,
-        iconColor: 'bg-yellow-500/10 text-yellow-500',
-      },
-      {
         title: 'PAN Verification',
         description: 'Validate individual PAN details for KYC compliance.',
-        icon: <IconEaseInOut />,
+        icon: <IdCard />,
         iconColor: 'bg-violet-500/10 text-violet-500',
       },
       {
-        title: 'Driving License Check',
-        description: 'Confirm license validity and ownership.',
-        icon: <IconCurrencyDollar />,
+        title: 'Aadhaar Verification',
+        description:
+          'Instantly verify Aadhaar details for identity authentication.',
+        icon: <Fingerprint />,
+        iconColor: 'bg-yellow-500/10 text-yellow-500',
+      },
+      {
+        title: 'Face Match',
+        description: 'Ensure user identity with AI-driven facial recognition.',
+        icon: <ScanFace />,
         iconColor: 'bg-cyan-500/10 text-cyan-500',
       },
       {
         title: 'Voter ID Verification',
         description: 'Authenticate voter ID details for user validation.',
-        icon: <IconAdjustmentsBolt />,
+        icon: <IdCard />,
         iconColor: 'bg-pink-500/10 text-pink-500',
       },
       {
         title: 'Passport Verification',
         description: 'Verify passport details for enhanced identification.',
-        icon: <IconHeart />,
+        icon: <UserRoundCheck />,
         iconColor: 'bg-pink-500/10 text-pink-500',
       },
+
       {
-        title: 'Face Match',
-        description: 'Ensure user identity with AI-driven facial recognition.',
-        icon: <IconRouteAltLeft />,
+        title: 'Driving License Check',
+        description: 'Confirm license validity and ownership.',
+        icon: <IdCard />,
         iconColor: 'bg-cyan-500/10 text-cyan-500',
       },
       {
         title: 'OCR-Based Verification',
         description: 'Extract & validate details from ID documents.',
-        icon: <IconHelp />,
+        icon: <ScanEye />,
         iconColor: 'bg-violet-500/10 text-violet-500',
       },
       {
         title: 'Liveness Detection',
         description: 'Prevent fraud with real-time user authentication.',
-        icon: <IconCloud />,
+        icon: <ScanFace />,
         iconColor: 'bg-pink-500/10 text-pink-500',
       },
     ],
@@ -161,57 +191,57 @@ const tabs = [
       description:
         'Simplify document signing with Aadhaar-based e-signature solutions.',
       buttonText: 'Learn More',
-      imageSrc: 'https://shadcnblocks.com/images/block/placeholder-dark-4.svg',
+
       imageAlt: 'Aadhaar E-Sign',
     },
     features: [
       {
         title: 'Aadhaar OTP E-Sign',
         description: 'Digitally sign documents using Aadhaar-based OTP.',
-        icon: <IconTerminal2 />,
+        icon: <KeyRound />,
         iconColor: 'bg-yellow-500/10 text-yellow-500',
       },
       {
         title: 'Biometric E-Sign',
         description: 'Authenticate signatures with Aadhaar biometrics.',
-        icon: <IconEaseInOut />,
+        icon: <Fingerprint />,
         iconColor: 'bg-cyan-500/10 text-cyan-500',
       },
       {
         title: 'Digital Agreement Signing',
         description: 'Enable legally binding e-signatures for contracts.',
-        icon: <IconCurrencyDollar />,
+        icon: <FileSignature />,
         iconColor: 'bg-violet-500/10 text-violet-500',
       },
       {
         title: 'E-Mandate Registration',
         description: 'Automate recurring payment authorizations.',
-        icon: <IconAdjustmentsBolt />,
+        icon: <CheckCircle />,
         iconColor: 'bg-pink-500/10 text-pink-500',
       },
       {
         title: 'NSDL-Based E-Sign',
         description: 'Securely sign documents via NSDL integration.',
-        icon: <IconHeart />,
+        icon: <FileSignature />,
         iconColor: 'bg-pink-500/10 text-pink-500',
       },
 
       {
         title: 'API-Based E-Sign',
         description: 'Seamlessly integrate Aadhaar e-sign into your workflows.',
-        icon: <IconRouteAltLeft />,
+        icon: <FileCode />,
         iconColor: 'bg-cyan-500/10 text-cyan-500',
       },
       {
         title: 'Bulk Document Signing',
         description: 'Sign multiple documents in a single workflow.',
-        icon: <IconHelp />,
+        icon: <FileCheck />,
         iconColor: 'bg-violet-500/10 text-violet-500',
       },
       {
-        title: 'Legal Validity & Compliance',
+        title: 'Legal Validity',
         description: 'Ensure compliance with IT Act 2000 regulations.',
-        icon: <IconCloud />,
+        icon: <Scale />,
         iconColor: 'bg-yellow-500/10 text-yellow-500',
       },
     ],
@@ -233,11 +263,11 @@ const Feature108 = () => {
           <div className="mb-4 flex items-center gap-2 sora-heading justify-center text-center text-wrap text-2xl lg:text-5xl font-bold leading-[1.2]">
             Comprehensive Verification Solutions
           </div>
-          <p className="mx-auto mb-8 max-w-lg text-center text-md lg:text-lg font-medium text-foreground/80">
+          <p className="mx-auto mb-4 max-w-lg text-center text-md lg:text-lg font-medium text-foreground/80">
             {features.description}
           </p>
         </div>
-        <Tabs defaultValue={tabs[0].value} className="mt-8">
+        <Tabs defaultValue={tabs[0].value} className="mt-4">
           <TabsList className="flex flex-col justify-center gap-4 sm:flex-row md:gap-10">
             {tabs.map((tab) => (
               <TabsTrigger

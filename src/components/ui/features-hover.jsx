@@ -15,7 +15,7 @@ const Feature = ({ title, description, icon, index, iconColor }) => {
   return (
     <div
       className={cn(
-        'flex flex-col lg:border-r py-10 relative group/feature ',
+        'flex flex-col lg:border-r py-5 relative group/feature mt-2',
         (index === 0 || index === 4) && 'lg:border-l border-secondary/20',
         index < 4 && 'lg:border-b border-secondary/20'
       )}
@@ -28,7 +28,7 @@ const Feature = ({ title, description, icon, index, iconColor }) => {
       )}
       <div
         className={cn(
-          'mb-4 flex w-min relative z-10 ml-8 p-2 rounded-full',
+          'mb-4 relative z-10 ml-8 w-8 h-8 p-1.5 rounded-full flex items-center justify-center font-bold text-lg',
           iconColor
         )}
       >
