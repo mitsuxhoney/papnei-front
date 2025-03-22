@@ -260,10 +260,10 @@ const Feature108 = () => {
           >
             {features.badge}
           </Badge> */}
-          <div className="mb-4 flex items-center gap-2 sora-heading justify-center text-center text-wrap text-2xl lg:text-5xl font-bold leading-[1.2]">
+          <div className="mb-4 sora-heading text-center text-4xl lg:text-5xl font-bold leading-[1.2]">
             Comprehensive Verification Solutions
           </div>
-          <p className="mx-auto mb-4 max-w-lg text-center text-md lg:text-lg font-medium text-foreground/80">
+          <p className="mx-auto mb-4 text-center text-md font-medium text-foreground/80">
             {features.description}
           </p>
         </div>

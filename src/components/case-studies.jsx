@@ -205,6 +205,7 @@ import { cn } from '../lib/utils'
 import case1 from '../assets/case1.png'
 import case2 from '../assets/case2.png'
 import case3 from '../assets/case3.png'
+import Wrapper from './Wrapper'
 
 export function CaseStudies() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -387,75 +388,77 @@ export function CaseStudies() {
     },
   ]
   return (
-    <section className="pb-20 pt-6 bg-transparent relative overflow-hidden">
-      <div className="absolute inset-0 -z-10" />
-      <div className="mx-auto">
-        <div className="text-center mb-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <div className="mb-4 text-center text-5xl sora-heading font-bold leading-[1.2]">
-              Recent Case Studies
-              {/* <div className="inline-block bg-primary rounded-md -rotate-2 p-2">
+    <Wrapper>
+      <section className="pb-20 pt-6 bg-transparent relative overflow-hidden">
+        <div className="absolute inset-0 -z-10" />
+        <div className="mx-auto">
+          <div className="text-center mb-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="mb-4 text-center text-4xl lg:text-5xl sora-heading font-bold leading-[1.2]">
+                Recent Case Studies
+                {/* <div className="inline-block bg-primary rounded-md -rotate-2 p-2">
                 <div className="rotate-2 text-white ">Case Studies</div>
               </div>{' '} */}
-            </div>
-            <p className="mx-auto max-w-lg text-center text-lg font-medium text-foreground/80">
-              Explore our recent case studies showcasing real-world success
-              stories and impactful solutions.
-            </p>
-          </motion.div>
-        </div>
-        <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex">
-            {industries.map((industry, index) => (
-              <motion.div
-                key={index}
-                className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.33%] pl-4"
-              >
-                <div
-                  className={cn(
-                    'group overflow-hidden relative rounded-[4px] h-[370px] md:h-[390px] lg:h-[400px] px-4 py-4 border border-primary-100 transition-all duration-300 hover:shadow-sm',
-                    industry.color
-                  )}
+              </div>
+              <p className="mx-auto text-center text-md font-medium text-foreground/80">
+                Explore our recent case studies showcasing real-world success
+                stories and impactful solutions.
+              </p>
+            </motion.div>
+          </div>
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex">
+              {industries.map((industry, index) => (
+                <motion.div
+                  key={index}
+                  className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.33%] pl-4"
                 >
-                  <div className="flex flex-col gap-3 items-start">
-                    <div className="!text-secondary">{industry.title}</div>
-                    <div className="text-neutral-600">{industry.heading}</div>
-                    <div className="text-foreground/80">
-                      {industry.description}
+                  <div
+                    className={cn(
+                      'group overflow-hidden relative rounded-[4px] h-[370px] md:h-[390px] lg:h-[400px] px-4 py-4 border border-primary-100 transition-all duration-300 hover:shadow-sm',
+                      industry.color
+                    )}
+                  >
+                    <div className="flex flex-col gap-3 items-start">
+                      <div className="!text-secondary">{industry.title}</div>
+                      <div className="text-neutral-600">{industry.heading}</div>
+                      <div className="text-foreground/80">
+                        {industry.description}
+                      </div>
+                    </div>
+                    <div className="absolute lg:-right-1">
+                      <img
+                        src={industry.image}
+                        className="h-full w-full rounded-md"
+                        alt=""
+                      />
                     </div>
                   </div>
-                  <div className="absolute lg:-right-1">
-                    <img
-                      src={industry.image}
-                      className="h-full w-full rounded-md"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              ))}
+            </div>
+          </div>
+          <div className="flex justify-center gap-2 mt-8">
+            {emblaApi &&
+              scrollSnaps.length > 0 &&
+              scrollSnaps.map((_, index) => (
+                <button
+                  key={index}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === selectedIndex
+                      ? 'bg-primary w-6'
+                      : 'bg-primary/10 hover:bg-primary/40'
+                  }`}
+                  onClick={() => scrollTo(index)}
+                />
+              ))}
           </div>
         </div>
-        <div className="flex justify-center gap-2 mt-8">
-          {emblaApi &&
-            scrollSnaps.length > 0 &&
-            scrollSnaps.map((_, index) => (
-              <button
-                key={index}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === selectedIndex
-                    ? 'bg-primary w-6'
-                    : 'bg-primary/10 hover:bg-primary/40'
-                }`}
-                onClick={() => scrollTo(index)}
-              />
-            ))}
-        </div>
-      </div>
-    </section>
+      </section>
+    </Wrapper>
   )
 }

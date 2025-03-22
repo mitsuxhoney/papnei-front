@@ -32,10 +32,10 @@ const FAQCTA = ({
       <div className="space-y-16 w-full">
         <Wrapper>
           <div className="mx-auto flex max-w-3xl flex-col text-left md:text-center">
-            <div className="mb-4 text-center text-5xl font-bold leading-[1.2] sora-heading">
+            <div className="mb-4 text-center text-4xl lg:text-5xl font-bold leading-[1.2] sora-heading">
               {faq.heading} {faq.span}
             </div>
-            <p className="mx-auto mb-8 max-w-lg text-center text-lg font-medium text-foreground/80">
+            <p className="mx-auto mb-8 text-center text-md font-medium text-foreground/80">
               {faq.description}
             </p>
           </div>

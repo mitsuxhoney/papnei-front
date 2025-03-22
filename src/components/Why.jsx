@@ -332,7 +332,7 @@ const items = [
     ),
     header: (
       <LazyLoadMotion>
-        <div className="absolute -bottom-44 right-0 lg:-bottom-42 lg:-right-2">
+        <div className="absolute -bottom-44 -right-14 lg:-bottom-42 lg:-right-2">
           <TerminalDemo />
         </div>
       </LazyLoadMotion>
@@ -346,7 +346,7 @@ const items = [
 
     header: (
       <LazyLoadMotion>
-        <div className="relative -right-20">
+        <div className="relative w-full -right-20">
           <OrbitingCirclesHome />
         </div>
       </LazyLoadMotion>
@@ -373,7 +373,7 @@ const items = [
     ),
     header: (
       <div className="relative w-full h-full">
-        <div className="absolute -bottom-8 -right-10 lg:-right-4 lg:-bottom-4">
+        <div className="absolute -bottom-16 -right-16 lg:-right-4 lg:-bottom-4">
           <svg
             width="242"
             height="154"
@@ -536,7 +536,8 @@ const items = [
         </div>
       </div>
     ),
-    className: 'max-md:col-span-2 lg:col-span-1 lg:h-[260px] bg-purple-500/10',
+    className:
+      'max-md:col-span-2 lg:col-span-1 lg:h-[260px] relative z-[-4] bg-purple-500/10',
     icon: <IconSignature className="h-4 w-4" />,
   },
   {
@@ -584,14 +585,14 @@ export function Why() {
   return (
     <div className="py-20">
       <div className="text-center mb-6">
-        <div className="mb-4 text-center sora-heading text-5xl font-bold leading-[1.2]">
+        <div className="mb-4 text-center sora-heading text-4xl lg:text-5xl font-bold leading-[1.2]">
           Why Choose {` `}
           {/* <div className="inline-block bg-primary rounded-md -rotate-2 p-2">
             <div className="rotate-2 text-white ">Choose</div>
           </div>{' '} */}
           Us ?
         </div>
-        <p className="mx-auto mb-8 max-w-lg text-center text-lg font-medium text-foreground/80">
+        <p className="mx-auto mb-8 text-center text-md font-medium text-foreground/80">
           {why.description}
         </p>
       </div>

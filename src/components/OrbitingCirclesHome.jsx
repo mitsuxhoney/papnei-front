@@ -4,7 +4,7 @@ import { CreditCard, IndianRupee, User } from 'lucide-react'
 
 export function OrbitingCirclesDemo() {
   return (
-    <div className="relative flex h-[342px] w-full flex-col items-center justify-center overflow-hidden">
+    <div className="relative flex h-[342px] w-full flex-col items-center justify-center">
       <OrbitingCircles iconSize={30}>
         <div className="text-tertiary">
           <IconTerminal2 />

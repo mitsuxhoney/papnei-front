@@ -16,14 +16,14 @@ function Hero2({ businessHero }) {
 
         <section className="relative z-10 border-white/10 w-full overflow-hidden">
           <Wrapper>
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 py-24 relative z-20">
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-10 xl:gap-4 py-24 relative z-20">
               {/* Hero Content */}
-              <div className="relative flex flex-col items-start justify-center text-left">
-                <h1 className="2xl:text-6xl xl:text-6xl text-xl font-semibold bg-gradient-to-b from-[#edeffd] to-[#7b9cda] bg-clip-text relative sora-heading">
+              <div className="relative flex flex-col items-start justify-center gap-4 text-left">
+                <h1 className="text-4xl lg:text-5xl font-bold relative sora-heading">
                   {businessHero.heading}
                 </h1>
 
-                <p className="text-balance text-muted-foreground pt-4 lg:text-lg relative">
+                <p className="text-balance text-foreground/80 pt-4 text-md relative">
                   {businessHero.description}
                 </p>
                 <Link to="/contact-us">

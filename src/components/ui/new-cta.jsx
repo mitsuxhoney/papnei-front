@@ -75,12 +75,12 @@ export function Connect() {
   ]
 
   return (
-    <section className="py-24 relative overflow-hidden bg-[#EAB308]/10">
+    <section className="py-24 relative z-[10] overflow-hidden bg-[#EAB308]/10">
       <Wrapper>
         <div className="absolute inset-0 bg-grid-primary-700/[0.05] -z-10" />
 
         <div className="container mx-auto px-6 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
+          <div className="flex flex-col lg:flex-row items-center gap-2">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -278,16 +278,15 @@ export function Connect() {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="flex-1 rounded-2xl p-8 relative md:h-auto"
+              className="block xl:flex-1 relative rounded-2xl xl:p-4 xl:h-auto"
             >
               {/* Add carousel background with revelrse direction */}
-              <div className="w-full absolute inset-0 -z-10 opacity-70">
+              <div className="w-full hidden xl:block absolute xl:top-12 inset-0 z-[9] opacity-80">
                 <IndustryCarousel className="-rotate-45 mb-12 lg:py-8" />
               </div>
-
-              <div className="relative">
+              <div className="relative z-[12]">
                 <img
-                  className="absolute hidden md:inline-block md:-top-20 lg:-top-28 lg:right-8"
+                  className="absolute hidden xl:inline-block lg:-top-16 lg:right-6"
                   src={newCTAImage}
                   alt=""
                 />

@@ -360,32 +360,35 @@ const ContactUs = () => {
                 transition={{ duration: 0.7, delay: 0.2 }}
                 className="lg:w-1/2 text-left"
               >
-                <div className="relative flex flex-col items-center justify-center text-left">
-                  <h1 className="2xl:text-6xl xl:text-6xl text-xl font-semibold sora-heading bg-gradient-to-b from-[#edeffd] to-[#7b9cda] bg-clip-text relative">
+                <div className="relative flex flex-col items-center justify-center w-full">
+                  <h1 className="text-4xl xl:text-5xl font-semibold sora-heading bg-gradient-to-b from-[#edeffd] to-[#7b9cda] bg-clip-text relative">
                     {businessHero.heading}
                   </h1>
 
-                  <p className="text-balance text-foreground/80 pt-4 lg:text-lg relative text-center">
+                  <p className="text-balance text-foreground/80 pt-4 text-md relative text-center">
                     {businessHero.description}
                   </p>
-                  <Link to="/contact-us" className="flex gap-2">
-                    <Button
-                      size="lg"
-                      className="mt-8 relative bg-secondary hover:bg-secondary/90 flex items-center"
-                    >
-                      <p>Schedule a call</p>
-                      <ArrowRight />
-                    </Button>
-
-                    <Button
-                      size="lg"
-                      className="mt-8 relative bg-white text-secondary border border-secondary hover:bg-white/80 flex items-center"
-                      onClick={scrollToContactForm}
-                    >
-                      <p>View Support Options</p>
-                      <ArrowRight />
-                    </Button>
-                  </Link>
+                  <div className="flex flex-col gap-2 mt-4 items-center md:flex-row justify-center w-full">
+                    <Link to="/contact-us">
+                      <Button
+                        size="lg"
+                        className="relative bg-secondary hover:bg-secondary/90 flex items-center"
+                      >
+                        <p>Schedule a call</p>
+                        <ArrowRight />
+                      </Button>
+                    </Link>
+                    <Link to="/contact-us" className="flex gap-2">
+                      <Button
+                        size="lg"
+                        className="relative bg-white text-secondary border border-secondary hover:bg-white/80 flex items-center"
+                        onClick={scrollToContactForm}
+                      >
+                        <p>View Support Options</p>
+                        <ArrowRight />
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </motion.div>
 
@@ -399,10 +402,10 @@ const ContactUs = () => {
       <section className="py-20 relative">
         <div className="max-w-6xl mx-auto px-4">
           <div className="mb-16 text-center">
-            <h2 className="mb-4 text-center text-5xl font-bold leading-[1.2] sora-heading">
+            <h2 className="mb-4 text-center text-4xl lg:text-5xl font-bold leading-[1.2] sora-heading">
               How to Reach Us
             </h2>
-            <p className="text-foreground/80 max-w-2xl mx-auto">
+            <p className="text-foreground/80 text-md mx-auto">
               Multiple ways to connect with our team for support, sales
               inquiries, or general questions.
             </p>
@@ -457,10 +460,10 @@ const ContactUs = () => {
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:20px_20px]"></div>
         <div className="max-w-6xl mx-auto px-4 relative z-10">
           <div className="mb-16 text-center">
-            <h2 className="mb-4 text-center text-5xl font-bold leading-[1.2] sora-heading">
+            <h2 className="mb-4 text-center text-4xl lg:text-5xl font-bold leading-[1.2] sora-heading">
               Send Us a Message
             </h2>
-            <p className="text-foreground/80 max-w-2xl mx-auto">
+            <p className="text-foreground/80 text-md mx-auto">
               Choose the right department and we&apos;ll make sure your message
               reaches the right team.
             </p>

@@ -644,7 +644,11 @@ const Navbar = () => {
                   <div className="flex items-center md:hidden">
                     <Sheet open={open} onOpenChange={setOpen}>
                       <SheetTrigger asChild>
-                        <Button variant="outline" className="p-5" size="icon">
+                        <Button
+                          variant="outline"
+                          className="p-4 hover:bg-secondary/5 hover:text-secondary"
+                          size="icon"
+                        >
                           <Menu className="h-6 w-6" />
                         </Button>
                       </SheetTrigger>

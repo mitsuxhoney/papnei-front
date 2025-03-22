@@ -2,6 +2,7 @@ import { cn } from '@/lib/utils'
 import { motion } from 'framer-motion'
 import { Star } from 'lucide-react'
 import { Marquee } from '@/components/ui/eldora-marquee'
+import Wrapper from '../Wrapper'
 
 export function Highlight({ children, className }) {
   return (
@@ -215,21 +216,24 @@ const testimonials = [
 export function Testimonials() {
   return (
     <section id="testimonials" className="py-10">
-      <div className="mb-4 text-center sora-heading text-5xl font-bold leading-[1.2] ">
-        What People {` `}
-        {/* <div className="inline-block bg-primary rounded-md -rotate-2 p-2">
+      <Wrapper>
+        <div className="mb-4 text-center sora-heading text-4xl lg:text-5xl font-bold leading-[1.2] ">
+          What People {` `}
+          {/* <div className="inline-block bg-primary rounded-md -rotate-2 p-2">
           <div className="rotate-2 text-white ">People</div>
         </div>{' '} */}
-        Are Saying
-      </div>
-      <h3 className="mx-auto mb-8 max-w-lg text-center text-lg font-medium text-foreground/80">
-        Don&apos;t just take our word for it. Here&apos;s what{' '}
-        <span className="from-fg-onAccent text-primary">real people</span> are
-        saying about{' '}
-        <span className="from-fg-onAccent font-medium text-primary">
-          XRAY AI
-        </span>
-      </h3>
+          Are Saying
+        </div>
+
+        <h3 className="mx-auto mb-8 text-center text-md font-medium text-foreground/80">
+          Don&apos;t just take our word for it. Here&apos;s what{' '}
+          <span className="from-fg-onAccent text-primary">real people</span> are
+          saying about{' '}
+          <span className="from-fg-onAccent font-medium text-primary">
+            XRAY AI
+          </span>
+        </h3>
+      </Wrapper>
       <div className="relative mt-6 max-h-screen overflow-hidden">
         <div className="gap-4 md:columns-2 xl:columns-3 2xl:columns-4">
           {Array(Math.ceil(testimonials.length / 3))

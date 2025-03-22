@@ -4,7 +4,7 @@ import { Logos3 as Partners } from '../../components/ui/logos3'
 
 import { Icons } from '@/components/ui/icons'
 import { Code, Layout, Pointer, Zap } from 'lucide-react'
-import { Feature108 as Features } from '@/components/ui/features'
+import { Feature108 as  Features } from '@/components/ui/features'
 import Wrapper from '../../components/Wrapper'
 import { Testimonials } from '../../components/ui/eldora-testimonials'
 import { IntegrationBenefits } from '../../components/IntegrationBenefits'
@@ -27,6 +27,7 @@ import { TerminalDemo1 } from '../../components/TerminalDemo1'
 import { TerminalDemo2 } from '../../components/TerminalDemo2'
 import { TerminalDemo3 } from '../../components/TerminalDemo3'
 import { TerminalDemo4 } from '../../components/TerminalDemo4'
+import { TerminalDemo } from '../../components/TerminalDemo'
 
 const tabsData = {
   badge: 'shadcnblocks.com',
@@ -208,7 +209,7 @@ const featureSteps = [
       'Use our well-documented APIs to connect seamlessly with your system.',
     image:
       'https://images.unsplash.com/photo-1723931464622-b7df7c71e380?q=80&w=2070&auto=format&fit=crop',
-    terminal: <TerminalDemo1 />,
+    terminal: <TerminalDemo />,
   },
   {
     step: 'Step 3',

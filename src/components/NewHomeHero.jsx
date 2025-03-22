@@ -1,4 +1,15 @@
-import { AlertCircle, ArrowRight, Briefcase, Building2, Key, Mail, Sparkle, SparklesIcon, Star, User } from 'lucide-react'
+import {
+  AlertCircle,
+  ArrowRight,
+  Briefcase,
+  Building2,
+  Key,
+  Mail,
+  Sparkle,
+  SparklesIcon,
+  Star,
+  User,
+} from 'lucide-react'
 import { AnimatedTooltip } from './ui/animated-tooltip'
 import { Badge } from '@/components/ui/badge'
 import { motion } from 'framer-motion'
@@ -64,14 +75,16 @@ const NewHomeHero = ({ businessHero }) => {
             <SparklesIcon className="" size={14} />
             <span className="">Start Verfying In Minutes</span>
           </Badge>
-          <h2 className="text-[44px] xl:text-[82px] xl:leading-[95px] tracking-[-2px] font-bold sora-heading max-w-[76rem] capitalize">
+
+          <h2 className="text-4xl md:text-6xl xl:text-[84px] xl:leading-[95px] xl:tracking-[-2px] font-bold sora-heading lg:max-w-[76rem] capitalize">
             Onboard{' '}
-            <span className="px-4 text-secondary bg-[url('@/assets/boxStroke.png')] bg-contain bg-no-repeat">
+            <span className="px-2 text-secondary bg-[url('@/assets/boxStroke.png')] bg-contain bg-no-repeat">
               Verified
             </span>
-            <span className="">Customers In Minutes</span>
+            Customers In Minutes
           </h2>
-          <p className="text-balance text-muted-foreground font-medium text-md lg:text-lg relative lg:max-w-[60%]">
+
+          <p className="text-balance text-foreground/80 font-medium text-md lg:text-lg relative lg:max-w-[60%]">
             Streamline your verification process with our comprehensive suite of
             API&apos;s. Fast, secure and compliant solutions designed for modern
             enterprises.
@@ -81,7 +94,7 @@ const NewHomeHero = ({ businessHero }) => {
               <AnimatedTooltip items={businessHero.reviews.avatars} />
             </span>
             <div>
-              <p className="text-left font-medium italic text-secondary">
+              <p className="text-sm lg:text-md text-center lg:text-left font-medium italic text-secondary">
                 We are trusted by fortune {businessHero.reviews.count}+
                 companies
               </p>
@@ -92,7 +105,7 @@ const NewHomeHero = ({ businessHero }) => {
               <DialogTrigger asChild>
                 <Button
                   variant="default"
-                  className="bg-gradient-to-r rounded-xl from-secondary to-secondary/80 px-6 py-3 h-12 text-primary-foreground hover:opacity-90 transition-all duration-200"
+                  className="bg-gradient-to-r rounded-xl from-secondary to-secondary/80  md:px-6 md:py-3 h-12 text-primary-foreground hover:opacity-90 transition-all duration-200"
                 >
                   Get API Keys
                   <ArrowRight />
@@ -228,14 +241,12 @@ const NewHomeHero = ({ businessHero }) => {
               </DialogContent>
             </Dialog>
 
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="w-full sm:w-auto px-6 py-4 rounded-lg
+            <Button
+              className="w-full sm:w-auto hover:scale-[scale: 1.02] px-2 py-2 md:px-6 md:py-4 rounded-lg
                 bg-white text-secondary border border-secondary hover:bg-white/80 flex items-center font-semibold"
             >
               View Documentation
-            </motion.button>
+            </Button>
           </div>
         </div>
       </Wrapper>
