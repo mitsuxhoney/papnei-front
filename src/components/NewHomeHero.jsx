@@ -1,4 +1,4 @@
-import { ArrowRight, Sparkle, SparklesIcon, Star } from 'lucide-react'
+import { AlertCircle, ArrowRight, Briefcase, Building2, Key, Mail, Sparkle, SparklesIcon, Star, User } from 'lucide-react'
 import { AnimatedTooltip } from './ui/animated-tooltip'
 import { Badge } from '@/components/ui/badge'
 import { motion } from 'framer-motion'
@@ -90,101 +90,135 @@ const NewHomeHero = ({ businessHero }) => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Dialog>
               <DialogTrigger asChild>
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full sm:w-auto px-6 py-4 bg-secondary text-primary-foreground 
-                rounded-lg flex items-center justify-center group font-semibold
-                hover:bg-secondary/90 transition-colors"
+                <Button
+                  variant="default"
+                  className="bg-gradient-to-r rounded-xl from-secondary to-secondary/80 px-6 py-3 h-12 text-primary-foreground hover:opacity-90 transition-all duration-200"
                 >
                   Get API Keys
-                  <ArrowRight className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
-                </motion.button>
+                  <ArrowRight />
+                </Button>
               </DialogTrigger>
-              <DialogContent className="sm:max-w-[425px]">
-                <DialogHeader>
-                  <DialogTitle>Contact Us</DialogTitle>
-                  <DialogDescription>
-                    Request a callback by filling the details below.
-                  </DialogDescription>
-                </DialogHeader>
-                <div className="grid gap-4 py-4 ">
+              <DialogContent className="sm:max-w-[600px] p-0 overflow-hidden select-none">
+                <div className="bg-gradient-to-br from-secondary/10 via-secondary/5 to-transparent p-6 pb-8 relative">
+                  <div className="absolute inset-0 bg-[linear-gradient(40deg,transparent_25%,rgba(68,68,68,0.05)_50%,transparent_75%)] opacity-20" />
+                  <DialogHeader>
+                    <DialogTitle className="text-2xl font-bold tracking-tight bg-clip-text text-secondary bg-gradient-to-r from-secondary to-/80 flex items-center gap-2">
+                      Get Your API Keys
+                    </DialogTitle>
+                    <DialogDescription className="text-foreground/80 mt-2">
+                      Join thousands of developers building amazing applications
+                      with our API.
+                    </DialogDescription>
+                  </DialogHeader>
+                </div>
+
+                <div className="p-6 space-y-6">
                   <Form {...form}>
-                    <form
-                      onSubmit={form.handleSubmit(onSubmit)}
-                      className="space-y-4 flex flex-col"
-                    >
-                      <FormField
-                        control={form.control}
-                        name="name"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormControl>
-                              <Input
-                                placeholder="Name"
-                                {...field}
-                                className="w-full"
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={form.control}
-                        name="businessName"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormControl>
-                              <Input
-                                placeholder="Business Name"
-                                {...field}
-                                className="w-full"
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormControl>
-                              <Input
-                                type="email"
-                                placeholder="Email"
-                                {...field}
-                                className="w-full"
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={form.control}
-                        name="workEmail"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormControl>
-                              <Input
-                                type="email"
-                                placeholder="Work Email"
-                                {...field}
-                                className="w-full"
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <DialogFooter>
+                    <form className="space-y-4">
+                      <div className="grid gap-4">
+                        <FormField
+                          control={form.control}
+                          name="name"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormControl>
+                                <div className="relative">
+                                  <User className="absolute left-3 top-3 w-4 h-4 text-muted-foreground" />
+                                  <Input
+                                    placeholder="Name"
+                                    {...field}
+                                    className="w-full pl-10 transition-all duration-200 focus:ring-2 focus:ring-primary/20"
+                                  />
+                                </div>
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+
+                        <FormField
+                          control={form.control}
+                          name="businessName"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormControl>
+                                <div className="relative">
+                                  <Building2 className="absolute left-3 top-3 w-4 h-4 text-muted-foreground" />
+                                  <Input
+                                    placeholder="Business Name"
+                                    {...field}
+                                    className="w-full pl-10 transition-all duration-200 focus:ring-2 focus:ring-primary/20"
+                                  />
+                                </div>
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+
+                        <FormField
+                          control={form.control}
+                          name="email"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormControl>
+                                <div className="relative">
+                                  <Mail className="absolute left-3 top-3 w-4 h-4 text-muted-foreground" />
+                                  <Input
+                                    type="email"
+                                    placeholder="Email"
+                                    {...field}
+                                    className="w-full pl-10 transition-all duration-200 focus:ring-2 focus:ring-primary/20"
+                                  />
+                                </div>
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+
+                        <FormField
+                          control={form.control}
+                          name="workEmail"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormControl>
+                                <div className="relative">
+                                  <Briefcase className="absolute left-3 top-3 w-4 h-4 text-muted-foreground" />
+                                  <Input
+                                    type="email"
+                                    placeholder="Work Email"
+                                    {...field}
+                                    className="w-full pl-10 transition-all duration-200 focus:ring-2 focus:ring-primary/20"
+                                  />
+                                </div>
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
+
+                      <div className="bg-secondary/10 rounded-lg p-4 mt-6">
+                        <div className="flex items-start gap-3">
+                          <AlertCircle className="w-5 h-5 text-muted-foreground mt-0.5" />
+                          <div className="text-sm text-foreground/80">
+                            <p className="font-medium mb-1">Important Note</p>
+                            <p>
+                              Your API keys will be sent to both email addresses
+                              for security purposes. Please ensure they are
+                              correct.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <DialogFooter className="flex justify-end gap-4 pt-4 border-t mt-6">
                         <Button
                           type="submit"
-                          className="w-full bg-secondary hover:bg-secondary/90"
+                          className="bg-gradient-to-r from-secondary to-secondary/80 text-primary-foreground hover:opacity-90 transition-all duration-200 min-w-[140px]"
                         >
+                          <Key className="w-4 h-4 mr-2" />
                           Get your API key
                         </Button>
                       </DialogFooter>

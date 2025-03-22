@@ -133,7 +133,6 @@ export function Connect() {
                       <div className="absolute inset-0 bg-[linear-gradient(40deg,transparent_25%,rgba(68,68,68,0.05)_50%,transparent_75%)] opacity-20" />
                       <DialogHeader>
                         <DialogTitle className="text-2xl font-bold tracking-tight bg-clip-text text-secondary bg-gradient-to-r from-secondary to-/80 flex items-center gap-2">
-                          <Key className="w-6 h-6" />
                           Get Your API Keys
                         </DialogTitle>
                         <DialogDescription className="text-foreground/80 mt-2">
