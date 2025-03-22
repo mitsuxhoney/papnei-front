@@ -239,16 +239,16 @@ const ContactUs = () => {
     {
       icon: <Phone className="w-6 h-6" strokeWidth={1.5} />,
       title: 'Phone Number',
-      content: '+91   8876102030',
+      content: '+91 8876102030',
       action: 'Call Now',
       url: 'tel:+918876102030',
     },
     {
       icon: <Mail className="w-6 h-6" strokeWidth={1.5} />,
       title: 'Email Address',
-      content: 'contact@xray.com • support@xray.com',
+      content: 'letstalk@xettle.net',
       action: 'Send Email',
-      url: 'mailto:contact@xray.com',
+      url: 'mailto:letstalk@xettle.net',
     },
     {
       icon: <Clock className="w-6 h-6" strokeWidth={1.5} />,
