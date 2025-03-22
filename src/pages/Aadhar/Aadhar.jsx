@@ -570,15 +570,16 @@ const otherProductsHeading = {
 const Aadhar = () => {
   return (
     <div>
-      <div className="mb-16">
+      <div className="my-16">
         <Hero2 businessHero={businessHero} />
       </div>
       <Wrapper>
-        <div className="">
+        <div className="py-20">
           <BusinessProducts
             grid={aadharProducts}
             gridHeading={aadharProductsHeading}
             className="grid-cols-1 md:grid-cols-2 max-w-3xl mx-auto"
+            cardClass="bg-white"
           />
         </div>
       </Wrapper>
@@ -599,7 +600,7 @@ const Aadhar = () => {
         <BusinessCTA />
       </div> */}
       <Wrapper>
-        <div className="mb-16 py-16">
+        <div className="mt-16 mb-24 py-16">
           <BusinessProducts
             grid={otherProducts}
             gridHeading={otherProductsHeading}

@@ -35,7 +35,7 @@ export function IntegrationBenefits({
                 return (
                   <motion.div
                     key={feature.step}
-                    className="lg:h-[400px]"
+                    className="h-full"
                     initial={{ width: '0%' }}
                     animate={{ width: '100%' }}
                     transition={{ duration: 0.5, ease: 'easeInOut' }}

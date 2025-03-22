@@ -14,7 +14,7 @@ const insightsArray = [
   {
     id: 1,
     heading:
-      '"Integration of Trustfulls identity scoring algorithms in our AML/KYC process allowed our bank to tap into alternative data sources to identify suspicious behavior."',
+      '"Integration of XRAY AI identity scoring algorithms in our AML/KYC process allowed our bank to tap into alternative data sources to identify suspicious behavior."',
     user: {
       name: 'Luca Crivellari',
       position:
@@ -50,7 +50,7 @@ const insightsArray = [
   {
     id: 2,
     heading:
-      '"Leveraging Trustfulls AI-driven risk analysis helped our institution detect fraud attempts more efficiently, reducing false positives and improving operational efficiency in compliance procedures."',
+      '"Leveraging XRAY AI AI-driven risk analysis helped our institution detect fraud attempts more efficiently, reducing false positives and improving operational efficiency in compliance procedures."',
     user: {
       name: 'Sophie Tremblay',
       position: 'Chief Risk Officer, Banque Nationale',
@@ -89,7 +89,7 @@ const insightsArray = [
   {
     id: 3,
     heading:
-      '"Trustfulls real-time behavioral analytics provided deeper insights into customer activities, strengthening our fraud detection mechanisms while enhancing the customer onboarding experience."',
+      '"XRAY AI real-time behavioral analytics provided deeper insights into customer activities, strengthening our fraud detection mechanisms while enhancing the customer onboarding experience."',
     user: {
       name: 'Carlos Fernandez',
       position: 'Director of Fraud Prevention, BBVA',
@@ -236,11 +236,11 @@ const AboutUs = () => {
                 We power trust building solutions
               </p>
               <p className="text-[19px] font-extralight text-foreground/80 leading-[30px] tracking-[0.417px]">
-                Trustfull&apos;s Identity Intelligence solution helps businesses
-                reduce risks, protect integrity and accelerate growth on a
-                global scale. Our solutions unlock hundreds of digital signals
-                to accurately detect fraud and fincrime attempts across the
-                entire customer journey.
+                XRAY AI Identity Intelligence solution helps businesses reduce
+                risks, protect integrity and accelerate growth on a global
+                scale. Our solutions unlock hundreds of digital signals to
+                accurately detect fraud and fincrime attempts across the entire
+                customer journey.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4 lg:place-items-center ">

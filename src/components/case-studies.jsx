@@ -260,15 +260,11 @@ export function CaseStudies() {
   const industries = [
     {
       title: <h3 className="text-lg font-semibold">Fintech Startup</h3>,
-      heading: (
-        <p className="text-md font-semibold ">
-          Boosted Loan Approvals with Instant KYC
-        </p>
-      ),
+      heading: <p className="text-md font-semibold ">Fast Loan Approvals</p>,
       description: (
         <p className="text-sm  mb-4">
-          A fintech startup reduced onboarding time by 60% using Aadhaar-based
-          e-KYC verification.{' '}
+          Instant KYC cut onboarding by 40%. Quicker approvals, happier
+          customers.
         </p>
       ),
       image: case1,
@@ -276,15 +272,11 @@ export function CaseStudies() {
     },
     {
       title: <h3 className="text-lg font-semibold">E-commerce Platform</h3>,
-      heading: (
-        <p className="text-md font-semibold ">
-          Prevented Fraudulent Sellers with Business
-        </p>
-      ),
+      heading: <p className="text-md font-semibold ">Trusted Seller Base</p>,
       description: (
         <p className="text-sm  mb-4">
-          An e-commerce giant verified business registrations to eliminate fake
-          sellers and ensure trust.
+          Robust business verification stopped fraud. Buyer trust increased
+          significantly.
         </p>
       ),
       image: case2,
@@ -292,127 +284,102 @@ export function CaseStudies() {
     },
     {
       title: <h3 className="text-lg font-semibold">Ride-Sharing Company</h3>,
-      heading: (
-        <p className="text-md font-semibold ">
-          Enhanced Driver Verification with Identity API
-        </p>
-      ),
+      heading: <p className="text-md font-semibold ">Safer Rider Experience</p>,
       description: (
         <p className="text-sm  mb-4">
-          A mobility startup ensured passenger safety by verifying driver
-          backgrounds in real time.
+          Real-time driver ID checks. Verified drivers, safer passenger
+          journeys.
         </p>
       ),
       image: case3,
       color: 'bg-pink-500/10',
     },
     {
-      title: <h3 className="text-lg font-semibold">Fintech1 Startup</h3>,
-      heading: (
-        <p className="text-md font-semibold ">
-          Boosted Loan Approvals with Instant KYC
-        </p>
+      title: (
+        <h3 className="text-lg font-semibold">Digital Lending Platform</h3>
       ),
+      heading: <p className="text-md font-semibold ">Automated Compliance</p>,
       description: (
         <p className="text-sm  mb-4">
-          A fintech startup reduced onboarding time by 60% using Aadhaar-based
-          e-KYC verification.{' '}
+          Advanced KYC/KYB reduced overhead. Seamless, automated compliance.
         </p>
       ),
       image: case1,
       color: 'bg-violet-500/10',
     },
     {
-      title: <h3 className="text-lg font-semibold">E-commerce Platform1</h3>,
-      heading: (
-        <p className="text-md font-semibold ">
-          Prevented Fraudulent Sellers with Business
-        </p>
-      ),
+      title: <h3 className="text-lg font-semibold">Online Marketplace</h3>,
+      heading: <p className="text-md font-semibold ">Secured Transactions</p>,
       description: (
         <p className="text-sm  mb-4">
-          An e-commerce giant verified business registrations to eliminate fake
-          sellers and ensure trust.
+          Bank verification cut payment fraud. Secure transactions for all
+          users.
         </p>
       ),
       image: case2,
       color: 'bg-cyan-500/10',
     },
     {
-      title: <h3 className="text-lg font-semibold">Ride-Sharing Company1</h3>,
+      title: <h3 className="text-lg font-semibold">Logistics Company</h3>,
       heading: (
-        <p className="text-md font-semibold ">
-          Enhanced Driver Verification with Identity API
-        </p>
+        <p className="text-md font-semibold ">Faster Partner Onboarding</p>
       ),
       description: (
         <p className="text-sm  mb-4">
-          A mobility startup ensured passenger safety by verifying driver
-          backgrounds in real time.
+          Quick identity checks streamlined onboarding. Faster operations,
+          immediate compliance.
         </p>
       ),
       image: case3,
       color: 'bg-yellow-500/10',
     },
     {
-      title: <h3 className="text-lg font-semibold">Fintech Startup2</h3>,
-      heading: (
-        <p className="text-md font-semibold ">
-          Boosted Loan Approvals with Instant KYC
-        </p>
+      title: (
+        <h3 className="text-lg font-semibold">Financial Services Provider</h3>
       ),
+      heading: <p className="text-md font-semibold ">Enhanced Trust</p>,
       description: (
         <p className="text-sm  mb-4">
-          A fintech startup reduced onboarding time by 60% using Aadhaar-based
-          e-KYC verification.{' '}
+          Aadhaar e-sign reduced paperwork. Secure digital agreements, increased
+          trust.
         </p>
       ),
       image: case1,
       color: 'bg-purple-500/10',
     },
     {
-      title: <h3 className="text-lg font-semibold">E-commerce Platform2</h3>,
-      heading: (
-        <p className="text-md font-semibold ">
-          Prevented Fraudulent Sellers with Business
-        </p>
-      ),
+      title: <h3 className="text-lg font-semibold">Retail E-commerce</h3>,
+      heading: <p className="text-md font-semibold ">Reduced Chargebacks</p>,
       description: (
         <p className="text-sm  mb-4">
-          An e-commerce giant verified business registrations to eliminate fake
-          sellers and ensure trust.
+          Verified customer data cut chargebacks by 30%. Enhanced payment
+          security.
         </p>
       ),
       image: case2,
       color: 'bg-violet-500/10',
     },
     {
-      title: <h3 className="text-lg font-semibold ">Ride-Sharing Company2</h3>,
+      title: <h3 className="text-lg font-semibold ">Gig Economy Platform</h3>,
       heading: (
-        <p className="text-md font-semibold ">
-          Enhanced Driver Verification with Identity API
-        </p>
+        <p className="text-md font-semibold ">Authentic Service Providers</p>
       ),
       description: (
         <p className="text-sm  mb-4">
-          A mobility startup ensured passenger safety by verifying driver
-          backgrounds in real time.
+          Identity API ensured authenticity. Trusted environment for all
+          customers.
         </p>
       ),
       image: case3,
       color: 'bg-cyan-500/10',
     },
     {
-      title: <h3 className="text-lg font-semibold">Fintech Startup3</h3>,
-      heading: (
-        <p className="text-md font-semibold ">
-          Boosted Loan Approvals with Instant KYC
-        </p>
-      ),
+      title: <h3 className="text-lg font-semibold">Insurance Company</h3>,
+      heading: <p className="text-md font-semibold ">Faster Policy Issuance</p>,
       description: (
         <p className="text-sm  mb-4">
-          A fintech startup reduced onboarding time by 60% using Aadhaar-based
-          e-KYC verification.{' '}
+          Instant verification sped up policy issuance. Improved customer
+          satisfaction.
         </p>
       ),
       image: case1,

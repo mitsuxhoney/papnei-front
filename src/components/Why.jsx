@@ -322,11 +322,12 @@ const SkeletonFive = () => {
 }
 const items = [
   {
-    title: <h2 className="">AI Powered Verification</h2>,
-    heading: <h3 className="">Find out who&apos;s behind any phone number</h3>,
+    title: <h2 className="">AI-Powered Verification</h2>,
+    heading: <h3 className="">Instant & Accurate Identity Checks</h3>,
     description: (
       <span className="text-sm">
-        Experience the power of AI in Verification.
+        Utilize advanced AI for rapid and reliable identity verification
+        processes.
       </span>
     ),
     header: (
@@ -340,8 +341,9 @@ const items = [
     icon: <IconClipboardCopy className="h-4 w-4" />,
   },
   {
-    title: <h2 className="">Automated Scanning</h2>,
-    heading: <h3>Find out who&apos;s behind any phone number</h3>,
+    title: <h2 className="">Automated Document Scanning</h2>,
+    heading: <h3>Efficient Data Extraction & Validation</h3>,
+
     header: (
       <LazyLoadMotion>
         <div className="relative -right-20">
@@ -351,7 +353,8 @@ const items = [
     ),
     description: (
       <span className="text-sm">
-        Let AI handle the proofreading of your documents.
+        Automate document processing, extracting key data and validating
+        authenticity.
       </span>
     ),
 
@@ -360,10 +363,13 @@ const items = [
     icon: <IconFileBroken className="h-4 w-4" />,
   },
   {
-    title: <h2 className="">One to Many Integrations</h2>,
-    heading: <h3>Find out who&apos;s behind any phone number</h3>,
+    title: <h2 className="">Multi-Platform Integrations</h2>,
+    heading: <h3>Seamless Connectivity Across Systems</h3>,
     description: (
-      <span className="text-sm">Get one to many integration benefits.</span>
+      <span className="text-sm">
+        Connect and integrate with various platforms for unified verification
+        workflows.
+      </span>
     ),
     header: (
       <div className="relative w-full h-full">
@@ -534,11 +540,11 @@ const items = [
     icon: <IconSignature className="h-4 w-4" />,
   },
   {
-    title: <h2 className="">Document Analysis</h2>,
-    heading: <h3>Find out who&apos;s behind any phone number</h3>,
+    title: <h2 className="">Secure Identity Checks</h2>,
+    heading: <h3>Keep fraudsters away with real-time authentication.</h3>,
     description: (
       <span className="text-sm">
-        Understand the sentiment of your text with AI analysis.
+        Fast and accurate ID verification for peace of mind.
       </span>
     ),
     contentClassName: 'gap-6',
@@ -554,11 +560,11 @@ const items = [
   },
 
   {
-    title: <h2 className="">Text Summarization</h2>,
-    heading: <h2>Find out who&apos;s behind any phone number</h2>,
+    title: <h2 className="">Safe & Compliant</h2>,
+    heading: <h2>Our strict regulations keeps your info private.</h2>,
     description: (
       <span className="text-sm">
-        Summarize your lengthy documents with AI technology.
+        Your data stays protected with industry-standard security.
       </span>
     ),
     header: '',

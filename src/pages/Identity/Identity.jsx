@@ -701,7 +701,7 @@ const otherProducts = [
     icon: <File className="w-5 h-5" />,
     iconColor: 'text-yellow-600 bg-yellow-600/10',
     backgroundColor: 'bg-yellow-600/10',
-    className: 'bg-yellow-600/10',
+    className: 'bg-white',
     url: '/business',
     button: (
       <InteractiveHoverButton className="rounded-md flex items-center text-sm">
@@ -765,11 +765,12 @@ const Identity = () => {
       </Wrapper>
 
       <Wrapper>
-        <div className=" py-16">
+        <div className="py-16 mt-16 mb-24">
           <BusinessProducts
             grid={otherProducts}
             gridHeading={otherProductsHeading}
             className="grid-cols-1 md:grid-cols-2 max-w-3xl mx-auto"
+            cardClass="bg-white"
           />
         </div>
       </Wrapper>

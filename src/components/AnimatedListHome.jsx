@@ -1,36 +1,43 @@
 import { cn } from '@/lib/utils'
 import { AnimatedList } from '@/components/ui/animated-list'
 import { IconTerminal2 } from '@tabler/icons-react'
-import { CreditCard, IndianRupee, User } from 'lucide-react'
+import {
+  BriefcaseBusiness,
+  CreditCard,
+  Fingerprint,
+  IdCard,
+  IndianRupee,
+  User,
+} from 'lucide-react'
 
 let notifications = [
   {
-    name: 'Payment received',
+    name: 'User Verified',
     description: 'XRAY AI',
     time: '15m ago',
 
-    icon: <IconTerminal2 />,
+    icon: <User />,
     color: '#00C9A7',
   },
   {
-    name: 'User signed up',
+    name: 'Business Verified',
     description: 'XRAY AI',
     time: '10m ago',
-    icon: <CreditCard />,
+    icon: <BriefcaseBusiness />,
     color: '#FFB800',
   },
   {
-    name: 'New message',
+    name: 'PAN Verified',
     description: 'XRAY AI',
     time: '5m ago',
-    icon: <IndianRupee />,
+    icon: <IdCard />,
     color: '#FF3D71',
   },
   {
-    name: 'New event',
+    name: 'Aadhar Verified',
     description: 'XRAY AI',
     time: '2m ago',
-    icon: <User />,
+    icon: <Fingerprint />,
     color: '#1E86FF',
   },
 ]

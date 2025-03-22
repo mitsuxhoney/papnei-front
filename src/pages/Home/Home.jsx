@@ -287,64 +287,64 @@ const featureSteps = [
 ]
 
 const caseStudiesData = {
-  title: 'Case Studies',
+  title: 'Verification Success Stories',
   description:
-    'Real-world success stories showcasing how our verification solutions drive security, compliance, and efficiency.',
+    'Explore how our business verification, identity verification, and Aadhaar e-sign solutions have empowered businesses to enhance security, streamline processes, and build trust.',
   items: [
     {
       id: 'study1',
-      title: 'Business Verification: Ensuring Trust & Compliance',
+      title: 'Streamlining Business Compliance with Verification',
       description:
-        'How our GST, PAN, and Bank Account verification helped businesses maintain compliance, prevent fraud, and establish trust.',
+        'Discover how our comprehensive business verification services, including GST, PAN, and bank account checks, ensured compliance and mitigated fraud risks for a leading enterprise.',
       href: 'https://yourwebsite.com/case-study/business-verification',
       image:
         'https://images.unsplash.com/photo-1591696205602-2f950c417cb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
     },
     {
-      id: 'study3',
-      title: 'Aadhaar E-Sign: Enabling Secure Digital Transactions',
+      id: 'study2',
+      title: 'Accelerating Digital Transactions with Aadhaar E-Sign',
       description:
-        'Discover how Aadhaar E-Sign transformed businesses by facilitating legally binding digital document signing.',
+        'Learn how our Aadhaar E-Sign integration revolutionized document signing for a financial institution, enabling secure and legally valid digital transactions.',
       href: 'https://yourwebsite.com/case-study/aadhaar-esign',
       image:
         'https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=1080&q=80',
     },
     {
-      id: 'study4',
-      title: 'Trademark & FSSAI Verification: Protecting Brands & Businesses',
+      id: 'study3',
+      title: 'Enhancing Customer Onboarding with Robust Identity Verification',
       description:
-        'A deep dive into how businesses safeguarded their brand identity and ensured regulatory compliance through verification solutions.',
-      href: 'https://yourwebsite.com/case-study/trademark-verification',
-      image:
-        'https://images.unsplash.com/photo-1605379399642-870262d3d051?w=1080&q=80',
-    },
-    {
-      id: 'study5',
-      title: 'KYC & KYB: Enabling Seamless Customer Onboarding',
-      description:
-        'How our Video KYC and document verification solutions accelerated user onboarding while maintaining compliance standards.',
+        'See how our advanced KYC and KYB solutions, including video verification, significantly improved customer onboarding efficiency and reduced fraudulent activities for a fast-growing fintech company.',
       href: 'https://yourwebsite.com/case-study/kyc-kyb',
       image:
         'https://images.pexels.com/photos/6476587/pexels-photo-6476587.jpeg?auto=compress&cs=tinysrgb&fit=max&w=1080',
     },
-
     {
-      id: 'study6',
-      title: 'Bank Account Verification: Preventing Payment Fraud',
+      id: 'study4',
+      title:
+        'Securing Financial Transactions Through Bank Account Verification',
       description:
-        'Case study on how our bank account verification solution helped businesses validate transactions and prevent financial fraud.',
+        'Explore how our bank account verification services helped an e-commerce platform prevent payment fraud and ensure secure transactions for their customers.',
       href: 'https://yourwebsite.com/case-study/bank-verification',
       image:
         'https://images.unsplash.com/photo-1513530534585-c7b1394c6d51?w=1080&q=80',
     },
     {
-      id: 'study8',
-      title: 'E-commerce Verification: Reducing Fraudulent Transactions',
+      id: 'study5',
+      title: 'Building Trust in E-commerce with Seller Identity Checks',
       description:
-        'Learn how online platforms used our verification solutions to authenticate sellers and enhance buyer trust.',
+        'Discover how our identity verification solutions empowered an online marketplace to authenticate sellers, fostering a safer and more trustworthy environment for buyers.',
       href: 'https://yourwebsite.com/case-study/ecommerce-verification',
       image:
         'https://images.unsplash.com/photo-1556745757-8d76bdb6984b?w=1080&q=80',
+    },
+    {
+      id: 'study6',
+      title: 'Safeguarding Brand Integrity with Trademark Verification',
+      description:
+        'Learn how our trademark verification services helped a leading brand protect their intellectual property and maintain brand integrity in a competitive market.',
+      href: 'https://yourwebsite.com/case-study/trademark-verification',
+      image:
+        'https://images.unsplash.com/photo-1605379399642-870262d3d051?w=1080&q=80',
     },
   ],
 }

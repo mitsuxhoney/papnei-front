@@ -18,6 +18,7 @@ import CTA from '@/assets/cta-image.png'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
+import newCTAImage from '../../assets/cta-image.png'
 import {
   Form,
   FormControl,
@@ -74,7 +75,7 @@ export function Connect() {
   ]
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden bg-[#EAB308]/10">
       <Wrapper>
         <div className="absolute inset-0 bg-grid-primary-700/[0.05] -z-10" />
 
@@ -288,7 +289,7 @@ export function Connect() {
               <div className="relative">
                 <img
                   className="absolute hidden md:inline-block md:-top-20 lg:-top-28 lg:right-8"
-                  src="/src/assets/cta-image.png"
+                  src={newCTAImage}
                   alt=""
                 />
               </div>

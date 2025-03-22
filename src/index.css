@@ -107,6 +107,7 @@ body {
 
     /* Secondary Color - Navy Blue */
     --secondary: 215 60% 25%;
+
     --secondary-foreground: 0 0% 100%;
     --secondary-light: 215 60% 35%;
     --secondary-dark: 215 60% 15%;

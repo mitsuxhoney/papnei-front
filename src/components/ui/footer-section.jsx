@@ -124,10 +124,8 @@ function Footerdemo() {
               <div>
                 <h3 className="mb-4 text-lg font-semibold">Contact Us</h3>
                 <address className="space-y-2 text-sm not-italic">
-                  <p>123 Innovation Street</p>
-                  <p>Tech City, TC 12345</p>
-                  <p>Phone: (123) 456-7890</p>
-                  <p>Email: hello@example.com</p>
+                  <p>44 IIND FLOOR REGAL BUILDING,</p>
+                  <p>CONNAUGHT PLACE, NEW DELHI</p>
                 </address>
               </div>
               <div className="relative">
@@ -205,9 +203,7 @@ function Footerdemo() {
               </div>
             </div>
             <div className="mt-4 flex flex-col items-center justify-between gap-4 border-t pt-8 text-center md:flex-row relative">
-              <p className="text-sm">
-                © 2024 Your Company. All rights reserved.
-              </p>
+              <p className="text-sm">© 2024 XRAY AI. All rights reserved.</p>
               <nav className="flex gap-4 text-sm">
                 <Link to="#" className="transition-colors hover:underline">
                   Privacy Policy

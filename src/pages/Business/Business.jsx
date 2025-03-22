@@ -485,50 +485,51 @@ const featureSteps = [
   // },
 ]
 const FAQCTAData = {
-  heading: 'Frequently asked questions',
+  heading: 'Frequently Asked Questions',
   description:
-    "Everything you need to know about shadcnblocks. Can't find the answer you're looking for? Feel free to contact our support team.",
-  ctaHeading: 'Ready To Get Started',
+    "Everything you need to know about identity verification. Can't find the answer you're looking for? Feel free to contact our support team.",
+  ctaHeading: 'Ready for Secure Business Verification?',
   ctaDescription:
-    'Join thousand of satisfied customers using our platform to build amazing websites.',
+    'Join thousands of businesses using our platform for seamless and compliant business verification.',
   items: [
     {
       id: 'faq-1',
-      question: 'What is shadcnblocks?',
+      question: 'What is business verification, and why is it important?',
       answer:
-        'shadcnblocks is a collection of ready-to-use block components built on top of shadcn/ui, designed to help you build beautiful websites faster.',
+        'Business verification is the process of validating a company’s legal existence, ownership, and compliance status. It is essential for fraud prevention, regulatory adherence, and secure transactions.',
     },
     {
       id: 'faq-2',
-      question: 'How do I install shadcnblocks?',
+      question: 'How does business verification work?',
       answer:
-        'shadcnblocks components are designed to be copied and pasted into your project. Simply browse the components, click on the one you want to use, and copy the code directly into your project. This gives you full control over the code and allows for easy customization.',
+        'Business verification involves checking company details against official registries, validating key identifiers such as GSTIN, PAN, or CIN, and ensuring compliance through real-time data verification.',
     },
     {
       id: 'faq-3',
-      question: 'Is shadcnblocks free to use?',
+      question: 'Is business verification secure?',
       answer:
-        'Yes, shadcnblocks is open-source and free to use in both personal and commercial projects. You can customize and modify the blocks to suit your needs.',
+        'Yes, business verification uses encrypted data transmission, AI-powered fraud detection, and secure APIs to safeguard sensitive company information and prevent misuse.',
     },
     {
       id: 'faq-4',
-      question: 'Can I customize the blocks?',
+      question: 'Can business verification be done remotely?',
       answer:
-        'Absolutely! All blocks are built with customization in mind. You can modify the styling, content, and behavior through props and Tailwind CSS classes.',
+        'Yes, business verification can be conducted online using automated document validation, API integrations, and real-time database checks.',
     },
     {
       id: 'faq-5',
-      question: 'Do you offer support?',
+      question: 'What happens if business verification fails?',
       answer:
-        'Yes, we provide support through our GitHub repository where you can report issues, suggest features, or ask questions about implementation.',
+        'If verification fails, users may need to update their business details, provide clearer documentation, or complete a manual review. Our support team is available to assist.',
     },
   ],
   supportHeading: 'Still have questions?',
   supportDescription:
-    "Can't find the answer you're looking for? Our support team is here to help with any technical questions or concerns.",
+    "Can't find the answer you're looking for? Our support team is here to help with any verification-related concerns.",
   supportButtonText: 'Contact Support',
-  supportButtonUrl: 'https://shadcnblocks.com',
+  supportButtonUrl: 'https://yourbusinessverificationsite.com',
 }
+
 const businessProducts = [
   {
     title: 'GST OTP Verification',
@@ -763,15 +764,16 @@ const Business = () => {
         <BusinessCTA />
       </div> */}
       <Wrapper>
-        <div className="my-16">
+        <div className="mt-16 mb-24 py-16">
           <BusinessProducts
             grid={otherProducts}
             gridHeading={otherProductsHeading}
             className="grid-cols-1 md:grid-cols-2 max-w-3xl mx-auto"
+            cardClass="bg-white"
           />
         </div>
       </Wrapper>
-      <div className="mb-16">
+      <div className="my-16">
         <Connect />
       </div>
 

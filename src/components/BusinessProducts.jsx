@@ -20,7 +20,7 @@ import {
 } from 'lucide-react'
 import { Card } from './ui/card'
 
-const BusinessProducts = ({ grid, gridHeading, className }) => {
+const BusinessProducts = ({ grid, gridHeading, className, cardClass }) => {
   return (
     <div className="w-full flex flex-col gap-4">
       <div className="flex flex-col items-center gap-2 text-center mb-6">
@@ -35,7 +35,7 @@ const BusinessProducts = ({ grid, gridHeading, className }) => {
         {grid?.map((item) => (
           <Card
             key={item.title}
-            className={cn(`p-4 rounded-[4px] group`, item.className)}
+            className={cn(`p-4 rounded-[4px] group`, item.cardClass)}
           >
             <div className="w-full flex flex-col gap-4">
               <div

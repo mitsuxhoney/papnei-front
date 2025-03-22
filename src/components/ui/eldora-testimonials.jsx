@@ -64,145 +64,149 @@ export function TestimonialCard({
 const testimonials = [
   {
     name: 'Alex Rivera',
-    role: 'UI/UX Lead at InnovateTech',
+    role: 'Security Analyst at SecureSphere Inc.',
     img: 'https://randomuser.me/api/portraits/men/91.jpg',
     description: (
       <p>
-        Using EldoraUI has revolutionized our design process.
+        "Our compliance processes have become significantly more efficient with
+        their verification services.
         <Highlight>
-          Its reusable, animated components make it easy to deliver cutting-edge
-          designs.
-        </Highlight>{' '}
-        A must-have for any design team.
+          The accuracy and speed of their identity checks are unmatched.
+        </Highlight>
+        It's been a critical tool for our risk management strategy."
       </p>
     ),
   },
   {
     name: 'Samantha Lee',
-    role: 'Frontend Engineer at NextGen Solutions',
+    role: 'Operations Manager at SwiftOnboard Solutions',
     img: 'https://randomuser.me/api/portraits/women/12.jpg',
     description: (
       <p>
-        EldoraUI&apos;s templates have drastically improved our development
-        speed.
+        "Implementing their Aadhaar e-sign solution has revolutionized our
+        onboarding process.
         <Highlight>
-          We&apos;ve reduced project timelines by 70%, delivering high-quality
-          UIs effortlessly.
-        </Highlight>{' '}
-        Highly recommend it to fellow developers.
+          We've cut down onboarding time by 60%, enhancing customer
+          satisfaction.
+        </Highlight>
+        Highly reliable and easy to integrate."
       </p>
     ),
   },
   {
     name: 'Raj Patel',
-    role: 'Founder at Startup Studio',
+    role: 'CFO at FinTrust Ventures',
     img: 'https://randomuser.me/api/portraits/men/45.jpg',
     description: (
       <p>
-        As a startup founder, I need tools that help us grow fast without
-        sacrificing quality. EldoraUI&apos;s stunning designs and simple
-        integration have made it an essential part of our workflow.
-        <Highlight>Our clients love our modern interfaces.</Highlight>
+        "As a financial institution, trust is paramount. Their business
+        verification tools have helped us maintain integrity.
+        <Highlight>
+          The detailed reports and quick turnaround are invaluable.
+        </Highlight>
+        "
       </p>
     ),
   },
   {
     name: 'Emily Chen',
-    role: 'Product Designer at Global Systems',
+    role: 'Compliance Officer at Global Commerce Ltd.',
     img: 'https://randomuser.me/api/portraits/women/83.jpg',
     description: (
       <p>
-        EldoraUI&apos;s prebuilt components have made it so easy to create
-        intuitive and compliant designs.
+        "Their KYC and KYB solutions have simplified our compliance workflows.
         <Highlight>
-          It&apos;s perfect for tackling complex workflows with style.
-        </Highlight>{' '}
-        A must-have for any product designer.
+          The comprehensive verification reports are crucial for our regulatory
+          adherence.
+        </Highlight>
+        A must-have for any business focused on compliance."
       </p>
     ),
   },
   {
     name: 'Michael Brown',
-    role: 'Creative Director at FinTech Innovations',
+    role: 'Head of Fraud Prevention at PaySecure Technologies',
     img: 'https://randomuser.me/api/portraits/men/1.jpg',
     description: (
       <p>
-        EldoraUI&apos;s animations and design elements have elevated our fintech
-        app&apos;s user experience.
+        "Their bank account verification services have significantly reduced our
+        fraud rates.
         <Highlight>
-          The feedback on our new design is phenomenal.
-        </Highlight>{' '}
-        It&apos;s a game-changer for user-centric applications.
+          The precision and real-time validation are exceptional.
+        </Highlight>
+        It's a game-changer for secure transactions."
       </p>
     ),
   },
   {
     name: 'Linda Wu',
-    role: 'Web Developer at LogiChain Solutions',
+    role: 'E-commerce Security Lead at LogiChain Retail',
     img: 'https://randomuser.me/api/portraits/women/5.jpg',
     description: (
       <p>
-        EldoraUI&apos;s component library has simplified web development for our
-        logistics dashboard.
+        "Their e-commerce verification tools have helped us build a safer
+        marketplace.
         <Highlight>
-          Building custom layouts has never been this efficient.
-        </Highlight>{' '}
+          The ability to authenticate sellers efficiently has boosted buyer
+          confidence.
+        </Highlight>
+        "
       </p>
     ),
   },
   {
     name: 'Carlos Gomez',
-    role: 'Digital Marketing Specialist at EcoTech',
+    role: 'Brand Protection Manager at EcoBrands Inc.',
     img: 'https://randomuser.me/api/portraits/men/14.jpg',
     description: (
       <p>
-        EldoraUI&apos;s responsive designs have helped us create marketing sites
-        that look amazing on every device.
+        "Trademark verification is essential for protecting our brand.
         <Highlight>
-          It&apos;s revolutionized how we approach branding online.
-        </Highlight>{' '}
+          Their services are thorough and provide peace of mind.
+        </Highlight>
+        It's revolutionized how we manage our intellectual property."
       </p>
     ),
   },
   {
     name: 'Aisha Khan',
-    role: 'E-commerce Product Manager at FashionForward',
+    role: 'Product Manager at FastTrack Financials',
     img: 'https://randomuser.me/api/portraits/women/56.jpg',
     description: (
       <p>
-        EldoraUI&apos;s beautifully crafted components have completely
-        transformed our fashion storefront.
+        "The seamless integration of their verification tools into our platform
+        has been impressive.
         <Highlight>
-          Customers love the dynamic shopping experience.
-        </Highlight>{' '}
+          Our customer onboarding is faster and more secure.
+        </Highlight>
+        "
       </p>
     ),
   },
   {
     name: 'Tom Chen',
-    role: 'Healthcare App Designer at HealthTech Solutions',
+    role: 'Legal Compliance Officer at HealthVerify Systems',
     img: 'https://randomuser.me/api/portraits/men/18.jpg',
     description: (
       <p>
-        EldoraUI has made it easy to create user-friendly, accessible interfaces
-        for our healthcare apps.
+        "In the healthcare sector, compliance is non-negotiable.
         <Highlight>
-          It&apos;s a crucial part of our design system.
-        </Highlight>{' '}
+          Their verification services ensure we meet all regulatory requirements
+          with ease.
+        </Highlight>
+        It's a crucial part of our compliance system."
       </p>
     ),
   },
   {
     name: 'Sofia Patel',
-    role: 'EdTech Founder at EduSafe Innovations',
+    role: 'Founder at EduTrust Platforms',
     img: 'https://randomuser.me/api/portraits/women/73.jpg',
     description: (
       <p>
-        EldoraUI&apos;s education-focused templates have doubled our
-        platform&apos;s usability.
-        <Highlight>
-          It&apos;s tailor-made for addressing student and teacher needs.
-        </Highlight>{' '}
+        "Their verification solutions have helped us build a trustworthy
+        educational platform.
+        <Highlight>The ease of use and reliability are unmatched.</Highlight>"
       </p>
     ),
   },
@@ -211,7 +215,7 @@ const testimonials = [
 export function Testimonials() {
   return (
     <section id="testimonials" className="py-10">
-      <div className="mb-4 text-center sora-heading text-5xl font-bold leading-[1.2]">
+      <div className="mb-4 text-center sora-heading text-5xl font-bold leading-[1.2] ">
         What People {` `}
         {/* <div className="inline-block bg-primary rounded-md -rotate-2 p-2">
           <div className="rotate-2 text-white ">People</div>
@@ -223,7 +227,7 @@ export function Testimonials() {
         <span className="from-fg-onAccent text-primary">real people</span> are
         saying about{' '}
         <span className="from-fg-onAccent font-medium text-primary">
-          Eldora UI
+          XRAY AI
         </span>
       </h3>
       <div className="relative mt-6 max-h-screen overflow-hidden">

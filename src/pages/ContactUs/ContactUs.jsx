@@ -232,28 +232,28 @@ const ContactUs = () => {
     {
       icon: <MapPin className="w-6 h-6" strokeWidth={1.5} />,
       title: 'Our Location',
-      content: '123 Healthcare Avenue, Medical District, New York, NY 10001',
+      content: '44 IIND FLOOR REGAL BUILDING, CONNAUGHT PLACE, NEW DELHI',
       action: 'Get Directions',
       url: 'https://maps.google.com',
     },
     {
       icon: <Phone className="w-6 h-6" strokeWidth={1.5} />,
       title: 'Phone Number',
-      content: '+1 (555) 123-4567 • +1 (555) 987-6543',
+      content: '+91   8876102030',
       action: 'Call Now',
-      url: 'tel:+15551234567',
+      url: 'tel:+918876102030',
     },
     {
       icon: <Mail className="w-6 h-6" strokeWidth={1.5} />,
       title: 'Email Address',
-      content: 'contact@papnei.com • support@papnei.com',
+      content: 'contact@xray.com • support@xray.com',
       action: 'Send Email',
-      url: 'mailto:contact@papnei.com',
+      url: 'mailto:contact@xray.com',
     },
     {
       icon: <Clock className="w-6 h-6" strokeWidth={1.5} />,
       title: 'Working Hours',
-      content: 'Monday - Friday: 9AM - 5PM • Saturday: 10AM - 2PM',
+      content: 'Monday - Saturday:   9AM - 5PM',
       badge: 'Open Now',
     },
   ]
@@ -717,7 +717,7 @@ const ContactUs = () => {
       </section>
 
       {/* Map and Location Section */}
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="max-w-6xl mx-auto px-4">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-center text-5xl font-bold leading-[1.2] sora-heading">
@@ -740,7 +740,7 @@ const ContactUs = () => {
                     style={{ border: 0 }}
                     allowFullScreen={true}
                     loading="lazy"
-                    title="Papnei Office Location"
+                    title="XRAY"
                   ></iframe>
                 </div>
               </Card>
@@ -762,11 +762,9 @@ const ContactUs = () => {
                     <div>
                       <h4 className="font-medium">Address</h4>
                       <p className="text-muted-foreground">
-                        123 Healthcare Avenue
+                        44 IIND FLOOR REGAL BUILDING,
                         <br />
-                        Medical District
-                        <br />
-                        New York, NY 10001
+                        CONNAUGHT PLACE, NEW DELHI
                       </p>
                     </div>
                   </div>
@@ -783,7 +781,7 @@ const ContactUs = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
       <div className="py-16">
