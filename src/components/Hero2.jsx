@@ -16,9 +16,9 @@ function Hero2({ businessHero }) {
 
         <section className="relative z-10 border-white/10 w-full overflow-hidden">
           <Wrapper>
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-10 xl:gap-4 py-24 relative z-20">
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-10 xl:gap-4 py-12 relative z-20">
               {/* Hero Content */}
-              <div className="relative flex flex-col items-start justify-center gap-4 text-left">
+              <div className="relative flex flex-col items-start justify-center gap-2 text-left">
                 <h1 className="text-4xl lg:text-5xl font-bold relative sora-heading">
                   {businessHero.heading}
                 </h1>
@@ -29,7 +29,7 @@ function Hero2({ businessHero }) {
                 <Link to="/contact-us">
                   <Button
                     size="lg"
-                    className="mt-8 relative bg-secondary hover:bg-secondary/90 flex items-center"
+                    className="mt-4 relative bg-secondary hover:bg-secondary/90 flex items-center"
                   >
                     <p>{businessHero.button.text}</p>
                     <ArrowRight />

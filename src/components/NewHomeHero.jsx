@@ -38,6 +38,7 @@ import {
 
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
+import toast from 'react-hot-toast'
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -65,7 +66,7 @@ const NewHomeHero = ({ businessHero }) => {
     })
   }
   return (
-    <div className="py-20 mx-auto w-full overflow-hidden bg-cover bg-center bg-no-repeat bg-[url('@/assets/homeHeroPNG.png')]">
+    <div className="py-12 mx-auto w-full overflow-hidden bg-cover bg-center bg-no-repeat bg-[url('@/assets/homeHeroPNG.png')]">
       <Wrapper>
         <div className="w-full flex flex-col gap-8 items-center mx-auto text-center">
           <Badge
@@ -76,18 +77,17 @@ const NewHomeHero = ({ businessHero }) => {
             <span className="">Start Verfying In Minutes</span>
           </Badge>
 
-          <h2 className="text-4xl md:text-6xl xl:text-[84px] xl:leading-[95px] xl:tracking-[-2px] font-bold sora-heading lg:max-w-[76rem] capitalize">
+          <h2 className="text-3xl md:text-5xl xl:text-[80px] xl:leading-[90px] xl:tracking-[-2px] font-bold sora-heading lg:max-w-[76rem] capitalize">
             Onboard{' '}
-            <span className="px-2 text-secondary bg-[url('@/assets/boxStroke.png')] bg-contain bg-no-repeat">
+            <span className="inline-block px-2 text-secondary bg-[url('@/assets/boxStroke.png')] bg-no-repeat bg-center bg-[length:100%_100%]">
               Verified
-            </span>
+            </span>{' '}
             Customers In Minutes
           </h2>
 
           <p className="text-balance text-foreground/80 font-medium text-md lg:text-lg relative lg:max-w-[60%]">
-            Streamline your verification process with our comprehensive suite of
-            API&apos;s. Fast, secure and compliant solutions designed for modern
-            enterprises.
+            Streamline verification with our API suite. Fast, secure, and
+            compliant solutions for modern businesses.
           </p>
           <div className=" flex flex-col gap-2 sm:flex-row items-center font-bold">
             <span className="inline-flex items-start -space-x-4">
@@ -100,12 +100,12 @@ const NewHomeHero = ({ businessHero }) => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex items-center justify-center gap-2">
             <Dialog>
               <DialogTrigger asChild>
                 <Button
                   variant="default"
-                  className="bg-gradient-to-r rounded-xl from-secondary to-secondary/80  md:px-6 md:py-3 h-12 text-primary-foreground hover:opacity-90 transition-all duration-200"
+                  className="bg-gradient-to-r rounded-md from-secondary to-secondary/80  md:px-6 md:py-3 text-primary-foreground hover:opacity-90 transition-all duration-200"
                 >
                   Get API Keys
                   <ArrowRight />
@@ -242,7 +242,7 @@ const NewHomeHero = ({ businessHero }) => {
             </Dialog>
 
             <Button
-              className="w-full sm:w-auto hover:scale-[scale: 1.02] px-2 py-2 md:px-6 md:py-4 rounded-lg
+              className="w-full sm:w-auto hover:scale-[scale: 1.02] px-2 py-2 md:px-6 md:py-4 rounded-md
                 bg-white text-secondary border border-secondary hover:bg-white/80 flex items-center font-semibold"
             >
               View Documentation

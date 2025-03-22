@@ -15,7 +15,7 @@ export function IntegrationBenefits({
     <div className={cn('', className)}>
       <div className=" mx-auto w-full">
         <div className="text-center mb-10">
-          <h2 className="mb-4 sora-heading text-center text-4xl lg:text-5xl font-bold leading-[1.2]">
+          <h2 className="mb-4 sora-heading text-center text-3xl lg:text-5xl font-bold leading-[1.2]">
             Seamless API Integration
           </h2>
           <p className="mx-auto mb-8 text-center text-md font-medium text-foreground/80">

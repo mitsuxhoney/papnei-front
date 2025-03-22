@@ -398,7 +398,7 @@ export function CaseStudies() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <div className="mb-4 text-center text-4xl lg:text-5xl sora-heading font-bold leading-[1.2]">
+              <div className="mb-4 text-center text-3xl lg:text-5xl sora-heading font-bold leading-[1.2]">
                 Recent Case Studies
                 {/* <div className="inline-block bg-primary rounded-md -rotate-2 p-2">
                 <div className="rotate-2 text-white ">Case Studies</div>

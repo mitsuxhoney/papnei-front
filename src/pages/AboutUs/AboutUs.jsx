@@ -229,13 +229,13 @@ const AboutUs = () => {
         <Wrapper>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div className="flex flex-col gap-4 items-start">
-              <h2 className="text-secondary text-[14px] font-semibold leading-[26px] tracking-[0.131px] uppercase">
+              <h2 className="text-secondary text-lg font-semibold leading-[26px] tracking-[0.131px] uppercase">
                 WHAT WE DO
               </h2>
-              <p className="font-semibold leading-[48px] tracking-[-0.317px] text-[37px]">
+              <p className="font-semibold leading-[48px] tracking-[-0.317px] text-3xl lg:text-5xl">
                 We power trust building solutions
               </p>
-              <p className="text-[19px] font-extralight text-foreground/80 leading-[30px] tracking-[0.417px]">
+              <p className="text-md font-extralight text-foreground/80 leading-[30px] tracking-[0.417px]">
                 XRAY AI Identity Intelligence solution helps businesses reduce
                 risks, protect integrity and accelerate growth on a global
                 scale. Our solutions unlock hundreds of digital signals to
@@ -297,7 +297,7 @@ const AboutUs = () => {
       <section id="mission" className="py-24">
         <div className=" mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="mb-4 text-center text-5xl font-bold leading-[1.2] sora-heading">
+            <h2 className="mb-4 text-center text-3xl lg:text-5xl font-bold leading-[1.2] sora-heading">
               Our Mission & Values
             </h2>
             <p className="mx-auto mb-8 max-w-lg text-center text-lg font-medium text-foreground/80">
@@ -366,7 +366,7 @@ const AboutUs = () => {
       <section className="py-16">
         <div className=" mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="mb-4 text-center text-5xl font-bold leading-[1.2] sora-heading">
+            <h2 className="mb-4 text-center text-3xl lg:text-5xl font-bold leading-[1.2] sora-heading">
               Our Impact
             </h2>
             <p className="">

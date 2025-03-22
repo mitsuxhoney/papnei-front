@@ -24,7 +24,7 @@ const BusinessProducts = ({ grid, gridHeading, className, cardClass }) => {
   return (
     <div className="w-full flex flex-col gap-4">
       <div className="flex flex-col items-center gap-2 text-center mb-6">
-        <h1 className="text-center text-4xl lg:text-5xl font-bold leading-[1.2] sora-heading">
+        <h1 className="text-center text-3xl lg:text-5xl font-bold leading-[1.2] sora-heading">
           {gridHeading.title}
         </h1>
         <p className="mx-auto text-center text-md font-medium text-foreground/80">

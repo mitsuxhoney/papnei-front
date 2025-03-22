@@ -4,7 +4,7 @@ import { Logos3 as Partners } from '../../components/ui/logos3'
 
 import { Icons } from '@/components/ui/icons'
 import { Code, Layout, Pointer, Zap } from 'lucide-react'
-import { Feature108 as  Features } from '@/components/ui/features'
+import { Feature108 as Features } from '@/components/ui/features'
 import Wrapper from '../../components/Wrapper'
 import { Testimonials } from '../../components/ui/eldora-testimonials'
 import { IntegrationBenefits } from '../../components/IntegrationBenefits'
@@ -405,7 +405,7 @@ const Home = () => {
 
       {/* <AnimatedTestimonialsDemo /> */}
       <Wrapper>
-        <div className="py-8">
+        <div className="py-0 lg:py-8">
           <Partners />
         </div>
       </Wrapper>

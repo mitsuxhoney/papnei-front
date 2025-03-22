@@ -45,7 +45,7 @@ const features = {
   badge: 'Products & Services',
   heading: 'Comprehensive Verification Solutions',
   description:
-    'Discover our suite of verification services designed to enhance your business operations.',
+    'Multiple suite of verification services for your business solutions.',
 }
 
 const tabs = [
@@ -260,15 +260,15 @@ const Feature108 = () => {
           >
             {features.badge}
           </Badge> */}
-          <div className="mb-4 sora-heading text-center text-4xl lg:text-5xl font-bold leading-[1.2]">
+          <div className="mb-4 sora-heading text-center text-3xl lg:text-5xl font-bold leading-[1.2]">
             Comprehensive Verification Solutions
           </div>
           <p className="mx-auto mb-4 text-center text-md font-medium text-foreground/80">
             {features.description}
           </p>
         </div>
-        <Tabs defaultValue={tabs[0].value} className="mt-4">
-          <TabsList className="flex flex-col justify-center gap-4 sm:flex-row md:gap-10">
+        <Tabs defaultValue={tabs[0].value} className="mt-6">
+          <TabsList className="flex flex-col justify-center gap-2 sm:flex-row md:gap-10">
             {tabs.map((tab) => (
               <TabsTrigger
                 key={tab.value}

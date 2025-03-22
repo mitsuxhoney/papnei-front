@@ -5,7 +5,7 @@ export function FeaturesSectionWithCardGradient({ grid, gridHeading }) {
   return (
     <div className="w-full py-20">
       <div className="flex flex-col items-center gap-4 text-center">
-        <h1 className="text-center text-4xl lg:text-5xl font-bold leading-[1.2] sora-heading">
+        <h1 className="text-center text-3xl lg:text-5xl font-bold leading-[1.2] sora-heading">
           {gridHeading.heading}
         </h1>
         <p className="mx-auto text-center text-md font-medium text-foreground/80">

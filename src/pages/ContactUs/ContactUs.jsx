@@ -402,7 +402,7 @@ const ContactUs = () => {
       <section className="py-20 relative">
         <div className="max-w-6xl mx-auto px-4">
           <div className="mb-16 text-center">
-            <h2 className="mb-4 text-center text-4xl lg:text-5xl font-bold leading-[1.2] sora-heading">
+            <h2 className="mb-4 text-center text-3xl lg:text-5xl font-bold leading-[1.2] sora-heading">
               How to Reach Us
             </h2>
             <p className="text-foreground/80 text-md mx-auto">
@@ -460,7 +460,7 @@ const ContactUs = () => {
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:20px_20px]"></div>
         <div className="max-w-6xl mx-auto px-4 relative z-10">
           <div className="mb-16 text-center">
-            <h2 className="mb-4 text-center text-4xl lg:text-5xl font-bold leading-[1.2] sora-heading">
+            <h2 className="mb-4 text-center text-3xl lg:text-5xl font-bold leading-[1.2] sora-heading">
               Send Us a Message
             </h2>
             <p className="text-foreground/80 text-md mx-auto">
